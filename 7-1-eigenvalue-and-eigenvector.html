@@ -103,10 +103,12 @@
 <p>If we treat this matrix as a transformation, applying this transformation on any 2d vector will give you another 2d vector. But this is not a new story, we did this before a billion times. What is interesting is that for some vectors in 2d space, their direction will not change after the transformation. What does that mean algebraically? Assume for some vector <span class="math">\(\pmb{x}\)</span>, we have the&nbsp;relation:</p>
 <div class="math">$$A\pmb{x} = \lambda\pmb{x}$$</div>
 <p>Where <span class="math">\(\lambda\)</span> is some non zero scalar value. Notice this value is just tells us how the vector is been &#8220;stretched&#8221; or &#8220;compressed&#8221;. If the <span class="math">\(\lambda\)</span> turns out to be negative, it just means the direction is&nbsp;reversed.</p>
-<p>Let&#8217;s look at one of such vector. In our case, if we input vector <span class="math">\(<div class="math">\begin{bmatrix}
+<p>Let&#8217;s look at one of such vector. In our case, if we input&nbsp;vector </p>
+<div class="math">$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}</div>\)</span> and calculate the vector after the transformation, we&nbsp;get:</p>
+\end{bmatrix}$$</div>
+<p> and calculate the vector after the transformation, we&nbsp;get:</p>
 <div class="math">$$A\pmb{x} = \begin{bmatrix}
 1 &amp; 0\\
 1 &amp; 2 \\
@@ -134,22 +136,29 @@
 -2\\
 2
 \end{bmatrix}$$</div>
-<p>What does the above equation means? It means not only the vector <span class="math">\(<div class="math">\begin{bmatrix}
+<p>What does the above equation means? It means not only the&nbsp;vector </p>
+<div class="math">$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}</div>\)</span> can do that, but any multiple of vector <span class="math">\(<div class="math">\begin{bmatrix}
+\end{bmatrix}$$</div>
+<p> can do that, but any multiple of&nbsp;vector </p>
+<div class="math">$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}</div>\)</span> also satisfy the equation <span class="math">\(A\pmb{x} = \lambda\pmb{x}\)</span>!</p>
+\end{bmatrix}$$</div>
+<p> also satisfy the&nbsp;equation: </p>
+<div class="math">$$A\pmb{x} = \lambda\pmb{x}$$</div>
 <p>For this specific vector, our vector stay the same after the transformation. So, <span class="math">\(\lambda\)</span> in this case is just <span class="math">\(1\)</span>. </p>
 <p>If we can find such vector and the corresponding <span class="math">\(\lambda\)</span> that satisfy the equation <span class="math">\(A\pmb{x} = \lambda\pmb{x}\)</span>. Then we call the vector <span class="math">\(\pmb{x}\)</span> the <strong>Eigenvector</strong> of our matrix <span class="math">\(A\)</span>, and we call the value <span class="math">\(\lambda\)</span> the corresponding <strong>Eigenvalue</strong> of the&nbsp;matrix.</p>
 <p>Great, now we know what does that means algebraically. Can we visualize&nbsp;this?</p>
 <p>If you take the transformation and graph the change on different vector input, you will get something looks like&nbsp;this:</p>
 <p><img alt="w6example" src="./images/trans_eigenvalue.gif" /></p>
-<p>As we expected, the vector<span class="math">\(<div class="math">\begin{bmatrix}
+<p>As we expected, the&nbsp;vector</p>
+<div class="math">$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}</div>\)</span> and all the vectors along that line stays on that line after the transformation. But if you pay more attention, along the y-axis, the vectors do not change their direction too. We can check it by multiplying any vector along&nbsp;y-axis:</p>
+\end{bmatrix}$$</div>
+<p> and all the vectors along that line stays on that line after the transformation. But if you pay more attention, along the y-axis, the vectors do not change their direction too. We can check it by multiplying any vector along&nbsp;y-axis:</p>
 <div class="math">$$A\pmb{x}' = \begin{bmatrix}
 1 &amp; 0\\
 1 &amp; 2 \\

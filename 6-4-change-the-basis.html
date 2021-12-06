@@ -98,22 +98,7 @@
 <p><img alt="w6example" src="./images/w6rotation.gif" /></p>
 <p>So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&nbsp;one? </p>
 <p>Let&#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&#8217;s say <span class="math">\((2,1)\)</span>.</p>
-<p>The basis of Cartesian coordinate is vector <span class="math">\(<div class="math">\begin{bmatrix} 1 \\ 0\end{bmatrix}</div>\)</span> and 
-<span class="math">\(<div class="math">\begin{bmatrix}
-0\\
-1\end{bmatrix}</div>\)</span>, so the meaning of vector 
-<span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span> is just two pieces of 
-<span class="math">\(<div class="math">\begin{bmatrix}
-1\\
-0
-\end{bmatrix}</div>\)</span> and one piece of 
-<span class="math">\(<div class="math">\begin{bmatrix}
-0\\
-1
-\end{bmatrix}</div>\)</span>:</p>
+<p>The basis of Cartesian coordinate is vector <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span>, so the meaning of vector <span class="math">\((2,1)\)</span> is just two pieces of <span class="math">\((1,0)\)</span> and one piece of <span class="math">\((0,1)\)</span>:</p>
 <div class="math">$$\begin{bmatrix}
 2\\
 1
@@ -125,26 +110,9 @@
 1
 \end{bmatrix}$$</div>
 <p><img alt="w6vector" src="./images/w6vector.png" /></p>
-<p>Here we have another 2d basis create by spanning vector 
-<span class="math">\(<div class="math">\begin{bmatrix}
-1\\
-1
-\end{bmatrix}</div>\)</span> and 
-<span class="math">\(<div class="math">\begin{bmatrix}
--1\\
-2
-\end{bmatrix}</div>\)</span>:</p>
+<p>Here we have another 2d basis create by spanning vector <span class="math">\((1,1)\)</span>and <span class="math">\((-1,2)\)</span>:</p>
 <p><img alt="w6basis" src="./images/w6basis.png" /></p>
-<p>In this new basis, our vector <span class="math">\(<div class="math">\begin{bmatrix}
-\color{red}2\\
-\color{red}1
-\end{bmatrix}</div>\)</span> will no longer looks the same as the vector <span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span> in Cartesian coordinate. We can do a quick calculation to see what is <span class="math">\(<div class="math">\begin{bmatrix}
-\color{red}2\\
-\color{red}1
-\end{bmatrix}</div>\)</span> in the new&nbsp;basis:</p>
+<p>In this new basis, our vector <span class="math">\((\color{red}2,\color{red}1)\)</span> will no longer looks the same as the vector <span class="math">\((2,1)\)</span> in Cartesian coordinate. We can do a quick calculation to see what is <span class="math">\((\color{red}2,\color{red}1)\)</span> in the new&nbsp;basis:</p>
 <div class="math">$$\pmb{\color{red}v} = 2\times\begin{bmatrix}
 1\\
 1
@@ -156,37 +124,10 @@
 1
 \end{bmatrix}$$</div>
 <p>To not make you confuse, I will label all the vectors lie in Cartesian coordinate black, and the vector lie in new coordinate&nbsp;red.</p>
-<p>So the question is, what should be the vector <span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span> in our new basis? In another word, how many <span class="math">\(<div class="math">\begin{bmatrix}
-1\\
-1
-\end{bmatrix}</div>\)</span> and <span class="math">\(<div class="math">\begin{bmatrix}
--1\\
-2
-\end{bmatrix}</div>\)</span> combined together will give you <span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span>? </p>
+<p>So the question is, what should be the vector <span class="math">\((2,1)\)</span> in our new basis? In another word, how many <span class="math">\((1,1)\)</span> and <span class="math">\((-1,2)\)</span> combined together will give you <span class="math">\((2,1)\)</span>? </p>
 <p>You might find the statements here are kind of confusing, so I will help you out by showing you the solution&nbsp;first:</p>
 <p><img alt="w6changebasis" src="./images/w6changebasis.png" /></p>
-<p>It turns out, if you take <span class="math">\(\color{red}{\frac{5}{3}}\)</span> of vector <span class="math">\(<div class="math">\begin{bmatrix}
-1\\
-1
-\end{bmatrix}</div>\)</span> and <span class="math">\(\color{red}{\frac{1}{3}}\)</span> of vector <span class="math">\(<div class="math">\begin{bmatrix}
-1\\
--2
-\end{bmatrix}</div>\)</span>, you will end up with vector <span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span>. So our vector <span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span> in the new basis has a new name <span class="math">\(<div class="math">\begin{bmatrix}
-\color{red}{\frac{5}{3}}\\
-\color{red}{\frac{1}{3}}
-\end{bmatrix}</div>\)</span>.</p>
+<p>It turns out, if you take <span class="math">\(\color{red}{\frac{5}{3}}\)</span> of vector <span class="math">\((1,1)\)</span> and <span class="math">\(\color{red}{\frac{1}{3}}\)</span> of vector <span class="math">\((-1,2)\)</span>, you will end up with vector <span class="math">\((2,1)\)</span>. So our vector <span class="math">\((2,1)\)</span> in the new basis has a new name <span class="math">\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)</span>.</p>
 <p>Now how do I got these number out? Think about this, if we rewrite the above relation in a matrix form, we will&nbsp;have:</p>
 <div class="math">$$\color{red}{\frac{5}{3}}\times\begin{bmatrix}
 1\\
@@ -207,16 +148,12 @@
 2\\
 1
 \end{bmatrix}$$</div>
-<p>It looks like the matrix <span class="math">\(<div class="math">\begin{bmatrix}
+<p>It looks like the&nbsp;matrix </p>
+<div class="math">$$\begin{bmatrix}
 1 &amp; 1\\
 1 &amp; -2
-\end{bmatrix}</div>\)</span> can transformed our <span class="math">\(<div class="math">\begin{bmatrix}
-\color{red}{\frac{5}{3}}\\
-\color{red}{\frac{1}{3}}
-\end{bmatrix}</div>\)</span> back to what it was in Cartesian coordinate. What do we want is to know what is <span class="math">\(<div class="math">\begin{bmatrix}
-2\\
-1
-\end{bmatrix}</div>\)</span> in new basis, so we have to find the&nbsp;inverse:</p>
+\end{bmatrix}$$</div>
+<p> can transformed our  <span class="math">\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)</span> back to what it was in Cartesian coordinate. What do we want is to know what is <span class="math">\((2,1)\)</span> in new basis, so we have to find the&nbsp;inverse:</p>
 <div class="math">$$\begin{bmatrix}
 1 &amp; 1\\
 1 &amp; -2
@@ -237,13 +174,12 @@
 \color{red}{\frac{1}{3}}
 \end{bmatrix} $$</div>
 <p>Strange, right? To know the presentation in one specific basis, you have to apply the inverse transformation. but this is what it&nbsp;is.</p>
-<p>For the previous example, the way we get <span class="math">\(<div class="math">\begin{bmatrix}
-\color{red}{\frac{5}{3}}\\
-\color{red}{\frac{1}{3}}
-\end{bmatrix}</div> $ is by first put our basis vector together and form the matrix $<div class="math">\begin{bmatrix}
+<p>For the previous example, the way we get <span class="math">\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)</span> is by first put our basis vector together and form the&nbsp;matrix </p>
+<div class="math">$$\begin{bmatrix}
 1 &amp; 1\\
 1 &amp; -2
-\end{bmatrix}</div>\)</span>, then we can find its&nbsp;inverse:</p>
+\end{bmatrix}$$</div>
+<p>then we can find its&nbsp;inverse:</p>
 <div class="math">$$\begin{bmatrix}
 1 &amp; 1\\
 1 &amp; -2

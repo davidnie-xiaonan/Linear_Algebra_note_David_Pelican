@@ -2877,45 +2877,59 @@ $$&lt;/div&gt;
 1 &amp;amp; 2 
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;then we write the &amp;#8220;bone&amp;#8221; of this matrix using the basis &lt;span class="math"&gt;\(C\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;How do we construct it? We can immediately tell that to get the first column &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;How do we construct it? We can immediately tell that to get the first&amp;nbsp;column:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 2 \\
 1 \\
 1 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;, we need just one portion of &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;we need just one portion&amp;nbsp;of &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 2 \\
 1 \\
 1 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and zero portion of &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;and zero portion&amp;nbsp;of &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1\\
 2 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. In another word, one portion of the first basis vector and zero of the&amp;nbsp;second:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;In another word, one portion of the first basis vector and zero of the&amp;nbsp;second:&lt;/p&gt;
 &lt;div class="math"&gt;$$R_1 = \begin{bmatrix}
 1 \\
 0 
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;To get the second column vector, we need zero portion of &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;To get the second column vector, we need zero portion&amp;nbsp;of &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 2 \\
 1 \\
 1 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and one portion of &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; and one portion&amp;nbsp;of &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1\\
 2 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. In another word, one portion of the first basis vector and zero of the&amp;nbsp;second:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;. In another word, one portion of the first basis vector and zero of the&amp;nbsp;second:&lt;/p&gt;
 &lt;div class="math"&gt;$$R_2 = \begin{bmatrix}
 0 \\
 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;At last, To get the third column vector, we need one portion of &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;At last, To get the third column vector, we need one portion&amp;nbsp;of &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 2 \\
 1 \\
 1 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and one portion of &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; and one portion&amp;nbsp;of &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1\\
 2 
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. In another word, one portion of the first basis vector and zero of the&amp;nbsp;second:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;. In another word, one portion of the first basis vector and zero of the&amp;nbsp;second:&lt;/p&gt;
 &lt;div class="math"&gt;$$R_3 = \begin{bmatrix}
 1 \\
 1
@@ -3008,22 +3022,7 @@ $$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&amp;nbsp;one? &lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&amp;#8217;s say &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The basis of Cartesian coordinate is vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix} 1 \\ 0\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and 
-&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-0\\
-1\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;, so the meaning of vector 
-&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; is just two pieces of 
-&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-1\\
-0
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and one piece of 
-&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-0\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;The basis of Cartesian coordinate is vector &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt;, so the meaning of vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; is just two pieces of &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and one piece of &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 2\\
 1
@@ -3035,26 +3034,9 @@ $$&lt;/div&gt;
 1
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w6vector" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6vector.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Here we have another 2d basis create by spanning vector 
-&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-1\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and 
-&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
--1\\
-2
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;Here we have another 2d basis create by spanning vector &lt;span class="math"&gt;\((1,1)\)&lt;/span&gt;and &lt;span class="math"&gt;\((-1,2)\)&lt;/span&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6basis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6basis.png" /&gt;&lt;/p&gt;
-&lt;p&gt;In this new basis, our vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-\color{red}2\\
-\color{red}1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; will no longer looks the same as the vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in Cartesian coordinate. We can do a quick calculation to see what is &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-\color{red}2\\
-\color{red}1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in the new&amp;nbsp;basis:&lt;/p&gt;
+&lt;p&gt;In this new basis, our vector &lt;span class="math"&gt;\((\color{red}2,\color{red}1)\)&lt;/span&gt; will no longer looks the same as the vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; in Cartesian coordinate. We can do a quick calculation to see what is &lt;span class="math"&gt;\((\color{red}2,\color{red}1)\)&lt;/span&gt; in the new&amp;nbsp;basis:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{\color{red}v} = 2\times\begin{bmatrix}
 1\\
 1
@@ -3066,37 +3048,10 @@ $$&lt;/div&gt;
 1
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;To not make you confuse, I will label all the vectors lie in Cartesian coordinate black, and the vector lie in new coordinate&amp;nbsp;red.&lt;/p&gt;
-&lt;p&gt;So the question is, what should be the vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in our new basis? In another word, how many &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-1\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
--1\\
-2
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; combined together will give you &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;? &lt;/p&gt;
+&lt;p&gt;So the question is, what should be the vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; in our new basis? In another word, how many &lt;span class="math"&gt;\((1,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((-1,2)\)&lt;/span&gt; combined together will give you &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;? &lt;/p&gt;
 &lt;p&gt;You might find the statements here are kind of confusing, so I will help you out by showing you the solution&amp;nbsp;first:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6changebasis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6changebasis.png" /&gt;&lt;/p&gt;
-&lt;p&gt;It turns out, if you take &lt;span class="math"&gt;\(\color{red}{\frac{5}{3}}\)&lt;/span&gt; of vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-1\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and &lt;span class="math"&gt;\(\color{red}{\frac{1}{3}}\)&lt;/span&gt; of vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-1\\
--2
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;, you will end up with vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. So our vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in the new basis has a new name &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-\color{red}{\frac{5}{3}}\\
-\color{red}{\frac{1}{3}}
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;It turns out, if you take &lt;span class="math"&gt;\(\color{red}{\frac{5}{3}}\)&lt;/span&gt; of vector &lt;span class="math"&gt;\((1,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\(\color{red}{\frac{1}{3}}\)&lt;/span&gt; of vector &lt;span class="math"&gt;\((-1,2)\)&lt;/span&gt;, you will end up with vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;. So our vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; in the new basis has a new name &lt;span class="math"&gt;\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Now how do I got these number out? Think about this, if we rewrite the above relation in a matrix form, we will&amp;nbsp;have:&lt;/p&gt;
 &lt;div class="math"&gt;$$\color{red}{\frac{5}{3}}\times\begin{bmatrix}
 1\\
@@ -3117,16 +3072,12 @@ $$&lt;/div&gt;
 2\\
 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;It looks like the matrix &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;It looks like the&amp;nbsp;matrix &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 1\\
 1 &amp;amp; -2
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; can transformed our &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-\color{red}{\frac{5}{3}}\\
-\color{red}{\frac{1}{3}}
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; back to what it was in Cartesian coordinate. What do we want is to know what is &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-2\\
-1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in new basis, so we have to find the&amp;nbsp;inverse:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; can transformed our  &lt;span class="math"&gt;\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)&lt;/span&gt; back to what it was in Cartesian coordinate. What do we want is to know what is &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; in new basis, so we have to find the&amp;nbsp;inverse:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 1\\
 1 &amp;amp; -2
@@ -3147,13 +3098,12 @@ $$&lt;/div&gt;
 \color{red}{\frac{1}{3}}
 \end{bmatrix} $$&lt;/div&gt;
 &lt;p&gt;Strange, right? To know the presentation in one specific basis, you have to apply the inverse transformation. but this is what it&amp;nbsp;is.&lt;/p&gt;
-&lt;p&gt;For the previous example, the way we get &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
-\color{red}{\frac{5}{3}}\\
-\color{red}{\frac{1}{3}}
-\end{bmatrix}&lt;/div&gt; $ is by first put our basis vector together and form the matrix $&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;For the previous example, the way we get &lt;span class="math"&gt;\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)&lt;/span&gt; is by first put our basis vector together and form the&amp;nbsp;matrix &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 1\\
 1 &amp;amp; -2
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;, then we can find its&amp;nbsp;inverse:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;then we can find its&amp;nbsp;inverse:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 1\\
 1 &amp;amp; -2
@@ -3264,10 +3214,12 @@ $$&lt;/div&gt;
 &lt;p&gt;If we treat this matrix as a transformation, applying this transformation on any 2d vector will give you another 2d vector. But this is not a new story, we did this before a billion times. What is interesting is that for some vectors in 2d space, their direction will not change after the transformation. What does that mean algebraically? Assume for some vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt;, we have the&amp;nbsp;relation:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb{x}$$&lt;/div&gt;
 &lt;p&gt;Where &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; is some non zero scalar value. Notice this value is just tells us how the vector is been &amp;#8220;stretched&amp;#8221; or &amp;#8220;compressed&amp;#8221;. If the &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; turns out to be negative, it just means the direction is&amp;nbsp;reversed.&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s look at one of such vector. In our case, if we input vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;Let&amp;#8217;s look at one of such vector. In our case, if we input&amp;nbsp;vector &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and calculate the vector after the transformation, we&amp;nbsp;get:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; and calculate the vector after the transformation, we&amp;nbsp;get:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x} = \begin{bmatrix}
 1 &amp;amp; 0\\
 1 &amp;amp; 2 \\
@@ -3295,22 +3247,29 @@ $$&lt;/div&gt;
 -2\\
 2
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;What does the above equation means? It means not only the vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;What does the above equation means? It means not only the&amp;nbsp;vector &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; can do that, but any multiple of vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; can do that, but any multiple of&amp;nbsp;vector &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; also satisfy the equation &lt;span class="math"&gt;\(A\pmb{x} = \lambda\pmb{x}\)&lt;/span&gt;!&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; also satisfy the&amp;nbsp;equation: &lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb{x}$$&lt;/div&gt;
 &lt;p&gt;For this specific vector, our vector stay the same after the transformation. So, &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; in this case is just &lt;span class="math"&gt;\(1\)&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;If we can find such vector and the corresponding &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; that satisfy the equation &lt;span class="math"&gt;\(A\pmb{x} = \lambda\pmb{x}\)&lt;/span&gt;. Then we call the vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; the &lt;strong&gt;Eigenvector&lt;/strong&gt; of our matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, and we call the value &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; the corresponding &lt;strong&gt;Eigenvalue&lt;/strong&gt; of the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Great, now we know what does that means algebraically. Can we visualize&amp;nbsp;this?&lt;/p&gt;
 &lt;p&gt;If you take the transformation and graph the change on different vector input, you will get something looks like&amp;nbsp;this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/trans_eigenvalue.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;As we expected, the vector&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;As we expected, the&amp;nbsp;vector&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and all the vectors along that line stays on that line after the transformation. But if you pay more attention, along the y-axis, the vectors do not change their direction too. We can check it by multiplying any vector along&amp;nbsp;y-axis:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt; and all the vectors along that line stays on that line after the transformation. But if you pay more attention, along the y-axis, the vectors do not change their direction too. We can check it by multiplying any vector along&amp;nbsp;y-axis:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x}' = \begin{bmatrix}
 1 &amp;amp; 0\\
 1 &amp;amp; 2 \\
@@ -3469,13 +3428,16 @@ y
 1
 \end{bmatrix}}
 $$&lt;/div&gt;
-&lt;p&gt;Therefore, the eigenvector correspond to eigenvalue &lt;span class="math"&gt;\(1\)&lt;/span&gt; is vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;Therefore, the eigenvector correspond to eigenvalue &lt;span class="math"&gt;\(1\)&lt;/span&gt; is&amp;nbsp;vector &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 -1\\
 1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. Using the same method, we can get the eigenvector for eigenvalue &lt;span class="math"&gt;\(\lambda_2 = 2\)&lt;/span&gt; is vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;Using the same method, we can get the eigenvector for eigenvalue &lt;span class="math"&gt;\(\lambda_2 = 2\)&lt;/span&gt; is&amp;nbsp;vector &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
 0\\
 1
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;.&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;Awesome! We solved all the eigenvalue and their eigenvector. Does that means we solved everything? Of course not. Remember, we got lucky when solving the polynomial. Let&amp;#8217;s go back to the characteristic polynomial and see what are we&amp;nbsp;missing.&lt;/p&gt;
 &lt;p&gt;The characteristic polynomial we had is &lt;span class="math"&gt;\((1-\lambda )(2-\lambda)\)&lt;/span&gt;, but in principle, we could have any polynomials. Take &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt; matrix as example, our characteristic polynomial will be a&amp;nbsp;quadratic:&lt;/p&gt;
 &lt;div class="math"&gt;$$a\lambda^2 + b\lambda + c= 0$$&lt;/div&gt;
@@ -3561,10 +3523,12 @@ $$&lt;/div&gt;
 $$&lt;/div&gt;
 &lt;p&gt;In convention, we call the the entries that has the same column and row number &amp;#8220;diagonal&amp;#8221; terms. and the entries that has the different column and row number &amp;#8220;off-diagonal&amp;#8221; terms. For diagonal matrix, First, it is usually a &lt;span class="math"&gt;\(n\times n\)&lt;/span&gt; matrix (we don&amp;#8217;t consider the &amp;#8220;rectangular&amp;#8221; ones&amp;#8221;). Second, all the &amp;#8220;off-diagonal&amp;#8221; terms must be zero. Notice that the diagonal terms doesn&amp;#8217;t have to be&amp;nbsp;zero.&lt;/p&gt;
 &lt;p&gt;Great, this matrix looks &lt;span class="caps"&gt;VERY&lt;/span&gt; simple! Indeed, it is very easy to work with. Let&amp;#8217;s look at an interesting&amp;nbsp;example:&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s say there is a matrix &lt;span class="math"&gt;\(A = &lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;Let&amp;#8217;s say there is a&amp;nbsp;matrix &lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
 1 &amp;amp; 2 \\
 3 &amp;amp; 4
-\end{bmatrix}&lt;/div&gt; $, then what is $A^2\)&lt;/span&gt;&amp;nbsp;?&lt;/p&gt;
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;then what is &lt;span class="math"&gt;\(A^2\)&lt;/span&gt;&amp;nbsp;?&lt;/p&gt;
 &lt;p&gt;We can do a quick matrix multiplication to get the answer for&amp;nbsp;that:&lt;/p&gt;
 &lt;div class="math"&gt;$$A^2 = \begin{bmatrix}
 1 &amp;amp; 2 \\
@@ -3590,10 +3554,12 @@ $$&lt;/div&gt;
 0 &amp;amp; 2^{201}
 \end{bmatrix} $$&lt;/div&gt;
 &lt;p&gt;Not only that, if you tried to find the eigenvalue of a diagonal matrix, you will soon realized the characteristic polynomials of a diagonal matrix is extremely&amp;nbsp;simple.&lt;/p&gt;
-&lt;p&gt;If take matrix &lt;span class="math"&gt;\(D = &lt;div class="math"&gt;\begin{bmatrix}
+&lt;p&gt;If take&amp;nbsp;matrix &lt;/p&gt;
+&lt;div class="math"&gt;$$D = \begin{bmatrix}
 1 &amp;amp; 0\\
 0 &amp;amp; 2
-\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; as a example. The characteristic polynomials is&amp;nbsp;just:&lt;/p&gt;
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;as a example. The characteristic polynomials is&amp;nbsp;just:&lt;/p&gt;
 &lt;div class="math"&gt;$$det(D-\lambda I) = det(\begin{bmatrix}
 1-\lambda &amp;amp; 0\\
 0 &amp;amp; 2-\lambda
