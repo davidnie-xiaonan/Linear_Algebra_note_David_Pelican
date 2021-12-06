@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -20,7 +20,7 @@
 <meta name="keywords" content=", Chapter 7 Eigenvector, eigenvalue and Diagonalization, " />
 
 <meta property="og:title" content="7-2 Characteristic polynomials "/>
-<meta property="og:url" content="/7-2-characteristic-polynomials" />
+<meta property="og:url" content="./7-2-characteristic-polynomials" />
 <meta property="og:description" content="Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn’t answer. One, Is there always eigenvector and eigenvalues for matrices? Second, How do we calculate them? Let’s start from the definition of eigenvector and eigenvalue: $$A\pmb{x} = \lambda\pmb …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
@@ -31,18 +31,18 @@
 
         <title>7-2 Characteristic polynomials  · Linear Algebra Note
 </title>
-        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
+        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="./theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
 
 
 
@@ -57,18 +57,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="/"><span class=site-name>Linear Algebra Note</span></a>
+                        <a class="brand" href="./"><span class=site-name>Linear Algebra Note</span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li >
                                     <a href=
-                                       "/"
+                                       .
                                     >Home</a>
                                 </li>
-                                <li ><a href="/categories">Categories</a></li>
-                                <li ><a href="/tags">Tags</a></li>
-                                <li ><a href="/archives">Archives</a></li>
-                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="./categories">Categories</a></li>
+                                <li ><a href="./tags">Tags</a></li>
+                                <li ><a href="./archives">Archives</a></li>
+                                <li><form class="navbar-search" action="./search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="/7-2-characteristic-polynomials">
+            <a href="./7-2-characteristic-polynomials">
                 7-2  Characteristic&nbsp;polynomials
             </a>
         </h1>
@@ -257,9 +257,9 @@ $$</div>
  
                 <p id="post-share-links">
     Like this post? Share on:
-      <a href="https://twitter.com/intent/tweet?text=7-2%20%20Characteristic%C2%A0polynomials&url=/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
- ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
- ❄       <a href="mailto:?subject=7-2%20%20Characteristic%C2%A0polynomials&amp;body=/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+      <a href="https://twitter.com/intent/tweet?text=7-2%20%20Characteristic%C2%A0polynomials&url=https%3A//davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=7-2%20%20Characteristic%C2%A0polynomials&amp;body=https%3A//davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
 
             
             
@@ -274,8 +274,8 @@ $$</div>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/7-3-diagonal-matrix-and-transpose" title="Previous: 7-3 Diagonal matrix and transpose">7-3 Diagonal matrix and transpose</a></li>
-                <li class="next-article"><a href="/7-1-eigenvalue-and-eigenvector" title="Next: 7-1 Eigenvalue and Eigenvector">7-1 Eigenvalue and Eigenvector</a> »</li>
+                <li class="previous-article">« <a href="./7-3-diagonal-matrix-and-transpose" title="Previous: 7-3 Diagonal matrix and transpose">7-3 Diagonal matrix and transpose</a></li>
+                <li class="next-article"><a href="./7-1-eigenvalue-and-eigenvector" title="Next: 7-1 Eigenvalue and Eigenvector">7-1 Eigenvalue and Eigenvector</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -287,7 +287,7 @@ $$</div>
 <time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="/categories#chapter-7-eigenvector-eigenvalue-and-diagonalization-ref">Chapter 7 Eigenvector, eigenvalue and Diagonalization</a>
+            <a class="category-link" href="./categories#chapter-7-eigenvector-eigenvalue-and-diagonalization-ref">Chapter 7 Eigenvector, eigenvalue and Diagonalization</a>
 <h4>Stay in Touch</h4>
 <div id="sidebar-social-link">
     <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
@@ -391,7 +391,7 @@ $$</div>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
