@@ -24,8 +24,8 @@
 <meta property="og:description" content="Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look at …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
-<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
-<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
+<meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-4 The cheat: inverse matrix ">
 <meta name="twitter:description" content="Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look at …">
 
@@ -135,7 +135,7 @@
 0\\
 1\\
 \vdots
-\end{bmatrix} ... \right)$$</div>
+\end{bmatrix} {static}. \right)$$</div>
 <p>For example, a 3 by 3 identity matrix should looks like&nbsp;this:</p>
 <div class="math">$$\begin{bmatrix}
 1 &amp; 0 &amp; 0\\
@@ -303,9 +303,9 @@ $$</div>
 2 &amp; -1\\
 2 &amp; -1
 \end{bmatrix}$$</div>
-<p><img alt="w5line_int" src="../images/w5linear_trans.gif" /></p>
+<p><img alt="w5line_int" src="./images/w5linear_trans.gif" /></p>
 <p>Do they have inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vector on the&nbsp;plane.</p>
-<p><img alt="w5line_int" src="../images/w5inverse.gif" /></p>
+<p><img alt="w5line_int" src="./images/w5inverse.gif" /></p>
 <p>That is not a linear transformation can do. It&#8217;s like functions, for one x value, you can only get one y value. So for one vector input, you can only get one vector&nbsp;output.</p>
 <p>In practice, we will see that finding the inverse in order to solve linear system is actually not very convenient. Nowadays, computer use other methods like <strong><span class="caps">LU</span> decomposition</strong>, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having inverse matrix is a&nbsp;must.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -401,9 +401,9 @@ $$</div>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+            <time itemprop="dateCreated" datetime="2021-09-11T10:20:00-04:00">9月 11, 2021</time>
 <h4>Last Updated</h4>
-<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+<time datetime="2021-12-05T19:30:00-05:00">12月 05, 2021</time>
 
             <h4>Category</h4>
             <a class="category-link" href="./categories#chapter-5-solving-linear-system-using-matrix-ref">Chapter 5 Solving Linear system using matrix</a>

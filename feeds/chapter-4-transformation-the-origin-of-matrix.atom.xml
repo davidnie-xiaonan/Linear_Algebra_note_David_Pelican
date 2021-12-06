@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 4 Transformation: the origin of matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-4-transformation-the-origin-of-matrix.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2010-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>4-1 Linear Transformation</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-1-linear-transformation" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/4-1-linear-transformation</id><summary type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 4 Transformation: the origin of matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-4-transformation-the-origin-of-matrix.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>4-1 Linear Transformation</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-1-linear-transformation" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-1-linear-transformation</id><summary type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is the relationship between linear transformation and matrix&amp;nbsp;multiplication.&lt;/p&gt;
 &lt;p&gt;The two key words are &amp;#8220;Linear&amp;#8221; and &amp;#8220;Transformation&amp;#8221;. We will began with the word transformation. In high school, transformation usually refer as the change from one graph to another graph. In here, the transformation can be understand as a function, a map that take in one vector and returns another one. The reason why we don&amp;#8217;t call it function is because we are interested in the &amp;#8220;movement&amp;#8221;. Just like you can visualize the graph being &amp;#8220;compressed&amp;#8221; or &amp;#8220;stretched&amp;#8221;. A linear transformation can be visualized as a vector &amp;#8220;moves&amp;#8221; to another&amp;nbsp;vector.&lt;/p&gt;
@@ -24,10 +24,10 @@
 &lt;p&gt;lovely! Both rules are satisfied. We can now say that the transformation of doing nothing is a linear&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;but that is way too boring, let&amp;#8217;s do a interesting one together: the transformation of rotating everything by 90 degrees counter&amp;nbsp;counterclockwise.&lt;/p&gt;
 &lt;p&gt;To demonstrate the transformation. I will plot the sample vector and many other vectors during the transformation. To not make the graph too crowded, I will only draw the points where the tip of the vectors landed for other&amp;nbsp;vectors.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;It seems impossible to show the additivity and homogeneity in this case. Unlike the last time, it is not easy to write down the &lt;span class="math"&gt;\(f(\pmb{x})\)&lt;/span&gt;. However, when you graph the transformation on the basis vectors of 2d space, things gets a lot&amp;nbsp;easier.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at how the basis vectors change under the transformation. More importantly, ask yourself whether if the basis is still a basis after the&amp;nbsp;transformation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see. the basis &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; changed to &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((-1,0)\)&lt;/span&gt;. And it looks like the new basis still works&amp;nbsp;well. &lt;/p&gt;
 &lt;p&gt;so if our vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; has x component &lt;span class="math"&gt;\(a\)&lt;/span&gt; and y component &lt;span class="math"&gt;\(b\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{x} = a(1,0)+b(0,1)$$&lt;/div&gt;
@@ -96,7 +96,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-2 Matrix multiplication with vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector</id><summary type="html">&lt;blockquote&gt;
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-2 Matrix multiplication with vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Unfortunately, no one can told you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
@@ -162,7 +162,7 @@
 0\\
 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;and as you see in the animation, the vector (1,0) indeed moves to&amp;nbsp;(0,1). &lt;/p&gt;
 &lt;p&gt;So what if we want to transform something harder? let&amp;#8217;s rotate the vector&amp;nbsp;(a,b):&lt;/p&gt;
 &lt;div class="math"&gt;$$T(\begin{bmatrix}
@@ -187,11 +187,11 @@ a + 0
 -b\\
 a
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;We can confirm this result is also true by looking at the&amp;nbsp;animation.&lt;/p&gt;
 &lt;p&gt;As you already guessed it, the square thing is called matrix and this operation we did is called the matrix&amp;nbsp;multiplication. &lt;/p&gt;
 &lt;p&gt;Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before, because usually the matrix multiplication was introduced like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4matrixwiki" src="../images/w4matrix_multi.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4matrixwiki" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4matrix_multi.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Don&amp;#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as linear transformation of vectors is much much more intuitive than pure&amp;nbsp;algebra. &lt;/p&gt;
 &lt;p&gt;Can we figure out more things from the matrix multiplication we&amp;nbsp;defined?&lt;/p&gt;
 &lt;p&gt;First is the dimension of matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a &lt;strong&gt;2 by 2 matrix&lt;/strong&gt; or &lt;strong&gt;2x2 matrix&lt;/strong&gt;. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&amp;nbsp;columns.&lt;/p&gt;
@@ -280,7 +280,7 @@ f
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-3-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/4-3-assignment</id><summary type="html">&lt;ol&gt;
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-3-assignment" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-3-assignment</id><summary type="html">&lt;ol&gt;
 &lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;

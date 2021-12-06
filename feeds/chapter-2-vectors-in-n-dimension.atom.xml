@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 2 Vectors in n dimension</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-2-vectors-in-n-dimension.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2010-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>2-1 Vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-1-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/2-1-vector</id><summary type="html">&lt;h1 id="what-is-a-vector-looks-like"&gt;What is a vector looks like?&lt;a class="headerlink" href="#what-is-a-vector-looks-like" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 2 Vectors in n dimension</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-2-vectors-in-n-dimension.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>2-1 Vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-1-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/2-1-vector</id><summary type="html">&lt;h1 id="what-is-a-vector-looks-like"&gt;What is a vector looks like?&lt;a class="headerlink" href="#what-is-a-vector-looks-like" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Linear algebra begin with a simple concept in physics, more specifically mechanics: the vector. Understanding vector is the first step to understand linear algebra. To do this, we have to visit three different place, since it has different meaning in different&amp;nbsp;field. &lt;/p&gt;
 &lt;p&gt;In physics …&lt;/p&gt;</summary><content type="html">&lt;h1 id="what-is-a-vector-looks-like"&gt;What is a vector looks like?&lt;a class="headerlink" href="#what-is-a-vector-looks-like" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Linear algebra begin with a simple concept in physics, more specifically mechanics: the vector. Understanding vector is the first step to understand linear algebra. To do this, we have to visit three different place, since it has different meaning in different&amp;nbsp;field. &lt;/p&gt;
@@ -80,7 +80,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-2 Adding vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-2-adding-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/2-2-adding-vector</id><summary type="html">&lt;h1 id="vector-addition-subtraction-and-scalar-multiplication"&gt;Vector addition, subtraction and Scalar multiplication&lt;a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-2 Adding vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-2-adding-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/2-2-adding-vector</id><summary type="html">&lt;h1 id="vector-addition-subtraction-and-scalar-multiplication"&gt;Vector addition, subtraction and Scalar multiplication&lt;a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do&amp;nbsp;that?&lt;/p&gt;
 &lt;p&gt;Imaging you are walking on a 2d plane and you start at the origin. Say there is a …&lt;/p&gt;</summary><content type="html">&lt;h1 id="vector-addition-subtraction-and-scalar-multiplication"&gt;Vector addition, subtraction and Scalar multiplication&lt;a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do&amp;nbsp;that?&lt;/p&gt;
@@ -88,14 +88,14 @@
 &lt;div class="math"&gt;$$ \vec{a} = (2,2)$$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w2vector1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2vector1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Then you heard someone yelling at you. The sound is coming from your right. So you walk to this person and return the penny to him unwillingly. Notice that if you look from above, the direction of this motion is Southeast because your moving direction is Northeast at the beginning. For simplicity, let say you walked exactly &lt;span class="math"&gt;\(\sqrt{2}\)&lt;/span&gt;&amp;nbsp;unit.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2vector2" src="../images/w2vector2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2vector2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2vector2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Now we need to see what is you second motion. As we learned before, moving a vector don&amp;#8217;t change the vector itself, so if we move this vector and place it on the origin, we can see the tip of the vector land exactly on the point&amp;nbsp;(1,-1).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2gif1" src="../images/w2gif1.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2gif1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2gif1.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So we do the same thing and record this motion using&amp;nbsp;vector:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \vec{b} = (1,-1)$$&lt;/div&gt;
 &lt;p&gt;Now we can finally ask ourselves: what is the meaning of adding this two vector &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt;? The answer is quite straightforward. The first motion is &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and right after that you did the second motion &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt;. If you combine these two motions and only look at the result of them, it looks like you just walked to the final point where you talked to the guy who thinks you stealed his&amp;nbsp;penny.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2gif2" src="../images/w2gif2.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2gif2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2gif2.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So how do we calculate the result? It is very obvious to see that the tip of &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; is sitting at point (3,1). Therefore the result is&amp;nbsp;just:&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}+\vec{b}= \vec{c} = (3,1)$$&lt;/div&gt;
 &lt;p&gt;If you watch carefully, you can find that the x coordinate of the result is just happens to be the result of adding both x&amp;nbsp;coordinate:&lt;/p&gt;
@@ -104,14 +104,14 @@
 &lt;div class="math"&gt;$$c_y = a_y + b_y = 2-1 = 1$$&lt;/div&gt;
 &lt;p&gt;The reason is because we placed everything inside the Cartesian&amp;nbsp;coordinate. &lt;/p&gt;
 &lt;p&gt;If we treat the x coordinate and the y coordinate as vectors sitting exactly on the x and y axis, then every vector can be represent as an addition of those&amp;nbsp;vectors!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2vectoradd" src="../images/w2vectoradd.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2vectoradd" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2vectoradd.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Once we realized that, we can reverse the addition and break down our &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt;. Then we add all the x direction vectors, do the same thing on y direction vectors. We will end up with two sums, one for x direction and one for y direction. So, our job is done! Because the way we write down vector is just to write down their x and y&amp;nbsp;components.&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}+\vec{b}= (\color{red}2,\color{blue}2) + (\color{red}1,\color{blue}{-1}) = (\color{red}3,\color{blue}1)$$&lt;/div&gt;
 &lt;hr /&gt;
 &lt;p&gt;Next we are going to do some multiplication. Just like number multiplication, the multiplication is just adding the same thing many many times. Luckily, we can also do that in vector. Again, take &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; from previous section as an&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$ 2\times\vec{a} = 2\times(\color{red}2,\color{red}2) = (2\times\color{red}2,2\times\color{red}2) = (4,4)$$&lt;/div&gt;
 &lt;p&gt;We can also multiply a negative scalar like &lt;span class="math"&gt;\(-1\)&lt;/span&gt;. Keep in mind, multiply negative value will reverse the direction of the vector.
-&lt;img alt="w2negative" src="../images/w2negative.gif" /&gt;&lt;/p&gt;
+&lt;img alt="w2negative" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2negative.gif" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;So far we know how to add any two vectors and multiply any vector with a scalar, it is a good time to introduce the&amp;nbsp;subtraction. &lt;/p&gt;
 &lt;p&gt;To calculate, it is fairly easy. As you expected, instead of adding the coordinate like you did before, this time you just&amp;nbsp;subtract:&lt;/p&gt;
@@ -119,7 +119,7 @@
 &lt;p&gt;To visualize it just like we did for addition, we can break down subtraction into addition and multiplication of &lt;span class="math"&gt;\(-1\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}-\vec{b} = \vec{a} + (\color{red}{-1}\times\vec{b})$$&lt;/div&gt;
 &lt;p&gt;
-&lt;img alt="w2subtract" src="../images/w2subtract.gif" /&gt;&lt;/p&gt;
+&lt;img alt="w2subtract" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2subtract.gif" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;And that is the end of the first&amp;nbsp;chapter! &lt;/p&gt;
 &lt;p&gt;You will see more examples and fun applications in the assignment. The addition and subtraction rules looks easy but it has a huge impact to more important concepts like linear combination, span, and&amp;nbsp;basis. &lt;/p&gt;
@@ -186,12 +186,12 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-3-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/2-3-assignment</id><summary type="html">&lt;p&gt;1.Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q1" src="../images/w2q1_question.png" /&gt;&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-3-assignment" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/2-3-assignment</id><summary type="html">&lt;p&gt;1.Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(a) Find the vector &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; using the vector subtraction law, and then calculate its magnitude and direction.(you can use angle to describe the&amp;nbsp;direction)&lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(b) Without using the result from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;1.Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q1" src="../images/w2q1_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(a) Find the vector &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; using the vector subtraction law, and then calculate its magnitude and direction.(you can use angle to describe the&amp;nbsp;direction)&lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(b) Without using the result from (a) and the law, find the magnitude and the direction of &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt;&lt;/p&gt;
@@ -200,7 +200,7 @@
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;2.You are play chess on a 2d Cartesian plane. Say your knight is located at the corner of the chess board(the origin) and there is a juicy queen sitting at (6,8). Reminder: The knight&amp;#8217;s movement is unique: it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an&amp;nbsp;L).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q2_question" src="../images/w2q2_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2_question" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(a) Let&amp;#8217;s assume your opponent is quite dumb, so he just don&amp;#8217;t like to move the queen. Now how do you move your knight to kill the&amp;nbsp;queen? &lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(b) We can use the vector notation to explain the movement of knight. For example, if we want to move the knight to (3,3), we can&amp;nbsp;do:&lt;/p&gt;
@@ -213,7 +213,7 @@
 &lt;ol&gt;
 &lt;li&gt;Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="w2q1" src="../images/w2q1_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(a) Find the vector &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; using the vector subtraction law, and then calculate its magnitude and direction.(you can use angle to describe the&amp;nbsp;direction)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;By using subtraction law, we can easily&amp;nbsp;get:&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}-\vec{b} = (3,4) - (2,-2) = (1,6)$$&lt;/div&gt;
@@ -222,7 +222,7 @@
 &lt;p&gt;To find the direction, we can use the inverse trig&amp;nbsp;function:&lt;/p&gt;
 &lt;div class="math"&gt;$$\theta = \arctan(6/1) = \arctan(6) $$&lt;/div&gt;
 &lt;p&gt;And that is roughly East 80.5 degree North.
-&lt;img alt="w2q1_ans" src="../images/w2q1_ans.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q1_ans" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_ans.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b) Without using the law of vector addition and subtraction, find the magnitude and the direction of &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This time no subtraction allowed. One way we can solve this is to use the cosine&amp;nbsp;law.&lt;/p&gt;
@@ -232,14 +232,14 @@
 &lt;p&gt;Then we find the angle between&amp;nbsp;them:&lt;/p&gt;
 &lt;div class="math"&gt;$$\theta = 53^\circ + 45^\circ = 98^\circ $$&lt;/div&gt;
 &lt;p&gt;
-&lt;img alt="w2q1p2" src="../images/w2q1p2.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q1p2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1p2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;then we use cosine&amp;nbsp;law:&lt;/p&gt;
 &lt;div class="math"&gt;$$ c^2 = a^2 + b^2 - 2ab\cos(\theta)$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ c = \sqrt{25+8-2\times5\times2\sqrt{2}\times \cos({98^\circ}}) = \sqrt{36.96} = 6.079$$&lt;/div&gt;
 &lt;p&gt;To get the angle, we can first use sine law to get the angle for other two angle in the&amp;nbsp;triangle:&lt;/p&gt;
 &lt;div class="math"&gt;$$\angle{A} = \arcsin(\frac{\sin(98^\circ)\times5}{6.079})= 54.5^\circ$$&lt;/div&gt;
 &lt;p&gt;
-&lt;img alt="w2q1p22" src="../images/w2q1p22.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q1p22" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1p22.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Then we can calculate the angle between &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; and the horizontal&amp;nbsp;line:&lt;/p&gt;
 &lt;div class="math"&gt;$$\theta = 180^\circ-45^\circ-54.5^\circ = 80.5^\circ$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;(c) compare your result from part(a) and part(b). Ask yourself which one you&amp;nbsp;prefer.&lt;/strong&gt;&lt;/p&gt;
@@ -248,10 +248,10 @@
 &lt;ol&gt;
 &lt;li&gt;You are play chess on a 2d Cartesian plane. Say your knight is located at the corner of the chess board(the origin) and there is a juicy queen sitting at (6,8). Reminder: The knight&amp;#8217;s movement is unique: it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an&amp;nbsp;L).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="w2q2_question" src="../images/w2q2_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2_question" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(a) Let&amp;#8217;s assume your opponent is quite dumb, so he just don&amp;#8217;t like to move the queen. Now how do you move your knight to kill the&amp;nbsp;queen? &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;There are multiple ways to do this, here I will only show one way:
-&lt;img alt="w2q2p1" src="../images/w2q2p1.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q2p1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2p1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b) We can use the vector notation to explain the movement of knight. For example, if we want to move the knight to (3,3), we can&amp;nbsp;do:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$(3,3) = 1*(2,1) + 1*(1,2)$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Now, rewrite your result from (a) using vector addition and scalar&amp;nbsp;multiplication.&lt;/strong&gt;&lt;/p&gt;
@@ -259,9 +259,9 @@
 &lt;div class="math"&gt;$$(6,8) = 1*(-2,1) + 3*(2,1)+ 2*(1,2)$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;(c) Can you prove that knight can go to any location on the chess&amp;nbsp;board?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;To prove the knight can go to any location, we have to design a path for any location (a,b). One way to do this is to find a path for the knight to go to (1,0), then repeat it a times to get to the position (a,0). After that, find a path for the knight to go to (0,1), then repeat it b times to get to the position (a,b). the below diagram shows how to jump to (1,0) and (0,1)&amp;nbsp;respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q2p2" src="../images/w2q2p2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2p2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2p2.png" /&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$(1,0) = (1,2) + (2,-1)+ (-2,-1)$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w2q2p3" src="../images/w2q2p3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2p3" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2p3.png" /&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$(0,1) = (2,1) + (-1,2)+ (-1,-2)$$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

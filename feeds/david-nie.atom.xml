@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - David Nie</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/david-nie.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-09-11T10:20:00-04:00</updated><subtitle>By David Nie</subtitle><entry><title>1-1 About this note</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/1-1-about-this-note" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/1-1-about-this-note</id><summary type="html">&lt;h1 id="a-welcome-from-david"&gt;A Welcome from David&lt;a class="headerlink" href="#a-welcome-from-david" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - David Nie</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/david-nie.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>1-1 About this note</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/1-1-about-this-note" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/1-1-about-this-note</id><summary type="html">&lt;h1 id="a-welcome-from-david"&gt;A Welcome from David&lt;a class="headerlink" href="#a-welcome-from-david" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Hello everybody! I am very happy that you chose to go through my&amp;nbsp;note.&lt;/p&gt;
 &lt;p&gt;Linear algebra is a fantastic branch of math and no need to say, most of the students don&amp;#8217;t understand what is going on even after the final exam of freshman yea …&lt;/p&gt;</summary><content type="html">&lt;h1 id="a-welcome-from-david"&gt;A Welcome from David&lt;a class="headerlink" href="#a-welcome-from-david" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Hello everybody! I am very happy that you chose to go through my&amp;nbsp;note.&lt;/p&gt;
@@ -16,7 +16,7 @@
 &lt;p&gt;Hopefully, everyone can get a much better understanding after reading the note and be able to perform some useful calculations. In the end, I would like to quote what Dieudonné said in his &amp;#8220;Foundations of Modern Analysis, Vol.&amp;nbsp;1&amp;#8221;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is hardly any theory which is more elementary (than linear algebra), in spite of the fact that generations of professors and textbook writers have obscured its simplicity by preposterous calculations with&amp;nbsp;matrices.&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Chapter 1"></category></entry><entry><title>1-2 prereq</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/1-2-prereq" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/1-2-prereq</id><summary type="html">&lt;p&gt;One of the fascinate thing about Linear Algebra is that the prerequisites of this course is nearly nothing. When I first learn the linear algebra, I was amazed by the fact that you can do so many thing with just some simple integer number operation. But to catch the essence …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the fascinate thing about Linear Algebra is that the prerequisites of this course is nearly nothing. When I first learn the linear algebra, I was amazed by the fact that you can do so many thing with just some simple integer number operation. But to catch the essence of linear algebra, we need to review some basic algebra that everybody do in grade 8: The linear&amp;nbsp;equation.&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="Chapter 1"></category></entry><entry><title>1-2 prereq</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/1-2-prereq" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/1-2-prereq</id><summary type="html">&lt;p&gt;One of the fascinate thing about Linear Algebra is that the prerequisites of this course is nearly nothing. When I first learn the linear algebra, I was amazed by the fact that you can do so many thing with just some simple integer number operation. But to catch the essence …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the fascinate thing about Linear Algebra is that the prerequisites of this course is nearly nothing. When I first learn the linear algebra, I was amazed by the fact that you can do so many thing with just some simple integer number operation. But to catch the essence of linear algebra, we need to review some basic algebra that everybody do in grade 8: The linear&amp;nbsp;equation.&lt;/p&gt;
 &lt;p&gt;We all learned the linear equations, the simple algebraic expression that somehow describe the shape of a line in Cartesian plane. The algebra&amp;nbsp;expression:&lt;/p&gt;
 &lt;div class="math"&gt;$$y=mx+b$$&lt;/div&gt;
 &lt;p&gt;We call this slope-intercept form. We can also rearrange the equation and write down the same thing with a expression looks&amp;nbsp;like:&lt;/p&gt;
@@ -112,7 +112,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 1"></category></entry><entry><title>2-1 Vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-1-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/2-1-vector</id><summary type="html">&lt;h1 id="what-is-a-vector-looks-like"&gt;What is a vector looks like?&lt;a class="headerlink" href="#what-is-a-vector-looks-like" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Chapter 1"></category></entry><entry><title>2-1 Vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-1-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/2-1-vector</id><summary type="html">&lt;h1 id="what-is-a-vector-looks-like"&gt;What is a vector looks like?&lt;a class="headerlink" href="#what-is-a-vector-looks-like" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Linear algebra begin with a simple concept in physics, more specifically mechanics: the vector. Understanding vector is the first step to understand linear algebra. To do this, we have to visit three different place, since it has different meaning in different&amp;nbsp;field. &lt;/p&gt;
 &lt;p&gt;In physics …&lt;/p&gt;</summary><content type="html">&lt;h1 id="what-is-a-vector-looks-like"&gt;What is a vector looks like?&lt;a class="headerlink" href="#what-is-a-vector-looks-like" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Linear algebra begin with a simple concept in physics, more specifically mechanics: the vector. Understanding vector is the first step to understand linear algebra. To do this, we have to visit three different place, since it has different meaning in different&amp;nbsp;field. &lt;/p&gt;
@@ -193,7 +193,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-2 Adding vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-2-adding-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/2-2-adding-vector</id><summary type="html">&lt;h1 id="vector-addition-subtraction-and-scalar-multiplication"&gt;Vector addition, subtraction and Scalar multiplication&lt;a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-2 Adding vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-2-adding-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/2-2-adding-vector</id><summary type="html">&lt;h1 id="vector-addition-subtraction-and-scalar-multiplication"&gt;Vector addition, subtraction and Scalar multiplication&lt;a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do&amp;nbsp;that?&lt;/p&gt;
 &lt;p&gt;Imaging you are walking on a 2d plane and you start at the origin. Say there is a …&lt;/p&gt;</summary><content type="html">&lt;h1 id="vector-addition-subtraction-and-scalar-multiplication"&gt;Vector addition, subtraction and Scalar multiplication&lt;a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do&amp;nbsp;that?&lt;/p&gt;
@@ -201,14 +201,14 @@
 &lt;div class="math"&gt;$$ \vec{a} = (2,2)$$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w2vector1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2vector1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Then you heard someone yelling at you. The sound is coming from your right. So you walk to this person and return the penny to him unwillingly. Notice that if you look from above, the direction of this motion is Southeast because your moving direction is Northeast at the beginning. For simplicity, let say you walked exactly &lt;span class="math"&gt;\(\sqrt{2}\)&lt;/span&gt;&amp;nbsp;unit.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2vector2" src="../images/w2vector2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2vector2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2vector2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Now we need to see what is you second motion. As we learned before, moving a vector don&amp;#8217;t change the vector itself, so if we move this vector and place it on the origin, we can see the tip of the vector land exactly on the point&amp;nbsp;(1,-1).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2gif1" src="../images/w2gif1.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2gif1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2gif1.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So we do the same thing and record this motion using&amp;nbsp;vector:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$ \vec{b} = (1,-1)$$&lt;/div&gt;
 &lt;p&gt;Now we can finally ask ourselves: what is the meaning of adding this two vector &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt;? The answer is quite straightforward. The first motion is &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and right after that you did the second motion &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt;. If you combine these two motions and only look at the result of them, it looks like you just walked to the final point where you talked to the guy who thinks you stealed his&amp;nbsp;penny.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2gif2" src="../images/w2gif2.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2gif2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2gif2.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So how do we calculate the result? It is very obvious to see that the tip of &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; is sitting at point (3,1). Therefore the result is&amp;nbsp;just:&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}+\vec{b}= \vec{c} = (3,1)$$&lt;/div&gt;
 &lt;p&gt;If you watch carefully, you can find that the x coordinate of the result is just happens to be the result of adding both x&amp;nbsp;coordinate:&lt;/p&gt;
@@ -217,14 +217,14 @@
 &lt;div class="math"&gt;$$c_y = a_y + b_y = 2-1 = 1$$&lt;/div&gt;
 &lt;p&gt;The reason is because we placed everything inside the Cartesian&amp;nbsp;coordinate. &lt;/p&gt;
 &lt;p&gt;If we treat the x coordinate and the y coordinate as vectors sitting exactly on the x and y axis, then every vector can be represent as an addition of those&amp;nbsp;vectors!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2vectoradd" src="../images/w2vectoradd.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2vectoradd" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2vectoradd.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Once we realized that, we can reverse the addition and break down our &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt;. Then we add all the x direction vectors, do the same thing on y direction vectors. We will end up with two sums, one for x direction and one for y direction. So, our job is done! Because the way we write down vector is just to write down their x and y&amp;nbsp;components.&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}+\vec{b}= (\color{red}2,\color{blue}2) + (\color{red}1,\color{blue}{-1}) = (\color{red}3,\color{blue}1)$$&lt;/div&gt;
 &lt;hr /&gt;
 &lt;p&gt;Next we are going to do some multiplication. Just like number multiplication, the multiplication is just adding the same thing many many times. Luckily, we can also do that in vector. Again, take &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; from previous section as an&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$ 2\times\vec{a} = 2\times(\color{red}2,\color{red}2) = (2\times\color{red}2,2\times\color{red}2) = (4,4)$$&lt;/div&gt;
 &lt;p&gt;We can also multiply a negative scalar like &lt;span class="math"&gt;\(-1\)&lt;/span&gt;. Keep in mind, multiply negative value will reverse the direction of the vector.
-&lt;img alt="w2negative" src="../images/w2negative.gif" /&gt;&lt;/p&gt;
+&lt;img alt="w2negative" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2negative.gif" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;So far we know how to add any two vectors and multiply any vector with a scalar, it is a good time to introduce the&amp;nbsp;subtraction. &lt;/p&gt;
 &lt;p&gt;To calculate, it is fairly easy. As you expected, instead of adding the coordinate like you did before, this time you just&amp;nbsp;subtract:&lt;/p&gt;
@@ -232,7 +232,7 @@
 &lt;p&gt;To visualize it just like we did for addition, we can break down subtraction into addition and multiplication of &lt;span class="math"&gt;\(-1\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}-\vec{b} = \vec{a} + (\color{red}{-1}\times\vec{b})$$&lt;/div&gt;
 &lt;p&gt;
-&lt;img alt="w2subtract" src="../images/w2subtract.gif" /&gt;&lt;/p&gt;
+&lt;img alt="w2subtract" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2subtract.gif" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;And that is the end of the first&amp;nbsp;chapter! &lt;/p&gt;
 &lt;p&gt;You will see more examples and fun applications in the assignment. The addition and subtraction rules looks easy but it has a huge impact to more important concepts like linear combination, span, and&amp;nbsp;basis. &lt;/p&gt;
@@ -299,12 +299,12 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-3-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/2-3-assignment</id><summary type="html">&lt;p&gt;1.Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q1" src="../images/w2q1_question.png" /&gt;&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>2-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/2-3-assignment" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/2-3-assignment</id><summary type="html">&lt;p&gt;1.Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(a) Find the vector &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; using the vector subtraction law, and then calculate its magnitude and direction.(you can use angle to describe the&amp;nbsp;direction)&lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(b) Without using the result from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;1.Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q1" src="../images/w2q1_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(a) Find the vector &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; using the vector subtraction law, and then calculate its magnitude and direction.(you can use angle to describe the&amp;nbsp;direction)&lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(b) Without using the result from (a) and the law, find the magnitude and the direction of &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt;&lt;/p&gt;
@@ -313,7 +313,7 @@
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;2.You are play chess on a 2d Cartesian plane. Say your knight is located at the corner of the chess board(the origin) and there is a juicy queen sitting at (6,8). Reminder: The knight&amp;#8217;s movement is unique: it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an&amp;nbsp;L).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q2_question" src="../images/w2q2_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2_question" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(a) Let&amp;#8217;s assume your opponent is quite dumb, so he just don&amp;#8217;t like to move the queen. Now how do you move your knight to kill the&amp;nbsp;queen? &lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;(b) We can use the vector notation to explain the movement of knight. For example, if we want to move the knight to (3,3), we can&amp;nbsp;do:&lt;/p&gt;
@@ -326,7 +326,7 @@
 &lt;ol&gt;
 &lt;li&gt;Two vectors &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\vec{b}\)&lt;/span&gt; are located at the origin as showing&amp;nbsp;below:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="w2q1" src="../images/w2q1_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(a) Find the vector &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; using the vector subtraction law, and then calculate its magnitude and direction.(you can use angle to describe the&amp;nbsp;direction)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;By using subtraction law, we can easily&amp;nbsp;get:&lt;/p&gt;
 &lt;div class="math"&gt;$$\vec{a}-\vec{b} = (3,4) - (2,-2) = (1,6)$$&lt;/div&gt;
@@ -335,7 +335,7 @@
 &lt;p&gt;To find the direction, we can use the inverse trig&amp;nbsp;function:&lt;/p&gt;
 &lt;div class="math"&gt;$$\theta = \arctan(6/1) = \arctan(6) $$&lt;/div&gt;
 &lt;p&gt;And that is roughly East 80.5 degree North.
-&lt;img alt="w2q1_ans" src="../images/w2q1_ans.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q1_ans" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1_ans.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b) Without using the law of vector addition and subtraction, find the magnitude and the direction of &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This time no subtraction allowed. One way we can solve this is to use the cosine&amp;nbsp;law.&lt;/p&gt;
@@ -345,14 +345,14 @@
 &lt;p&gt;Then we find the angle between&amp;nbsp;them:&lt;/p&gt;
 &lt;div class="math"&gt;$$\theta = 53^\circ + 45^\circ = 98^\circ $$&lt;/div&gt;
 &lt;p&gt;
-&lt;img alt="w2q1p2" src="../images/w2q1p2.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q1p2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1p2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;then we use cosine&amp;nbsp;law:&lt;/p&gt;
 &lt;div class="math"&gt;$$ c^2 = a^2 + b^2 - 2ab\cos(\theta)$$&lt;/div&gt;
 &lt;div class="math"&gt;$$ c = \sqrt{25+8-2\times5\times2\sqrt{2}\times \cos({98^\circ}}) = \sqrt{36.96} = 6.079$$&lt;/div&gt;
 &lt;p&gt;To get the angle, we can first use sine law to get the angle for other two angle in the&amp;nbsp;triangle:&lt;/p&gt;
 &lt;div class="math"&gt;$$\angle{A} = \arcsin(\frac{\sin(98^\circ)\times5}{6.079})= 54.5^\circ$$&lt;/div&gt;
 &lt;p&gt;
-&lt;img alt="w2q1p22" src="../images/w2q1p22.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q1p22" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q1p22.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Then we can calculate the angle between &lt;span class="math"&gt;\(\vec{a}-\vec{b}\)&lt;/span&gt; and the horizontal&amp;nbsp;line:&lt;/p&gt;
 &lt;div class="math"&gt;$$\theta = 180^\circ-45^\circ-54.5^\circ = 80.5^\circ$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;(c) compare your result from part(a) and part(b). Ask yourself which one you&amp;nbsp;prefer.&lt;/strong&gt;&lt;/p&gt;
@@ -361,10 +361,10 @@
 &lt;ol&gt;
 &lt;li&gt;You are play chess on a 2d Cartesian plane. Say your knight is located at the corner of the chess board(the origin) and there is a juicy queen sitting at (6,8). Reminder: The knight&amp;#8217;s movement is unique: it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an&amp;nbsp;L).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="w2q2_question" src="../images/w2q2_question.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2_question" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2_question.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(a) Let&amp;#8217;s assume your opponent is quite dumb, so he just don&amp;#8217;t like to move the queen. Now how do you move your knight to kill the&amp;nbsp;queen? &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;There are multiple ways to do this, here I will only show one way:
-&lt;img alt="w2q2p1" src="../images/w2q2p1.png" /&gt;&lt;/p&gt;
+&lt;img alt="w2q2p1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2p1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b) We can use the vector notation to explain the movement of knight. For example, if we want to move the knight to (3,3), we can&amp;nbsp;do:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$(3,3) = 1*(2,1) + 1*(1,2)$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Now, rewrite your result from (a) using vector addition and scalar&amp;nbsp;multiplication.&lt;/strong&gt;&lt;/p&gt;
@@ -372,9 +372,9 @@
 &lt;div class="math"&gt;$$(6,8) = 1*(-2,1) + 3*(2,1)+ 2*(1,2)$$&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;(c) Can you prove that knight can go to any location on the chess&amp;nbsp;board?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;To prove the knight can go to any location, we have to design a path for any location (a,b). One way to do this is to find a path for the knight to go to (1,0), then repeat it a times to get to the position (a,0). After that, find a path for the knight to go to (0,1), then repeat it b times to get to the position (a,b). the below diagram shows how to jump to (1,0) and (0,1)&amp;nbsp;respectively.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w2q2p2" src="../images/w2q2p2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2p2" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2p2.png" /&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$(1,0) = (1,2) + (2,-1)+ (-2,-1)$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w2q2p3" src="../images/w2q2p3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w2q2p3" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w2q2p3.png" /&gt;&lt;/p&gt;
 &lt;div class="math"&gt;$$(0,1) = (2,1) + (-1,2)+ (-1,-2)$$&lt;/div&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -437,7 +437,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>3-1 Linear combination of vectors</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors</id><summary type="html">&lt;p&gt;From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>3-1 Linear combination of vectors</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors</id><summary type="html">&lt;p&gt;From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
 &lt;p&gt;Say we have a set of many 2d vectors. Let&amp;#8217;s call …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
 &lt;p&gt;Say we have a set of many 2d vectors. Let&amp;#8217;s call&amp;nbsp;them:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n$$&lt;/div&gt;
@@ -511,7 +511,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-2 Span of vectors and space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space</id><summary type="html">&lt;p&gt;As we just learned from last section, we can create a new vector by linear combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
+&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-2 Span of vectors and space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space</id><summary type="html">&lt;p&gt;As we just learned from last section, we can create a new vector by linear combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s go back to the beginning. Before we learn any linear algebra, we mentioned the lines in three dimension space. We find that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we just learned from last section, we can create a new vector by linear combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s go back to the beginning. Before we learn any linear algebra, we mentioned the lines in three dimension space. We find that describing lines in 2d Cartesian plane is much easier than do the same thing in 3d space. So can we find a new way to describe lines, planes or even space using linear&amp;nbsp;combination?&lt;/p&gt;
 &lt;p&gt;Of course! But there is one thing we need to consider. The linear combination of vectors will only give you another vector, but we want more than just one&amp;nbsp;vector.&lt;/p&gt;
@@ -520,12 +520,12 @@
 &lt;p&gt;if we do a linear combination of only this vector, we can get a new vector by scalar&amp;nbsp;multiplication:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \pmb{v}_{new} = (1,2)\times2 = (2,4)$$&lt;/div&gt;
 &lt;p&gt;we can do this for other numbers too, but you will see that no matter how you change the number, you will always end up with the vector on the same&amp;nbsp;line.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w3vectors" src="../images/w3vectors.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w3vectors" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3vectors.png" /&gt;&lt;/p&gt;
 &lt;p&gt;If you collect all the possible linear combination, you will just get a&amp;nbsp;line. &lt;/p&gt;
 &lt;p&gt;In linear algebra, we have a specific name for such collection of vectors: The &lt;strong&gt;span of vector&amp;nbsp;(2,1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now, let&amp;#8217;s see what can we get if we span two vector. For example, the span of vector (1,0) and (0,1). You will soon realize that one can easily get any vector in 2d plane by linear combining (1,0) and&amp;nbsp;(0,1):&lt;/p&gt;
 &lt;div class="math"&gt;$$(a,b) = a(1,0) + b(0,1)$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w3spanspace" src="../images/w3spanspace.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w3spanspace" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3spanspace.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So, span of vector (1,0) and (0,1) will give you the whole 2d&amp;nbsp;plane. &lt;/p&gt;
 &lt;p&gt;You can imaging that if we graph the span of more vectors, we can end up with any multidimensional&amp;nbsp;space. &lt;/p&gt;
 &lt;p&gt;For example, to describe a three dimension space, we can pick three vectors lying in the&amp;nbsp;space:&lt;/p&gt;
@@ -545,7 +545,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 &lt;div class="math"&gt;$$(0,4) = 4(0,1)$$&lt;/div&gt;
 &lt;p&gt;If that is the case, we call them &lt;strong&gt;&amp;#8220;Linear Dependent vectors&amp;#8221;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In 3d, things are getting a little more complicated, because finding one vector is the linear combination of other two algebraically are not easy. So, we need more useful tools to calculate. However, we can see what happens when we have one vector is the linear combination of other two in 3d space. Let&amp;#8217;s look at the graph&amp;nbsp;below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w3spanplane" src="../images/w3spanplane.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w3spanplane" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3spanplane.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The vectors shown above&amp;nbsp;are:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \pmb{v}_1 = (1,1,-2) $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ \pmb{v}_2 = (-1,2,5) $$&lt;/div&gt;
@@ -614,14 +614,14 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-3 Basis of space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-3-basis-of-space" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/3-3-basis-of-space</id><summary type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we will have our definition of&amp;nbsp;basis:&lt;/p&gt;
+&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-3 Basis of space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-3-basis-of-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-3-basis-of-space</id><summary type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we will have our definition of&amp;nbsp;basis:&lt;/p&gt;
 &lt;p&gt;We called a set of vectors &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; is a basis of vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt; if every element in &lt;span class="math"&gt;\(V\)&lt;/span&gt; can be written as a unique &lt;strong&gt;linear combination&lt;/strong&gt; of vectors in &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; and all the vectors in &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; is &lt;strong&gt;linear independent&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;For example, &lt;span class="math"&gt;\(set[(0,1),(1,0)]\)&lt;/span&gt; is a basis of 2d vector space (real vector space) since any vector in the vector space (a,b) can be written as a unique linear combination of &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt;. Not only that, &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; cannot be written as a linear combination of each others, so they are linear&amp;nbsp;independent.&lt;/p&gt;
 &lt;p&gt;If the set spans the vector space but the vectors in it are not linear independent. We can still called them the generating set or the spanning set of vector space. The name comes from the fact that the vectors &amp;#8220;generate&amp;#8221; the whole&amp;nbsp;space.&lt;/p&gt;
 &lt;p&gt;In linear algebra, we can use the basis to represent the corresponding vector space. But what is the actual difference between two different basis if they describe the exact same vector&amp;nbsp;space?&lt;/p&gt;
 &lt;p&gt;We can construct the 2d Cartesian plane use &lt;span class="math"&gt;\(set[(0,1),(1,0)]\)&lt;/span&gt;, we can also do the same thing with &lt;span class="math"&gt;\(set[(1,1),(1,0)]\)&lt;/span&gt;. So what is the point of writing vector space in terms of different basis? Is it just for&amp;nbsp;fun?&lt;/p&gt;
 &lt;p&gt;Answer is of course not. In fact, this idea of presenting vector space in different basis is a huge topic in linear algebra. Change basis of a vector space will simultaneously change all the vectors in that space. To understand how the vector change in space, we have to learn the &amp;#8220;essence&amp;#8221; of linear algebra: the linear&amp;nbsp;transformation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w3changebasis" src="../images/w3changebasis.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w3changebasis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3changebasis.gif" /&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -683,92 +683,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-4 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-4-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/3-4-assignment</id><summary type="html">&lt;p&gt;1.Let &lt;span class="math"&gt;\(A\)&lt;/span&gt;, &lt;span class="math"&gt;\(B\)&lt;/span&gt; be two vectors in 2d real vector space &lt;span class="math"&gt;\(\mathbb{R}_2\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(a)If &lt;span class="math"&gt;\(A = (1,2)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (1,4)\)&lt;/span&gt;, are they linear independent or not? If they are, can you write (4,4) as a linear combination of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt;?&lt;/p&gt;
-&lt;p&gt;(b) If &lt;span class="math"&gt;\(A = (x …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;1.Let &lt;span class="math"&gt;\(A\)&lt;/span&gt;, &lt;span class="math"&gt;\(B\)&lt;/span&gt; be two vectors in 2d real vector space &lt;span class="math"&gt;\(\mathbb{R}_2\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(a)If &lt;span class="math"&gt;\(A = (1,2)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (1,4)\)&lt;/span&gt;, are they linear independent or not? If they are, can you write (4,4) as a linear combination of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt;?&lt;/p&gt;
-&lt;p&gt;(b) If &lt;span class="math"&gt;\(A = (x,y)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (x,2y)\)&lt;/span&gt;, what &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; value will make &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; linear&amp;nbsp;dependent?&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;2.Let &lt;span class="math"&gt;\(C\)&lt;/span&gt;, &lt;span class="math"&gt;\(D\)&lt;/span&gt;, and &lt;span class="math"&gt;\(E\)&lt;/span&gt; be three vectors in 3d real vector space &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(a) Let &lt;span class="math"&gt;\(C=(1,2,3)\)&lt;/span&gt;, &lt;span class="math"&gt;\(D=(1,3,1)\)&lt;/span&gt;, and &lt;span class="math"&gt;\(E=(-1,-1,-5)\)&lt;/span&gt;. Show that set &lt;span class="math"&gt;\([C, D, E]\)&lt;/span&gt; cannot be a basis of &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(b) Which vector in (a) you should change in order to obtain a basis of &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;? &lt;/p&gt;
-&lt;p&gt;(c) Now, change the vector and prove it is a basis of &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;3.The polynomial &lt;span class="math"&gt;\(P(x) = a_0 + a_1x + a_2x^2+ ... + a_nx^n\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(a) Show that P(x) is a linear combination of some&amp;nbsp;monomials.&lt;/p&gt;
-&lt;p&gt;(b) Can you find a basis for the polynomial vector space? If so, prove that they are indeed a basis for the&amp;nbsp;space.&lt;/p&gt;
-&lt;p&gt;(c) What is the dimention of the polynomial vector&amp;nbsp;space?&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;4.Orthonormal basis is a special kind of basis. It requires all basis vectors to be orthogonal to each other and has length of&amp;nbsp;1.&lt;/p&gt;
-&lt;p&gt;(a) Show that &lt;span class="math"&gt;\(set[(1,0,0),(0,1,0),(0,0,1)]\)&lt;/span&gt; is a orthonormal basis for &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;(b) Find another orthonormal basis for &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt; (Try not to use the vectors on the&amp;nbsp;axis)&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h1 id="answer-sheet"&gt;Answer sheet&lt;a class="headerlink" href="#answer-sheet" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;1.Let &lt;span class="math"&gt;\(A\)&lt;/span&gt;, &lt;span class="math"&gt;\(B\)&lt;/span&gt; be two vectors in 2d real vector space &lt;span class="math"&gt;\(\mathbb{R}_2\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(a)If &lt;span class="math"&gt;\(A = (1,2)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (1,4)\)&lt;/span&gt;, are they linear independent or not? If they are, can you write (4,4) as a linear combination of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt;?&lt;/p&gt;
-&lt;p&gt;(b) If &lt;span class="math"&gt;\(A = (x,y)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (x,2y)\)&lt;/span&gt;, what &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; value will make &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; linear&amp;nbsp;dependent?&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>4-1 Linear Transformation</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-1-linear-transformation" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/4-1-linear-transformation</id><summary type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
+&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>4-1 Linear Transformation</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-1-linear-transformation" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-1-linear-transformation</id><summary type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is the relationship between linear transformation and matrix&amp;nbsp;multiplication.&lt;/p&gt;
 &lt;p&gt;The two key words are &amp;#8220;Linear&amp;#8221; and &amp;#8220;Transformation&amp;#8221;. We will began with the word transformation. In high school, transformation usually refer as the change from one graph to another graph. In here, the transformation can be understand as a function, a map that take in one vector and returns another one. The reason why we don&amp;#8217;t call it function is because we are interested in the &amp;#8220;movement&amp;#8221;. Just like you can visualize the graph being &amp;#8220;compressed&amp;#8221; or &amp;#8220;stretched&amp;#8221;. A linear transformation can be visualized as a vector &amp;#8220;moves&amp;#8221; to another&amp;nbsp;vector.&lt;/p&gt;
@@ -793,10 +708,10 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 &lt;p&gt;lovely! Both rules are satisfied. We can now say that the transformation of doing nothing is a linear&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;but that is way too boring, let&amp;#8217;s do a interesting one together: the transformation of rotating everything by 90 degrees counter&amp;nbsp;counterclockwise.&lt;/p&gt;
 &lt;p&gt;To demonstrate the transformation. I will plot the sample vector and many other vectors during the transformation. To not make the graph too crowded, I will only draw the points where the tip of the vectors landed for other&amp;nbsp;vectors.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;It seems impossible to show the additivity and homogeneity in this case. Unlike the last time, it is not easy to write down the &lt;span class="math"&gt;\(f(\pmb{x})\)&lt;/span&gt;. However, when you graph the transformation on the basis vectors of 2d space, things gets a lot&amp;nbsp;easier.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at how the basis vectors change under the transformation. More importantly, ask yourself whether if the basis is still a basis after the&amp;nbsp;transformation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see. the basis &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; changed to &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((-1,0)\)&lt;/span&gt;. And it looks like the new basis still works&amp;nbsp;well. &lt;/p&gt;
 &lt;p&gt;so if our vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; has x component &lt;span class="math"&gt;\(a\)&lt;/span&gt; and y component &lt;span class="math"&gt;\(b\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{x} = a(1,0)+b(0,1)$$&lt;/div&gt;
@@ -865,7 +780,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-2 Matrix multiplication with vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector</id><summary type="html">&lt;blockquote&gt;
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-2 Matrix multiplication with vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Unfortunately, no one can told you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
@@ -931,7 +846,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 0\\
 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;and as you see in the animation, the vector (1,0) indeed moves to&amp;nbsp;(0,1). &lt;/p&gt;
 &lt;p&gt;So what if we want to transform something harder? let&amp;#8217;s rotate the vector&amp;nbsp;(a,b):&lt;/p&gt;
 &lt;div class="math"&gt;$$T(\begin{bmatrix}
@@ -956,11 +871,11 @@ a + 0
 -b\\
 a
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;We can confirm this result is also true by looking at the&amp;nbsp;animation.&lt;/p&gt;
 &lt;p&gt;As you already guessed it, the square thing is called matrix and this operation we did is called the matrix&amp;nbsp;multiplication. &lt;/p&gt;
 &lt;p&gt;Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before, because usually the matrix multiplication was introduced like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4matrixwiki" src="../images/w4matrix_multi.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4matrixwiki" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4matrix_multi.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Don&amp;#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as linear transformation of vectors is much much more intuitive than pure&amp;nbsp;algebra. &lt;/p&gt;
 &lt;p&gt;Can we figure out more things from the matrix multiplication we&amp;nbsp;defined?&lt;/p&gt;
 &lt;p&gt;First is the dimension of matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a &lt;strong&gt;2 by 2 matrix&lt;/strong&gt; or &lt;strong&gt;2x2 matrix&lt;/strong&gt;. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&amp;nbsp;columns.&lt;/p&gt;
@@ -1049,7 +964,7 @@ f
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-3-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/4-3-assignment</id><summary type="html">&lt;ol&gt;
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-3 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-3-assignment" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-3-assignment</id><summary type="html">&lt;ol&gt;
 &lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
@@ -1157,11 +1072,11 @@ f
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>5-1 intercepts problem</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>5-1 intercepts problem</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start from the simplest linear system you can imagine: line&amp;nbsp;intercepts.&lt;/p&gt;
 &lt;p&gt;Suppose we have two lines in Cartisian plane, line A and line&amp;nbsp;B:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5line_int.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_int.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Here are their&amp;nbsp;equations:&lt;/p&gt;
 &lt;div class="math"&gt;$$  
 \begin{cases}
@@ -1173,7 +1088,7 @@ $$&lt;/div&gt;
 &lt;p&gt;It is fairly easy to see in graph that these two lines do intersect and they intersect at point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it under a&amp;nbsp;minute.&lt;/p&gt;
 &lt;p&gt;If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving system of linear equations. Why? I will give you two&amp;nbsp;reasons:&lt;/p&gt;
 &lt;p&gt;First, how do we solve the question with more than 2&amp;nbsp;dimensions? &lt;/p&gt;
-&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d&amp;#8230; That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long, but also nasty to&amp;nbsp;read.&lt;/p&gt;
+&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long, but also nasty to&amp;nbsp;read.&lt;/p&gt;
 &lt;p&gt;Second, how do we know if there is a&amp;nbsp;solution?&lt;/p&gt;
 &lt;p&gt;Assume you are working on this 100 dimension linear system, it took you 3 days to realize that there is no solution! How frustrated is&amp;nbsp;that! &lt;/p&gt;
 &lt;p&gt;So, Let&amp;#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have a easy way to check whether there is a solution or&amp;nbsp;not.&lt;/p&gt;
@@ -1292,7 +1207,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-2 Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination</id><summary type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-2 Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination</id><summary type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;So what is Gaussian elimination? In short, it is a algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;So what is Gaussian elimination? In short, it is a algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the procedure, no matter how hard the linear systems are, you can solve it&amp;nbsp;guaranteed.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s go through a simple&amp;nbsp;example:
@@ -1816,16 +1731,16 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-3 Column space and null space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space</id><summary type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions are there before we solve the&amp;nbsp;equations.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-3 Column space and null space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space</id><summary type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions are there before we solve the&amp;nbsp;equations.&lt;/p&gt;
 &lt;p&gt;This sounds great, but how should we do this? Let&amp;#8217;s start from 2d and then move on to higher&amp;nbsp;dimension.&lt;/p&gt;
 &lt;p&gt;Our linear equations on plane looks like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&amp;nbsp;lines.&lt;/p&gt;
 &lt;p&gt;So what are the&amp;nbsp;cases?&lt;/p&gt;
 &lt;p&gt;The first case is obvious, two lines intersect at one point. In this case, we have exactly &lt;strong&gt;one&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5line_int.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_int.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The second case is two parallel lines. In this case, we have &lt;strong&gt;zero&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5line_para.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_para.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are &lt;strong&gt;infinite&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5same_line.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5same_line.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;I personally don&amp;#8217;t like to say there are infinite many solution. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinite many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &amp;#8220;there are infinite many solutions&amp;#8221; won&amp;#8217;t give you enough&amp;nbsp;information. &lt;/p&gt;
 &lt;p&gt;If we write these three different cases in augment matrix, you will see that the second one and the third one are very&amp;nbsp;special:&lt;/p&gt;
 &lt;div class="math"&gt;$$\left[
@@ -1901,7 +1816,7 @@ $$&lt;/div&gt;
 2 &amp;amp;-1
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;So what is the transformation looks&amp;nbsp;like?&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5linear_trans.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5linear_trans.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, all the vectors are transformed onto a line &lt;span class="math"&gt;\(y = x\)&lt;/span&gt;. This makes sense since the transformation returns exactly same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; that gives you &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;. Then there are two possible results: One is that your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; actually landed on this line so you get some solution. The other case is your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is unfortunately not on this line so the system is inconsistent, no such &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; can give you that &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; vector after the&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;Now why do you have multiple solutions for one &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;? Well, If we just look at the transformation itself, I looks like all the vectors in 2d space are &lt;strong&gt;projected&lt;/strong&gt; on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects returns exactly same&amp;nbsp;shadow.&lt;/p&gt;
 &lt;p&gt;But this is only 2 dimension. What if we have more than 2? what if we have dimension of 10? how do we understand the transformation that happens in 100 dimension? Obviously we need more tools to do that. So, let&amp;#8217;s use the knowledge of span and basis&amp;nbsp;vector!&lt;/p&gt;
@@ -1984,7 +1899,7 @@ y
 \end{bmatrix} \right) $$&lt;/div&gt;
 &lt;p&gt;We actually have name for this space, we call it &lt;strong&gt;null space&lt;/strong&gt; or &lt;strong&gt;Kernel&lt;/strong&gt;. &amp;#8220;Null&amp;#8221; means &amp;#8220;nothing&amp;#8221;, Of course this does not means there is nothing in the space. It means the collection of all vectors that are transformed to &amp;#8220;nothing&amp;#8221;, the zero&amp;nbsp;vector.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&amp;nbsp;dimensional.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5nullspace.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5nullspace.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solution from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&amp;nbsp;one.&lt;/p&gt;
 &lt;p&gt;By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solution or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describes one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&amp;nbsp;algebra.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -2048,7 +1963,7 @@ y
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-4 The cheat: inverse matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix</id><summary type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-4 The cheat: inverse matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix</id><summary type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at our equation in matrix&amp;nbsp;form:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
@@ -2092,7 +2007,7 @@ y
 0\\
 1\\
 \vdots
-\end{bmatrix} ... \right)$$&lt;/div&gt;
+\end{bmatrix} {static}. \right)$$&lt;/div&gt;
 &lt;p&gt;For example, a 3 by 3 identity matrix should looks like&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 0 &amp;amp; 0\\
@@ -2260,9 +2175,9 @@ $$&lt;/div&gt;
 2 &amp;amp; -1\\
 2 &amp;amp; -1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5linear_trans.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5linear_trans.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;Do they have inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vector on the&amp;nbsp;plane.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5inverse.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5inverse.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;That is not a linear transformation can do. It&amp;#8217;s like functions, for one x value, you can only get one y value. So for one vector input, you can only get one vector&amp;nbsp;output.&lt;/p&gt;
 &lt;p&gt;In practice, we will see that finding the inverse in order to solve linear system is actually not very convenient. Nowadays, computer use other methods like &lt;strong&gt;&lt;span class="caps"&gt;LU&lt;/span&gt; decomposition&lt;/strong&gt;, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having inverse matrix is a&amp;nbsp;must.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -2326,7 +2241,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-5 The fundamental theorem of Linear Algebra</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-5-the-fundamental-theorem-of-linear-algebra" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/5-5-the-fundamental-theorem-of-linear-algebra</id><summary type="html">&lt;p&gt;In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part of it which also called Rank–Nullity&amp;nbsp;theorem.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-5 The fundamental theorem of Linear Algebra</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-5-the-fundamental-theorem-of-linear-algebra" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-5-the-fundamental-theorem-of-linear-algebra</id><summary type="html">&lt;p&gt;In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part of it which also called Rank–Nullity&amp;nbsp;theorem.&lt;/p&gt;
 &lt;p&gt;The name of this theorem is actually not universal. It is popularized by one of my favorite professors: &lt;a href="http://www-math.mit.edu/~gs/"&gt;Gilbert Strang&lt;/a&gt;. This name is related to the famous theorem in calculus, the fundamental theorem of Calculus. The theorem itself is not hard to prove, so if you are interested, you can try to do it. But before we dig in to the theorem, we will quickly introduce two more&amp;nbsp;concepts.&lt;/p&gt;
 &lt;p&gt;The first one is the &lt;strong&gt;Rank&lt;/strong&gt; of a matrix &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; transformation. The Rank of a matrix is defined as the dimension of its column space. For&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$A = \begin{bmatrix}
@@ -2431,7 +2346,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-6 assignments</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-6-assignments" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/5-6-assignments</id><summary type="html">&lt;ol&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-6 assignments</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-6-assignments" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-6-assignments</id><summary type="html">&lt;ol&gt;
 &lt;li&gt;Solve the linear system by using Gaussian&amp;nbsp;elimination:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
@@ -2547,7 +2462,7 @@ z
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>6-1 Matrix and matrix multiplication</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication</id><summary type="html">&lt;p&gt;In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from&amp;nbsp;basics.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>6-1 Matrix and matrix multiplication</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication</id><summary type="html">&lt;p&gt;In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from&amp;nbsp;basics.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from&amp;nbsp;basics.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at two matrix multiplication with vectors &lt;span class="math"&gt;\(A\pmb{x} = \pmb{b}\)&lt;/span&gt;&amp;nbsp;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
@@ -2647,7 +2562,7 @@ z
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-2 The “Steps” in Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination</id><summary type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into application. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-2 The “Steps” in Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination</id><summary type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into application. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
 &lt;p&gt;Remember the way we solve the linear system? We use Gaussian elimination. Let&amp;#8217;s look at a example and see if …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into application. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
 &lt;p&gt;Remember the way we solve the linear system? We use Gaussian elimination. Let&amp;#8217;s look at a example and see if we can understand the process in a new point of&amp;nbsp;view.&lt;/p&gt;
 &lt;p&gt;Assume we are going to solve the below&amp;nbsp;system:
@@ -2845,7 +2760,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-3 Row Reduced Echelon Form</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form</id><summary type="html">&lt;p&gt;We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-3 Row Reduced Echelon Form</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form</id><summary type="html">&lt;p&gt;We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
 &lt;p&gt;Assume we have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
 &lt;p&gt;Assume we have a lovely matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, where &lt;span class="math"&gt;\(A\)&lt;/span&gt; has some interesting&amp;nbsp;columns:&lt;/p&gt;
 &lt;div class="math"&gt;$$A = \begin{bmatrix}
@@ -3002,10 +2917,10 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-4 Change the basis</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-4-change-the-basis" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/6-4-change-the-basis</id><summary type="html">&lt;p&gt;Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&amp;nbsp;segment …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&amp;nbsp;segment:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w6example" src="../images/w6example.png" /&gt;&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-4 Change the basis</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-4-change-the-basis" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-4-change-the-basis</id><summary type="html">&lt;p&gt;Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&amp;nbsp;segment …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&amp;nbsp;segment:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6example.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Say we want to find the tip of the bar after a rotation of 15 degree, to do this normally takes quite a lot of work. But, if we convert the point &lt;span class="math"&gt;\((3,1)\)&lt;/span&gt; to the polar coordinate, and then we do the rotation. After that, we can covert the transformed polar coordinate into Cartesian&amp;nbsp;coordinate.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w6example" src="../images/w6rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&amp;nbsp;one? &lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&amp;#8217;s say &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The basis of Cartesian coordinate is vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
@@ -3034,7 +2949,7 @@ $$&lt;/div&gt;
 0\\
 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;&lt;img alt="w6vector" src="../images/w6vector.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6vector" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6vector.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Here we have another 2d basis create by spanning vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
 1\\
 1
@@ -3042,7 +2957,7 @@ $$&lt;/div&gt;
 -1\\
 2
 \end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w6basis" src="../images/w6basis.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6basis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6basis.png" /&gt;&lt;/p&gt;
 &lt;p&gt;In this new basis, our vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
 \color{red}2\\
 \color{red}1
@@ -3078,7 +2993,7 @@ $$&lt;/div&gt;
 1
 \end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;? &lt;/p&gt;
 &lt;p&gt;You might find the statements here are kind of confusing, so I will help you out by showing you the solution&amp;nbsp;first:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w6changebasis" src="../images/w6changebasis.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6changebasis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6changebasis.png" /&gt;&lt;/p&gt;
 &lt;p&gt;It turns out, if you take &lt;span class="math"&gt;\(\color{red}{\frac{5}{3}}\)&lt;/span&gt; of vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
 1\\
 1
@@ -3164,7 +3079,7 @@ $$&lt;/div&gt;
 2\\
 1
 \end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in different&amp;nbsp;basis:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w6any" src="../images/w6any.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6any" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6any.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;Now we know how to convert a vector in another basis, let&amp;#8217;s do something fun&amp;nbsp;here.&lt;/p&gt;
 &lt;p&gt;Assume you have some transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt; in some basis. For example, the Cartesian coordinate. The transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt; has a dimension of &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;. Let&amp;#8217;s say we have a vector lies in the Cartesian coordinate called &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt; and if you transform that vector, you will get vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$T\pmb{a} = \pmb{b}$$&lt;/div&gt;
@@ -3251,7 +3166,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>7-1 Eigenvalue and Eigenvector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-1-eigenvalue-and-eigenvector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/7-1-eigenvalue-and-eigenvector</id><summary type="html">&lt;p&gt;So far, we have been working on many matrices. We also learned that the cool notation &amp;#8220;matrix&amp;#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&amp;#8230; We can rely on matrix to do a lot of calculation that couldn&amp;#8217;t be done or hard to describe …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So far, we have been working on many matrices. We also learned that the cool notation &amp;#8220;matrix&amp;#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&amp;#8230; We can rely on matrix to do a lot of calculation that couldn&amp;#8217;t be done or hard to describe before. However, in real life, even if we use the matrix to cheat, the questions can still be really hard and tedious. In this chapter, we will be focusing on &lt;span class="caps"&gt;ONE&lt;/span&gt; way to make our life easier. Also, it turns out, this specific method has a huge impact on many many&amp;nbsp;area. &lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>7-1 Eigenvalue and Eigenvector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-1-eigenvalue-and-eigenvector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/7-1-eigenvalue-and-eigenvector</id><summary type="html">&lt;p&gt;So far, we have been working on many matrices. We also learned that the cool notation &amp;#8220;matrix&amp;#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&amp;#8230; We can rely on matrix to do a lot of calculation that couldn&amp;#8217;t be done or hard to describe …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So far, we have been working on many matrices. We also learned that the cool notation &amp;#8220;matrix&amp;#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&amp;#8230; We can rely on matrix to do a lot of calculation that couldn&amp;#8217;t be done or hard to describe before. However, in real life, even if we use the matrix to cheat, the questions can still be really hard and tedious. In this chapter, we will be focusing on &lt;span class="caps"&gt;ONE&lt;/span&gt; way to make our life easier. Also, it turns out, this specific method has a huge impact on many many&amp;nbsp;area. &lt;/p&gt;
 &lt;p&gt;Our main character has a German name: &lt;strong&gt;Eigen&lt;/strong&gt;. It is not because the guy who invent this is a German, but because David Hilbert, a German mathematician gave him this classic German name. From then, everyone start calling him&amp;nbsp;this.&lt;/p&gt;
 &lt;p&gt;Although this idea is first arose in the study of quadratic forms and differential equations, we are not going to take that approach. Instead, let&amp;#8217;s first define what it is, and then see what can this bad boy&amp;nbsp;do.&lt;/p&gt;
 &lt;p&gt;So let&amp;#8217;s look at an example&amp;nbsp;matrix:&lt;/p&gt;
@@ -3304,7 +3219,7 @@ $$&lt;/div&gt;
 &lt;p&gt;If we can find such vector and the corresponding &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; that satisfy the equation &lt;span class="math"&gt;\(A\pmb{x} = \lambda\pmb{x}\)&lt;/span&gt;. Then we call the vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; the &lt;strong&gt;Eigenvector&lt;/strong&gt; of our matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, and we call the value &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; the corresponding &lt;strong&gt;Eigenvalue&lt;/strong&gt; of the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Great, now we know what does that means algebraically. Can we visualize&amp;nbsp;this?&lt;/p&gt;
 &lt;p&gt;If you take the transformation and graph the change on different vector input, you will get something looks like&amp;nbsp;this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w6example" src="../images/trans_eigenvalue.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/trans_eigenvalue.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;As we expected, the vector&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
 -1\\
 1
@@ -3383,7 +3298,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-2 Characteristic polynomials</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials</id><summary type="html">&lt;p&gt;Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn&amp;#8217;t&amp;nbsp;answer.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-2 Characteristic polynomials</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/7-2-characteristic-polynomials</id><summary type="html">&lt;p&gt;Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn&amp;#8217;t&amp;nbsp;answer.&lt;/p&gt;
 &lt;p&gt;One, Is there always eigenvector and eigenvalues for&amp;nbsp;matrices?&lt;/p&gt;
 &lt;p&gt;Second, How do we calculate&amp;nbsp;them?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start from the definition of eigenvector and&amp;nbsp;eigenvalue:&lt;/p&gt;
@@ -3481,7 +3396,7 @@ $$&lt;/div&gt;
 &lt;p&gt;The two same &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; values case is not that interesting. In 2d, the transformation that has only one eigenvalue will looks like a shear transformation. The interesting case is when we have no real &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;&amp;nbsp;values. &lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s imaging: What kind of transformation in 2d that has no eigenvector? Having eigenvectors means there are some directions where all the vector alone that direction do not change its direction after the transformation. So, having no eigenvector means all the vector in 2d change its direction after the transformation. Did we see any of the transformation that can do&amp;nbsp;this?&lt;/p&gt;
 &lt;p&gt;Of course! Any transformation that rotate the&amp;nbsp;plane!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s take the very first linear transformation we saw. As you can see, all the vector do not end up with the same direction after the&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;If you learned the imaginary number before(don&amp;#8217;t worry if you never learn it, but I highly recommend you check it out online if you never), you will know that the quadratic that has no real solution will have imaginary solution. So our eigenvalue will be imaginary. In fact, imaginary eigenvalue will always has something to do with the rotation. However, Imaginary eigenvalue is beyond the scope of our&amp;nbsp;note.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -3545,7 +3460,7 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-3 Diagonal matrix and transpose</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-3-diagonal-matrix-and-transpose" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/7-3-diagonal-matrix-and-transpose</id><summary type="html">&lt;p&gt;From the last chapter, we learned the way to compute the eigenvectors and eigenvalues of a matrix. We also learned the geometric meaning of eigenvectors and eigenvalues. You might say: Sure, here is the eigenvectors and eigenvalues of a matrix. So what? What is the&amp;nbsp;application?&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-3 Diagonal matrix and transpose</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-3-diagonal-matrix-and-transpose" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/7-3-diagonal-matrix-and-transpose</id><summary type="html">&lt;p&gt;From the last chapter, we learned the way to compute the eigenvectors and eigenvalues of a matrix. We also learned the geometric meaning of eigenvectors and eigenvalues. You might say: Sure, here is the eigenvectors and eigenvalues of a matrix. So what? What is the&amp;nbsp;application?&lt;/p&gt;
 &lt;p&gt;Don&amp;#8217;t worry! You …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From the last chapter, we learned the way to compute the eigenvectors and eigenvalues of a matrix. We also learned the geometric meaning of eigenvectors and eigenvalues. You might say: Sure, here is the eigenvectors and eigenvalues of a matrix. So what? What is the&amp;nbsp;application?&lt;/p&gt;
 &lt;p&gt;Don&amp;#8217;t worry! You will find out the good stuff real soon. But for now, we have to learn one interesting type of matrix, which is related to the &amp;#8220;good stuff&amp;#8221;&amp;nbsp;later.&lt;/p&gt;
 &lt;p&gt;The special matrix is called the diagonal matrix. The name &amp;#8220;diagonal&amp;#8221; comes from the fact that the matrix only has non-zero entry on the &amp;#8220;diagonal&amp;#8221; of the square&amp;nbsp;matrix:&lt;/p&gt;
@@ -3659,4 +3574,89 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-4 Diagonalization</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-4-diagonalization" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/7-4-diagonalization</id><content type="html">&lt;p&gt;Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to&amp;nbsp;solve.&lt;/p&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry></feed>
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-4 Diagonalization</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-4-diagonalization" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/7-4-diagonalization</id><content type="html">&lt;p&gt;Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to&amp;nbsp;solve.&lt;/p&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>3-4 Assignment</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-4-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2010-12-03:/Linear_Algebra_note_David_Pelican/3-4-assignment</id><summary type="html">&lt;p&gt;1.Let &lt;span class="math"&gt;\(A\)&lt;/span&gt;, &lt;span class="math"&gt;\(B\)&lt;/span&gt; be two vectors in 2d real vector space &lt;span class="math"&gt;\(\mathbb{R}_2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(a)If &lt;span class="math"&gt;\(A = (1,2)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (1,4)\)&lt;/span&gt;, are they linear independent or not? If they are, can you write (4,4) as a linear combination of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;(b) If &lt;span class="math"&gt;\(A = (x …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;1.Let &lt;span class="math"&gt;\(A\)&lt;/span&gt;, &lt;span class="math"&gt;\(B\)&lt;/span&gt; be two vectors in 2d real vector space &lt;span class="math"&gt;\(\mathbb{R}_2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(a)If &lt;span class="math"&gt;\(A = (1,2)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (1,4)\)&lt;/span&gt;, are they linear independent or not? If they are, can you write (4,4) as a linear combination of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;(b) If &lt;span class="math"&gt;\(A = (x,y)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (x,2y)\)&lt;/span&gt;, what &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; value will make &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; linear&amp;nbsp;dependent?&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;2.Let &lt;span class="math"&gt;\(C\)&lt;/span&gt;, &lt;span class="math"&gt;\(D\)&lt;/span&gt;, and &lt;span class="math"&gt;\(E\)&lt;/span&gt; be three vectors in 3d real vector space &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(a) Let &lt;span class="math"&gt;\(C=(1,2,3)\)&lt;/span&gt;, &lt;span class="math"&gt;\(D=(1,3,1)\)&lt;/span&gt;, and &lt;span class="math"&gt;\(E=(-1,-1,-5)\)&lt;/span&gt;. Show that set &lt;span class="math"&gt;\([C, D, E]\)&lt;/span&gt; cannot be a basis of &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(b) Which vector in (a) you should change in order to obtain a basis of &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;? &lt;/p&gt;
+&lt;p&gt;(c) Now, change the vector and prove it is a basis of &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;3.The polynomial &lt;span class="math"&gt;\(P(x) = a_0 + a_1x + a_2x^2+ ... + a_nx^n\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(a) Show that P(x) is a linear combination of some&amp;nbsp;monomials.&lt;/p&gt;
+&lt;p&gt;(b) Can you find a basis for the polynomial vector space? If so, prove that they are indeed a basis for the&amp;nbsp;space.&lt;/p&gt;
+&lt;p&gt;(c) What is the dimention of the polynomial vector&amp;nbsp;space?&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;4.Orthonormal basis is a special kind of basis. It requires all basis vectors to be orthogonal to each other and has length of&amp;nbsp;1.&lt;/p&gt;
+&lt;p&gt;(a) Show that &lt;span class="math"&gt;\(set[(1,0,0),(0,1,0),(0,0,1)]\)&lt;/span&gt; is a orthonormal basis for &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(b) Find another orthonormal basis for &lt;span class="math"&gt;\(\mathbb{R}_3\)&lt;/span&gt; (Try not to use the vectors on the&amp;nbsp;axis)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1 id="answer-sheet"&gt;Answer sheet&lt;a class="headerlink" href="#answer-sheet" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;1.Let &lt;span class="math"&gt;\(A\)&lt;/span&gt;, &lt;span class="math"&gt;\(B\)&lt;/span&gt; be two vectors in 2d real vector space &lt;span class="math"&gt;\(\mathbb{R}_2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(a)If &lt;span class="math"&gt;\(A = (1,2)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (1,4)\)&lt;/span&gt;, are they linear independent or not? If they are, can you write (4,4) as a linear combination of &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;(b) If &lt;span class="math"&gt;\(A = (x,y)\)&lt;/span&gt; and &lt;span class="math"&gt;\(B = (x,2y)\)&lt;/span&gt;, what &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; value will make &lt;span class="math"&gt;\(A\)&lt;/span&gt; and &lt;span class="math"&gt;\(B\)&lt;/span&gt; linear&amp;nbsp;dependent?&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry></feed>

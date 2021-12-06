@@ -24,8 +24,8 @@
 <meta property="og:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
-<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
-<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
+<meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-3 Column space and null space ">
 <meta name="twitter:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …">
 
@@ -97,11 +97,11 @@
 <p>Our linear equations on plane looks like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&nbsp;lines.</p>
 <p>So what are the&nbsp;cases?</p>
 <p>The first case is obvious, two lines intersect at one point. In this case, we have exactly <strong>one</strong>&nbsp;solution.</p>
-<p><img alt="w5line_int" src="../images/w5line_int.png" /></p>
+<p><img alt="w5line_int" src="./images/w5line_int.png" /></p>
 <p>The second case is two parallel lines. In this case, we have <strong>zero</strong>&nbsp;solution.</p>
-<p><img alt="w5line_int" src="../images/w5line_para.png" /></p>
+<p><img alt="w5line_int" src="./images/w5line_para.png" /></p>
 <p>The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are <strong>infinite</strong>&nbsp;solution.</p>
-<p><img alt="w5line_int" src="../images/w5same_line.gif" /></p>
+<p><img alt="w5line_int" src="./images/w5same_line.gif" /></p>
 <p>I personally don&#8217;t like to say there are infinite many solution. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinite many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &#8220;there are infinite many solutions&#8221; won&#8217;t give you enough&nbsp;information. </p>
 <p>If we write these three different cases in augment matrix, you will see that the second one and the third one are very&nbsp;special:</p>
 <div class="math">$$\left[
@@ -177,7 +177,7 @@ $$</div>
 2 &amp;-1
 \end{bmatrix}$$</div>
 <p>So what is the transformation looks&nbsp;like?</p>
-<p><img alt="w5line_int" src="../images/w5linear_trans.gif" /></p>
+<p><img alt="w5line_int" src="./images/w5linear_trans.gif" /></p>
 <p>As you can see, all the vectors are transformed onto a line <span class="math">\(y = x\)</span>. This makes sense since the transformation returns exactly same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific <span class="math">\(\pmb{\color{red}x}\)</span> that gives you <span class="math">\(\pmb{b}\)</span>. Then there are two possible results: One is that your <span class="math">\(\pmb{b}\)</span> actually landed on this line so you get some solution. The other case is your <span class="math">\(\pmb{b}\)</span> is unfortunately not on this line so the system is inconsistent, no such <span class="math">\(\pmb{\color{red}x}\)</span> can give you that <span class="math">\(\pmb{b}\)</span> vector after the&nbsp;transformation.</p>
 <p>Now why do you have multiple solutions for one <span class="math">\(\pmb{b}\)</span>? Well, If we just look at the transformation itself, I looks like all the vectors in 2d space are <strong>projected</strong> on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects returns exactly same&nbsp;shadow.</p>
 <p>But this is only 2 dimension. What if we have more than 2? what if we have dimension of 10? how do we understand the transformation that happens in 100 dimension? Obviously we need more tools to do that. So, let&#8217;s use the knowledge of span and basis&nbsp;vector!</p>
@@ -260,7 +260,7 @@ y
 \end{bmatrix} \right) $$</div>
 <p>We actually have name for this space, we call it <strong>null space</strong> or <strong>Kernel</strong>. &#8220;Null&#8221; means &#8220;nothing&#8221;, Of course this does not means there is nothing in the space. It means the collection of all vectors that are transformed to &#8220;nothing&#8221;, the zero&nbsp;vector.</p>
 <p>Let&#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&nbsp;dimensional.</p>
-<p><img alt="w5line_int" src="../images/w5nullspace.gif" /></p>
+<p><img alt="w5line_int" src="./images/w5nullspace.gif" /></p>
 <p>As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solution from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&nbsp;one.</p>
 <p>By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solution or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describes one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&nbsp;algebra.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -356,9 +356,9 @@ y
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+            <time itemprop="dateCreated" datetime="2021-09-11T10:20:00-04:00">9月 11, 2021</time>
 <h4>Last Updated</h4>
-<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+<time datetime="2021-12-05T19:30:00-05:00">12月 05, 2021</time>
 
             <h4>Category</h4>
             <a class="category-link" href="./categories#chapter-5-solving-linear-system-using-matrix-ref">Chapter 5 Solving Linear system using matrix</a>
