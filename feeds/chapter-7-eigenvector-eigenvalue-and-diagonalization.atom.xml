@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 7 Eigenvector, eigenvalue and Diagonalization</title><link href="/" rel="alternate"></link><link href="/feeds/chapter-7-eigenvector-eigenvalue-and-diagonalization.atom.xml" rel="self"></link><id>/</id><updated>2010-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>7-1 Eigenvalue and Eigenvector</title><link href="/7-1-eigenvalue-and-eigenvector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/7-1-eigenvalue-and-eigenvector</id><summary type="html">&lt;p&gt;So far, we have been working on many matrices. We also learned that the cool notation &amp;#8220;matrix&amp;#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&amp;#8230; We can rely on matrix to do a lot of calculation that couldn&amp;#8217;t be done or hard to describe …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So far, we have been working on many matrices. We also learned that the cool notation &amp;#8220;matrix&amp;#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&amp;#8230; We can rely on matrix to do a lot of calculation that couldn&amp;#8217;t be done or hard to describe before. However, in real life, even if we use the matrix to cheat, the questions can still be really hard and tedious. In this chapter, we will be focusing on &lt;span class="caps"&gt;ONE&lt;/span&gt; way to make our life easier. Also, it turns out, this specific method has a huge impact on many many&amp;nbsp;area. &lt;/p&gt;
+&lt;p&gt;Our main character has a German name: &lt;strong&gt;Eigen&lt;/strong&gt;. It is not because the guy who invent this is a German, but because David Hilbert, a German mathematician gave him this classic German name. From then, everyone start calling him&amp;nbsp;this.&lt;/p&gt;
+&lt;p&gt;Although this idea is first arose in the study of quadratic forms and differential equations, we are not going to take that approach. Instead, let&amp;#8217;s first define what it is, and then see what can this bad boy&amp;nbsp;do.&lt;/p&gt;
+&lt;p&gt;So let&amp;#8217;s look at an example&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;If we treat this matrix as a transformation, applying this transformation on any 2d vector will give you another 2d vector. But this is not a new story, we did this before a billion times. What is interesting is that for some vectors in 2d space, their direction will not change after the transformation. What does that mean algebraically? Assume for some vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt;, we have the&amp;nbsp;relation:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb{x}$$&lt;/div&gt;
+&lt;p&gt;Where &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; is some non zero scalar value. Notice this value is just tells us how the vector is been &amp;#8220;stretched&amp;#8221; or &amp;#8220;compressed&amp;#8221;. If the &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; turns out to be negative, it just means the direction is&amp;nbsp;reversed.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at one of such vector. In our case, if we input vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and calculate the vector after the transformation, we&amp;nbsp;get:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+-1\\
+1
+\end{bmatrix} = \begin{bmatrix}
+-1\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;What a coincident! If we multiply 2 on both side, we&amp;nbsp;get:&lt;/p&gt;
+&lt;div class="math"&gt;$$2\times A\pmb{x} = 2\begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+-1\\
+1
+\end{bmatrix} = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+-2\\
+2
+\end{bmatrix} = \begin{bmatrix}
+-2\\
+2
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;What does the above equation means? It means not only the vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; can do that, but any multiple of vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; also satisfy the equation &lt;span class="math"&gt;\(A\pmb{x} = \lambda\pmb{x}\)&lt;/span&gt;!&lt;/p&gt;
+&lt;p&gt;For this specific vector, our vector stay the same after the transformation. So, &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; in this case is just &lt;span class="math"&gt;\(1\)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;If we can find such vector and the corresponding &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; that satisfy the equation &lt;span class="math"&gt;\(A\pmb{x} = \lambda\pmb{x}\)&lt;/span&gt;. Then we call the vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; the &lt;strong&gt;Eigenvector&lt;/strong&gt; of our matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, and we call the value &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; the corresponding &lt;strong&gt;Eigenvalue&lt;/strong&gt; of the&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Great, now we know what does that means algebraically. Can we visualize&amp;nbsp;this?&lt;/p&gt;
+&lt;p&gt;If you take the transformation and graph the change on different vector input, you will get something looks like&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6example" src="../images/trans_eigenvalue.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;As we expected, the vector&lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and all the vectors along that line stays on that line after the transformation. But if you pay more attention, along the y-axis, the vectors do not change their direction too. We can check it by multiplying any vector along&amp;nbsp;y-axis:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x}' = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+0\\
+1
+\end{bmatrix} =\begin{bmatrix}
+0\\
+2
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So any vector on y-axis will get doubled after the transformation. What does that means? Well, that vector didn&amp;#8217;t change the direction(still pointing along y-axis) so it is obviously another eigenvector of our matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;. What is the eigenvalue corresponding to that eigenvector? Since the vectors get doubled, then the eigenvalue must be&amp;nbsp;two.&lt;/p&gt;
+&lt;p&gt;Wonderful! We have two different eigenvectors and eigenvalues for a single matrix. Can we find more? Unfortunately, we can&amp;#8217;t in this case. Later on, we will know why that is the&amp;nbsp;case. &lt;/p&gt;
+&lt;p&gt;Now, you might wondering, does that means the eigenvectors and eigenvalues exist for any matrices? If so, how could we find them without guessing? We will leave that question to the future&amp;nbsp;chapter.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-2 Characteristic polynomials</title><link href="/7-2-characteristic-polynomials" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/7-2-characteristic-polynomials</id><summary type="html">&lt;p&gt;Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn&amp;#8217;t&amp;nbsp;answer.&lt;/p&gt;
+&lt;p&gt;One, Is there always eigenvector and eigenvalues for&amp;nbsp;matrices?&lt;/p&gt;
+&lt;p&gt;Second, How do we calculate&amp;nbsp;them?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s start from the definition of eigenvector and&amp;nbsp;eigenvalue:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb …&lt;/div&gt;</summary><content type="html">&lt;p&gt;Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn&amp;#8217;t&amp;nbsp;answer.&lt;/p&gt;
+&lt;p&gt;One, Is there always eigenvector and eigenvalues for&amp;nbsp;matrices?&lt;/p&gt;
+&lt;p&gt;Second, How do we calculate&amp;nbsp;them?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s start from the definition of eigenvector and&amp;nbsp;eigenvalue:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb{x}$$&lt;/div&gt;
+&lt;p&gt;If this equation hold for some vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; and non-zero value &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;, then great! We found the eigenvector and eigenvalues for that&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;To solve this, let&amp;#8217;s try to move all the terms on one&amp;nbsp;side:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} - \lambda\pmb{x} = 0$$&lt;/div&gt;
+&lt;p&gt;Notice that we only know the matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, so we need some way to combine these two terms. Factoring out vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; seems to be a good idea, but is there any way to factor out the vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;Yes! We know the fact that for the square matrix with the same&amp;nbsp;size:&lt;/p&gt;
+&lt;div class="math"&gt;$$(A+B)\pmb{x} = A\pmb{x}+B\pmb{x}$$&lt;/div&gt;
+&lt;p&gt;So if we can rewrite number &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; into a matrix with the same size as &lt;span class="math"&gt;\(A\)&lt;/span&gt;, then we can combine the matrices and factor out &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt;. But how do we  rewrite number to a matrix? That is not hard since this number is multiplying on a vector, We can add a linear transformation that does nothing in front of vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$\lambda\pmb{x} = \lambda I\pmb{x} = (\lambda I)\pmb{x} $$&lt;/div&gt;
+&lt;p&gt;Now, the scalar &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; is a linear transformation &lt;span class="math"&gt;\(\lambda I\)&lt;/span&gt;, therefore, we can add the matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt; and the new matrix &lt;span class="math"&gt;\(\lambda I\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} - \lambda I\pmb{x} = 0$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(A- \lambda I)\pmb{x} = 0$$&lt;/div&gt;
+&lt;p&gt;The new matrix &lt;span class="math"&gt;\((A- \lambda I)\)&lt;/span&gt; multiply some vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; gives you zero vector. How do we find the vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt;? Easy! This is just ask you to find the null space of matrix &lt;span class="math"&gt;\((A- \lambda I)\)&lt;/span&gt;! &lt;/p&gt;
+&lt;p&gt;Before, to find null space, we need to solve the linear system &lt;span class="math"&gt;\(A\pmb{x} = 0\)&lt;/span&gt;. But in our case, the matrix itself has some unknown variable in it, which is the number &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;. So how could we find the null space of a unknown&amp;nbsp;matrix?&lt;/p&gt;
+&lt;p&gt;Here we will introduce a technique that we didn&amp;#8217;t mention before, call &lt;strong&gt;determinant&lt;/strong&gt;. In short, the determinant calculate the ratio between the size of space before and after the linear transformation. In 2d, it is simply the ratio between the area before and after the linear transformation. To calculate determinant for any &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt; matrix, we just need to&amp;nbsp;do:&lt;/p&gt;
+&lt;div class="math"&gt;$$det(A) = \begin{vmatrix}
+a &amp;amp; b\\
+c &amp;amp; d \\
+\end{vmatrix} = ad - bc$$&lt;/div&gt;
+&lt;p&gt;We are not going to cover the method of finding &lt;span class="math"&gt;\(3\times3\)&lt;/span&gt; or higher dimension matrix&amp;#8217;s determinant in this chapter. Feel free to search them up and think about&amp;nbsp;why. &lt;/p&gt;
+&lt;p&gt;Why is find the ratio of area useful in our case? Because if a non-zero null space exist for a matrix, the the determinant of this matrix must be&amp;nbsp;zero. &lt;/p&gt;
+&lt;p&gt;Why? By the rank-nullity theorem, if null space has dimension greater than zero, it means our rank is less than the dimension of matrix. So the linear transformation will transform the space to a space with lower&amp;nbsp;dimension. &lt;/p&gt;
+&lt;p&gt;If the matrix is &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt; but the rank is lower than 2, for example, is 1. It just means the matrix will transform any 2d vector to a 2d vector on a line (1d). So what will be the ratio of area before and after the transformation? Obviously is zero(The whole 2d plane was &amp;#8220;smash&amp;#8221; into a&amp;nbsp;line).&lt;/p&gt;
+&lt;p&gt;Great! Now is time to put everything together and calculate some eigenvalue &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; eigenvector! Let&amp;#8217;s find the eigenvalue &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; eigenvector for the matrix we discussed last&amp;nbsp;time:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;The first thing we do is to get the matrix &lt;span class="math"&gt;\(A - \lambda I\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$A - \lambda I = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}-\lambda \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 1 \\
+\end{bmatrix} = \begin{bmatrix}
+1-\lambda  &amp;amp; 0\\
+1 &amp;amp; 2-\lambda  \\
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;Then, we write down the determinant of this&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{vmatrix}
+1-\lambda  &amp;amp; 0\\
+1 &amp;amp; 2-\lambda  \\
+\end{vmatrix} = (1-\lambda )(2-\lambda) - 0\times1 = (1-\lambda )(2-\lambda)$$&lt;/div&gt;
+&lt;p&gt;To solve &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;, we just need to set this expression to zero. But before we do that, look at this familiar expression! It is a quadratic! Later, you will see that the determinant of &lt;span class="math"&gt;\(A - \lambda I\)&lt;/span&gt; will always be a polynomial. We have a special name for this: the &lt;strong&gt;Characteristic polynomials&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In our case, this polynomials is extremely easy to&amp;nbsp;solve:&lt;/p&gt;
+&lt;div class="math"&gt;$$(1-\lambda )(2-\lambda) = 0 $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\downarrow$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\lambda_1 = 1$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\lambda_2 = 2$$&lt;/div&gt;
+&lt;p&gt;So, &lt;span class="math"&gt;\(\lambda_1 = 1\)&lt;/span&gt; and &lt;span class="math"&gt;\(\lambda_2 = 2\)&lt;/span&gt; are the eigenvalue of the matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;. To solve the eigenvector correspond to these eigenvalue, we just plug these back into our matrix &lt;span class="math"&gt;\(A - \lambda I\)&lt;/span&gt; and find the null&amp;nbsp;space:&lt;/p&gt;
+&lt;div class="math"&gt;$$A - \lambda_1 I = \begin{bmatrix}
+1 -1&amp;amp; 0\\
+1 &amp;amp; 2 -1 \\
+\end{bmatrix} = \begin{bmatrix}
+0 &amp;amp; 0\\
+1 &amp;amp; 1 \\
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;To find the null space, we solve the linear system &lt;span class="math"&gt;\(A\pmb{x} = 0\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+0 &amp;amp; 0\\
+1 &amp;amp; 1 \\
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix}= 0$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\downarrow$$&lt;/div&gt;
+&lt;div class="math"&gt;$$  
+\begin{cases}
+      0x+0y\ =\ 0 \\
+      x+y\ =\ 0 
+    \end{cases}  \rightarrow  x = -y \rightarrow span{\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}}
+$$&lt;/div&gt;
+&lt;p&gt;Therefore, the eigenvector correspond to eigenvalue &lt;span class="math"&gt;\(1\)&lt;/span&gt; is vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. Using the same method, we can get the eigenvector for eigenvalue &lt;span class="math"&gt;\(\lambda_2 = 2\)&lt;/span&gt; is vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
+0\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Awesome! We solved all the eigenvalue and their eigenvector. Does that means we solved everything? Of course not. Remember, we got lucky when solving the polynomial. Let&amp;#8217;s go back to the characteristic polynomial and see what are we&amp;nbsp;missing.&lt;/p&gt;
+&lt;p&gt;The characteristic polynomial we had is &lt;span class="math"&gt;\((1-\lambda )(2-\lambda)\)&lt;/span&gt;, but in principle, we could have any polynomials. Take &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt; matrix as example, our characteristic polynomial will be a&amp;nbsp;quadratic:&lt;/p&gt;
+&lt;div class="math"&gt;$$a\lambda^2 + b\lambda + c= 0$$&lt;/div&gt;
+&lt;p&gt;For our case, we ended up with two distinct &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; values. But we could also have two same &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; values or no real &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;The two same &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt; values case is not that interesting. In 2d, the transformation that has only one eigenvalue will looks like a shear transformation. The interesting case is when we have no real &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;&amp;nbsp;values. &lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s imaging: What kind of transformation in 2d that has no eigenvector? Having eigenvectors means there are some directions where all the vector alone that direction do not change its direction after the transformation. So, having no eigenvector means all the vector in 2d change its direction after the transformation. Did we see any of the transformation that can do&amp;nbsp;this?&lt;/p&gt;
+&lt;p&gt;Of course! Any transformation that rotate the&amp;nbsp;plane!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s take the very first linear transformation we saw. As you can see, all the vector do not end up with the same direction after the&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;If you learned the imaginary number before(don&amp;#8217;t worry if you never learn it, but I highly recommend you check it out online if you never), you will know that the quadratic that has no real solution will have imaginary solution. So our eigenvalue will be imaginary. In fact, imaginary eigenvalue will always has something to do with the rotation. However, Imaginary eigenvalue is beyond the scope of our&amp;nbsp;note.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-3 Diagonal matrix and transpose</title><link href="/7-3-diagonal-matrix-and-transpose" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/7-3-diagonal-matrix-and-transpose</id><summary type="html">&lt;p&gt;From the last chapter, we learned the way to compute the eigenvectors and eigenvalues of a matrix. We also learned the geometric meaning of eigenvectors and eigenvalues. You might say: Sure, here is the eigenvectors and eigenvalues of a matrix. So what? What is the&amp;nbsp;application?&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t worry! You …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From the last chapter, we learned the way to compute the eigenvectors and eigenvalues of a matrix. We also learned the geometric meaning of eigenvectors and eigenvalues. You might say: Sure, here is the eigenvectors and eigenvalues of a matrix. So what? What is the&amp;nbsp;application?&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t worry! You will find out the good stuff real soon. But for now, we have to learn one interesting type of matrix, which is related to the &amp;#8220;good stuff&amp;#8221;&amp;nbsp;later.&lt;/p&gt;
+&lt;p&gt;The special matrix is called the diagonal matrix. The name &amp;#8220;diagonal&amp;#8221; comes from the fact that the matrix only has non-zero entry on the &amp;#8220;diagonal&amp;#8221; of the square&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$ A = \begin{bmatrix}
+    x_{11} &amp;amp; 0 &amp;amp; 0 &amp;amp; \dots  &amp;amp; 0 \\
+    0 &amp;amp; x_{22} &amp;amp; 0 &amp;amp; \dots  &amp;amp; 0 \\
+    0 &amp;amp; 0 &amp;amp; x_{33} &amp;amp; \dots  &amp;amp; 0 \\
+    \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+    0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \dots  &amp;amp; x_{nn}
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;In convention, we call the the entries that has the same column and row number &amp;#8220;diagonal&amp;#8221; terms. and the entries that has the different column and row number &amp;#8220;off-diagonal&amp;#8221; terms. For diagonal matrix, First, it is usually a &lt;span class="math"&gt;\(n\times n\)&lt;/span&gt; matrix (we don&amp;#8217;t consider the &amp;#8220;rectangular&amp;#8221; ones&amp;#8221;). Second, all the &amp;#8220;off-diagonal&amp;#8221; terms must be zero. Notice that the diagonal terms doesn&amp;#8217;t have to be&amp;nbsp;zero.&lt;/p&gt;
+&lt;p&gt;Great, this matrix looks &lt;span class="caps"&gt;VERY&lt;/span&gt; simple! Indeed, it is very easy to work with. Let&amp;#8217;s look at an interesting&amp;nbsp;example:&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s say there is a matrix &lt;span class="math"&gt;\(A = &lt;div class="math"&gt;\begin{bmatrix}
+1 &amp;amp; 2 \\
+3 &amp;amp; 4
+\end{bmatrix}&lt;/div&gt; $, then what is $A^2\)&lt;/span&gt;&amp;nbsp;?&lt;/p&gt;
+&lt;p&gt;We can do a quick matrix multiplication to get the answer for&amp;nbsp;that:&lt;/p&gt;
+&lt;div class="math"&gt;$$A^2 = \begin{bmatrix}
+1 &amp;amp; 2 \\
+3 &amp;amp; 4
+\end{bmatrix} \begin{bmatrix}
+1 &amp;amp; 2 \\
+3 &amp;amp; 4
+\end{bmatrix} = \begin{bmatrix}
+1 + 6 &amp;amp; 2 + 8 \\
+3 + 12 &amp;amp; 6 + 16
+\end{bmatrix} = \begin{bmatrix}
+7 &amp;amp; 10 \\
+15 &amp;amp; 22
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;Well that was a breeze. But what if someone ask you, what is &lt;span class="math"&gt;\(A^{201}\)&lt;/span&gt; ? Then we are screwed. However, if you ask the same question on a diagonal matrix &lt;span class="math"&gt;\(D\)&lt;/span&gt;&amp;nbsp;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ D = \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 2
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;the result of &lt;span class="math"&gt;\(D^{201}\)&lt;/span&gt; is&amp;nbsp;simply:&lt;/p&gt;
+&lt;div class="math"&gt;$$ D^{201} = \begin{bmatrix}
+1^{201} &amp;amp; 0\\
+0 &amp;amp; 2^{201}
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;Not only that, if you tried to find the eigenvalue of a diagonal matrix, you will soon realized the characteristic polynomials of a diagonal matrix is extremely&amp;nbsp;simple.&lt;/p&gt;
+&lt;p&gt;If take matrix &lt;span class="math"&gt;\(D = &lt;div class="math"&gt;\begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 2
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; as a example. The characteristic polynomials is&amp;nbsp;just:&lt;/p&gt;
+&lt;div class="math"&gt;$$det(D-\lambda I) = det(\begin{bmatrix}
+1-\lambda &amp;amp; 0\\
+0 &amp;amp; 2-\lambda
+\end{bmatrix}) = (1-\lambda)(2-\lambda) = 0$$&lt;/div&gt;
+&lt;p&gt;This tells us the eigenvalue right away, &lt;span class="math"&gt;\(\lambda = 1\)&lt;/span&gt; or &lt;span class="math"&gt;\(\lambda = 2\)&lt;/span&gt;. Which happens to be the diagonal terms of the matrix. Also, the eigenvectors of the matrix are easy too(Try to find them by&amp;nbsp;yourself).&lt;/p&gt;
+&lt;p&gt;Alright! We now learned everything we need for the grand finale. In the next section, we are going to combine all the pieces and construct one of the most powerful weapons in linear algebra:&amp;nbsp;Diagonalization. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry><entry><title>7-4 Diagonalization</title><link href="/7-4-diagonalization" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/7-4-diagonalization</id><content type="html">&lt;p&gt;Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to&amp;nbsp;solve.&lt;/p&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue and Diagonalization"></category></entry></feed>

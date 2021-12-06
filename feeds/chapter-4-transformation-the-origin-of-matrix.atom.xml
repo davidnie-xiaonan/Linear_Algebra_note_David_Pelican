@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 4 Transformation: the origin of matrix</title><link href="/" rel="alternate"></link><link href="/feeds/chapter-4-transformation-the-origin-of-matrix.atom.xml" rel="self"></link><id>/</id><updated>2010-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>4-1 Linear Transformation</title><link href="/4-1-linear-transformation" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/4-1-linear-transformation</id><summary type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is the relationship between linear transformation and matrix&amp;nbsp;multiplication.&lt;/p&gt;
+&lt;p&gt;The two key words are &amp;#8220;Linear&amp;#8221; and &amp;#8220;Transformation&amp;#8221;. We will began with the word transformation. In high school, transformation usually refer as the change from one graph to another graph. In here, the transformation can be understand as a function, a map that take in one vector and returns another one. The reason why we don&amp;#8217;t call it function is because we are interested in the &amp;#8220;movement&amp;#8221;. Just like you can visualize the graph being &amp;#8220;compressed&amp;#8221; or &amp;#8220;stretched&amp;#8221;. A linear transformation can be visualized as a vector &amp;#8220;moves&amp;#8221; to another&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Notice that the transformation is not talking about only one vector being transformed into one vector. It is talking about every single vector that lives in the vector space being transformed into another vector. Like when we talk about the word &amp;#8220;function&amp;#8221;, we are not only interested in one x value change to a y value, we are interested in all x and y value in the domain and&amp;nbsp;range.&lt;/p&gt;
+&lt;p&gt;But how about the word &amp;#8220;linear&amp;#8221;? Like what we learned before in &amp;#8220;linear&amp;#8221; combination, the word &amp;#8220;linear&amp;#8221; means this type of transformation follows certain rules: &lt;strong&gt;additivity&lt;/strong&gt; and &lt;strong&gt;homogeneity&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;Additivity means that the transformation preserve&amp;nbsp;addition:&lt;/p&gt;
+&lt;div class="math"&gt;$$f(\pmb{a}+\pmb{b}) = f(\pmb{a}) + f(\pmb{b})$$&lt;/div&gt;
+&lt;p&gt;homogeneity, or more precisely, the homogeneity of degree 1 means the operation of scalar multiplication is&amp;nbsp;preserved.&lt;/p&gt;
+&lt;div class="math"&gt;$$f(c\pmb{a}) = cf(\pmb{a})$$&lt;/div&gt;
+&lt;p&gt;So what is so special about this type of transformation compare to&amp;nbsp;others?&lt;/p&gt;
+&lt;p&gt;If you have any set of vector that forms a line, for example, all the vectors that has tips sitting on the x-axis. After the transformation, the vectors will still sitting on a line. So linear transformation will not &amp;#8220;curve&amp;#8221; the&amp;nbsp;space.&lt;/p&gt;
+&lt;p&gt;Also, notice that these two condition also tells you a important detail, which is the zero vector stay as a zero vector. You can check that using the&amp;nbsp;condition.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s see a simple&amp;nbsp;example:&lt;/p&gt;
+&lt;p&gt;The transformation we will see is the simplest transformation: the transformation of doing nothing at&amp;nbsp;all:&lt;/p&gt;
+&lt;div class="math"&gt;$$f(\pmb{x}) = \pmb{x}$$&lt;/div&gt;
+&lt;p&gt;Is this a linear transformation? Let&amp;#8217;s check additivity&amp;nbsp;first:&lt;/p&gt;
+&lt;div class="math"&gt;$$f(\pmb{a}+\pmb{b}) = \pmb{a} + \pmb{b} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$f(\pmb{a}) + f(\pmb{b}) = \pmb{a} + \pmb{b}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$f(\pmb{a}+\pmb{b}) = f(\pmb{a}) + f(\pmb{b})$$&lt;/div&gt;
+&lt;p&gt;Obviously, this follows the rule. Now let&amp;#8217;s check&amp;nbsp;homogeneity:&lt;/p&gt;
+&lt;div class="math"&gt;$$f(c\pmb{a}) =c\pmb{a} = cf(\pmb{a})$$&lt;/div&gt;
+&lt;p&gt;lovely! Both rules are satisfied. We can now say that the transformation of doing nothing is a linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;but that is way too boring, let&amp;#8217;s do a interesting one together: the transformation of rotating everything by 90 degrees counter&amp;nbsp;counterclockwise.&lt;/p&gt;
+&lt;p&gt;To demonstrate the transformation. I will plot the sample vector and many other vectors during the transformation. To not make the graph too crowded, I will only draw the points where the tip of the vectors landed for other&amp;nbsp;vectors.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;It seems impossible to show the additivity and homogeneity in this case. Unlike the last time, it is not easy to write down the &lt;span class="math"&gt;\(f(\pmb{x})\)&lt;/span&gt;. However, when you graph the transformation on the basis vectors of 2d space, things gets a lot&amp;nbsp;easier.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at how the basis vectors change under the transformation. More importantly, ask yourself whether if the basis is still a basis after the&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;As you can see. the basis &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; changed to &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((-1,0)\)&lt;/span&gt;. And it looks like the new basis still works&amp;nbsp;well. &lt;/p&gt;
+&lt;p&gt;so if our vector &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; has x component &lt;span class="math"&gt;\(a\)&lt;/span&gt; and y component &lt;span class="math"&gt;\(b\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$\pmb{x} = a(1,0)+b(0,1)$$&lt;/div&gt;
+&lt;p&gt;in our new basis, the coefficients &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; shouldn&amp;#8217;t&amp;nbsp;change:&lt;/p&gt;
+&lt;div class="math"&gt;$$\pmb{x}_{new} = a(0,1)+b(-1,0)$$&lt;/div&gt;
+&lt;p&gt;Now we have enough information to show the rotation by 90 degrees is a linear transformation. You will show this in the&amp;nbsp;assignment.&lt;/p&gt;
+&lt;p&gt;To see this geometrically, if you connect the points to form a grid. You will see that the lines remain as lines after the transformation. The space didn&amp;#8217;t&amp;nbsp;&amp;#8220;curve&amp;#8221;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-2 Matrix multiplication with vector</title><link href="/4-2-matrix-multiplication-with-vector" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/4-2-matrix-multiplication-with-vector</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Unfortunately, no one can told you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Unfortunately, no one can told you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this chapter. To &amp;#8220;see&amp;#8221; what matrix really is, the knowledge of linear transformation is required. Good thing is, we have learned what linear transformation is,  so now is time to find a way to describe the transformation numerically. Hopefully, we can all &amp;#8220;see&amp;#8221; it by the end of the&amp;nbsp;section.&lt;/p&gt;
+&lt;p&gt;We knew that the linear transformation is the transformation between vector space, and vector space can be expressed as the span of basis vector. So, to write down the linear transformation, we need to see how the basis vector changes under the&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s again take the example from the last section. The transformation of rotating 90 degrees counterclockwise. Remember last time we said the transformation act on the basis of space and change the basis to a new&amp;nbsp;one:&lt;/p&gt;
+&lt;div class="math"&gt;$$(1,0) \rightarrow \color{red}{(0,1)}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(0,1) \rightarrow \color{red}{(-1,0)}$$&lt;/div&gt;
+&lt;p&gt;Now let&amp;#8217;s introduce a better way to write down the vector. For a vector lives in 2d, we usually write them from up to down and close it with a square&amp;nbsp;bracket:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+1\\
+0
+\end{bmatrix}\rightarrow\color{red}{\begin{bmatrix}
+0\\
+1
+\end{bmatrix}}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+0\\
+1
+\end{bmatrix}\rightarrow\color{red}{\begin{bmatrix}
+-1\\
+0
+\end{bmatrix}}$$&lt;/div&gt;
+&lt;p&gt;Then, to describe the transformation, we just need to write down the two basis vectors side by side (you will see real soon why we do&amp;nbsp;this):&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\pmb{x}) = \color{red}{\begin{bmatrix}
+0 &amp;amp; -1\\
+1 &amp;amp; 0
+\end{bmatrix}}$$&lt;/div&gt;
+&lt;p&gt;To see why this notation even make sense, we will put this square thing next to a vector. Like functions, we can input a number and return another one, this transformation eat a vector and spit out another vector. In our case, the input vector is the vector before the transformation and the output is&amp;nbsp;after.&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\begin{bmatrix}
+1\\
+0
+\end{bmatrix}) = \color{red}{\begin{bmatrix}
+0 &amp;amp; -1\\
+1 &amp;amp; 0
+\end{bmatrix}}\begin{bmatrix}
+1\\
+0
+\end{bmatrix} = \begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So how did this calculating work? Let&amp;#8217;s take a close look at each&amp;nbsp;element. &lt;/p&gt;
+&lt;p&gt;The vector (1,0) has 1 as x-component so the result has 1 portion of the first row(the new x basis). It also has 0 as its y-component so it has 0 portion of the second row(the new y basis). Notice this comes from the fact that the coefficients of linear combination don&amp;#8217;t change during the transformation. If you have one &lt;span class="math"&gt;\(\hat{x}\)&lt;/span&gt; and zero &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt;, you remains one &lt;span class="math"&gt;\(\hat{x}\)&lt;/span&gt; and zero &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt;. The only thing that change is the&amp;nbsp;basis.&lt;/p&gt;
+&lt;div class="math"&gt;$$\color{red}{\begin{bmatrix}
+0 &amp;amp; -1\\
+1 &amp;amp; 0
+\end{bmatrix}}\begin{bmatrix}
+1\\
+0
+\end{bmatrix} = 1*\begin{bmatrix}
+0\\
+1
+\end{bmatrix}+ 0 * \begin{bmatrix}
+-1\\
+0
+\end{bmatrix} = {\begin{bmatrix}
+0 + 0\\
+1 + 0
+\end{bmatrix}} = \begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;and as you see in the animation, the vector (1,0) indeed moves to&amp;nbsp;(0,1). &lt;/p&gt;
+&lt;p&gt;So what if we want to transform something harder? let&amp;#8217;s rotate the vector&amp;nbsp;(a,b):&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\begin{bmatrix}
+a\\
+b
+\end{bmatrix}) = \color{red}{\begin{bmatrix}
+0 &amp;amp; -1\\
+1 &amp;amp; 0
+\end{bmatrix}}\begin{bmatrix}
+a\\
+b
+\end{bmatrix} = a*\begin{bmatrix}
+0\\
+1
+\end{bmatrix}+ b * \begin{bmatrix}
+-1\\
+0
+\end{bmatrix} = {\begin{bmatrix}
+0 + (-b)\\
+a + 0
+\end{bmatrix}} = \begin{bmatrix}
+-b\\
+a
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;&lt;img alt="w4rotation" src="../images/w4rotation.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;We can confirm this result is also true by looking at the&amp;nbsp;animation.&lt;/p&gt;
+&lt;p&gt;As you already guessed it, the square thing is called matrix and this operation we did is called the matrix&amp;nbsp;multiplication. &lt;/p&gt;
+&lt;p&gt;Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before, because usually the matrix multiplication was introduced like&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w4matrixwiki" src="../images/w4matrix_multi.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as linear transformation of vectors is much much more intuitive than pure&amp;nbsp;algebra. &lt;/p&gt;
+&lt;p&gt;Can we figure out more things from the matrix multiplication we&amp;nbsp;defined?&lt;/p&gt;
+&lt;p&gt;First is the dimension of matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a &lt;strong&gt;2 by 2 matrix&lt;/strong&gt; or &lt;strong&gt;2x2 matrix&lt;/strong&gt;. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&amp;nbsp;columns.&lt;/p&gt;
+&lt;p&gt;But why do our matrix has such shape? Why not 10 by 10 or 20 by 20? The answer can be find from the dimension of the input vector and output vector. the transformation takes in a 2d vector and spit out another 2d vector so the dimension of matrix has to be 2 by 2. If the transformation takes in a 3d vector and returns a 2d vector, then the dimension of this transformation matrix has to be 2 by&amp;nbsp;3.&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}) = \color{red}{\begin{bmatrix}
+a &amp;amp; b &amp;amp; c\\
+d &amp;amp; e &amp;amp; f
+\end{bmatrix}}\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix} = x*\begin{bmatrix}
+a\\
+d
+\end{bmatrix}+ y * \begin{bmatrix}
+b\\
+e
+\end{bmatrix}+ z * \begin{bmatrix}
+c\\
+f
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;There is also an interesting question to think about: Can any linear transformation be written as a matrix? If that so, then any matrix with any dimension can be treat as a linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Here is another thinking question: what if two matrix multiply each other? What is the result looks like? More importantly, what is the meaning of doing&amp;nbsp;that?&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-3 Assignment</title><link href="/4-3-assignment" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/4-3-assignment</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}) R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$T(\pmb{x …&lt;/div&gt;</summary><content type="html">&lt;ol&gt;
+&lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}) R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$T(\pmb{x}) = \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 2 
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;(1) What is this transformation does to the space, you can try to transform some vector to&amp;nbsp;see.&lt;/p&gt;
+&lt;p&gt;(2) What kinds of vectors do not change directions after the&amp;nbsp;transformation?&lt;/p&gt;
+&lt;p&gt;(3) If now the transformation matrix&amp;nbsp;became:&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\pmb{x}) = \begin{bmatrix}
+1 &amp;amp; 1\\
+0 &amp;amp; 2 
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;What kinds of vectors do not change directions after the transformation this time? Do we expect the same&amp;nbsp;answer?&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;Consider following transformation&amp;nbsp;matrix:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$T_1(\pmb{x}) = \begin{bmatrix}
+2 &amp;amp; 0 &amp;amp; 3\\
+0 &amp;amp; 2 &amp;amp; 2
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;(1) What is the dimension of vectors before and after the&amp;nbsp;transformation?&lt;/p&gt;
+&lt;p&gt;(2) After such transformation, the space is then transformed by another&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$T_2(\pmb{x}) = \begin{bmatrix}
+2 &amp;amp; 0 \\
+0 &amp;amp; 2 \\
+1 &amp;amp; 2
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;What is the dimension of vectors after this&amp;nbsp;transformation?&lt;/p&gt;
+&lt;p&gt;(3)Now combine these two transformation into one transformation &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt; so&amp;nbsp;that:&lt;/p&gt;
+&lt;div class="math"&gt;$$T_3(\pmb{x}) = T_2(T_1(\pmb{x}))$$&lt;/div&gt;
+&lt;p&gt;Can you write &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt; down as a matrix? if so, what is the dimension of this matrix &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt;? (hint: Try to think matrix as columns of&amp;nbsp;vector)&lt;/p&gt;
+&lt;p&gt;(4)What if you reverse the order of transformation? Say &lt;span class="math"&gt;\(T_4(\pmb{x}) = T_1(T_2(\pmb{x}))\)&lt;/span&gt;? Does that gives you the same transformation? What is the result tells&amp;nbsp;you?&lt;/p&gt;
+&lt;h1 id="answer-sheet"&gt;Answer sheet&lt;a class="headerlink" href="#answer-sheet" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry></feed>

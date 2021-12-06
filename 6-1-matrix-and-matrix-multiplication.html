@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="David Nie" />
+
+        <meta name="description" content="In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from basics. Let’s look at …
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", Chapter 6 Matrix and Matrix multiplication, " />
+
+<meta property="og:title" content="6-1 Matrix and matrix multiplication "/>
+<meta property="og:url" content="/6-1-matrix-and-matrix-multiplication" />
+<meta property="og:description" content="In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from basics. Let’s look at …" />
+<meta property="og:site_name" content="Linear Algebra Note" />
+<meta property="og:article:author" content="David Nie" />
+<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
+<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta name="twitter:title" content="6-1 Matrix and matrix multiplication ">
+<meta name="twitter:description" content="In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from basics. Let’s look at …">
+
+        <title>6-1 Matrix and matrix multiplication  · Linear Algebra Note
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Linear Algebra Note</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/6-1-matrix-and-matrix-multiplication">
+                6-1 Matrix and matrix&nbsp;multiplication
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from&nbsp;basics.</p>
+<p>Let&#8217;s look at two matrix multiplication with vectors <span class="math">\(A\pmb{x} = \pmb{b}\)</span>&nbsp;:</p>
+<div class="math">$$\begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}\begin{bmatrix}
+1 \\
+0
+\end{bmatrix} = \begin{bmatrix}
+1 \\
+3 
+\end{bmatrix}$$</div>
+<div class="math">$$\begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}\begin{bmatrix}
+\color{red}{0} \\
+\color{red}{1}
+\end{bmatrix} = \begin{bmatrix}
+\color{red}{2} \\
+\color{red}{4}
+\end{bmatrix}$$</div>
+<p>If we combine the vectors into a matrix, and do the same thing with both vector <span class="math">\(\pmb{x}\)</span> and vector <span class="math">\(\pmb{b}\)</span>, we will get&nbsp;:</p>
+<div class="math">$$\begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}\begin{bmatrix}
+1 &amp; \color{red}{0} \\
+0 &amp; \color{red}{1}
+\end{bmatrix} = \begin{bmatrix}
+1 &amp; \color{red}{2} \\
+3 &amp; \color{red}{4}
+\end{bmatrix}$$</div>
+<p>So here you are! This is the way of multiplying matrices! Although we don&#8217;t know what it is mean or what is it for yet, we can still see something out of&nbsp;it.</p>
+<p>First you can see that the &#8220;shape&#8221; of matrix is quite important here. Just like when we do transformation, we cannot make a 3 by 3 transformation matrix to transform a 1d vector. To multiply two matrices, the matrices must have certain&nbsp;&#8220;shape&#8221;.</p>
+<p>If we think about matrix <span class="amp">&amp;</span> matrix multiplication as the combination of many column vector transformation, then like transformation, the size of input column vector must agree with the size of transformation matrix, to be specific, the column number of the first matrix must be the same as the size of input column vector. Which happens to be the row number of the second&nbsp;matrix. </p>
+<p>But how about the row number of the first matrix and the column number of the second matrix? Are they useful? Well yes!, they are just happens to be the dimension of the result matrix! The row number of the first matrix became the dimension of output vector and the column number of the second matrix tells you how many of them are combining together to form the final&nbsp;matrix.</p>
+<p>All of the details above seems complicate and hard to memorize, but here is one good thing about math, you don&#8217;t have to memorize them at all! Just write down any matrix and start multiplying them and combining the vectors. You will figure out all the details by yourself! Also Luckily, we hardly work with non-square matrices, and for square matrices, rules are pretty simple: <span class="math">\(n \times n\)</span> matrix can only multiply the square matrix with the same size (<span class="math">\(n \times n\)</span>) and the result will be another <span class="math">\(n \times n\)</span>&nbsp;matrix.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=6-1%20Matrix%20and%20matrix%C2%A0multiplication&url=/6-1-matrix-and-matrix-multiplication" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/6-1-matrix-and-matrix-multiplication" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=6-1%20Matrix%20and%20matrix%C2%A0multiplication&amp;body=/6-1-matrix-and-matrix-multiplication" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/6-2-the-steps-in-gaussian-elimination" title="Previous: 6-2 The “Steps” in Gaussian elimination">6-2 The “Steps” in Gaussian elimination</a></li>
+                <li class="next-article"><a href="/5-6-assignments" title="Next: 5-6 assignments">5-6 assignments</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+<h4>Last Updated</h4>
+<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#chapter-6-matrix-and-matrix-multiplication-ref">Chapter 6 Matrix and Matrix multiplication</a>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Linear Algebra Note</span> - By David Nie
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

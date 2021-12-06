@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="David Nie" />
+
+        <meta name="description" content="We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: linear transformation. And this idea will lead us to a powerful tool in linear algebra: the matrix. Let’s jump right into the definition of linear transformation, and see what is …
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", Chapter 4 Transformation: the origin of matrix, " />
+
+<meta property="og:title" content="4-1 Linear Transformation "/>
+<meta property="og:url" content="/4-1-linear-transformation" />
+<meta property="og:description" content="We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: linear transformation. And this idea will lead us to a powerful tool in linear algebra: the matrix. Let’s jump right into the definition of linear transformation, and see what is …" />
+<meta property="og:site_name" content="Linear Algebra Note" />
+<meta property="og:article:author" content="David Nie" />
+<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
+<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta name="twitter:title" content="4-1 Linear Transformation ">
+<meta name="twitter:description" content="We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: linear transformation. And this idea will lead us to a powerful tool in linear algebra: the matrix. Let’s jump right into the definition of linear transformation, and see what is …">
+
+        <title>4-1 Linear Transformation  · Linear Algebra Note
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Linear Algebra Note</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/4-1-linear-transformation">
+                4-1 Linear&nbsp;Transformation
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: <strong>linear transformation</strong>. And this idea will lead us to a powerful tool in linear algebra: the&nbsp;matrix.</p>
+<p>Let&#8217;s jump right into the definition of linear transformation, and see what is the relationship between linear transformation and matrix&nbsp;multiplication.</p>
+<p>The two key words are &#8220;Linear&#8221; and &#8220;Transformation&#8221;. We will began with the word transformation. In high school, transformation usually refer as the change from one graph to another graph. In here, the transformation can be understand as a function, a map that take in one vector and returns another one. The reason why we don&#8217;t call it function is because we are interested in the &#8220;movement&#8221;. Just like you can visualize the graph being &#8220;compressed&#8221; or &#8220;stretched&#8221;. A linear transformation can be visualized as a vector &#8220;moves&#8221; to another&nbsp;vector.</p>
+<p>Notice that the transformation is not talking about only one vector being transformed into one vector. It is talking about every single vector that lives in the vector space being transformed into another vector. Like when we talk about the word &#8220;function&#8221;, we are not only interested in one x value change to a y value, we are interested in all x and y value in the domain and&nbsp;range.</p>
+<p>But how about the word &#8220;linear&#8221;? Like what we learned before in &#8220;linear&#8221; combination, the word &#8220;linear&#8221; means this type of transformation follows certain rules: <strong>additivity</strong> and <strong>homogeneity</strong>. </p>
+<p>Additivity means that the transformation preserve&nbsp;addition:</p>
+<div class="math">$$f(\pmb{a}+\pmb{b}) = f(\pmb{a}) + f(\pmb{b})$$</div>
+<p>homogeneity, or more precisely, the homogeneity of degree 1 means the operation of scalar multiplication is&nbsp;preserved.</p>
+<div class="math">$$f(c\pmb{a}) = cf(\pmb{a})$$</div>
+<p>So what is so special about this type of transformation compare to&nbsp;others?</p>
+<p>If you have any set of vector that forms a line, for example, all the vectors that has tips sitting on the x-axis. After the transformation, the vectors will still sitting on a line. So linear transformation will not &#8220;curve&#8221; the&nbsp;space.</p>
+<p>Also, notice that these two condition also tells you a important detail, which is the zero vector stay as a zero vector. You can check that using the&nbsp;condition.</p>
+<p>Let&#8217;s see a simple&nbsp;example:</p>
+<p>The transformation we will see is the simplest transformation: the transformation of doing nothing at&nbsp;all:</p>
+<div class="math">$$f(\pmb{x}) = \pmb{x}$$</div>
+<p>Is this a linear transformation? Let&#8217;s check additivity&nbsp;first:</p>
+<div class="math">$$f(\pmb{a}+\pmb{b}) = \pmb{a} + \pmb{b} $$</div>
+<div class="math">$$f(\pmb{a}) + f(\pmb{b}) = \pmb{a} + \pmb{b}$$</div>
+<div class="math">$$f(\pmb{a}+\pmb{b}) = f(\pmb{a}) + f(\pmb{b})$$</div>
+<p>Obviously, this follows the rule. Now let&#8217;s check&nbsp;homogeneity:</p>
+<div class="math">$$f(c\pmb{a}) =c\pmb{a} = cf(\pmb{a})$$</div>
+<p>lovely! Both rules are satisfied. We can now say that the transformation of doing nothing is a linear&nbsp;transformation.</p>
+<p>but that is way too boring, let&#8217;s do a interesting one together: the transformation of rotating everything by 90 degrees counter&nbsp;counterclockwise.</p>
+<p>To demonstrate the transformation. I will plot the sample vector and many other vectors during the transformation. To not make the graph too crowded, I will only draw the points where the tip of the vectors landed for other&nbsp;vectors.</p>
+<p><img alt="w4rotation" src="../images/w4rotation.gif" /></p>
+<p>It seems impossible to show the additivity and homogeneity in this case. Unlike the last time, it is not easy to write down the <span class="math">\(f(\pmb{x})\)</span>. However, when you graph the transformation on the basis vectors of 2d space, things gets a lot&nbsp;easier.</p>
+<p>Let&#8217;s look at how the basis vectors change under the transformation. More importantly, ask yourself whether if the basis is still a basis after the&nbsp;transformation.</p>
+<p><img alt="w4rotation" src="../images/w4axis_rotation.gif" /></p>
+<p>As you can see. the basis <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span> changed to <span class="math">\((0,1)\)</span> and <span class="math">\((-1,0)\)</span>. And it looks like the new basis still works&nbsp;well. </p>
+<p>so if our vector <span class="math">\(\pmb{x}\)</span> has x component <span class="math">\(a\)</span> and y component <span class="math">\(b\)</span>:</p>
+<div class="math">$$\pmb{x} = a(1,0)+b(0,1)$$</div>
+<p>in our new basis, the coefficients <span class="math">\(a\)</span> and <span class="math">\(b\)</span> shouldn&#8217;t&nbsp;change:</p>
+<div class="math">$$\pmb{x}_{new} = a(0,1)+b(-1,0)$$</div>
+<p>Now we have enough information to show the rotation by 90 degrees is a linear transformation. You will show this in the&nbsp;assignment.</p>
+<p>To see this geometrically, if you connect the points to form a grid. You will see that the lines remain as lines after the transformation. The space didn&#8217;t&nbsp;&#8220;curve&#8221;.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=4-1%20Linear%C2%A0Transformation&url=/4-1-linear-transformation" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/4-1-linear-transformation" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=4-1%20Linear%C2%A0Transformation&amp;body=/4-1-linear-transformation" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/4-2-matrix-multiplication-with-vector" title="Previous: 4-2 Matrix multiplication with vector">4-2 Matrix multiplication with vector</a></li>
+                <li class="next-article"><a href="/3-4-assignment" title="Next: 3-4 Assignment">3-4 Assignment</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+<h4>Last Updated</h4>
+<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#chapter-4-transformation-the-origin-of-matrix-ref">Chapter 4 Transformation: the origin of matrix</a>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Linear Algebra Note</span> - By David Nie
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

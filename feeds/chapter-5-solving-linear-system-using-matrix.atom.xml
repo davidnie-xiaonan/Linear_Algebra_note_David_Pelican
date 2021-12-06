@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 5 Solving Linear system using matrix</title><link href="/" rel="alternate"></link><link href="/feeds/chapter-5-solving-linear-system-using-matrix.atom.xml" rel="self"></link><id>/</id><updated>2010-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>5-1 intercepts problem</title><link href="/5-1-intercepts-problem" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Let …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s start from the simplest linear system you can imagine: line&amp;nbsp;intercepts.&lt;/p&gt;
+&lt;p&gt;Suppose we have two lines in Cartisian plane, line A and line&amp;nbsp;B:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5line_int.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Here are their&amp;nbsp;equations:&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{cases}
+      2x-y\ =\ 2 &amp;amp; \text{Line A}\\
+      x+y\ =\ 1 &amp;amp; \text{Line B}
+    \end{cases}   
+$$&lt;/div&gt;
+&lt;p&gt;Now the classic questions are: where does these two lines meet? And do they meet at&amp;nbsp;all?&lt;/p&gt;
+&lt;p&gt;It is fairly easy to see in graph that these two lines do intersect and they intersect at point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it under a&amp;nbsp;minute.&lt;/p&gt;
+&lt;p&gt;If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving system of linear equations. Why? I will give you two&amp;nbsp;reasons:&lt;/p&gt;
+&lt;p&gt;First, how do we solve the question with more than 2&amp;nbsp;dimensions? &lt;/p&gt;
+&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d&amp;#8230; That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long, but also nasty to&amp;nbsp;read.&lt;/p&gt;
+&lt;p&gt;Second, how do we know if there is a&amp;nbsp;solution?&lt;/p&gt;
+&lt;p&gt;Assume you are working on this 100 dimension linear system, it took you 3 days to realize that there is no solution! How frustrated is&amp;nbsp;that! &lt;/p&gt;
+&lt;p&gt;So, Let&amp;#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have a easy way to check whether there is a solution or&amp;nbsp;not.&lt;/p&gt;
+&lt;p&gt;Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write system of linear equations using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s take the above equations as an&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{cases}
+      2x-y\ =\ 2 &amp;amp; \text{Line A}\\
+      x+y\ =\ 1 &amp;amp; \text{Line B}
+    \end{cases}   
+$$&lt;/div&gt;
+&lt;p&gt;The left side of the equations are some variable with different coefficients, so let&amp;#8217;s start from&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;Instead of writing all the x and y in our equations, we can put all of them at the side as a&amp;nbsp;vector:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+x\\
+y
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;then we can write only the coefficients in front of variables as a&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2&amp;amp;-1\\
+1&amp;amp;1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;To get &lt;span class="math"&gt;\(2x-y\ =\ 2\)&lt;/span&gt; and &lt;span class="math"&gt;\(x+y\ =\ 1\)&lt;/span&gt; back, we can do a matrix&amp;nbsp;multiplication:&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{cases}
+      2x-y\ \\
+      x+y\  
+    \end{cases}   \rightarrow\begin{bmatrix}
+2&amp;amp;-1\\
+1&amp;amp;1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;then we can rewrite the right hand side as a vector&amp;nbsp;too:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So we ended up with a matrix multiply on an unknown vector equals to a&amp;nbsp;vector:&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{bmatrix}
+2&amp;amp;-1\\
+1&amp;amp;1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix}=\begin{bmatrix}
+2\\
+1
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;We can write this in a more abstract&amp;nbsp;form:&lt;/p&gt;
+&lt;div class="math"&gt;$$\color{red}{A}\pmb{x} = \pmb{b}$$&lt;/div&gt;
+&lt;p&gt;Where &lt;span class="math"&gt;\(\color{red}{A}\)&lt;/span&gt; is a matrix, &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; is the unknown vector that we are trying to solve and &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is a&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;It is obvious to see that the matrix notation is way easier than the original one since you don&amp;#8217;t have to write down the variables over and over again. Moreover, it is much faster to do elimination. We will discuss the detail of Gauss elimination in the next&amp;nbsp;section.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-2 Gaussian elimination</title><link href="/5-2-gaussian-elimination" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/5-2-gaussian-elimination</id><summary type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;So what is Gaussian elimination? In short, it is a algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;So what is Gaussian elimination? In short, it is a algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the procedure, no matter how hard the linear systems are, you can solve it&amp;nbsp;guaranteed.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s go through a simple&amp;nbsp;example:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{cases}
+      2x-y\ =\ 2  &amp;amp;\color{red}{(1)}\\
+      x+y\ =\ 1 &amp;amp;\color{red}{(2)}
+    \end{cases}   
+$$&lt;/div&gt;
+&lt;p&gt;We can write this in a matrix&amp;nbsp;form:&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{bmatrix}
+2&amp;amp;-1\\
+1&amp;amp;1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix}=\begin{bmatrix}
+2\\
+1
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;To solve this as a high school student, you can try substitution or&amp;nbsp;elimination. &lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s use elimination! You will first make a choice of eliminating x or y. It is much easier to eliminate y, all you need is to add first row to the second row and cancel out all the&amp;nbsp;y:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(1)}+ \color{red}{(2)} \rightarrow 3x = 3 $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ x = 1 $$&lt;/div&gt;
+&lt;p&gt;then we substitute the result back to &lt;span class="math"&gt;\((2)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$1+y = 1$$&lt;/div&gt;
+&lt;div class="math"&gt;$$y = 0 $$&lt;/div&gt;
+&lt;p&gt;So how to do the same thing in matrix form? The first step we do is to make this linear equation &lt;span class="math"&gt;\(A\pmb{x} = \pmb{b}\)&lt;/span&gt; even easier. We will rewrite the equation to something we called &lt;strong&gt;Augmented matrix&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$  
+\begin{bmatrix}
+2&amp;amp;-1\\
+1&amp;amp;1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix}=\begin{bmatrix}
+2\\
+1
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\downarrow
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    1 &amp;amp; 1  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      1  
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;How do you &amp;#8220;read&amp;#8221; this notation? Well, think about the first column is the coefficients for x and the second column is the coefficients for y and the sum is given by the number after the&amp;nbsp;bar. &lt;/p&gt;
+&lt;p&gt;We will see why this notation suit our purpose in a sec, now if we want to do the same thing as above, then how should we write&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;To write &lt;span class="math"&gt;\( \color{red}{(1)}+ \color{red}{(2)}\)&lt;/span&gt;, we can &lt;strong&gt;change&lt;/strong&gt; the row &lt;span class="math"&gt;\( \color{red}{(2)}\)&lt;/span&gt; to our new row &lt;span class="math"&gt;\( \color{red}{(1)}+ \color{red}{(2)}\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow \color{red}{(1)}+ \color{red}{(2)}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$
+\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    1\color{red}{+2} &amp;amp; 1\color{red}{-1}  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      1\color{red}{+2}  
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    \color{red}{3} &amp;amp; \color{red}{0}  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      \color{red}{3}  
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;this change is so called the &lt;strong&gt;row operation&lt;/strong&gt;, or &lt;strong&gt;elementary row operation&lt;/strong&gt;, There are in total three types of row operations. The first one is &lt;strong&gt;row addition&lt;/strong&gt;, which is exactly what we did above, replacing one row to this row adding another&amp;nbsp;row.&lt;/p&gt;
+&lt;p&gt;then what we did is to divide the new row by 3, in order to get $ x = 1 $. we will perform the same operation&amp;nbsp;here:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow \frac{1}{3} \times \color{red}{(2)}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    3\color{red}{\div3} &amp;amp; 0\color{red}{\div3}  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      3\color{red}{\div3}  
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    \color{red}{1} &amp;amp; \color{red}{0}  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      \color{red}{1}  
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;And this is our next type of row operation, called &lt;strong&gt;row multiplication&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;Now comes to the hard part, which is our &amp;#8220;substitution&amp;#8221;. In grade 9, these two method: substitution and elimination were taught as different method. But in here, we can see that both method can be break down into numbers of basic row&amp;nbsp;operations.&lt;/p&gt;
+&lt;p&gt;What we did after we figured out the x is we plugged into the original equation &lt;span class="math"&gt;\(\color{red}{(2)}\)&lt;/span&gt;. But as you see, we don&amp;#8217;t have the original equations anymore,, so we have to plug into the first one. How to do that? we can first remove all the x from the first equation by&amp;nbsp;doing:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(1)}\rightarrow \color{red}{(1)} - 2 \times \color{red}{(2)}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    2\color{red}{-2} &amp;amp; -1  \\
+    1 &amp;amp; 0  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2 \color{red}{-2} \\
+      1 
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    \color{red}{0} &amp;amp; -1  \\
+    1 &amp;amp; 0  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      \color{red}{0}  \\
+      1  
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Next we can divide the first row by &lt;span class="math"&gt;\(-1\)&lt;/span&gt; to get $y = $ something instead of  $-y = $&amp;nbsp;something:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(1)}\rightarrow -1 \times\color{red}{(1)} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    0 &amp;amp; -1\color{red}{\div-1}  \\
+    1 &amp;amp; 0  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0\color{red}{\div-1} \\
+      1 
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    0 &amp;amp; \color{red}{1}  \\
+    1 &amp;amp; 0  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      \color{red}{0}  \\
+      1  
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Basically, our job is done here. However, for simplicity, we would like to show &lt;span class="math"&gt;\(x = 1\)&lt;/span&gt; first and then show &lt;span class="math"&gt;\(y = 0\)&lt;/span&gt;, so we can do the last type of row operation here, called the &lt;strong&gt;row switching&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(1)}\leftrightarrow \color{red}{(2)} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    0 &amp;amp; 1  \\
+    1 &amp;amp; 0  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0 \\
+      1 
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    1 &amp;amp; 0  \\
+    0 &amp;amp; 1  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1  \\
+      0  
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Then, we can easily read the result just by looking at the&amp;nbsp;rows.&lt;/p&gt;
+&lt;p&gt;Alright! We have learned the notation and row operation, now it is the time to find out how to perform the Gaussian elimination. This method is not always the optimum one when you solve linear system, but it is surely the one you can rely on when you have no clue how to&amp;nbsp;start.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s have a fairly simple example to show how this&amp;nbsp;work.&lt;/p&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    1 &amp;amp; 0 &amp;amp; 2  \\
+    1 &amp;amp; 3 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      1  \\
+      3  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;As you can see, we have a system of equations with three unknowns. We started from the first row and we only care about the first number in the row. If this number is not &lt;span class="math"&gt;\(1\)&lt;/span&gt;, we will divide whatever this number is to make our first number to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In this case, we have that number already be &lt;span class="math"&gt;\(1\)&lt;/span&gt; so we moved on to next&amp;nbsp;step.&lt;/p&gt;
+&lt;p&gt;The next step is to make the first number on the second row to be &lt;span class="math"&gt;\(0\)&lt;/span&gt;. To do that, you will do a row addition(subtraction). The only row we will use is the first row since the first row already has the coefficient of x to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;, we just need to subtract as many row 1 as we want to get the first number on the second row to be &lt;span class="math"&gt;\(0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In this case, the first number on the second row is 1, so we need to subtract exactly one row 1 to row&amp;nbsp;2:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow  \color{red}{(2)}- \color{red}{(1)} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    1 &amp;amp; 0 &amp;amp; 2  \\
+    1 &amp;amp; 3 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      1  \\
+      3  \\
+    \end{matrix}
+  \right.
+\right]\rightarrow \left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    1 &amp;amp; 3 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      3  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Now we do the similar thing as above, we check if the coefficient of the second number is &lt;span class="math"&gt;\(1\)&lt;/span&gt; or not, if not, we will do a division to make this number to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;. Luckily, this time we get a &lt;span class="math"&gt;\(1\)&lt;/span&gt; again! So we don&amp;#8217;t have to do&amp;nbsp;anything.&lt;/p&gt;
+&lt;p&gt;You might already see the pattern here. The next step is to make sure that on the third row, we have &lt;span class="math"&gt;\(0\)&lt;/span&gt; for both the first coefficient and the second one. To do that, we subtract different amount of row 1 and row&amp;nbsp;2.&lt;/p&gt;
+&lt;p&gt;In our case, The first number for the third row is 1, which means that we need to subtract off one row&amp;nbsp;1:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(3)}\rightarrow  \color{red}{(3)}- \color{red}{(1)} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    1 &amp;amp; 3 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      3  \\
+    \end{matrix}
+  \right.
+\right]\rightarrow \left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    0 &amp;amp; 4 &amp;amp; 0
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      1  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Then we subtract out four row 2 since the second number of row 3 is now &lt;span class="math"&gt;\(4\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;You might find that we can also divide the new row 3 by 4 and we immediately get what y is. But as I mentioned before, the Gaussian elimination is not always the easiest one, so we will follow the more general&amp;nbsp;case.&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(3)}\rightarrow  \color{red}{(3)}- 4\times\color{red}{(2)} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    0 &amp;amp; 4 &amp;amp; 0
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      1  \\
+    \end{matrix}
+  \right.
+\right]\rightarrow \left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    0 &amp;amp; 0 &amp;amp; -4
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      5  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;we do the same thing again, now this time the leading coefficient is &lt;span class="math"&gt;\(-4\)&lt;/span&gt;, so we divide the row 3 by &lt;span class="math"&gt;\(-4\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(3)}\rightarrow  \color{red}{(3)}\div (-4) $$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    0 &amp;amp; 0 &amp;amp; -4
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      5  \\
+    \end{matrix}
+  \right.
+\right]\rightarrow \left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    0 &amp;amp; 0 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      -5/4  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Lovely, we are half way there! As you can see, our matrix on the left now became a special shape with all diagonal term to be &lt;span class="math"&gt;\(1\)&lt;/span&gt; and the bottom left to be all zero. This type of matrix is what we called &lt;strong&gt;lower triangular matrix&lt;/strong&gt;, but that is not our topic today so we won&amp;#8217;t dig on too&amp;nbsp;much. &lt;/p&gt;
+&lt;p&gt;The rest of the job is much easier than the first half, you will do the similar thing but work your way up this time. The goal is to have all diagonal terms to be &lt;span class="math"&gt;\(1\)&lt;/span&gt; and rest to be zero. To do that , we first subtract one row 3 to row 2 to get rid of that annoying &lt;span class="math"&gt;\(1\)&lt;/span&gt; at the end of row&amp;nbsp;2:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow  \color{red}{(2)}- \color{red}{(3)}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 1  \\
+    0 &amp;amp; 0 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1  \\
+      -5/4  \\
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 0  \\
+    0 &amp;amp; 0 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      1/4  \\
+      -5/4  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Then we add one row 2 to row 1 and subtract one row 3 to row&amp;nbsp;1:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \color{red}{(1)}\rightarrow  \color{red}{(1)}+\color{red}{(2)}- \color{red}{(3)}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; -1 &amp;amp; 1  \\
+    0 &amp;amp; 1 &amp;amp; 0  \\
+    0 &amp;amp; 0 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      1/4  \\
+      -5/4  \\
+    \end{matrix}
+  \right.
+\right]\rightarrow\left[
+  \begin{matrix}
+    1&amp;amp; 0 &amp;amp; 0  \\
+    0 &amp;amp; 1 &amp;amp; 0  \\
+    0 &amp;amp; 0 &amp;amp; 1
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      7/2  \\
+      1/4  \\
+      -5/4  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;And we have our&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;Sadly, you are not always getting a great answer like this. Just like if you are solving two linear equations, you might experience something like two parallel lines or two same lines. When you solve a linear system, a non-trivial solution is not always&amp;nbsp;guaranteed.&lt;/p&gt;
+&lt;p&gt;Sometimes, you might end up with something like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; 0 &amp;amp; 0  \\
+    0 &amp;amp; 1 &amp;amp; 0  \\
+    0 &amp;amp; 0 &amp;amp; 0
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0  \\
+      0  \\
+      1  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Or&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1&amp;amp; 0 &amp;amp; 0  \\
+    0 &amp;amp; 1 &amp;amp; 0  \\
+    0 &amp;amp; 0 &amp;amp; 0
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0  \\
+      0  \\
+      0  \\
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Don&amp;#8217;t worry! You will see these cases in the practice. We are not going to discuss these case in&amp;nbsp;detail. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-3 Column space and null space</title><link href="/5-3-column-space-and-null-space" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/5-3-column-space-and-null-space</id><summary type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions are there before we solve the&amp;nbsp;equations.&lt;/p&gt;
+&lt;p&gt;This sounds great, but how should we do this? Let&amp;#8217;s start from 2d and then move on to higher&amp;nbsp;dimension.&lt;/p&gt;
+&lt;p&gt;Our linear equations on plane looks like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&amp;nbsp;lines.&lt;/p&gt;
+&lt;p&gt;So what are the&amp;nbsp;cases?&lt;/p&gt;
+&lt;p&gt;The first case is obvious, two lines intersect at one point. In this case, we have exactly &lt;strong&gt;one&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5line_int.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The second case is two parallel lines. In this case, we have &lt;strong&gt;zero&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5line_para.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are &lt;strong&gt;infinite&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5same_line.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;I personally don&amp;#8217;t like to say there are infinite many solution. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinite many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &amp;#8220;there are infinite many solutions&amp;#8221; won&amp;#8217;t give you enough&amp;nbsp;information. &lt;/p&gt;
+&lt;p&gt;If we write these three different cases in augment matrix, you will see that the second one and the third one are very&amp;nbsp;special:&lt;/p&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    2 &amp;amp; -1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1 
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    2 &amp;amp; -1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0  \\
+      0 
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Both cases has two &lt;strong&gt;linearly dependent&lt;/strong&gt; rows, but the vectors on the right are different. Let&amp;#8217;s look at them one by&amp;nbsp;one:&lt;/p&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    2 &amp;amp; -1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      2  \\
+      -1 
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;This one is saying that &lt;span class="math"&gt;\(2x-y = 2\)&lt;/span&gt; and also &lt;span class="math"&gt;\(2x-y = -1\)&lt;/span&gt;. Obviously this will end up with no solution since you can combine them and give you &lt;span class="math"&gt;\(2 = -1\)&lt;/span&gt;. For this type of linear system, we say they are &lt;strong&gt;inconsistent&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;Then let&amp;#8217;s look at the next&amp;nbsp;one:&lt;/p&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    2 &amp;amp; -1  \\
+    2 &amp;amp; -1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0 \\
+      0
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;This one is ridiculous. The two equations are literally the same thing! So it didn&amp;#8217;t tell us enough information about the system! Of course you are getting infinite many solution because you have two variable with only one&amp;nbsp;equation.&lt;/p&gt;
+&lt;p&gt;So Let&amp;#8217;s sum up here. If the matrix has linear dependent rows, then it means that at least one of the row is &amp;#8220;useless&amp;#8221;. So if you have a n by n matrix and one of the row is telling the same thing as other rows, then you will not have sufficient condition to solve this system. Then you will end up with many&amp;nbsp;solutions. &lt;/p&gt;
+&lt;p&gt;If your matrix has linear dependent rows and the vector don&amp;#8217;t match, then it means you have parallel lines&amp;amp;planes. Then you end up with no&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;Then finally, if all your rows are linear independent, congratulation! You can have a non-trivial&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;But why linear independent rows can give you non-trivial solution? Let&amp;#8217;s see if we can understand it using the knowledge of linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;The equation we are going to solve is&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
+&lt;p&gt;Solving this equation means to find the vector &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; such that after the transformation it became &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;By look at the transformation, we can predict what will happen if we put a vector in there. Let&amp;#8217;s start with a linear dependent&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2 &amp;amp;-1\\
+2 &amp;amp;-1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So what is the transformation looks&amp;nbsp;like?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5linear_trans.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, all the vectors are transformed onto a line &lt;span class="math"&gt;\(y = x\)&lt;/span&gt;. This makes sense since the transformation returns exactly same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; that gives you &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;. Then there are two possible results: One is that your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; actually landed on this line so you get some solution. The other case is your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is unfortunately not on this line so the system is inconsistent, no such &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; can give you that &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; vector after the&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Now why do you have multiple solutions for one &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;? Well, If we just look at the transformation itself, I looks like all the vectors in 2d space are &lt;strong&gt;projected&lt;/strong&gt; on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects returns exactly same&amp;nbsp;shadow.&lt;/p&gt;
+&lt;p&gt;But this is only 2 dimension. What if we have more than 2? what if we have dimension of 10? how do we understand the transformation that happens in 100 dimension? Obviously we need more tools to do that. So, let&amp;#8217;s use the knowledge of span and basis&amp;nbsp;vector!&lt;/p&gt;
+&lt;p&gt;We know that we can think of any matrices as linear transformation, and each column in a transformation matrix tells us how basis vector transform. So why don&amp;#8217;t we find the span of those basis vectors after the transformation? That will definitely give us some information about this&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s take the above matrix as a&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2 &amp;amp;-1\\
+2 &amp;amp;-1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;The column vectors&amp;nbsp;are:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2\\
+2
+\end{bmatrix},\begin{bmatrix}
+-1\\
+-1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So the span of those vectors give us the &lt;span class="math"&gt;\(y = x\)&lt;/span&gt; line on 2d&amp;nbsp;plane. &lt;/p&gt;
+&lt;p&gt;What do we know from this? We know that any vectors after this transformation will end up sitting on the line &lt;span class="math"&gt;\(y = x\)&lt;/span&gt;. Why? Well any vector on the plane can be rewrite into a linear combination of the basis&amp;nbsp;vector:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+a\\
+b
+\end{bmatrix} = a\begin{bmatrix}
+1\\
+0
+\end{bmatrix}+ b\begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;Then if we apply the&amp;nbsp;transformation:&lt;/p&gt;
+&lt;div class="math"&gt;$$T\begin{bmatrix}
+a\\
+b
+\end{bmatrix} = a \times T\begin{bmatrix}
+1\\
+0
+\end{bmatrix}+ b \times T\begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So the vector after the transformation will be a linear combination of the column vectors &lt;span class="math"&gt;\(T&lt;div class="math"&gt;\begin{bmatrix}
+1\\
+0
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; and &lt;span class="math"&gt;\(T&lt;div class="math"&gt;\begin{bmatrix}
+0\\
+1
+\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. Therefore, the vector after the transformation will for sure sit on the span of column vectors, because the span is the collection of all possible linear&amp;nbsp;combinations.&lt;/p&gt;
+&lt;p&gt;Do that span of column vectors has a name? Yes, it is called &lt;strong&gt;Column space&lt;/strong&gt;. By looking at the column space, we will know where our vectors live after the transformation. It is just like the idea of range in&amp;nbsp;function.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at the dimension of column space. For a n by n matrix, which means you have n variable and n equations(or you can think of a dimension n vector transform to a same dimension vector). We can say the dimension of matrix is n. if its column space also have dimension of n, what does this tell us? Well, it means your vector after the transformation lives in the same dimension n space. In the other word, the columns are linearly independent. Later on we will know that this also means the rows are linearly independent&amp;nbsp;too. &lt;/p&gt;
+&lt;p&gt;Here is the tricky part. What if the dimension is less than n? You might say: Sure! Then it means the linear system has no solution or many solution. But I want to know more about&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;An interesting question to ask is: We start with dimension of n, we ended up with dimension of something less than n, so where does this &amp;#8220;missing&amp;#8221; dimension go? Let&amp;#8217;s look at the equation&amp;nbsp;again:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
+&lt;p&gt;Assume we have linear independent columns (or you can say we have only one solution). Let&amp;#8217;s call the solution &lt;span class="math"&gt;\(\pmb{x}_1\)&lt;/span&gt;,&amp;nbsp;so:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x}_1 = \pmb{b}$$&lt;/div&gt;
+&lt;p&gt;Now let&amp;#8217;s consider the similar&amp;nbsp;equation:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \pmb{0}$$&lt;/div&gt;
+&lt;p&gt;if there is some non-zero &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; satisfy this equation, we are in a big trouble.&amp;nbsp;Why?&lt;/p&gt;
+&lt;p&gt;Assume that &lt;span class="math"&gt;\(A\pmb{x}_2 = \pmb{0}\)&lt;/span&gt; for some non-zero &lt;span class="math"&gt;\(\pmb{x}_2\)&lt;/span&gt;, the I can say there exist a brand new solution for &lt;span class="math"&gt;\(A\pmb{x} = \pmb{b}\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x}_1 + A\pmb{x}_2 = \pmb{b} + \pmb{0} $$&lt;/div&gt;
+&lt;div class="math"&gt;$$A(\pmb{x}_1 + \pmb{x}_2) = \pmb{b} $$&lt;/div&gt;
+&lt;p&gt;The new solution is &lt;span class="math"&gt;\(\pmb{x}_1 + \pmb{x}_2\)&lt;/span&gt;. For linear independent matrix, this $\pmb{x}_2 $ has to be zero, other wise you won&amp;#8217;t get only one&amp;nbsp;solution. &lt;/p&gt;
+&lt;p&gt;What if the rows are linear dependent? Then the equation &lt;span class="math"&gt;\(A\pmb{x} = \pmb{0}\)&lt;/span&gt; will have non-zero&amp;nbsp;solution! &lt;/p&gt;
+&lt;p&gt;Take the same matrix as example, if we solve &lt;span class="math"&gt;\(A\pmb{x} = \pmb{0}\)&lt;/span&gt; for this matrix we will&amp;nbsp;have:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2 &amp;amp;-1\\
+2 &amp;amp;-1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix} = \begin{bmatrix}
+0\\
+0
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;This equation is easy to solve, we just have&amp;nbsp;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ 2x-y = 0 $$&lt;/div&gt;
+&lt;p&gt;All the vectors on the line $ y = 2x $ satisify the equations. We can also write the result&amp;nbsp;as:&lt;/p&gt;
+&lt;div class="math"&gt;$$span \left( \begin{bmatrix}
+1\\
+2
+\end{bmatrix} \right) $$&lt;/div&gt;
+&lt;p&gt;We actually have name for this space, we call it &lt;strong&gt;null space&lt;/strong&gt; or &lt;strong&gt;Kernel&lt;/strong&gt;. &amp;#8220;Null&amp;#8221; means &amp;#8220;nothing&amp;#8221;, Of course this does not means there is nothing in the space. It means the collection of all vectors that are transformed to &amp;#8220;nothing&amp;#8221;, the zero&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&amp;nbsp;dimensional.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5nullspace.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solution from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solution or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describes one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&amp;nbsp;algebra.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-4 The cheat: inverse matrix</title><link href="/5-4-the-cheat-inverse-matrix" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/5-4-the-cheat-inverse-matrix</id><summary type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at our equation in matrix&amp;nbsp;form:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
+&lt;p&gt;The thing we are trying to solve is &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt;, and we know the transformation &lt;span class="math"&gt;\(A\)&lt;/span&gt; and the target vector &lt;span class="math"&gt;\(b\)&lt;/span&gt;. Assume you solved the equation and you have exactly one solution, you know that the null space of this transformation is zero. In another word, the system will always give you a unique &lt;span class="math"&gt;\( \pmb{\color{red}x}\)&lt;/span&gt; for any vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;. But the problem is, when we change the vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;, we have to solve the system again, and that is not good for&amp;nbsp;us.&lt;/p&gt;
+&lt;p&gt;So, is there a better way to solve&amp;nbsp;this? &lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at the simplest equation that we all learned in elementary&amp;nbsp;school:&lt;/p&gt;
+&lt;div class="math"&gt;$$a\color{red}x = b$$&lt;/div&gt;
+&lt;p&gt;Notice that &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; are just number. To solve x, we just divide the &lt;span class="math"&gt;\(a\)&lt;/span&gt; both side. Good thing about this is that no matter how b change, we &lt;strong&gt;always&lt;/strong&gt; divide the number &lt;span class="math"&gt;\(a\)&lt;/span&gt; to get our solution for &lt;span class="math"&gt;\(\color{red}x\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;But wait a second, we don&amp;#8217;t have division in matrix! Obviously you can&amp;#8217;t divide matrices, it doesn&amp;#8217;t make any sense! Or is&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;The matrix act as a transformation &amp;#8220;function&amp;#8221;, like &lt;span class="math"&gt;\( y = sin(x)\)&lt;/span&gt;, you can&amp;#8217;t just divide functions. But, we can change our &amp;#8220;division&amp;#8221; into the multiplication of the reciprocal! What is the &amp;#8220;reciprocal&amp;#8221; of a function? Well, it is called the inverse of&amp;nbsp;function:&lt;/p&gt;
+&lt;div class="math"&gt;$$f^{-1}(f(x)) = x$$&lt;/div&gt;
+&lt;p&gt;So how do we solve the equation? Let&amp;#8217;s first see how we did it in&amp;nbsp;function:&lt;/p&gt;
+&lt;div class="math"&gt;$$f(x) = b $$&lt;/div&gt;
+&lt;div class="math"&gt;$$f^{-1}(f(x)) = f^{-1}(b) = x $$&lt;/div&gt;
+&lt;div class="math"&gt;$$x = f^{-1}(b) $$&lt;/div&gt;
+&lt;p&gt;Assume there exist the &amp;#8220;inverse&amp;#8221; of matrix, we can perform the same thing as we did in&amp;nbsp;function:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$A^{-1}(A\pmb{\color{red}x}) = A^{-1}b = \color{red}x $$&lt;/div&gt;
+&lt;div class="math"&gt;$$x = A^{-1}(b) $$&lt;/div&gt;
+&lt;p&gt;So what has to be true for this &amp;#8220;inverse&amp;#8221; in order to make the above idea&amp;nbsp;practical?&lt;/p&gt;
+&lt;p&gt;It is not hard to see that the second line has to be the definition for inverse&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$A^{-1}(A\pmb{\color{red}x}) = \color{red}x $$&lt;/div&gt;
+&lt;p&gt;If you treat the two matrix &lt;span class="math"&gt;\(A^{-1}A\)&lt;/span&gt; as one matrix, Let&amp;#8217;s call it &lt;span class="math"&gt;\(I\)&lt;/span&gt; ,what is &lt;span class="math"&gt;\(I\)&lt;/span&gt; transformation looks&amp;nbsp;like?&lt;/p&gt;
+&lt;div class="math"&gt;$$A^{-1}A = I$$&lt;/div&gt;
+&lt;div class="math"&gt;$$(A^{-1}A)\pmb{\color{red}x} = \color{red}x $$&lt;/div&gt;
+&lt;div class="math"&gt;$$I\pmb{\color{red}x} = \pmb{\color{red}x}$$&lt;/div&gt;
+&lt;p&gt;Well, this matrix has to transform vector &lt;span class="math"&gt;\({\color{red}x}\)&lt;/span&gt; into itself. Such transformation is called &lt;strong&gt;identity matrix&lt;/strong&gt;. Let&amp;#8217;s construct the identity matrix&amp;nbsp;together.&lt;/p&gt;
+&lt;p&gt;First, what is the dimension of this matrix? If the vector has to transform to itself, then the matrix must have size of n by n, where n is the dimension of that vector. How about the entries? The basis of this transformation should remain the&amp;nbsp;same:&lt;/p&gt;
+&lt;div class="math"&gt;$$\left( \begin{bmatrix}
+1\\
+0\\
+0\\
+\vdots
+\end{bmatrix} , \begin{bmatrix}
+0\\
+1\\
+0\\
+\vdots
+\end{bmatrix} , \begin{bmatrix}
+0\\
+0\\
+1\\
+\vdots
+\end{bmatrix} ... \right)$$&lt;/div&gt;
+&lt;p&gt;For example, a 3 by 3 identity matrix should looks like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+1 &amp;amp; 0 &amp;amp; 0\\
+0 &amp;amp; 1 &amp;amp; 0\\
+0 &amp;amp; 0 &amp;amp; 1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;Now we know what matrix are we looking for, it is time to see how to compute the inverse&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Our goal is to find a matrix &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt;such that &lt;span class="math"&gt;\(A^{-1}A = I\)&lt;/span&gt;, Here we will introduce one of the methods to compute the inverse. For now, let&amp;#8217;s accept the fact that this method works. Later on, we will find out why this method&amp;nbsp;works.&lt;/p&gt;
+&lt;p&gt;The method we will use is  Gauss–Jordan elimination, a variation of the classic Gaussian elimination. Let&amp;#8217;s say we want to find the inverse matrix of following matrix&amp;nbsp;A:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+1 &amp;amp; 2\\
+3 &amp;amp; 4
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;First, we have to take a look at the matrix, because not all matrices have inverse. There are two things we need to check: First is the size of this matrix, it has to be a &lt;strong&gt;square matrix&lt;/strong&gt; (2 by 2, 3 by 3 etc.). Second, it has to have linear independent rows. Or use the concepts we learned earlier, for a n by n matrix, the dimension of column space has to be&amp;nbsp;n.&lt;/p&gt;
+&lt;p&gt;For this easy example, we can see that both conditions are satisfied. So we know that this matrix has inverse, and now we can compute&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;First step is to write a augmented matrix by combining the matrix A and the identity matrix with the same&amp;nbsp;size:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+[A|I] = \left[
+  \begin{matrix}
+    1 &amp;amp; 2  \\
+    3 &amp;amp; 4  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 &amp;amp; 0 \\
+      0 &amp;amp; 1 
+    \end{matrix}
+  \right.
+\right]
+$$&lt;/div&gt;
+&lt;p&gt;Then we do Gaussian elimination. The goal is to make the left part of the augmented matrix to be identity matrix so the right part, which is the identity matrix at the beginning, will became the inverse&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s get&amp;nbsp;started:&lt;/p&gt;
+&lt;div class="math"&gt;$$r_2 \rightarrow r_2-3r_1$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1 &amp;amp; 2  \\
+    3 &amp;amp; 4  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 &amp;amp; 0 \\
+      0 &amp;amp; 1 
+    \end{matrix}
+  \right.
+\right] \rightarrow \left[
+  \begin{matrix}
+    1 &amp;amp; 2  \\
+    0 &amp;amp; -2  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 &amp;amp; 0 \\
+      -3 &amp;amp; 1 
+    \end{matrix}
+  \right.
+\right] 
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$r_2 \rightarrow -\frac{1}{2}r_2$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1 &amp;amp; 2  \\
+    0 &amp;amp; -2  
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 &amp;amp; 0 \\
+      -3 &amp;amp; 1 
+    \end{matrix}
+  \right.
+\right] \rightarrow \left[
+  \begin{matrix}
+    1 &amp;amp; 2  \\
+    0 &amp;amp; 1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 &amp;amp; 0 \\
+      \frac{3}{2} &amp;amp; -\frac{1}{2}
+    \end{matrix}
+  \right.
+\right] 
+$$&lt;/div&gt;
+&lt;div class="math"&gt;$$r_1 \rightarrow r_1 - 2r_2$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\left[
+  \begin{matrix}
+    1 &amp;amp; 2  \\
+    0 &amp;amp; 1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 &amp;amp; 0 \\
+      \frac{3}{2} &amp;amp; -\frac{1}{2}
+    \end{matrix}
+  \right.
+\right] \rightarrow \left[
+  \begin{matrix}
+    1 &amp;amp; 0  \\
+    0 &amp;amp; 1 
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      -2 &amp;amp; 1 \\
+      \frac{3}{2} &amp;amp; -\frac{1}{2}
+    \end{matrix}
+  \right.
+\right] 
+$$&lt;/div&gt;
+&lt;p&gt;So the inverse of matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;&amp;nbsp;is:&lt;/p&gt;
+&lt;div class="math"&gt;$$A^{-1} = \begin{bmatrix}
+      -2 &amp;amp; 1 \\
+      \frac{3}{2} &amp;amp; -\frac{1}{2}
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;We can check it by multiplying &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; and &lt;span class="math"&gt;\(A\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$A^{-1}A = \begin{bmatrix}
+      -2 &amp;amp; 1 \\
+      \frac{3}{2} &amp;amp; -\frac{1}{2}
+\end{bmatrix}\begin{bmatrix}
+1 &amp;amp; 2\\
+3 &amp;amp; 4
+\end{bmatrix} = \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;For 3 by 3 or higher dimension matrix, finding inverse can be really tedious. There are other ways to compute the inverse of a matrix, but if you do it by hand, Gaussian elimination is the most efficient&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;Now we successfully find the inverse of our matrix, we can finally find the nontrivial solution for our equation &lt;span class="math"&gt;\(A\pmb{\color{red}x} = \pmb{b}\)&lt;/span&gt; for any &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; we&amp;nbsp;want.&lt;/p&gt;
+&lt;p&gt;But you might want to ask this question: There are cases that we don&amp;#8217;t get any solution or get infinite many solution, so if our solution is given by a simple&amp;nbsp;multiplication:&lt;/p&gt;
+&lt;div class="math"&gt;$$\color{red}x = A^{-1} \pmb{b}$$&lt;/div&gt;
+&lt;p&gt;Then how can there be infinite many solution or no solution? An easy answer to this question is: For those cases, we couldn&amp;#8217;t find any&amp;nbsp;inverse. &lt;/p&gt;
+&lt;p&gt;To see that, we have to treat the inverse matrix as a linear transformation. Not all matrices have inverse, for example, any matrix has different numbers of rows and columns cannot have&amp;nbsp;inverse.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at a specific&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$AB = \begin{bmatrix}
+1 &amp;amp; 2 &amp;amp; 1\\
+0 &amp;amp; 1 &amp;amp; 1
+\end{bmatrix}\begin{bmatrix}
+      1 &amp;amp; 0 \\
+      0 &amp;amp; -1 \\
+      0 &amp;amp; 2
+\end{bmatrix} = \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 1
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;Apparently, the matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt; multiply by matrix &lt;span class="math"&gt;\(B\)&lt;/span&gt; give you identity matrix, but can you say that the inverse of &lt;span class="math"&gt;\(B\)&lt;/span&gt; is &lt;span class="math"&gt;\(A\)&lt;/span&gt;? Sort of, but not quite. We can call them &lt;strong&gt;left inverse&lt;/strong&gt; or &lt;strong&gt;right inverse&lt;/strong&gt;. To be a inverse matrix, multiply from left to right or right to left has to returns the same identity&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;For the above example, we can easily see&amp;nbsp;that:&lt;/p&gt;
+&lt;div class="math"&gt;$$BA =\begin{bmatrix}
+      1 &amp;amp; 0 \\
+      0 &amp;amp; -1 \\
+      0 &amp;amp; 2
+\end{bmatrix} \begin{bmatrix}
+1 &amp;amp; 2 &amp;amp; 1\\
+0 &amp;amp; 1 &amp;amp; 1
+\end{bmatrix} \neq \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 1
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;How about the matrix that transform 2d space to 1d&amp;nbsp;line? &lt;/p&gt;
+&lt;div class="math"&gt;$$ A = \begin{bmatrix}
+2 &amp;amp; -1\\
+2 &amp;amp; -1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5linear_trans.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Do they have inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vector on the&amp;nbsp;plane.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w5line_int" src="../images/w5inverse.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;That is not a linear transformation can do. It&amp;#8217;s like functions, for one x value, you can only get one y value. So for one vector input, you can only get one vector&amp;nbsp;output.&lt;/p&gt;
+&lt;p&gt;In practice, we will see that finding the inverse in order to solve linear system is actually not very convenient. Nowadays, computer use other methods like &lt;strong&gt;&lt;span class="caps"&gt;LU&lt;/span&gt; decomposition&lt;/strong&gt;, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having inverse matrix is a&amp;nbsp;must.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-5 The fundamental theorem of Linear Algebra</title><link href="/5-5-the-fundamental-theorem-of-linear-algebra" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/5-5-the-fundamental-theorem-of-linear-algebra</id><summary type="html">&lt;p&gt;In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part of it which also called Rank–Nullity&amp;nbsp;theorem.&lt;/p&gt;
+&lt;p&gt;The name of this theorem is actually not universal. It is popularized by one of my favorite professors: &lt;a href="http://www-math.mit.edu/~gs/"&gt;Gilbert Strang&lt;/a&gt;. This name is related to the famous theorem in calculus, the fundamental theorem of Calculus. The theorem itself is not hard to prove, so if you are interested, you can try to do it. But before we dig in to the theorem, we will quickly introduce two more&amp;nbsp;concepts.&lt;/p&gt;
+&lt;p&gt;The first one is the &lt;strong&gt;Rank&lt;/strong&gt; of a matrix &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; transformation. The Rank of a matrix is defined as the dimension of its column space. For&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+1 &amp;amp; 2\\
+3 &amp;amp; 4
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;The Column space is the span of its columns. In this case, we have &lt;span class="math"&gt;\(span \left( &lt;div class="math"&gt;\begin{bmatrix}
+1\\
+3
+\end{bmatrix}&lt;/div&gt;, &lt;div class="math"&gt;\begin{bmatrix}
+2\\
+4
+\end{bmatrix}&lt;/div&gt; \right)\)&lt;/span&gt;, the two column vectors are linear independent so they span the entire 2d space. Then the dimension of its column space is 2. So we can&amp;nbsp;say:&lt;/p&gt;
+&lt;div class="math"&gt;$$Rank(A) = 2$$&lt;/div&gt;
+&lt;p&gt;The second one is the &lt;strong&gt;Nullity&lt;/strong&gt; of a matrix &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; transformation. The Nullity of a matrix is defined as the dimension of its null space or Kernel. For&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+2 &amp;amp; 1\\
+2 &amp;amp; 1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;The null space of this transformation can be found by calculate the following&amp;nbsp;equation:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \pmb{0}$$&lt;/div&gt;
+&lt;p&gt;if you solve this equation, you will find that the solution for &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; is &lt;span class="math"&gt;\(span \left( &lt;div class="math"&gt;\begin{bmatrix}
+1\\
+-2
+\end{bmatrix}&lt;/div&gt;\right)\)&lt;/span&gt;, so the dimension of null space is 1, therefore we can&amp;nbsp;say:&lt;/p&gt;
+&lt;div class="math"&gt;$$Nullity(A) = 1$$&lt;/div&gt;
+&lt;p&gt;Now we finished our appetizer, let&amp;#8217;s check our main course. And of course, To understand the theorem better, we have to put this in the frame of linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s say we have a transformation matrix &lt;span class="math"&gt;\(T\)&lt;/span&gt;. This matrix transform all vectors in vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt; to another vector space &lt;span class="math"&gt;\(W\)&lt;/span&gt;. So if you pick any vector in &lt;span class="math"&gt;\(W\)&lt;/span&gt;, say &lt;span class="math"&gt;\(\pmb{w} \in W\)&lt;/span&gt;. Then their must be at least one vector &lt;span class="math"&gt;\(\pmb{v}\)&lt;/span&gt; in vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt;, such&amp;nbsp;that: &lt;/p&gt;
+&lt;div class="math"&gt;$$\pmb{w} = T(\pmb{v})$$&lt;/div&gt;
+&lt;p&gt;What we are interested is the dimension. So what is the dimension of &lt;span class="math"&gt;\(V\)&lt;/span&gt;? This is easy. If your matrix &lt;span class="math"&gt;\(T\)&lt;/span&gt; is a &lt;span class="math"&gt;\(m \times n\)&lt;/span&gt; matrix, it means you take the vector with dimension &lt;span class="math"&gt;\(n\)&lt;/span&gt; and you output a vector with dimension &lt;span class="math"&gt;\(m\)&lt;/span&gt;. So, the input vector space must have dimension of &lt;span class="math"&gt;\(n\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;How about the dimension of &lt;span class="math"&gt;\(W\)&lt;/span&gt;? The vector space &lt;span class="math"&gt;\(W\)&lt;/span&gt; has a more complicated situation. You might think, like how we get the dimension of &lt;span class="math"&gt;\(V\)&lt;/span&gt;, the dimension of &lt;span class="math"&gt;\(W\)&lt;/span&gt; is simply &lt;span class="math"&gt;\(m\)&lt;/span&gt;. That is not true. For&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+0 &amp;amp; 0\\
+0 &amp;amp; 0
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;This zero matrix returns only vector zero, which means our &lt;span class="math"&gt;\(W\)&lt;/span&gt; space has dimension of zero. But &lt;span class="math"&gt;\(m\)&lt;/span&gt; in this case is 2 so not true at&amp;nbsp;all. &lt;/p&gt;
+&lt;p&gt;So what is it? Well, I think I just spoil the answer at the beginning. Yes! You guessed it! It is the Rank of this transformation. Why? Remember how the transformation matrix is defined? The column of the transformation matrix is the basis vectors after transformation. So the span of the &amp;#8220;transformed&amp;#8221; basis has to be the vector space &lt;span class="math"&gt;\(W\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;There is another name for &lt;span class="math"&gt;\(W\)&lt;/span&gt;. For a linear transformation. Vector space &lt;span class="math"&gt;\(W\)&lt;/span&gt; is called the &lt;strong&gt;image&lt;/strong&gt; of transformation. It is the &amp;#8220;output&amp;#8221; of that&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Alright! We now know the dimension of vector space before and after the transformation, there is only one part of the theorem&amp;nbsp;remains.&lt;/p&gt;
+&lt;p&gt;When we looked at the dimension of &lt;span class="math"&gt;\(V\)&lt;/span&gt; and &lt;span class="math"&gt;\(W\)&lt;/span&gt;, you will notice that the dimension of &lt;span class="math"&gt;\(V\)&lt;/span&gt; is &lt;strong&gt;always&lt;/strong&gt; bigger or equal to the dimension of &lt;span class="math"&gt;\(W\)&lt;/span&gt;. This comes from the fact that linear transformation cannot map one vector to two different ones, just like in function, one &lt;span class="math"&gt;\(x\)&lt;/span&gt; value will always give you one &lt;span class="math"&gt;\(y\)&lt;/span&gt; value, so the domain will always bigger than the&amp;nbsp;range. &lt;/p&gt;
+&lt;p&gt;This is not particularly interested, but one might ask another question: where did the &amp;#8220;missing&amp;#8221; dimension go? If your transformation transform a 3d space to a 1d space, the rest 2 dimension actually go to the &lt;strong&gt;Null space&lt;/strong&gt; of that transformation! This is the last piece of our Rank-Nullity&amp;nbsp;theorem:&lt;/p&gt;
+&lt;div class="math"&gt;$$Rank(T) + Nullity(T) = dim(V) = n$$&lt;/div&gt;
+&lt;p&gt;How is this useful in practice? Well, once we know the rank of a transformation, we can quickly tell the dimension of its null space, and this works for unknown matrix too. Even if we don&amp;#8217;t know the exact transformation in the future, by applying the Rank-Nullity Theorem, we can know the dimension of image space or null&amp;nbsp;space. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-6 assignments</title><link href="/5-6-assignments" rel="alternate"></link><published>2010-12-03T10:20:00-05:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:None,2010-12-03:/5-6-assignments</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;Solve the linear system by using Gaussian&amp;nbsp;elimination:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2 &amp;amp; 0 &amp;amp; 1\\
+1 &amp;amp; 1 &amp;amp; 0\\
+1 &amp;amp; 0 &amp;amp; 1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix} = \begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}$$&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Find the inverse of the above matrix by using Gaussian elimination, write down the rank …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;ol&gt;
+&lt;li&gt;Solve the linear system by using Gaussian&amp;nbsp;elimination:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2 &amp;amp; 0 &amp;amp; 1\\
+1 &amp;amp; 1 &amp;amp; 0\\
+1 &amp;amp; 0 &amp;amp; 1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix} = \begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}$$&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Find the inverse of the above matrix by using Gaussian elimination, write down the rank of the matrix and explain why you get &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; didn&amp;#8217;t get solutions for question&amp;nbsp;1.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Solve the system without using Gaussian&amp;nbsp;elimination:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+2 &amp;amp; 0 &amp;amp; 1\\
+1 &amp;amp; 1 &amp;amp; 0\\
+1 &amp;amp; 0 &amp;amp; 1
+\end{bmatrix}\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix} = \begin{bmatrix}
+2\\
+3\\
+4
+\end{bmatrix}$$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry></feed>

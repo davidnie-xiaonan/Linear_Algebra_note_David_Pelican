@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="David Nie" />
+
+        <meta name="description" content="Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line segment …
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", Chapter 6 Matrix and Matrix multiplication, " />
+
+<meta property="og:title" content="6-4 Change the basis "/>
+<meta property="og:url" content="/6-4-change-the-basis" />
+<meta property="og:description" content="Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line segment …" />
+<meta property="og:site_name" content="Linear Algebra Note" />
+<meta property="og:article:author" content="David Nie" />
+<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
+<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta name="twitter:title" content="6-4 Change the basis ">
+<meta name="twitter:description" content="Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line segment …">
+
+        <title>6-4 Change the basis  · Linear Algebra Note
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Linear Algebra Note</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/6-4-change-the-basis">
+                6-4  Change the&nbsp;basis
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&nbsp;segment:</p>
+<p><img alt="w6example" src="../images/w6example.png" /></p>
+<p>Say we want to find the tip of the bar after a rotation of 15 degree, to do this normally takes quite a lot of work. But, if we convert the point <span class="math">\((3,1)\)</span> to the polar coordinate, and then we do the rotation. After that, we can covert the transformed polar coordinate into Cartesian&nbsp;coordinate.</p>
+<p><img alt="w6example" src="../images/w6rotation.gif" /></p>
+<p>So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&nbsp;one? </p>
+<p>Let&#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&#8217;s say <span class="math">\((2,1)\)</span>.</p>
+<p>The basis of Cartesian coordinate is vector <span class="math">\(<div class="math">\begin{bmatrix}
+1\\
+0
+\end{bmatrix}</div>\)</span> and <span class="math">\(<div class="math">\begin{bmatrix}
+0\\
+1
+\end{bmatrix}</div>\)</span>, so the meaning of vector <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span> is just two pieces of <span class="math">\(<div class="math">\begin{bmatrix}
+1\\
+0
+\end{bmatrix}</div>\)</span> and one piece of <span class="math">\(<div class="math">\begin{bmatrix}
+0\\
+1
+\end{bmatrix}</div>\)</span>:</p>
+<div class="math">$$\begin{bmatrix}
+2\\
+1
+\end{bmatrix} = 2\times\begin{bmatrix}
+1\\
+0
+\end{bmatrix} + 1\times\begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$</div>
+<p><img alt="w6vector" src="../images/w6vector.png" /></p>
+<p>Here we have another 2d basis create by spanning vector <span class="math">\(<div class="math">\begin{bmatrix}
+1\\
+1
+\end{bmatrix}</div>\)</span> and <span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+2
+\end{bmatrix}</div>\)</span>:</p>
+<p><img alt="w6basis" src="../images/w6basis.png" /></p>
+<p>In this new basis, our vector <span class="math">\(<div class="math">\begin{bmatrix}
+\color{red}2\\
+\color{red}1
+\end{bmatrix}</div>\)</span> will no longer looks the same as the vector <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span> in Cartesian coordinate. We can do a quick calculation to see what is <span class="math">\(<div class="math">\begin{bmatrix}
+\color{red}2\\
+\color{red}1
+\end{bmatrix}</div>\)</span> in the new&nbsp;basis:</p>
+<div class="math">$$\pmb{\color{red}v} = 2\times\begin{bmatrix}
+1\\
+1
+\end{bmatrix} + 1\times\begin{bmatrix}
+1\\
+-2
+\end{bmatrix} = \begin{bmatrix}
+3\\
+1
+\end{bmatrix}$$</div>
+<p>To not make you confuse, I will label all the vectors lie in Cartesian coordinate black, and the vector lie in new coordinate&nbsp;red.</p>
+<p>So the question is, what should be the vector <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span> in our new basis? In another word, how many <span class="math">\(<div class="math">\begin{bmatrix}
+1\\
+1
+\end{bmatrix}</div>\)</span> and <span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+2
+\end{bmatrix}</div>\)</span> combined together will give you <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span>? </p>
+<p>You might find the statements here are kind of confusing, so I will help you out by showing you the solution&nbsp;first:</p>
+<p><img alt="w6changebasis" src="../images/w6changebasis.png" /></p>
+<p>It turns out, if you take <span class="math">\(\color{red}{\frac{5}{3}}\)</span> of vector <span class="math">\(<div class="math">\begin{bmatrix}
+1\\
+1
+\end{bmatrix}</div>\)</span> and <span class="math">\(\color{red}{\frac{1}{3}}\)</span> of vector <span class="math">\(<div class="math">\begin{bmatrix}
+1\\
+-2
+\end{bmatrix}</div>\)</span>, you will end up with vector <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span>. So our vector <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span> in the new basis has a new name <span class="math">\(<div class="math">\begin{bmatrix}
+\color{red}{\frac{5}{3}}\\
+\color{red}{\frac{1}{3}}
+\end{bmatrix}</div>\)</span>.</p>
+<p>Now how do I got these number out? Think about this, if we rewrite the above relation in a matrix form, we will&nbsp;have:</p>
+<div class="math">$$\color{red}{\frac{5}{3}}\times\begin{bmatrix}
+1\\
+1
+\end{bmatrix}+\color{red}{\frac{1}{3}}\times\begin{bmatrix}
+1\\
+-2
+\end{bmatrix} = \begin{bmatrix}
+2\\
+1
+\end{bmatrix}\rightarrow\begin{bmatrix}
+1 &amp; 1\\
+1 &amp; -2
+\end{bmatrix}\begin{bmatrix}
+\color{red}{\frac{5}{3}}\\
+\color{red}{\frac{1}{3}}
+\end{bmatrix} = \begin{bmatrix}
+2\\
+1
+\end{bmatrix}$$</div>
+<p>It looks like the matrix <span class="math">\(<div class="math">\begin{bmatrix}
+1 &amp; 1\\
+1 &amp; -2
+\end{bmatrix}</div>\)</span> can transformed our <span class="math">\(<div class="math">\begin{bmatrix}
+\color{red}{\frac{5}{3}}\\
+\color{red}{\frac{1}{3}}
+\end{bmatrix}</div>\)</span> back to what it was in Cartesian coordinate. What do we want is to know what is <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span> in new basis, so we have to find the&nbsp;inverse:</p>
+<div class="math">$$\begin{bmatrix}
+1 &amp; 1\\
+1 &amp; -2
+\end{bmatrix}\begin{bmatrix}
+\color{red}{\frac{5}{3}}\\
+\color{red}{\frac{1}{3}}
+\end{bmatrix} = \begin{bmatrix}
+2\\
+1
+\end{bmatrix} \rightarrow \begin{bmatrix}
+1 &amp; 1\\
+1 &amp; -2
+\end{bmatrix}^{-1}\begin{bmatrix}
+2\\
+1
+\end{bmatrix}= \begin{bmatrix}
+\color{red}{\frac{5}{3}}\\
+\color{red}{\frac{1}{3}}
+\end{bmatrix} $$</div>
+<p>Strange, right? To know the presentation in one specific basis, you have to apply the inverse transformation. but this is what it&nbsp;is.</p>
+<p>For the previous example, the way we get <span class="math">\(<div class="math">\begin{bmatrix}
+\color{red}{\frac{5}{3}}\\
+\color{red}{\frac{1}{3}}
+\end{bmatrix}</div> $ is by first put our basis vector together and form the matrix $<div class="math">\begin{bmatrix}
+1 &amp; 1\\
+1 &amp; -2
+\end{bmatrix}</div>\)</span>, then we can find its&nbsp;inverse:</p>
+<div class="math">$$\begin{bmatrix}
+1 &amp; 1\\
+1 &amp; -2
+\end{bmatrix}^{-1} = \begin{bmatrix}
+\frac{2}{3} &amp; \frac{1}{3}\\
+\frac{1}{3} &amp; -\frac{1}{3}
+\end{bmatrix}$$</div>
+<p>And the last step is to put any vector we want to transform in it and do a&nbsp;multiplication.</p>
+<p>Can we do it for any basis? Here is the animation I made that shows the vector <span class="math">\(<div class="math">\begin{bmatrix}
+2\\
+1
+\end{bmatrix}</div>\)</span> in different&nbsp;basis:</p>
+<p><img alt="w6any" src="../images/w6any.gif" /></p>
+<p>Now we know how to convert a vector in another basis, let&#8217;s do something fun&nbsp;here.</p>
+<p>Assume you have some transformation <span class="math">\(T\)</span> in some basis. For example, the Cartesian coordinate. The transformation <span class="math">\(T\)</span> has a dimension of <span class="math">\(n \times n\)</span>. Let&#8217;s say we have a vector lies in the Cartesian coordinate called <span class="math">\(\pmb{a}\)</span> and if you transform that vector, you will get vector <span class="math">\(\pmb{b}\)</span>:</p>
+<div class="math">$$T\pmb{a} = \pmb{b}$$</div>
+<p>Here comes the cool part. Instead of doing this transform in the old, boring Cartesian coordinate, why not do it in a new fancy basis? The basis vectors of this new basis form a matrix <span class="math">\(P\)</span>. We can rewrite the vector <span class="math">\(\pmb{a}\)</span> and <span class="math">\(\pmb{b}\)</span> in our new&nbsp;basis:</p>
+<div class="math">$$\pmb{a}' = P^{-1}\pmb{a}$$</div>
+<div class="math">$$\pmb{b}' = P^{-1}\pmb{b}$$</div>
+<p>We know the fact that you can use the transformation <span class="math">\(T\)</span> to transform <span class="math">\(\pmb{a}\)</span> to <span class="math">\(\pmb{b}\)</span> but you can see that wouldn&#8217;t work in our new basis. Namely, you cannot apply the same transformation <span class="math">\(T\)</span> on <span class="math">\(\pmb{a}'\)</span> to give you <span class="math">\(\pmb{b}'\)</span>:</p>
+<div class="math">$$\pmb{a}' = P^{-1}\pmb{a}$$</div>
+<div class="math">$$T\pmb{a}' = TP^{-1}\pmb{a} \neq \pmb{b}'$$</div>
+<p>So we need a new &#8220;look&#8221; of our transformation <span class="math">\(T\)</span> in the new basis. We shall name it <span class="math">\(T'\)</span>, so&nbsp;that:</p>
+<div class="math">$$T'\pmb{a}' = \pmb{b}'$$</div>
+<p>With some simple algebra, we can get the expression of <span class="math">\(T'\)</span>:</p>
+<div class="math">$$T'\pmb{a}' = \pmb{b}'$$</div>
+<div class="math">$$T'\pmb{a}' = P^{-1}\pmb{b}$$</div>
+<div class="math">$$T'\pmb{a}' = P^{-1}T\pmb{a}$$</div>
+<div class="math">$$T'\pmb{a}' = P^{-1}TP\pmb{a}'$$</div>
+<div class="math">$$T' = P^{-1}TP$$</div>
+<p>We can see that the way we rewrite a transformation for new basis is kind of different than vector. To understand the expression<span class="math">\(T' = P^{-1}TP $ is not hard. Imagine you are doing business in the other country. The transformation is the business process(Take some money and return some money). $T'\)</span> and <span class="math">\(T\)</span> is just the same business process but in different country. say one in <span class="caps">US</span> one in <span class="caps">UK</span>. The matrix <span class="math">\(P\)</span> convert one currency to another, in our case dollar to pound. So if you are American and want to do the business in <span class="caps">US</span>, all you need is the transformation <span class="math">\(T\)</span>. But if you are a gentleman from <span class="caps">UK</span>, The same business process became&nbsp;to:</p>
+<p>1) Convert the money to dollar (<span class="math">\(P\)</span>)
+2) Do the business in <span class="caps">US</span> (<span class="math">\(T\)</span>)
+3) Convert the dollar you earned in <span class="caps">US</span> back to pound and enjoy your life (<span class="math">\(P^{-1}\)</span>)</p>
+<p>So overall, what you did&nbsp;is:</p>
+<div class="math">$$\pmb{a} \rightarrow P\pmb{a} \rightarrow TP\pmb{a} \rightarrow P^{-1}TP\pmb{a}$$</div>
+<p>and that is the process <span class="math">\(T'\)</span>.</p>
+<p>Notice that what we are dealing with is the <span class="math">\(n \times n\)</span> case. We can generalized this idea to any dimensions, but that is not what we focus here. Most of the time, we will be working on <span class="math">\(n \times n\)</span> case, especially <span class="math">\(3 \times 3\)</span> or <span class="math">\(4 \times 4\)</span> for&nbsp;physics. </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=6-4%20%20Change%20the%C2%A0basis&url=/6-4-change-the-basis" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/6-4-change-the-basis" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=6-4%20%20Change%20the%C2%A0basis&amp;body=/6-4-change-the-basis" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/7-1-eigenvalue-and-eigenvector" title="Previous: 7-1 Eigenvalue and Eigenvector">7-1 Eigenvalue and Eigenvector</a></li>
+                <li class="next-article"><a href="/6-3-row-reduced-echelon-form" title="Next: 6-3 Row Reduced Echelon Form">6-3 Row Reduced Echelon Form</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+<h4>Last Updated</h4>
+<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#chapter-6-matrix-and-matrix-multiplication-ref">Chapter 6 Matrix and Matrix multiplication</a>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Linear Algebra Note</span> - By David Nie
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

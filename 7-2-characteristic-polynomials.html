@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="David Nie" />
+
+        <meta name="description" content="Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn’t answer. One, Is there always eigenvector and eigenvalues for matrices? Second, How do we calculate them? Let’s start from the definition of eigenvector and eigenvalue: $$A\pmb{x} = \lambda\pmb …
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", Chapter 7 Eigenvector, eigenvalue and Diagonalization, " />
+
+<meta property="og:title" content="7-2 Characteristic polynomials "/>
+<meta property="og:url" content="/7-2-characteristic-polynomials" />
+<meta property="og:description" content="Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn’t answer. One, Is there always eigenvector and eigenvalues for matrices? Second, How do we calculate them? Let’s start from the definition of eigenvector and eigenvalue: $$A\pmb{x} = \lambda\pmb …" />
+<meta property="og:site_name" content="Linear Algebra Note" />
+<meta property="og:article:author" content="David Nie" />
+<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
+<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta name="twitter:title" content="7-2 Characteristic polynomials ">
+<meta name="twitter:description" content="Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn’t answer. One, Is there always eigenvector and eigenvalues for matrices? Second, How do we calculate them? Let’s start from the definition of eigenvector and eigenvalue: $$A\pmb{x} = \lambda\pmb …">
+
+        <title>7-2 Characteristic polynomials  · Linear Algebra Note
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Linear Algebra Note</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/7-2-characteristic-polynomials">
+                7-2  Characteristic&nbsp;polynomials
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>Last time, we learned a special vector for linear transformation: Eigenvector. But, there are two questions we didn&#8217;t&nbsp;answer.</p>
+<p>One, Is there always eigenvector and eigenvalues for&nbsp;matrices?</p>
+<p>Second, How do we calculate&nbsp;them?</p>
+<p>Let&#8217;s start from the definition of eigenvector and&nbsp;eigenvalue:</p>
+<div class="math">$$A\pmb{x} = \lambda\pmb{x}$$</div>
+<p>If this equation hold for some vector <span class="math">\(\pmb{x}\)</span> and non-zero value <span class="math">\(\lambda\)</span>, then great! We found the eigenvector and eigenvalues for that&nbsp;matrix.</p>
+<p>To solve this, let&#8217;s try to move all the terms on one&nbsp;side:</p>
+<div class="math">$$A\pmb{x} - \lambda\pmb{x} = 0$$</div>
+<p>Notice that we only know the matrix <span class="math">\(A\)</span>, so we need some way to combine these two terms. Factoring out vector <span class="math">\(\pmb{x}\)</span> seems to be a good idea, but is there any way to factor out the vector <span class="math">\(\pmb{x}\)</span>?</p>
+<p>Yes! We know the fact that for the square matrix with the same&nbsp;size:</p>
+<div class="math">$$(A+B)\pmb{x} = A\pmb{x}+B\pmb{x}$$</div>
+<p>So if we can rewrite number <span class="math">\(\lambda\)</span> into a matrix with the same size as <span class="math">\(A\)</span>, then we can combine the matrices and factor out <span class="math">\(\pmb{x}\)</span>. But how do we  rewrite number to a matrix? That is not hard since this number is multiplying on a vector, We can add a linear transformation that does nothing in front of vector <span class="math">\(\pmb{x}\)</span>:</p>
+<div class="math">$$\lambda\pmb{x} = \lambda I\pmb{x} = (\lambda I)\pmb{x} $$</div>
+<p>Now, the scalar <span class="math">\(\lambda\)</span> is a linear transformation <span class="math">\(\lambda I\)</span>, therefore, we can add the matrix <span class="math">\(A\)</span> and the new matrix <span class="math">\(\lambda I\)</span>:</p>
+<div class="math">$$A\pmb{x} - \lambda I\pmb{x} = 0$$</div>
+<div class="math">$$(A- \lambda I)\pmb{x} = 0$$</div>
+<p>The new matrix <span class="math">\((A- \lambda I)\)</span> multiply some vector <span class="math">\(\pmb{x}\)</span> gives you zero vector. How do we find the vector <span class="math">\(\pmb{x}\)</span>? Easy! This is just ask you to find the null space of matrix <span class="math">\((A- \lambda I)\)</span>! </p>
+<p>Before, to find null space, we need to solve the linear system <span class="math">\(A\pmb{x} = 0\)</span>. But in our case, the matrix itself has some unknown variable in it, which is the number <span class="math">\(\lambda\)</span>. So how could we find the null space of a unknown&nbsp;matrix?</p>
+<p>Here we will introduce a technique that we didn&#8217;t mention before, call <strong>determinant</strong>. In short, the determinant calculate the ratio between the size of space before and after the linear transformation. In 2d, it is simply the ratio between the area before and after the linear transformation. To calculate determinant for any <span class="math">\(2\times2\)</span> matrix, we just need to&nbsp;do:</p>
+<div class="math">$$det(A) = \begin{vmatrix}
+a &amp; b\\
+c &amp; d \\
+\end{vmatrix} = ad - bc$$</div>
+<p>We are not going to cover the method of finding <span class="math">\(3\times3\)</span> or higher dimension matrix&#8217;s determinant in this chapter. Feel free to search them up and think about&nbsp;why. </p>
+<p>Why is find the ratio of area useful in our case? Because if a non-zero null space exist for a matrix, the the determinant of this matrix must be&nbsp;zero. </p>
+<p>Why? By the rank-nullity theorem, if null space has dimension greater than zero, it means our rank is less than the dimension of matrix. So the linear transformation will transform the space to a space with lower&nbsp;dimension. </p>
+<p>If the matrix is <span class="math">\(2\times2\)</span> but the rank is lower than 2, for example, is 1. It just means the matrix will transform any 2d vector to a 2d vector on a line (1d). So what will be the ratio of area before and after the transformation? Obviously is zero(The whole 2d plane was &#8220;smash&#8221; into a&nbsp;line).</p>
+<p>Great! Now is time to put everything together and calculate some eigenvalue <span class="amp">&amp;</span> eigenvector! Let&#8217;s find the eigenvalue <span class="amp">&amp;</span> eigenvector for the matrix we discussed last&nbsp;time:</p>
+<div class="math">$$A = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}$$</div>
+<p>The first thing we do is to get the matrix <span class="math">\(A - \lambda I\)</span>:</p>
+<div class="math">$$A - \lambda I = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}-\lambda \begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 1 \\
+\end{bmatrix} = \begin{bmatrix}
+1-\lambda  &amp; 0\\
+1 &amp; 2-\lambda  \\
+\end{bmatrix}$$</div>
+<p>Then, we write down the determinant of this&nbsp;matrix:</p>
+<div class="math">$$\begin{vmatrix}
+1-\lambda  &amp; 0\\
+1 &amp; 2-\lambda  \\
+\end{vmatrix} = (1-\lambda )(2-\lambda) - 0\times1 = (1-\lambda )(2-\lambda)$$</div>
+<p>To solve <span class="math">\(\lambda\)</span>, we just need to set this expression to zero. But before we do that, look at this familiar expression! It is a quadratic! Later, you will see that the determinant of <span class="math">\(A - \lambda I\)</span> will always be a polynomial. We have a special name for this: the <strong>Characteristic polynomials</strong>.</p>
+<p>In our case, this polynomials is extremely easy to&nbsp;solve:</p>
+<div class="math">$$(1-\lambda )(2-\lambda) = 0 $$</div>
+<div class="math">$$\downarrow$$</div>
+<div class="math">$$\lambda_1 = 1$$</div>
+<div class="math">$$\lambda_2 = 2$$</div>
+<p>So, <span class="math">\(\lambda_1 = 1\)</span> and <span class="math">\(\lambda_2 = 2\)</span> are the eigenvalue of the matrix <span class="math">\(A\)</span>. To solve the eigenvector correspond to these eigenvalue, we just plug these back into our matrix <span class="math">\(A - \lambda I\)</span> and find the null&nbsp;space:</p>
+<div class="math">$$A - \lambda_1 I = \begin{bmatrix}
+1 -1&amp; 0\\
+1 &amp; 2 -1 \\
+\end{bmatrix} = \begin{bmatrix}
+0 &amp; 0\\
+1 &amp; 1 \\
+\end{bmatrix} $$</div>
+<p>To find the null space, we solve the linear system <span class="math">\(A\pmb{x} = 0\)</span>:</p>
+<div class="math">$$\begin{bmatrix}
+0 &amp; 0\\
+1 &amp; 1 \\
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix}= 0$$</div>
+<div class="math">$$\downarrow$$</div>
+<div class="math">$$  
+\begin{cases}
+      0x+0y\ =\ 0 \\
+      x+y\ =\ 0 
+    \end{cases}  \rightarrow  x = -y \rightarrow span{\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}}
+$$</div>
+<p>Therefore, the eigenvector correspond to eigenvalue <span class="math">\(1\)</span> is vector <span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}</div>\)</span>. Using the same method, we can get the eigenvector for eigenvalue <span class="math">\(\lambda_2 = 2\)</span> is vector <span class="math">\(<div class="math">\begin{bmatrix}
+0\\
+1
+\end{bmatrix}</div>\)</span>.</p>
+<p>Awesome! We solved all the eigenvalue and their eigenvector. Does that means we solved everything? Of course not. Remember, we got lucky when solving the polynomial. Let&#8217;s go back to the characteristic polynomial and see what are we&nbsp;missing.</p>
+<p>The characteristic polynomial we had is <span class="math">\((1-\lambda )(2-\lambda)\)</span>, but in principle, we could have any polynomials. Take <span class="math">\(2\times2\)</span> matrix as example, our characteristic polynomial will be a&nbsp;quadratic:</p>
+<div class="math">$$a\lambda^2 + b\lambda + c= 0$$</div>
+<p>For our case, we ended up with two distinct <span class="math">\(\lambda\)</span> values. But we could also have two same <span class="math">\(\lambda\)</span> values or no real <span class="math">\(\lambda\)</span>. </p>
+<p>The two same <span class="math">\(\lambda\)</span> values case is not that interesting. In 2d, the transformation that has only one eigenvalue will looks like a shear transformation. The interesting case is when we have no real <span class="math">\(\lambda\)</span>&nbsp;values. </p>
+<p>Let&#8217;s imaging: What kind of transformation in 2d that has no eigenvector? Having eigenvectors means there are some directions where all the vector alone that direction do not change its direction after the transformation. So, having no eigenvector means all the vector in 2d change its direction after the transformation. Did we see any of the transformation that can do&nbsp;this?</p>
+<p>Of course! Any transformation that rotate the&nbsp;plane!</p>
+<p><img alt="w4rotation" src="../images/w4rotation.gif" /></p>
+<p>Let&#8217;s take the very first linear transformation we saw. As you can see, all the vector do not end up with the same direction after the&nbsp;transformation.</p>
+<p>If you learned the imaginary number before(don&#8217;t worry if you never learn it, but I highly recommend you check it out online if you never), you will know that the quadratic that has no real solution will have imaginary solution. So our eigenvalue will be imaginary. In fact, imaginary eigenvalue will always has something to do with the rotation. However, Imaginary eigenvalue is beyond the scope of our&nbsp;note.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=7-2%20%20Characteristic%C2%A0polynomials&url=/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=7-2%20%20Characteristic%C2%A0polynomials&amp;body=/7-2-characteristic-polynomials" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/7-3-diagonal-matrix-and-transpose" title="Previous: 7-3 Diagonal matrix and transpose">7-3 Diagonal matrix and transpose</a></li>
+                <li class="next-article"><a href="/7-1-eigenvalue-and-eigenvector" title="Next: 7-1 Eigenvalue and Eigenvector">7-1 Eigenvalue and Eigenvector</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+<h4>Last Updated</h4>
+<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#chapter-7-eigenvector-eigenvalue-and-diagonalization-ref">Chapter 7 Eigenvector, eigenvalue and Diagonalization</a>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Linear Algebra Note</span> - By David Nie
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

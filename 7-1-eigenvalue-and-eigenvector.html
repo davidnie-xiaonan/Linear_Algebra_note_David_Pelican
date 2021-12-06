@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="David Nie" />
+
+        <meta name="description" content="So far, we have been working on many matrices. We also learned that the cool notation “matrix” can describe a lot of things: linear equations, transformation, rotation, change the basis… We can rely on matrix to do a lot of calculation that couldn’t be done or hard to describe …
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", Chapter 7 Eigenvector, eigenvalue and Diagonalization, " />
+
+<meta property="og:title" content="7-1 Eigenvalue and Eigenvector "/>
+<meta property="og:url" content="/7-1-eigenvalue-and-eigenvector" />
+<meta property="og:description" content="So far, we have been working on many matrices. We also learned that the cool notation “matrix” can describe a lot of things: linear equations, transformation, rotation, change the basis… We can rely on matrix to do a lot of calculation that couldn’t be done or hard to describe …" />
+<meta property="og:site_name" content="Linear Algebra Note" />
+<meta property="og:article:author" content="David Nie" />
+<meta property="og:article:published_time" content="2010-12-03T10:20:00-05:00" />
+<meta property="og:article:modified_time" content="2010-12-05T19:30:00-05:00" />
+<meta name="twitter:title" content="7-1 Eigenvalue and Eigenvector ">
+<meta name="twitter:description" content="So far, we have been working on many matrices. We also learned that the cool notation “matrix” can describe a lot of things: linear equations, transformation, rotation, change the basis… We can rely on matrix to do a lot of calculation that couldn’t be done or hard to describe …">
+
+        <title>7-1 Eigenvalue and Eigenvector  · Linear Algebra Note
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Linear Algebra Note</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/7-1-eigenvalue-and-eigenvector">
+                7-1  Eigenvalue and&nbsp;Eigenvector
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <p>So far, we have been working on many matrices. We also learned that the cool notation &#8220;matrix&#8221; can describe a lot of things: linear equations, transformation, rotation, change the basis&#8230; We can rely on matrix to do a lot of calculation that couldn&#8217;t be done or hard to describe before. However, in real life, even if we use the matrix to cheat, the questions can still be really hard and tedious. In this chapter, we will be focusing on <span class="caps">ONE</span> way to make our life easier. Also, it turns out, this specific method has a huge impact on many many&nbsp;area. </p>
+<p>Our main character has a German name: <strong>Eigen</strong>. It is not because the guy who invent this is a German, but because David Hilbert, a German mathematician gave him this classic German name. From then, everyone start calling him&nbsp;this.</p>
+<p>Although this idea is first arose in the study of quadratic forms and differential equations, we are not going to take that approach. Instead, let&#8217;s first define what it is, and then see what can this bad boy&nbsp;do.</p>
+<p>So let&#8217;s look at an example&nbsp;matrix:</p>
+<div class="math">$$A = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}$$</div>
+<p>If we treat this matrix as a transformation, applying this transformation on any 2d vector will give you another 2d vector. But this is not a new story, we did this before a billion times. What is interesting is that for some vectors in 2d space, their direction will not change after the transformation. What does that mean algebraically? Assume for some vector <span class="math">\(\pmb{x}\)</span>, we have the&nbsp;relation:</p>
+<div class="math">$$A\pmb{x} = \lambda\pmb{x}$$</div>
+<p>Where <span class="math">\(\lambda\)</span> is some non zero scalar value. Notice this value is just tells us how the vector is been &#8220;stretched&#8221; or &#8220;compressed&#8221;. If the <span class="math">\(\lambda\)</span> turns out to be negative, it just means the direction is&nbsp;reversed.</p>
+<p>Let&#8217;s look at one of such vector. In our case, if we input vector <span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}</div>\)</span> and calculate the vector after the transformation, we&nbsp;get:</p>
+<div class="math">$$A\pmb{x} = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+-1\\
+1
+\end{bmatrix} = \begin{bmatrix}
+-1\\
+1
+\end{bmatrix}$$</div>
+<p>What a coincident! If we multiply 2 on both side, we&nbsp;get:</p>
+<div class="math">$$2\times A\pmb{x} = 2\begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+-1\\
+1
+\end{bmatrix} = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+-2\\
+2
+\end{bmatrix} = \begin{bmatrix}
+-2\\
+2
+\end{bmatrix}$$</div>
+<p>What does the above equation means? It means not only the vector <span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}</div>\)</span> can do that, but any multiple of vector <span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}</div>\)</span> also satisfy the equation <span class="math">\(A\pmb{x} = \lambda\pmb{x}\)</span>!</p>
+<p>For this specific vector, our vector stay the same after the transformation. So, <span class="math">\(\lambda\)</span> in this case is just <span class="math">\(1\)</span>. </p>
+<p>If we can find such vector and the corresponding <span class="math">\(\lambda\)</span> that satisfy the equation <span class="math">\(A\pmb{x} = \lambda\pmb{x}\)</span>. Then we call the vector <span class="math">\(\pmb{x}\)</span> the <strong>Eigenvector</strong> of our matrix <span class="math">\(A\)</span>, and we call the value <span class="math">\(\lambda\)</span> the corresponding <strong>Eigenvalue</strong> of the&nbsp;matrix.</p>
+<p>Great, now we know what does that means algebraically. Can we visualize&nbsp;this?</p>
+<p>If you take the transformation and graph the change on different vector input, you will get something looks like&nbsp;this:</p>
+<p><img alt="w6example" src="../images/trans_eigenvalue.gif" /></p>
+<p>As we expected, the vector<span class="math">\(<div class="math">\begin{bmatrix}
+-1\\
+1
+\end{bmatrix}</div>\)</span> and all the vectors along that line stays on that line after the transformation. But if you pay more attention, along the y-axis, the vectors do not change their direction too. We can check it by multiplying any vector along&nbsp;y-axis:</p>
+<div class="math">$$A\pmb{x}' = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}\begin{bmatrix}
+0\\
+1
+\end{bmatrix} =\begin{bmatrix}
+0\\
+2
+\end{bmatrix}$$</div>
+<p>So any vector on y-axis will get doubled after the transformation. What does that means? Well, that vector didn&#8217;t change the direction(still pointing along y-axis) so it is obviously another eigenvector of our matrix <span class="math">\(A\)</span>. What is the eigenvalue corresponding to that eigenvector? Since the vectors get doubled, then the eigenvalue must be&nbsp;two.</p>
+<p>Wonderful! We have two different eigenvectors and eigenvalues for a single matrix. Can we find more? Unfortunately, we can&#8217;t in this case. Later on, we will know why that is the&nbsp;case. </p>
+<p>Now, you might wondering, does that means the eigenvectors and eigenvalues exist for any matrices? If so, how could we find them without guessing? We will leave that question to the future&nbsp;chapter.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=7-1%20%20Eigenvalue%20and%C2%A0Eigenvector&url=/7-1-eigenvalue-and-eigenvector" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/7-1-eigenvalue-and-eigenvector" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=7-1%20%20Eigenvalue%20and%C2%A0Eigenvector&amp;body=/7-1-eigenvalue-and-eigenvector" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/7-2-characteristic-polynomials" title="Previous: 7-2 Characteristic polynomials">7-2 Characteristic polynomials</a></li>
+                <li class="next-article"><a href="/6-4-change-the-basis" title="Next: 6-4 Change the basis">6-4 Change the basis</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2010-12-03T10:20:00-05:00">12月 03, 2010</time>
+<h4>Last Updated</h4>
+<time datetime="2010-12-05T19:30:00-05:00">12月 05, 2010</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#chapter-7-eigenvector-eigenvalue-and-diagonalization-ref">Chapter 7 Eigenvector, eigenvalue and Diagonalization</a>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Linear Algebra Note</span> - By David Nie
+    </div>
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
