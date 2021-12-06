@@ -3009,9 +3009,7 @@ $$&lt;/div&gt;
 &lt;p&gt;So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&amp;nbsp;one? &lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&amp;#8217;s say &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The basis of Cartesian coordinate is vector 
-&lt;span class="math"&gt;\(\bigl[&lt;div class="math"&gt;\begin{smallmatrix}
-1\\
-0\end{smallmatrix}&lt;/div&gt;\bigl]\)&lt;/span&gt; and 
+ &lt;span class="math"&gt;\(\bigl( &lt;div class="math"&gt;\begin{smallmatrix} a &amp;amp; b \\ c &amp;amp; d \end{smallmatrix}&lt;/div&gt; \bigr)\)&lt;/span&gt; and 
 &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
 0\\
 1\end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;, so the meaning of vector 
