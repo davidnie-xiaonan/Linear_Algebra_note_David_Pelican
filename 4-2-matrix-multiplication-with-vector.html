@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Unfortunately, no one can told you what the Matrix is. You have to see it for yourself. For most of us, the first time when we hear the word “Matrix” is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …
+        <meta name="description" content="Unfortunately, no one can tell you what the Matrix is. You have to see it for yourself. For most of us, the first time when we hear the word “Matrix” is from the movie Matrix. So, here I quote one of the character’s line in Matrix as the start …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="4-2 Matrix multiplication with vector "/>
 <meta property="og:url" content="./4-2-matrix-multiplication-with-vector" />
-<meta property="og:description" content="Unfortunately, no one can told you what the Matrix is. You have to see it for yourself. For most of us, the first time when we hear the word “Matrix” is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …" />
+<meta property="og:description" content="Unfortunately, no one can tell you what the Matrix is. You have to see it for yourself. For most of us, the first time when we hear the word “Matrix” is from the movie Matrix. So, here I quote one of the character’s line in Matrix as the start …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="4-2 Matrix multiplication with vector ">
-<meta name="twitter:description" content="Unfortunately, no one can told you what the Matrix is. You have to see it for yourself. For most of us, the first time when we hear the word “Matrix” is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …">
+<meta name="twitter:description" content="Unfortunately, no one can tell you what the Matrix is. You have to see it for yourself. For most of us, the first time when we hear the word “Matrix” is from the movie Matrix. So, here I quote one of the character’s line in Matrix as the start …">
 
         <title>4-2 Matrix multiplication with vector  · Linear Algebra Note
 </title>
@@ -93,10 +93,10 @@
         <div class="span8 offset2 article-content">
             
             <blockquote>
-<p>Unfortunately, no one can told you what the Matrix is. You have to see it for&nbsp;yourself. </p>
+<p>Unfortunately, no one can tell you what the Matrix is. You have to see it for&nbsp;yourself. </p>
 </blockquote>
-<p>For most of us, the first time when we hear the word &#8220;Matrix&#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this chapter. To &#8220;see&#8221; what matrix really is, the knowledge of linear transformation is required. Good thing is, we have learned what linear transformation is,  so now is time to find a way to describe the transformation numerically. Hopefully, we can all &#8220;see&#8221; it by the end of the&nbsp;section.</p>
-<p>We knew that the linear transformation is the transformation between vector space, and vector space can be expressed as the span of basis vector. So, to write down the linear transformation, we need to see how the basis vector changes under the&nbsp;transformation.</p>
+<p>For most of us, the first time when we hear the word &#8220;Matrix&#8221; is from the movie Matrix. So, here I quote one of the character&#8217;s line in Matrix as the start of this chapter. To &#8220;see&#8221; what matrix really is, the knowledge of linear transformation is required. Good thing is, we have learned what linear transformation is,  so now is time to find a way to describe the transformation numerically. Hopefully, we can all &#8220;see&#8221; it by the end of the&nbsp;section.</p>
+<p>We knew that the linear transformation is the transformation between vector space, and vector space can be expressed as the span of the basis vector. So, to write down the linear transformation, we need to see how the basis vector changes under the&nbsp;transformation.</p>
 <p>Let&#8217;s again take the example from the last section. The transformation of rotating 90 degrees counterclockwise. Remember last time we said the transformation act on the basis of space and change the basis to a new&nbsp;one:</p>
 <div class="math">$$(1,0) \rightarrow \color{red}{(0,1)}$$</div>
 <div class="math">$$(0,1) \rightarrow \color{red}{(-1,0)}$$</div>
@@ -120,7 +120,7 @@
 0 &amp; -1\\
 1 &amp; 0
 \end{bmatrix}}$$</div>
-<p>To see why this notation even make sense, we will put this square thing next to a vector. Like functions, we can input a number and return another one, this transformation eat a vector and spit out another vector. In our case, the input vector is the vector before the transformation and the output is&nbsp;after.</p>
+<p>To see why this notation even makes sense, we will put this square thing next to a vector. Like functions, we can input a number and return another one, this transformation eats a vector and spit out another vector. In our case, the input vector is the vector before the transformation and the output is&nbsp;after.</p>
 <div class="math">$$T(\begin{bmatrix}
 1\\
 0
@@ -135,7 +135,7 @@
 1
 \end{bmatrix}$$</div>
 <p>So how did this calculating work? Let&#8217;s take a close look at each&nbsp;element. </p>
-<p>The vector (1,0) has 1 as x-component so the result has 1 portion of the first row(the new x basis). It also has 0 as its y-component so it has 0 portion of the second row(the new y basis). Notice this comes from the fact that the coefficients of linear combination don&#8217;t change during the transformation. If you have one <span class="math">\(\hat{x}\)</span> and zero <span class="math">\(\hat{y}\)</span>, you remains one <span class="math">\(\hat{x}\)</span> and zero <span class="math">\(\hat{y}\)</span>. The only thing that change is the&nbsp;basis.</p>
+<p>The vector (1,0) has 1 as the x-component so the result has 1 portion of the first row(the new x basis). It also has 0 as its y-component so it has 0 portions of the second row(the new y basis). Notice this comes from the fact that the coefficients of linear combination don&#8217;t change during the transformation. If you have one <span class="math">\(\hat{x}\)</span> and zero <span class="math">\(\hat{y}\)</span>, you remains one <span class="math">\(\hat{x}\)</span> and zero <span class="math">\(\hat{y}\)</span>. The only thing that changes is the&nbsp;basis.</p>
 <div class="math">$$\color{red}{\begin{bmatrix}
 0 &amp; -1\\
 1 &amp; 0
@@ -182,13 +182,13 @@ a
 \end{bmatrix}$$</div>
 <p><img alt="w4rotation" src="./images/w4rotation.gif" /></p>
 <p>We can confirm this result is also true by looking at the&nbsp;animation.</p>
-<p>As you already guessed it, the square thing is called matrix and this operation we did is called the matrix&nbsp;multiplication. </p>
-<p>Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before, because usually the matrix multiplication was introduced like&nbsp;this:</p>
+<p>As you already guessed it, the square thing is called matrix and this operation we did is called matrix&nbsp;multiplication. </p>
+<p>Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before because usually the matrix multiplication was introduced like&nbsp;this:</p>
 <p><img alt="w4matrixwiki" src="./images/w4matrix_multi.png" /></p>
-<p>Don&#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as linear transformation of vectors is much much more intuitive than pure&nbsp;algebra. </p>
+<p>Don&#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as a linear transformation of vectors is much much more intuitive than pure&nbsp;algebra. </p>
 <p>Can we figure out more things from the matrix multiplication we&nbsp;defined?</p>
-<p>First is the dimension of matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a <strong>2 by 2 matrix</strong> or <strong>2x2 matrix</strong>. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&nbsp;columns.</p>
-<p>But why do our matrix has such shape? Why not 10 by 10 or 20 by 20? The answer can be find from the dimension of the input vector and output vector. the transformation takes in a 2d vector and spit out another 2d vector so the dimension of matrix has to be 2 by 2. If the transformation takes in a 3d vector and returns a 2d vector, then the dimension of this transformation matrix has to be 2 by&nbsp;3.</p>
+<p>First is the dimension of the matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a <strong>2 by 2 matrix</strong> or <strong>2x2 matrix</strong>. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&nbsp;columns.</p>
+<p>But why does our matrix has such a shape? Why not 10 by 10 or 20 by 20? The answer can be found from the dimension of the input vector and output vector. the transformation takes in a 2d vector and spits out another 2d vector so the dimension of the matrix has to be 2 by 2. If the transformation takes in a 3d vector and returns a 2d vector, then the dimension of this transformation matrix has to be 2 by&nbsp;3.</p>
 <div class="math">$$T(\begin{bmatrix}
 x\\
 y\\
@@ -210,8 +210,8 @@ e
 c\\
 f
 \end{bmatrix}$$</div>
-<p>There is also an interesting question to think about: Can any linear transformation be written as a matrix? If that so, then any matrix with any dimension can be treat as a linear&nbsp;transformation.</p>
-<p>Here is another thinking question: what if two matrix multiply each other? What is the result looks like? More importantly, what is the meaning of doing&nbsp;that?</p>
+<p>There is also an interesting question to think about: Can any linear transformation be written as a matrix? If so, then any matrix with any dimension can be treated as a linear&nbsp;transformation.</p>
+<p>Here is another thinking question: what if two matrices multiply each other? What is the result looks like? More importantly, what is the meaning of doing&nbsp;that?</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

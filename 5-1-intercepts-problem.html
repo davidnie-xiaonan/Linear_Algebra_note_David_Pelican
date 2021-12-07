@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using matrix. Let …
+        <meta name="description" content="Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using matrices. Let …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="5-1 intercepts problem "/>
 <meta property="og:url" content="./5-1-intercepts-problem" />
-<meta property="og:description" content="Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using matrix. Let …" />
+<meta property="og:description" content="Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using matrices. Let …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-1 intercepts problem ">
-<meta name="twitter:description" content="Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using matrix. Let …">
+<meta name="twitter:description" content="Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using matrices. Let …">
 
         <title>5-1 intercepts problem  · Linear Algebra Note
 </title>
@@ -92,9 +92,9 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&nbsp;matrix.</p>
+            <p>Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&nbsp;matrices.</p>
 <p>Let&#8217;s start from the simplest linear system you can imagine: line&nbsp;intercepts.</p>
-<p>Suppose we have two lines in Cartisian plane, line A and line&nbsp;B:</p>
+<p>Suppose we have two lines in Cartesian plane, line A and line&nbsp;B:</p>
 <p><img alt="w5line_int" src="./images/w5line_int.png" /></p>
 <p>Here are their&nbsp;equations:</p>
 <div class="math">$$  
@@ -103,15 +103,15 @@
       x+y\ =\ 1 &amp; \text{Line B}
     \end{cases}   
 $$</div>
-<p>Now the classic questions are: where does these two lines meet? And do they meet at&nbsp;all?</p>
-<p>It is fairly easy to see in graph that these two lines do intersect and they intersect at point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it under a&nbsp;minute.</p>
-<p>If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving system of linear equations. Why? I will give you two&nbsp;reasons:</p>
+<p>Now the classic questions are: where do these two lines meet? And do they meet at&nbsp;all?</p>
+<p>It is fairly easy to see in the graph that these two lines do intersect and they intersect at the point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it in under a&nbsp;minute.</p>
+<p>If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving a system of linear equations. Why? I will give you two&nbsp;reasons:</p>
 <p>First, how do we solve the question with more than 2&nbsp;dimensions? </p>
-<p>Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like <span class="math">\(a_1, a_2\)</span>, the equation will be not only long, but also nasty to&nbsp;read.</p>
+<p>Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like <span class="math">\(a_1, a_2\)</span>, the equation will be not only long but also nasty to&nbsp;read.</p>
 <p>Second, how do we know if there is a&nbsp;solution?</p>
-<p>Assume you are working on this 100 dimension linear system, it took you 3 days to realize that there is no solution! How frustrated is&nbsp;that! </p>
-<p>So, Let&#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have a easy way to check whether there is a solution or&nbsp;not.</p>
-<p>Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write system of linear equations using&nbsp;matrix.</p>
+<p>Assume you are working on this 100 dimensions linear system, it took you 3 days to realize that there is no solution! How frustrated is&nbsp;that! </p>
+<p>So, Let&#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have an easy way to check whether there is a solution or&nbsp;not.</p>
+<p>Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write a system of linear equations using&nbsp;matrix.</p>
 <p>Let&#8217;s take the above equations as an&nbsp;example:</p>
 <div class="math">$$  
 \begin{cases}
@@ -119,7 +119,7 @@ $$</div>
       x+y\ =\ 1 &amp; \text{Line B}
     \end{cases}   
 $$</div>
-<p>The left side of the equations are some variable with different coefficients, so let&#8217;s start from&nbsp;there.</p>
+<p>The left side of the equations are some variables with different coefficients, so let&#8217;s start from&nbsp;there.</p>
 <p>Instead of writing all the x and y in our equations, we can put all of them at the side as a&nbsp;vector:</p>
 <div class="math">$$\begin{bmatrix}
 x\\
@@ -163,7 +163,7 @@ y
 $$</div>
 <p>We can write this in a more abstract&nbsp;form:</p>
 <div class="math">$$\color{red}{A}\pmb{x} = \pmb{b}$$</div>
-<p>Where <span class="math">\(\color{red}{A}\)</span> is a matrix, <span class="math">\(\pmb{x}\)</span> is the unknown vector that we are trying to solve and <span class="math">\(\pmb{b}\)</span> is a&nbsp;vector.</p>
+<p>Where <span class="math">\(\color{red}{A}\)</span> is a matrix, <span class="math">\(\pmb{x}\)</span> is the unknown vector that we are trying to solve, and <span class="math">\(\pmb{b}\)</span> is a&nbsp;vector.</p>
 <p>It is obvious to see that the matrix notation is way easier than the original one since you don&#8217;t have to write down the variables over and over again. Moreover, it is much faster to do elimination. We will discuss the detail of Gauss elimination in the next&nbsp;section.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

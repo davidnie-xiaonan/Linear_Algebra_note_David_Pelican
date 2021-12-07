@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we …
+        <meta name="description" content="Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from the last section, we can linearly combine a set of vectors to form a line, a plane, or even a space. Also, we knew that there is a restriction. Combine these two …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="3-3 Basis of space "/>
 <meta property="og:url" content="./3-3-basis-of-space" />
-<meta property="og:description" content="Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we …" />
+<meta property="og:description" content="Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from the last section, we can linearly combine a set of vectors to form a line, a plane, or even a space. Also, we knew that there is a restriction. Combine these two …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="3-3 Basis of space ">
-<meta name="twitter:description" content="Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we …">
+<meta name="twitter:description" content="Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from the last section, we can linearly combine a set of vectors to form a line, a plane, or even a space. Also, we knew that there is a restriction. Combine these two …">
 
         <title>3-3 Basis of space  · Linear Algebra Note
 </title>
@@ -92,13 +92,13 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we will have our definition of&nbsp;basis:</p>
-<p>We called a set of vectors <span class="math">\(\pmb{S}\)</span> is a basis of vector space <span class="math">\(V\)</span> if every element in <span class="math">\(V\)</span> can be written as a unique <strong>linear combination</strong> of vectors in <span class="math">\(\pmb{S}\)</span> and all the vectors in <span class="math">\(\pmb{S}\)</span> is <strong>linear independent</strong>.</p>
+            <p>Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from the last section, we can linearly combine a set of vectors to form a line, a plane, or even a space. Also, we knew that there is a restriction. Combine these two ideas, we will have our definition of&nbsp;basis:</p>
+<p>We called a set of vectors <span class="math">\(\pmb{S}\)</span> is a basis of vector space <span class="math">\(V\)</span> if every element in <span class="math">\(V\)</span> can be written as a unique <strong>linear combination</strong> of vectors in <span class="math">\(\pmb{S}\)</span> and all the vectors in <span class="math">\(\pmb{S}\)</span> are <strong>linear independent</strong>.</p>
 <p>For example, <span class="math">\(set[(0,1),(1,0)]\)</span> is a basis of 2d vector space (real vector space) since any vector in the vector space (a,b) can be written as a unique linear combination of <span class="math">\((0,1)\)</span> and <span class="math">\((1,0)\)</span>. Not only that, <span class="math">\((0,1)\)</span> and <span class="math">\((1,0)\)</span> cannot be written as a linear combination of each others, so they are linear&nbsp;independent.</p>
-<p>If the set spans the vector space but the vectors in it are not linear independent. We can still called them the generating set or the spanning set of vector space. The name comes from the fact that the vectors &#8220;generate&#8221; the whole&nbsp;space.</p>
+<p>If the set spans the vector space but the vectors in it are not linear independent. We can still call them the generating set or the spanning set of vector space. The name comes from the fact that the vectors &#8220;generate&#8221; the whole&nbsp;space.</p>
 <p>In linear algebra, we can use the basis to represent the corresponding vector space. But what is the actual difference between two different basis if they describe the exact same vector&nbsp;space?</p>
 <p>We can construct the 2d Cartesian plane use <span class="math">\(set[(0,1),(1,0)]\)</span>, we can also do the same thing with <span class="math">\(set[(1,1),(1,0)]\)</span>. So what is the point of writing vector space in terms of different basis? Is it just for&nbsp;fun?</p>
-<p>Answer is of course not. In fact, this idea of presenting vector space in different basis is a huge topic in linear algebra. Change basis of a vector space will simultaneously change all the vectors in that space. To understand how the vector change in space, we have to learn the &#8220;essence&#8221; of linear algebra: the linear&nbsp;transformation.</p>
+<p>The answer is of course not. In fact, this idea of presenting vector space on a different basis is a huge topic in linear algebra. Change the basis of a vector space will most of the time simultaneously change all the vectors in that space. To understand how the vector change in space, we have to learn the &#8220;essence&#8221; of linear algebra: the linear&nbsp;transformation.</p>
 <p><img alt="w3changebasis" src="./images/w3changebasis.gif" /></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

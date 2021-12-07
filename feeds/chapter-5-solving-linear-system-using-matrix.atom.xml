@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 5 Solving Linear system using matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-5-solving-linear-system-using-matrix.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>5-1 intercepts problem</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
-&lt;p&gt;Let …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 5 Solving Linear system using matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-5-solving-linear-system-using-matrix.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>5-1 intercepts problem</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrices.&lt;/p&gt;
+&lt;p&gt;Let …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrices.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start from the simplest linear system you can imagine: line&amp;nbsp;intercepts.&lt;/p&gt;
-&lt;p&gt;Suppose we have two lines in Cartisian plane, line A and line&amp;nbsp;B:&lt;/p&gt;
+&lt;p&gt;Suppose we have two lines in Cartesian plane, line A and line&amp;nbsp;B:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_int.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Here are their&amp;nbsp;equations:&lt;/p&gt;
 &lt;div class="math"&gt;$$  
@@ -11,15 +11,15 @@
       x+y\ =\ 1 &amp;amp; \text{Line B}
     \end{cases}   
 $$&lt;/div&gt;
-&lt;p&gt;Now the classic questions are: where does these two lines meet? And do they meet at&amp;nbsp;all?&lt;/p&gt;
-&lt;p&gt;It is fairly easy to see in graph that these two lines do intersect and they intersect at point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it under a&amp;nbsp;minute.&lt;/p&gt;
-&lt;p&gt;If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving system of linear equations. Why? I will give you two&amp;nbsp;reasons:&lt;/p&gt;
+&lt;p&gt;Now the classic questions are: where do these two lines meet? And do they meet at&amp;nbsp;all?&lt;/p&gt;
+&lt;p&gt;It is fairly easy to see in the graph that these two lines do intersect and they intersect at the point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it in under a&amp;nbsp;minute.&lt;/p&gt;
+&lt;p&gt;If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving a system of linear equations. Why? I will give you two&amp;nbsp;reasons:&lt;/p&gt;
 &lt;p&gt;First, how do we solve the question with more than 2&amp;nbsp;dimensions? &lt;/p&gt;
-&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long, but also nasty to&amp;nbsp;read.&lt;/p&gt;
+&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long but also nasty to&amp;nbsp;read.&lt;/p&gt;
 &lt;p&gt;Second, how do we know if there is a&amp;nbsp;solution?&lt;/p&gt;
-&lt;p&gt;Assume you are working on this 100 dimension linear system, it took you 3 days to realize that there is no solution! How frustrated is&amp;nbsp;that! &lt;/p&gt;
-&lt;p&gt;So, Let&amp;#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have a easy way to check whether there is a solution or&amp;nbsp;not.&lt;/p&gt;
-&lt;p&gt;Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write system of linear equations using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Assume you are working on this 100 dimensions linear system, it took you 3 days to realize that there is no solution! How frustrated is&amp;nbsp;that! &lt;/p&gt;
+&lt;p&gt;So, Let&amp;#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have an easy way to check whether there is a solution or&amp;nbsp;not.&lt;/p&gt;
+&lt;p&gt;Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write a system of linear equations using&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s take the above equations as an&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$  
 \begin{cases}
@@ -27,7 +27,7 @@ $$&lt;/div&gt;
       x+y\ =\ 1 &amp;amp; \text{Line B}
     \end{cases}   
 $$&lt;/div&gt;
-&lt;p&gt;The left side of the equations are some variable with different coefficients, so let&amp;#8217;s start from&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;The left side of the equations are some variables with different coefficients, so let&amp;#8217;s start from&amp;nbsp;there.&lt;/p&gt;
 &lt;p&gt;Instead of writing all the x and y in our equations, we can put all of them at the side as a&amp;nbsp;vector:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 x\\
@@ -71,7 +71,7 @@ y
 $$&lt;/div&gt;
 &lt;p&gt;We can write this in a more abstract&amp;nbsp;form:&lt;/p&gt;
 &lt;div class="math"&gt;$$\color{red}{A}\pmb{x} = \pmb{b}$$&lt;/div&gt;
-&lt;p&gt;Where &lt;span class="math"&gt;\(\color{red}{A}\)&lt;/span&gt; is a matrix, &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; is the unknown vector that we are trying to solve and &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is a&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Where &lt;span class="math"&gt;\(\color{red}{A}\)&lt;/span&gt; is a matrix, &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; is the unknown vector that we are trying to solve, and &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is a&amp;nbsp;vector.&lt;/p&gt;
 &lt;p&gt;It is obvious to see that the matrix notation is way easier than the original one since you don&amp;#8217;t have to write down the variables over and over again. Moreover, it is much faster to do elimination. We will discuss the detail of Gauss elimination in the next&amp;nbsp;section.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

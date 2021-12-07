@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is “Linear” in the word: linear algebra. Say we have a set of many 2d vectors. Let’s call …
+        <meta name="description" content="From the last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is “Linear” in the word: linear algebra. Say we have a set of many 2d vectors. Let’s …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="3-1 Linear combination of vectors "/>
 <meta property="og:url" content="./3-1-linear-combination-of-vectors" />
-<meta property="og:description" content="From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is “Linear” in the word: linear algebra. Say we have a set of many 2d vectors. Let’s call …" />
+<meta property="og:description" content="From the last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is “Linear” in the word: linear algebra. Say we have a set of many 2d vectors. Let’s …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="3-1 Linear combination of vectors ">
-<meta name="twitter:description" content="From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is “Linear” in the word: linear algebra. Say we have a set of many 2d vectors. Let’s call …">
+<meta name="twitter:description" content="From the last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is “Linear” in the word: linear algebra. Say we have a set of many 2d vectors. Let’s …">
 
         <title>3-1 Linear combination of vectors  · Linear Algebra Note
 </title>
@@ -92,18 +92,18 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &#8220;Linear&#8221; in the word: linear&nbsp;algebra. </p>
+            <p>From the last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &#8220;Linear&#8221; in the word: linear&nbsp;algebra. </p>
 <p>Say we have a set of many 2d vectors. Let&#8217;s call&nbsp;them:</p>
 <div class="math">$$\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n$$</div>
 <p>I have changed the notation a bit, instead of putting a little arrow on the letter, I just bold the&nbsp;symbols. </p>
-<p>Notice that every single one of them has to be in a 2d Cartesian plane, because we cannot add 2d vector and 3d vector. Then, I pick few of them, randomly expand or compress them by multiplying some numbers. Then add everything up. At the end, I would expect the vector to be another 2d vector, let&#8217;s call it <span class="math">\(\pmb{a}\)</span>:</p>
+<p>Notice that every single one of them has to be in a 2d Cartesian plane because we cannot add 2d vector and 3d vector. Then, I pick a few of them, randomly expand or compress them by multiplying some numbers. Then add everything up. In the end, I would expect the vector to be another 2d vector, let&#8217;s call it <span class="math">\(\pmb{a}\)</span>:</p>
 <div class="math">$$\pmb{a} = c_1\pmb{v}_1+c_2\pmb{v}_2+c_3\pmb{v}_3+...+c_n\pmb{v}_n$$</div>
 <p>the set of numbers <span class="math">\(c_1,c_2,c_3,...,c_n\)</span> tells you how you expand or compress each vector. For example, I want to create a vector that is just half of the vector <span class="math">\(\pmb{v}_1\)</span>, then we can&nbsp;do:</p>
 <div class="math">$$\pmb{a} = 0.5\pmb{v}_1+0\pmb{v}_2+0\pmb{v}_3+...+0\pmb{v}_n$$</div>
-<p>If this is how you construct vector <span class="math">\(\pmb{a}\)</span>, we say that <span class="math">\(\pmb{a}\)</span> is a <strong>Linear combination</strong> of <span class="math">\(\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n\)</span>. The word &#8220;Linear&#8221; just means you only used the vector addition and scalar multiplication to create your vector. We will see why this is called &#8220;Linear&#8221; later. Spoil alert! it has something to do with how space change after certain&nbsp;operation.</p>
+<p>If this is how you construct vector <span class="math">\(\pmb{a}\)</span>, we say that <span class="math">\(\pmb{a}\)</span> is a <strong>Linear combination</strong> of <span class="math">\(\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n\)</span>. The word &#8220;Linear&#8221; just means you only used vector addition and scalar multiplication to create your vector. We will see why this is called &#8220;Linear&#8221; later. Spoil alert! it has something to do with how space changes after certain&nbsp;operations.</p>
 <p>Now, what is so great about this linear combination? Well, a lot of ideas are coming from the linear combination, it is just we don&#8217;t call it that way&nbsp;before. </p>
 <p>For example, you can get any point(vector) on a line by multiplying a vector. We can say it is just the linear combination of that vector. Similarly, you can get any point(vector) on a plane by &#8220;linear&#8221; combining two vectors. This is exactly how we construct the 2d Cartesian plane, by combining vector (1,0) and&nbsp;(0,1)! </p>
-<p>Later on, you will see that the above examples will can be explained using the new concepts in linear&nbsp;algebra. </p>
+<p>Later on, you will see that the above examples will be explained using the new concepts in linear&nbsp;algebra. </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

@@ -437,19 +437,19 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>3-1 Linear combination of vectors</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors</id><summary type="html">&lt;p&gt;From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
-&lt;p&gt;Say we have a set of many 2d vectors. Let&amp;#8217;s call …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 2 Vectors in n dimension"></category></entry><entry><title>3-1 Linear combination of vectors</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-1-linear-combination-of-vectors</id><summary type="html">&lt;p&gt;From the last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
+&lt;p&gt;Say we have a set of many 2d vectors. Let&amp;#8217;s …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From the last chapter, we learned how to add and subtract vectors. We also know that how to expand or compress a vector using scalar multiplication. Now we can finally explain what is &amp;#8220;Linear&amp;#8221; in the word: linear&amp;nbsp;algebra. &lt;/p&gt;
 &lt;p&gt;Say we have a set of many 2d vectors. Let&amp;#8217;s call&amp;nbsp;them:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n$$&lt;/div&gt;
 &lt;p&gt;I have changed the notation a bit, instead of putting a little arrow on the letter, I just bold the&amp;nbsp;symbols. &lt;/p&gt;
-&lt;p&gt;Notice that every single one of them has to be in a 2d Cartesian plane, because we cannot add 2d vector and 3d vector. Then, I pick few of them, randomly expand or compress them by multiplying some numbers. Then add everything up. At the end, I would expect the vector to be another 2d vector, let&amp;#8217;s call it &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;Notice that every single one of them has to be in a 2d Cartesian plane because we cannot add 2d vector and 3d vector. Then, I pick a few of them, randomly expand or compress them by multiplying some numbers. Then add everything up. In the end, I would expect the vector to be another 2d vector, let&amp;#8217;s call it &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{a} = c_1\pmb{v}_1+c_2\pmb{v}_2+c_3\pmb{v}_3+...+c_n\pmb{v}_n$$&lt;/div&gt;
 &lt;p&gt;the set of numbers &lt;span class="math"&gt;\(c_1,c_2,c_3,...,c_n\)&lt;/span&gt; tells you how you expand or compress each vector. For example, I want to create a vector that is just half of the vector &lt;span class="math"&gt;\(\pmb{v}_1\)&lt;/span&gt;, then we can&amp;nbsp;do:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{a} = 0.5\pmb{v}_1+0\pmb{v}_2+0\pmb{v}_3+...+0\pmb{v}_n$$&lt;/div&gt;
-&lt;p&gt;If this is how you construct vector &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt;, we say that &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt; is a &lt;strong&gt;Linear combination&lt;/strong&gt; of &lt;span class="math"&gt;\(\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n\)&lt;/span&gt;. The word &amp;#8220;Linear&amp;#8221; just means you only used the vector addition and scalar multiplication to create your vector. We will see why this is called &amp;#8220;Linear&amp;#8221; later. Spoil alert! it has something to do with how space change after certain&amp;nbsp;operation.&lt;/p&gt;
+&lt;p&gt;If this is how you construct vector &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt;, we say that &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt; is a &lt;strong&gt;Linear combination&lt;/strong&gt; of &lt;span class="math"&gt;\(\pmb{v}_1,\pmb{v}_2,\pmb{v}_3,\pmb{v}_4,...,\pmb{v}_n\)&lt;/span&gt;. The word &amp;#8220;Linear&amp;#8221; just means you only used vector addition and scalar multiplication to create your vector. We will see why this is called &amp;#8220;Linear&amp;#8221; later. Spoil alert! it has something to do with how space changes after certain&amp;nbsp;operations.&lt;/p&gt;
 &lt;p&gt;Now, what is so great about this linear combination? Well, a lot of ideas are coming from the linear combination, it is just we don&amp;#8217;t call it that way&amp;nbsp;before. &lt;/p&gt;
 &lt;p&gt;For example, you can get any point(vector) on a line by multiplying a vector. We can say it is just the linear combination of that vector. Similarly, you can get any point(vector) on a plane by &amp;#8220;linear&amp;#8221; combining two vectors. This is exactly how we construct the 2d Cartesian plane, by combining vector (1,0) and&amp;nbsp;(0,1)! &lt;/p&gt;
-&lt;p&gt;Later on, you will see that the above examples will can be explained using the new concepts in linear&amp;nbsp;algebra. &lt;/p&gt;
+&lt;p&gt;Later on, you will see that the above examples will be explained using the new concepts in linear&amp;nbsp;algebra. &lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -511,9 +511,9 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-2 Span of vectors and space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space</id><summary type="html">&lt;p&gt;As we just learned from last section, we can create a new vector by linear combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s go back to the beginning. Before we learn any linear algebra, we mentioned the lines in three dimension space. We find that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we just learned from last section, we can create a new vector by linear combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s go back to the beginning. Before we learn any linear algebra, we mentioned the lines in three dimension space. We find that describing lines in 2d Cartesian plane is much easier than do the same thing in 3d space. So can we find a new way to describe lines, planes or even space using linear&amp;nbsp;combination?&lt;/p&gt;
+&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-2 Span of vectors and space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-2-span-of-vectors-and-space</id><summary type="html">&lt;p&gt;As we just learned from the last section, we can create a new vector by linearly combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s go back to the beginning. Before we learn any linear algebra, we mentioned the lines in three-dimension space. We find that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we just learned from the last section, we can create a new vector by linearly combining other vectors. But why do need this tool at&amp;nbsp;all?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s go back to the beginning. Before we learn any linear algebra, we mentioned the lines in three-dimension space. We find that describing lines in 2d Cartesian plane is much easier than doing the same thing in 3d space. So can we find a new way to describe lines, planes, or even space using linear&amp;nbsp;combination?&lt;/p&gt;
 &lt;p&gt;Of course! But there is one thing we need to consider. The linear combination of vectors will only give you another vector, but we want more than just one&amp;nbsp;vector.&lt;/p&gt;
 &lt;p&gt;For example, if I have a vector in 2d&amp;nbsp;plane:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \pmb{v} = (1,2) $$&lt;/div&gt;
@@ -521,12 +521,12 @@
 &lt;div class="math"&gt;$$ \pmb{v}_{new} = (1,2)\times2 = (2,4)$$&lt;/div&gt;
 &lt;p&gt;we can do this for other numbers too, but you will see that no matter how you change the number, you will always end up with the vector on the same&amp;nbsp;line.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w3vectors" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3vectors.png" /&gt;&lt;/p&gt;
-&lt;p&gt;If you collect all the possible linear combination, you will just get a&amp;nbsp;line. &lt;/p&gt;
-&lt;p&gt;In linear algebra, we have a specific name for such collection of vectors: The &lt;strong&gt;span of vector&amp;nbsp;(2,1)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you collect all the possible linear combinations, you will just get a&amp;nbsp;line. &lt;/p&gt;
+&lt;p&gt;In linear algebra, we have a specific name for such a collection of vectors: The &lt;strong&gt;span of vector&amp;nbsp;(2,1)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now, let&amp;#8217;s see what can we get if we span two vector. For example, the span of vector (1,0) and (0,1). You will soon realize that one can easily get any vector in 2d plane by linear combining (1,0) and&amp;nbsp;(0,1):&lt;/p&gt;
 &lt;div class="math"&gt;$$(a,b) = a(1,0) + b(0,1)$$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w3spanspace" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3spanspace.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;So, span of vector (1,0) and (0,1) will give you the whole 2d&amp;nbsp;plane. &lt;/p&gt;
+&lt;p&gt;So, the span of vector (1,0) and (0,1) will give you the whole 2d&amp;nbsp;plane. &lt;/p&gt;
 &lt;p&gt;You can imaging that if we graph the span of more vectors, we can end up with any multidimensional&amp;nbsp;space. &lt;/p&gt;
 &lt;p&gt;For example, to describe a three dimension space, we can pick three vectors lying in the&amp;nbsp;space:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{v}_1 = (1,0,0)$$&lt;/div&gt;
@@ -535,16 +535,15 @@
 &lt;p&gt;To get any vector lying in the space, we can do a linear combination of the three&amp;nbsp;vector:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{v} = a_1\pmb{v}_1+a_2\pmb{v}_2+a_3\pmb{v}_3$$&lt;/div&gt;
 &lt;p&gt;What if we span only two vectors in 3d space? Well, just like what happens in 2d plane, &lt;strong&gt;most of the time&lt;/strong&gt;, we will also get a plane in 2d&amp;nbsp;space.&lt;/p&gt;
-&lt;p&gt;But, what if we span two colinear vectors? If we look at the image above, we can see that spanning vector (1,2) and a same 
-direction vector (2,4) will not give you a whole plane. All the linear combinations of these two vector will just sitting on the same&amp;nbsp;line.&lt;/p&gt;
-&lt;p&gt;So, spanning two vectors will not always give you 2d plane, sometime it could be a line, sometime even just a zero&amp;nbsp;vector.&lt;/p&gt;
-&lt;p&gt;Now you might ask, if I want to span two vector to get a plane, or I want to span three vector to get a 3d space, how should I select my vectors? This question is fairly easy to answer in 2d: just don&amp;#8217;t pick the vectors that sit on the same line. But we need a better answer when we raise the&amp;nbsp;dimension. &lt;/p&gt;
-&lt;p&gt;In short, we want to have all the vector to be &amp;#8220;unique&amp;#8221;, means they were not the linear combination of other vectors. Of course, we have another fancy name for this kind of vectors: we call them &lt;strong&gt;&amp;#8220;Linear Independent vectors&amp;#8221;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But, what if we span two colinear vectors? If we look at the image above, we can see that spanning vector (1,2) and the same direction vector (2,4) will not give you a whole plane. All the linear combinations of these two vectors will just sit on the same&amp;nbsp;line.&lt;/p&gt;
+&lt;p&gt;So, spanning two vectors will not always give you 2d plane, sometimes it could be a line, sometime even just a zero&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Now you might ask: if I want to span two vectors to get a plane, or I want to span three vectors to get a 3d space, how should I select my vectors? This question is fairly easy to answer in 2d: just don&amp;#8217;t pick the vectors that sit on the same line. But we need a better answer when we raise the&amp;nbsp;dimension. &lt;/p&gt;
+&lt;p&gt;In short, we want to have all the vectors to be &amp;#8220;unique&amp;#8221;, which means they were not the linear combination of other vectors. Of course, we have another fancy name for this kind of vector: we call them &lt;strong&gt;&amp;#8220;Linear Independent vectors&amp;#8221;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;For&amp;nbsp;example:&lt;/p&gt;
-&lt;p&gt;In 2d, There is no way you can linear combine (1,0) to get (0,1), so they are linear independent. But you cannot say that (0,1) and (0,4) are linear independent vectors, because you can write (0,4) to be a linear combination of vector&amp;nbsp;(0,1):&lt;/p&gt;
+&lt;p&gt;In 2d, There is no way you can linearly combine (1,0) to get (0,1), so they are linear independent. But you cannot say that (0,1) and (0,4) are linearly independent vectors because you can write (0,4) to be a linear combination of vector&amp;nbsp;(0,1):&lt;/p&gt;
 &lt;div class="math"&gt;$$(0,4) = 4(0,1)$$&lt;/div&gt;
 &lt;p&gt;If that is the case, we call them &lt;strong&gt;&amp;#8220;Linear Dependent vectors&amp;#8221;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;In 3d, things are getting a little more complicated, because finding one vector is the linear combination of other two algebraically are not easy. So, we need more useful tools to calculate. However, we can see what happens when we have one vector is the linear combination of other two in 3d space. Let&amp;#8217;s look at the graph&amp;nbsp;below:&lt;/p&gt;
+&lt;p&gt;In 3d, things are getting a little more complicated, because finding one vector is the linear combination of the other two algebraically is not easy. So, we need more useful tools to calculate. However, we can see what happens when we have one vector is the linear combination of the other two in 3d space. Let&amp;#8217;s look at the graph&amp;nbsp;below:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w3spanplane" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3spanplane.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The vectors shown above&amp;nbsp;are:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \pmb{v}_1 = (1,1,-2) $$&lt;/div&gt;
@@ -552,7 +551,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 &lt;div class="math"&gt;$$ \pmb{v}_3 = (0,1,1) $$&lt;/div&gt;
 &lt;p&gt;To proof one vector is the linear combination of other two, we can rewrite &lt;span class="math"&gt;\(\pmb{v}_1\)&lt;/span&gt; as&amp;nbsp;:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \pmb{v}_1 = 3\pmb{v}_3-\pmb{v}_2 $$&lt;/div&gt;
-&lt;p&gt;Unlike the colinear vector in 2d space, linear independent vector in 3d can be visualize as the vector that sit on the plane spanned by other two&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Unlike the colinear vector in 2d space, the linear independent vector in 3d can be visualized as the vector that sits on the plane spanned by the other two&amp;nbsp;vectors.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -614,13 +613,13 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-3 Basis of space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-3-basis-of-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-3-basis-of-space</id><summary type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from last section, we can linear combine a set of vectors to form a line, a plane, or even space. Also, we knew that there is a restriction. Combine these two idea, we will have our definition of&amp;nbsp;basis:&lt;/p&gt;
-&lt;p&gt;We called a set of vectors &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; is a basis of vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt; if every element in &lt;span class="math"&gt;\(V\)&lt;/span&gt; can be written as a unique &lt;strong&gt;linear combination&lt;/strong&gt; of vectors in &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; and all the vectors in &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; is &lt;strong&gt;linear independent&lt;/strong&gt;.&lt;/p&gt;
+&lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>3-3 Basis of space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/3-3-basis-of-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/3-3-basis-of-space</id><summary type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from the last section, we can linearly combine a set of vectors to form a line, a plane, or even a space. Also, we knew that there is a restriction. Combine these two …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally, we are can talk about the building block of N-dimension space: The basis. As we learned from the last section, we can linearly combine a set of vectors to form a line, a plane, or even a space. Also, we knew that there is a restriction. Combine these two ideas, we will have our definition of&amp;nbsp;basis:&lt;/p&gt;
+&lt;p&gt;We called a set of vectors &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; is a basis of vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt; if every element in &lt;span class="math"&gt;\(V\)&lt;/span&gt; can be written as a unique &lt;strong&gt;linear combination&lt;/strong&gt; of vectors in &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; and all the vectors in &lt;span class="math"&gt;\(\pmb{S}\)&lt;/span&gt; are &lt;strong&gt;linear independent&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;For example, &lt;span class="math"&gt;\(set[(0,1),(1,0)]\)&lt;/span&gt; is a basis of 2d vector space (real vector space) since any vector in the vector space (a,b) can be written as a unique linear combination of &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt;. Not only that, &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; cannot be written as a linear combination of each others, so they are linear&amp;nbsp;independent.&lt;/p&gt;
-&lt;p&gt;If the set spans the vector space but the vectors in it are not linear independent. We can still called them the generating set or the spanning set of vector space. The name comes from the fact that the vectors &amp;#8220;generate&amp;#8221; the whole&amp;nbsp;space.&lt;/p&gt;
+&lt;p&gt;If the set spans the vector space but the vectors in it are not linear independent. We can still call them the generating set or the spanning set of vector space. The name comes from the fact that the vectors &amp;#8220;generate&amp;#8221; the whole&amp;nbsp;space.&lt;/p&gt;
 &lt;p&gt;In linear algebra, we can use the basis to represent the corresponding vector space. But what is the actual difference between two different basis if they describe the exact same vector&amp;nbsp;space?&lt;/p&gt;
 &lt;p&gt;We can construct the 2d Cartesian plane use &lt;span class="math"&gt;\(set[(0,1),(1,0)]\)&lt;/span&gt;, we can also do the same thing with &lt;span class="math"&gt;\(set[(1,1),(1,0)]\)&lt;/span&gt;. So what is the point of writing vector space in terms of different basis? Is it just for&amp;nbsp;fun?&lt;/p&gt;
-&lt;p&gt;Answer is of course not. In fact, this idea of presenting vector space in different basis is a huge topic in linear algebra. Change basis of a vector space will simultaneously change all the vectors in that space. To understand how the vector change in space, we have to learn the &amp;#8220;essence&amp;#8221; of linear algebra: the linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;The answer is of course not. In fact, this idea of presenting vector space on a different basis is a huge topic in linear algebra. Change the basis of a vector space will most of the time simultaneously change all the vectors in that space. To understand how the vector change in space, we have to learn the &amp;#8220;essence&amp;#8221; of linear algebra: the linear&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w3changebasis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w3changebasis.gif" /&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -771,16 +770,16 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 &lt;/script&gt;</content><category term='Chapter 3 Meaning of "Linear" in linear algebra'></category></entry><entry><title>4-1 Linear Transformation</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-1-linear-transformation" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-1-linear-transformation</id><summary type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are finally here! All the idea that we introduced earlier, is for this amazing idea in linear algebra: &lt;strong&gt;linear transformation&lt;/strong&gt;. And this idea will lead us to a powerful tool in linear algebra: the&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s jump right into the definition of linear transformation, and see what is the relationship between linear transformation and matrix&amp;nbsp;multiplication.&lt;/p&gt;
-&lt;p&gt;The two key words are &amp;#8220;Linear&amp;#8221; and &amp;#8220;Transformation&amp;#8221;. We will began with the word transformation. In high school, transformation usually refer as the change from one graph to another graph. In here, the transformation can be understand as a function, a map that take in one vector and returns another one. The reason why we don&amp;#8217;t call it function is because we are interested in the &amp;#8220;movement&amp;#8221;. Just like you can visualize the graph being &amp;#8220;compressed&amp;#8221; or &amp;#8220;stretched&amp;#8221;. A linear transformation can be visualized as a vector &amp;#8220;moves&amp;#8221; to another&amp;nbsp;vector.&lt;/p&gt;
-&lt;p&gt;Notice that the transformation is not talking about only one vector being transformed into one vector. It is talking about every single vector that lives in the vector space being transformed into another vector. Like when we talk about the word &amp;#8220;function&amp;#8221;, we are not only interested in one x value change to a y value, we are interested in all x and y value in the domain and&amp;nbsp;range.&lt;/p&gt;
-&lt;p&gt;But how about the word &amp;#8220;linear&amp;#8221;? Like what we learned before in &amp;#8220;linear&amp;#8221; combination, the word &amp;#8220;linear&amp;#8221; means this type of transformation follows certain rules: &lt;strong&gt;additivity&lt;/strong&gt; and &lt;strong&gt;homogeneity&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;The two keywords are &amp;#8220;Linear&amp;#8221; and &amp;#8220;Transformation&amp;#8221;. We will begin with the word transformation. In high school, transformation is usually refers to the change from one graph to another graph. Here, the transformation can be understood as a function, a map that takes in one vector and returns another one. The reason why we don&amp;#8217;t call it function is that we are interested in the &amp;#8220;movement&amp;#8221;. Just like you can visualize the graph being &amp;#8220;compressed&amp;#8221; or &amp;#8220;stretched&amp;#8221;. A linear transformation can be visualized as a vector &amp;#8220;moves&amp;#8221; to another&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Notice that the transformation is not talking about only one vector being transformed into one vector. It is talking about every single vector that lives in the vector space being transformed into another vector. Like when we talk about the word &amp;#8220;function&amp;#8221;, we are not only interested in one x value change to a y values, we are interested in all x and y value in the domain and&amp;nbsp;range.&lt;/p&gt;
+&lt;p&gt;But how about the word &amp;#8220;linear&amp;#8221;? Like what we learned before in the &amp;#8220;linear&amp;#8221; combination, the word &amp;#8220;linear&amp;#8221; means this type of transformation follows certain rules: &lt;strong&gt;additivity&lt;/strong&gt; and &lt;strong&gt;homogeneity&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;Additivity means that the transformation preserve&amp;nbsp;addition:&lt;/p&gt;
 &lt;div class="math"&gt;$$f(\pmb{a}+\pmb{b}) = f(\pmb{a}) + f(\pmb{b})$$&lt;/div&gt;
 &lt;p&gt;homogeneity, or more precisely, the homogeneity of degree 1 means the operation of scalar multiplication is&amp;nbsp;preserved.&lt;/p&gt;
 &lt;div class="math"&gt;$$f(c\pmb{a}) = cf(\pmb{a})$$&lt;/div&gt;
 &lt;p&gt;So what is so special about this type of transformation compare to&amp;nbsp;others?&lt;/p&gt;
-&lt;p&gt;If you have any set of vector that forms a line, for example, all the vectors that has tips sitting on the x-axis. After the transformation, the vectors will still sitting on a line. So linear transformation will not &amp;#8220;curve&amp;#8221; the&amp;nbsp;space.&lt;/p&gt;
-&lt;p&gt;Also, notice that these two condition also tells you a important detail, which is the zero vector stay as a zero vector. You can check that using the&amp;nbsp;condition.&lt;/p&gt;
+&lt;p&gt;If you have any set of vector that forms a line, for example, all the vectors that have tips sitting on the x-axis. After the transformation, the vectors will still sit on a line. So linear transformation will not &amp;#8220;curve&amp;#8221; the&amp;nbsp;space.&lt;/p&gt;
+&lt;p&gt;Also, notice that these two conditions also tells you an important detail, which is the zero vector stay as a zero vector. You can check that using the&amp;nbsp;condition.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s see a simple&amp;nbsp;example:&lt;/p&gt;
 &lt;p&gt;The transformation we will see is the simplest transformation: the transformation of doing nothing at&amp;nbsp;all:&lt;/p&gt;
 &lt;div class="math"&gt;$$f(\pmb{x}) = \pmb{x}$$&lt;/div&gt;
@@ -791,10 +790,10 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 &lt;p&gt;Obviously, this follows the rule. Now let&amp;#8217;s check&amp;nbsp;homogeneity:&lt;/p&gt;
 &lt;div class="math"&gt;$$f(c\pmb{a}) =c\pmb{a} = cf(\pmb{a})$$&lt;/div&gt;
 &lt;p&gt;lovely! Both rules are satisfied. We can now say that the transformation of doing nothing is a linear&amp;nbsp;transformation.&lt;/p&gt;
-&lt;p&gt;but that is way too boring, let&amp;#8217;s do a interesting one together: the transformation of rotating everything by 90 degrees counter&amp;nbsp;counterclockwise.&lt;/p&gt;
+&lt;p&gt;but that is way too boring, let&amp;#8217;s do an interesting one together: the transformation of rotating everything by 90 degrees counter&amp;nbsp;counterclockwise.&lt;/p&gt;
 &lt;p&gt;To demonstrate the transformation. I will plot the sample vector and many other vectors during the transformation. To not make the graph too crowded, I will only draw the points where the tip of the vectors landed for other&amp;nbsp;vectors.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;It seems impossible to show the additivity and homogeneity in this case. Unlike the last time, it is not easy to write down the &lt;span class="math"&gt;\(f(\pmb{x})\)&lt;/span&gt;. However, when you graph the transformation on the basis vectors of 2d space, things gets a lot&amp;nbsp;easier.&lt;/p&gt;
+&lt;p&gt;It seems impossible to show the additivity and homogeneity in this case. Unlike the last time, it is not easy to write down the &lt;span class="math"&gt;\(f(\pmb{x})\)&lt;/span&gt;. However, when you graph the transformation on the basis vectors of 2d space, things get a lot&amp;nbsp;easier.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at how the basis vectors change under the transformation. More importantly, ask yourself whether if the basis is still a basis after the&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4axis_rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;As you can see. the basis &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; changed to &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((-1,0)\)&lt;/span&gt;. And it looks like the new basis still works&amp;nbsp;well. &lt;/p&gt;
@@ -866,13 +865,13 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>4-2 Matrix multiplication with vector</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/4-2-matrix-multiplication-with-vector</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Unfortunately, no one can told you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
+&lt;p&gt;Unfortunately, no one can tell you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;Unfortunately, no one can told you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
+&lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character&amp;#8217;s line in Matrix as the start …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Unfortunately, no one can tell you what the Matrix is. You have to see it for&amp;nbsp;yourself. &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character in Matrix as the start of this chapter. To &amp;#8220;see&amp;#8221; what matrix really is, the knowledge of linear transformation is required. Good thing is, we have learned what linear transformation is,  so now is time to find a way to describe the transformation numerically. Hopefully, we can all &amp;#8220;see&amp;#8221; it by the end of the&amp;nbsp;section.&lt;/p&gt;
-&lt;p&gt;We knew that the linear transformation is the transformation between vector space, and vector space can be expressed as the span of basis vector. So, to write down the linear transformation, we need to see how the basis vector changes under the&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;For most of us, the first time when we hear the word &amp;#8220;Matrix&amp;#8221; is from the movie Matrix. So, here I quote one of the character&amp;#8217;s line in Matrix as the start of this chapter. To &amp;#8220;see&amp;#8221; what matrix really is, the knowledge of linear transformation is required. Good thing is, we have learned what linear transformation is,  so now is time to find a way to describe the transformation numerically. Hopefully, we can all &amp;#8220;see&amp;#8221; it by the end of the&amp;nbsp;section.&lt;/p&gt;
+&lt;p&gt;We knew that the linear transformation is the transformation between vector space, and vector space can be expressed as the span of the basis vector. So, to write down the linear transformation, we need to see how the basis vector changes under the&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s again take the example from the last section. The transformation of rotating 90 degrees counterclockwise. Remember last time we said the transformation act on the basis of space and change the basis to a new&amp;nbsp;one:&lt;/p&gt;
 &lt;div class="math"&gt;$$(1,0) \rightarrow \color{red}{(0,1)}$$&lt;/div&gt;
 &lt;div class="math"&gt;$$(0,1) \rightarrow \color{red}{(-1,0)}$$&lt;/div&gt;
@@ -896,7 +895,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 0 &amp;amp; -1\\
 1 &amp;amp; 0
 \end{bmatrix}}$$&lt;/div&gt;
-&lt;p&gt;To see why this notation even make sense, we will put this square thing next to a vector. Like functions, we can input a number and return another one, this transformation eat a vector and spit out another vector. In our case, the input vector is the vector before the transformation and the output is&amp;nbsp;after.&lt;/p&gt;
+&lt;p&gt;To see why this notation even makes sense, we will put this square thing next to a vector. Like functions, we can input a number and return another one, this transformation eats a vector and spit out another vector. In our case, the input vector is the vector before the transformation and the output is&amp;nbsp;after.&lt;/p&gt;
 &lt;div class="math"&gt;$$T(\begin{bmatrix}
 1\\
 0
@@ -911,7 +910,7 @@ direction vector (2,4) will not give you a whole plane. All the linear combinati
 1
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;So how did this calculating work? Let&amp;#8217;s take a close look at each&amp;nbsp;element. &lt;/p&gt;
-&lt;p&gt;The vector (1,0) has 1 as x-component so the result has 1 portion of the first row(the new x basis). It also has 0 as its y-component so it has 0 portion of the second row(the new y basis). Notice this comes from the fact that the coefficients of linear combination don&amp;#8217;t change during the transformation. If you have one &lt;span class="math"&gt;\(\hat{x}\)&lt;/span&gt; and zero &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt;, you remains one &lt;span class="math"&gt;\(\hat{x}\)&lt;/span&gt; and zero &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt;. The only thing that change is the&amp;nbsp;basis.&lt;/p&gt;
+&lt;p&gt;The vector (1,0) has 1 as the x-component so the result has 1 portion of the first row(the new x basis). It also has 0 as its y-component so it has 0 portions of the second row(the new y basis). Notice this comes from the fact that the coefficients of linear combination don&amp;#8217;t change during the transformation. If you have one &lt;span class="math"&gt;\(\hat{x}\)&lt;/span&gt; and zero &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt;, you remains one &lt;span class="math"&gt;\(\hat{x}\)&lt;/span&gt; and zero &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt;. The only thing that changes is the&amp;nbsp;basis.&lt;/p&gt;
 &lt;div class="math"&gt;$$\color{red}{\begin{bmatrix}
 0 &amp;amp; -1\\
 1 &amp;amp; 0
@@ -958,13 +957,13 @@ a
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w4rotation" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;We can confirm this result is also true by looking at the&amp;nbsp;animation.&lt;/p&gt;
-&lt;p&gt;As you already guessed it, the square thing is called matrix and this operation we did is called the matrix&amp;nbsp;multiplication. &lt;/p&gt;
-&lt;p&gt;Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before, because usually the matrix multiplication was introduced like&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;As you already guessed it, the square thing is called matrix and this operation we did is called matrix&amp;nbsp;multiplication. &lt;/p&gt;
+&lt;p&gt;Anyone who learned the matrix multiplication before might find this operation slightly different from the way you learned before because usually the matrix multiplication was introduced like&amp;nbsp;this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w4matrixwiki" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w4matrix_multi.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Don&amp;#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as linear transformation of vectors is much much more intuitive than pure&amp;nbsp;algebra. &lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t panic, you will soon find out the two ways are exactly the same. But imaging matrix multiplication as a linear transformation of vectors is much much more intuitive than pure&amp;nbsp;algebra. &lt;/p&gt;
 &lt;p&gt;Can we figure out more things from the matrix multiplication we&amp;nbsp;defined?&lt;/p&gt;
-&lt;p&gt;First is the dimension of matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a &lt;strong&gt;2 by 2 matrix&lt;/strong&gt; or &lt;strong&gt;2x2 matrix&lt;/strong&gt;. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&amp;nbsp;columns.&lt;/p&gt;
-&lt;p&gt;But why do our matrix has such shape? Why not 10 by 10 or 20 by 20? The answer can be find from the dimension of the input vector and output vector. the transformation takes in a 2d vector and spit out another 2d vector so the dimension of matrix has to be 2 by 2. If the transformation takes in a 3d vector and returns a 2d vector, then the dimension of this transformation matrix has to be 2 by&amp;nbsp;3.&lt;/p&gt;
+&lt;p&gt;First is the dimension of the matrix. We can see that our transformation matrix has two rows and two columns, we call this matrix a &lt;strong&gt;2 by 2 matrix&lt;/strong&gt; or &lt;strong&gt;2x2 matrix&lt;/strong&gt;. In convention, we write the number of rows first and then the columns. So a 4 by 3 matrix will have 4 rows and 3&amp;nbsp;columns.&lt;/p&gt;
+&lt;p&gt;But why does our matrix has such a shape? Why not 10 by 10 or 20 by 20? The answer can be found from the dimension of the input vector and output vector. the transformation takes in a 2d vector and spits out another 2d vector so the dimension of the matrix has to be 2 by 2. If the transformation takes in a 3d vector and returns a 2d vector, then the dimension of this transformation matrix has to be 2 by&amp;nbsp;3.&lt;/p&gt;
 &lt;div class="math"&gt;$$T(\begin{bmatrix}
 x\\
 y\\
@@ -986,8 +985,8 @@ e
 c\\
 f
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;There is also an interesting question to think about: Can any linear transformation be written as a matrix? If that so, then any matrix with any dimension can be treat as a linear&amp;nbsp;transformation.&lt;/p&gt;
-&lt;p&gt;Here is another thinking question: what if two matrix multiply each other? What is the result looks like? More importantly, what is the meaning of doing&amp;nbsp;that?&lt;/p&gt;
+&lt;p&gt;There is also an interesting question to think about: Can any linear transformation be written as a matrix? If so, then any matrix with any dimension can be treated as a linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Here is another thinking question: what if two matrices multiply each other? What is the result looks like? More importantly, what is the meaning of doing&amp;nbsp;that?&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -1157,10 +1156,10 @@ f
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>5-1 intercepts problem</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
-&lt;p&gt;Let …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 4 Transformation: the origin of matrix"></category></entry><entry><title>5-1 intercepts problem</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-1-intercepts-problem</id><summary type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrices.&lt;/p&gt;
+&lt;p&gt;Let …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Historically, the matrix was not invented for linear transformation, but for a more practical problem: solving linear systems. In this unit, we are going to cover everything you need to know when solving a linear system. Then I will explain why it is better to solve them using&amp;nbsp;matrices.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s start from the simplest linear system you can imagine: line&amp;nbsp;intercepts.&lt;/p&gt;
-&lt;p&gt;Suppose we have two lines in Cartisian plane, line A and line&amp;nbsp;B:&lt;/p&gt;
+&lt;p&gt;Suppose we have two lines in Cartesian plane, line A and line&amp;nbsp;B:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_int.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Here are their&amp;nbsp;equations:&lt;/p&gt;
 &lt;div class="math"&gt;$$  
@@ -1169,15 +1168,15 @@ f
       x+y\ =\ 1 &amp;amp; \text{Line B}
     \end{cases}   
 $$&lt;/div&gt;
-&lt;p&gt;Now the classic questions are: where does these two lines meet? And do they meet at&amp;nbsp;all?&lt;/p&gt;
-&lt;p&gt;It is fairly easy to see in graph that these two lines do intersect and they intersect at point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it under a&amp;nbsp;minute.&lt;/p&gt;
-&lt;p&gt;If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving system of linear equations. Why? I will give you two&amp;nbsp;reasons:&lt;/p&gt;
+&lt;p&gt;Now the classic questions are: where do these two lines meet? And do they meet at&amp;nbsp;all?&lt;/p&gt;
+&lt;p&gt;It is fairly easy to see in the graph that these two lines do intersect and they intersect at the point (1,0). To solve this algebraically is also trivial, you can do a substitution and solve it in under a&amp;nbsp;minute.&lt;/p&gt;
+&lt;p&gt;If you can solve this, congratulation! You pass the grade 9 math exam! Clearly, this method is not a good way of solving a system of linear equations. Why? I will give you two&amp;nbsp;reasons:&lt;/p&gt;
 &lt;p&gt;First, how do we solve the question with more than 2&amp;nbsp;dimensions? &lt;/p&gt;
-&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long, but also nasty to&amp;nbsp;read.&lt;/p&gt;
+&lt;p&gt;Well, you might say we introduce more than two variables! a, b, c, d{static}. That is absurd because we only have 26 letters and if we use notation like &lt;span class="math"&gt;\(a_1, a_2\)&lt;/span&gt;, the equation will be not only long but also nasty to&amp;nbsp;read.&lt;/p&gt;
 &lt;p&gt;Second, how do we know if there is a&amp;nbsp;solution?&lt;/p&gt;
-&lt;p&gt;Assume you are working on this 100 dimension linear system, it took you 3 days to realize that there is no solution! How frustrated is&amp;nbsp;that! &lt;/p&gt;
-&lt;p&gt;So, Let&amp;#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have a easy way to check whether there is a solution or&amp;nbsp;not.&lt;/p&gt;
-&lt;p&gt;Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write system of linear equations using&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Assume you are working on this 100 dimensions linear system, it took you 3 days to realize that there is no solution! How frustrated is&amp;nbsp;that! &lt;/p&gt;
+&lt;p&gt;So, Let&amp;#8217;s sum up. We need our new notation to have two things: One, It has to look good, precise, clear, and elegant. Two, it has to have an easy way to check whether there is a solution or&amp;nbsp;not.&lt;/p&gt;
+&lt;p&gt;Luckily, we have matrix. The matrix notation solve the above questions perfectly and even gave us more details about the system. I will show you the way to write a system of linear equations using&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s take the above equations as an&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$  
 \begin{cases}
@@ -1185,7 +1184,7 @@ $$&lt;/div&gt;
       x+y\ =\ 1 &amp;amp; \text{Line B}
     \end{cases}   
 $$&lt;/div&gt;
-&lt;p&gt;The left side of the equations are some variable with different coefficients, so let&amp;#8217;s start from&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;The left side of the equations are some variables with different coefficients, so let&amp;#8217;s start from&amp;nbsp;there.&lt;/p&gt;
 &lt;p&gt;Instead of writing all the x and y in our equations, we can put all of them at the side as a&amp;nbsp;vector:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 x\\
@@ -1229,7 +1228,7 @@ y
 $$&lt;/div&gt;
 &lt;p&gt;We can write this in a more abstract&amp;nbsp;form:&lt;/p&gt;
 &lt;div class="math"&gt;$$\color{red}{A}\pmb{x} = \pmb{b}$$&lt;/div&gt;
-&lt;p&gt;Where &lt;span class="math"&gt;\(\color{red}{A}\)&lt;/span&gt; is a matrix, &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; is the unknown vector that we are trying to solve and &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is a&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Where &lt;span class="math"&gt;\(\color{red}{A}\)&lt;/span&gt; is a matrix, &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; is the unknown vector that we are trying to solve, and &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is a&amp;nbsp;vector.&lt;/p&gt;
 &lt;p&gt;It is obvious to see that the matrix notation is way easier than the original one since you don&amp;#8217;t have to write down the variables over and over again. Moreover, it is much faster to do elimination. We will discuss the detail of Gauss elimination in the next&amp;nbsp;section.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
