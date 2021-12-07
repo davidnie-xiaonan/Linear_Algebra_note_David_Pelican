@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Vector addition, subtraction and Scalar multiplication Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do that? Imaging you are walking on a 2d plane and you start at the origin. Say there is a …
+        <meta name="description" content="Vector addition, subtraction, and Scalar multiplication Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vectors, and how do we do that? Imagine you are walking on a 2d plane and you start at the origin. Say there is a …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="2-2 Adding vector "/>
 <meta property="og:url" content="./2-2-adding-vector" />
-<meta property="og:description" content="Vector addition, subtraction and Scalar multiplication Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do that? Imaging you are walking on a 2d plane and you start at the origin. Say there is a …" />
+<meta property="og:description" content="Vector addition, subtraction, and Scalar multiplication Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vectors, and how do we do that? Imagine you are walking on a 2d plane and you start at the origin. Say there is a …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="2-2 Adding vector ">
-<meta name="twitter:description" content="Vector addition, subtraction and Scalar multiplication Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do that? Imaging you are walking on a 2d plane and you start at the origin. Say there is a …">
+<meta name="twitter:description" content="Vector addition, subtraction, and Scalar multiplication Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vectors, and how do we do that? Imagine you are walking on a 2d plane and you start at the origin. Say there is a …">
 
         <title>2-2 Adding vector  · Linear Algebra Note
 </title>
@@ -92,19 +92,19 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h1 id="vector-addition-subtraction-and-scalar-multiplication">Vector addition, subtraction and Scalar multiplication<a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"> </a></h1>
-<p>Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vector, and how do we do&nbsp;that?</p>
-<p>Imaging you are walking on a 2d plane and you start at the origin. Say there is a penny located at (2,2) and you are about to pick it up. So you walk to the position (2,2). Let us record this motion using vector and write this vector <span class="math">\(a\)</span>&nbsp;as:</p>
+            <h1 id="vector-addition-subtraction-and-scalar-multiplication">Vector addition, subtraction, and Scalar multiplication<a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permanent link"> </a></h1>
+<p>Like numbers, you can also add and subtract vectors. But what is the meaning of adding or subtracting two vectors, and how do we do&nbsp;that?</p>
+<p>Imagine you are walking on a 2d plane and you start at the origin. Say there is a penny located at (2,2) and you are about to pick it up. So you walk to the position (2,2). Let us record this motion using vector and write this vector <span class="math">\(a\)</span>&nbsp;as:</p>
 <div class="math">$$ \vec{a} = (2,2)$$</div>
 <p><img alt="w2vector1" src="./images/w2vector1.png" /></p>
 <p>Then you heard someone yelling at you. The sound is coming from your right. So you walk to this person and return the penny to him unwillingly. Notice that if you look from above, the direction of this motion is Southeast because your moving direction is Northeast at the beginning. For simplicity, let say you walked exactly <span class="math">\(\sqrt{2}\)</span>&nbsp;unit.</p>
 <p><img alt="w2vector2" src="./images/w2vector2.png" /></p>
-<p>Now we need to see what is you second motion. As we learned before, moving a vector don&#8217;t change the vector itself, so if we move this vector and place it on the origin, we can see the tip of the vector land exactly on the point&nbsp;(1,-1).</p>
+<p>Now we need to see what is your second motion. As we learned before, moving a vector doesn&#8217;t change the vector itself, so if we move this vector and place it on the origin, we can see the tip of the vector land exactly on the point&nbsp;(1,-1).</p>
 <p><img alt="w2gif1" src="./images/w2gif1.gif" /></p>
 <p>So we do the same thing and record this motion using&nbsp;vector:
 </p>
 <div class="math">$$ \vec{b} = (1,-1)$$</div>
-<p>Now we can finally ask ourselves: what is the meaning of adding this two vector <span class="math">\(\vec{a}\)</span> and <span class="math">\(\vec{b}\)</span>? The answer is quite straightforward. The first motion is <span class="math">\(\vec{a}\)</span> and right after that you did the second motion <span class="math">\(\vec{b}\)</span>. If you combine these two motions and only look at the result of them, it looks like you just walked to the final point where you talked to the guy who thinks you stealed his&nbsp;penny.</p>
+<p>Now we can finally ask ourselves: what is the meaning of adding these two vectors <span class="math">\(\vec{a}\)</span> and <span class="math">\(\vec{b}\)</span>? The answer is quite straightforward. The first motion is <span class="math">\(\vec{a}\)</span> and right after that you did the second motion <span class="math">\(\vec{b}\)</span>. If you combine these two motions and only look at the result of them, it looks like you just walked to the final point where you talked to the guy who thinks you stole his&nbsp;penny.</p>
 <p><img alt="w2gif2" src="./images/w2gif2.gif" /></p>
 <p>So how do we calculate the result? It is very obvious to see that the tip of <span class="math">\(\vec{b}\)</span> is sitting at point (3,1). Therefore the result is&nbsp;just:</p>
 <div class="math">$$\vec{a}+\vec{b}= \vec{c} = (3,1)$$</div>
@@ -112,19 +112,19 @@
 <div class="math">$$c_x = a_x + b_x = 2+1 = 3$$</div>
 <p>Same as y&nbsp;coordinate:</p>
 <div class="math">$$c_y = a_y + b_y = 2-1 = 1$$</div>
-<p>The reason is because we placed everything inside the Cartesian&nbsp;coordinate. </p>
-<p>If we treat the x coordinate and the y coordinate as vectors sitting exactly on the x and y axis, then every vector can be represent as an addition of those&nbsp;vectors!</p>
+<p>The reason is that we placed everything inside the Cartesian&nbsp;coordinate. </p>
+<p>If we treat the x coordinate and the y coordinate as vectors sitting exactly on the x and y axis, then every vector can be represented as addition of those&nbsp;vectors!</p>
 <p><img alt="w2vectoradd" src="./images/w2vectoradd.png" /></p>
-<p>Once we realized that, we can reverse the addition and break down our <span class="math">\(\vec{a}\)</span> and <span class="math">\(\vec{b}\)</span>. Then we add all the x direction vectors, do the same thing on y direction vectors. We will end up with two sums, one for x direction and one for y direction. So, our job is done! Because the way we write down vector is just to write down their x and y&nbsp;components.</p>
+<p>Once we realized that, we can reverse the addition and break down our <span class="math">\(\vec{a}\)</span> and <span class="math">\(\vec{b}\)</span>. Then we add all the x direction vectors, do the same thing on y direction vectors. We will end up with two sums, one for x direction and one for y direction. So, our job is done! Because the way we write down vectors is just to write down their x and y&nbsp;components.</p>
 <div class="math">$$\vec{a}+\vec{b}= (\color{red}2,\color{blue}2) + (\color{red}1,\color{blue}{-1}) = (\color{red}3,\color{blue}1)$$</div>
 <hr />
 <p>Next we are going to do some multiplication. Just like number multiplication, the multiplication is just adding the same thing many many times. Luckily, we can also do that in vector. Again, take <span class="math">\(\vec{a}\)</span> from previous section as an&nbsp;example:</p>
 <div class="math">$$ 2\times\vec{a} = 2\times(\color{red}2,\color{red}2) = (2\times\color{red}2,2\times\color{red}2) = (4,4)$$</div>
-<p>We can also multiply a negative scalar like <span class="math">\(-1\)</span>. Keep in mind, multiply negative value will reverse the direction of the vector.
+<p>We can also multiply a negative scalar like <span class="math">\(-1\)</span>. Keep in mind, multiply negative values will reverse the direction of the vector.
 <img alt="w2negative" src="./images/w2negative.gif" /></p>
 <hr />
 <p>So far we know how to add any two vectors and multiply any vector with a scalar, it is a good time to introduce the&nbsp;subtraction. </p>
-<p>To calculate, it is fairly easy. As you expected, instead of adding the coordinate like you did before, this time you just&nbsp;subtract:</p>
+<p>To calculate, it is fairly easy. As you expected, instead of adding the coordinate as you did before, this time you just&nbsp;subtract:</p>
 <div class="math">$$\vec{a}-\vec{b} = (2,2)-(1,-1) = (1,3)$$</div>
 <p>To visualize it just like we did for addition, we can break down subtraction into addition and multiplication of <span class="math">\(-1\)</span>:</p>
 <div class="math">$$\vec{a}-\vec{b} = \vec{a} + (\color{red}{-1}\times\vec{b})$$</div>
@@ -132,9 +132,9 @@
 <img alt="w2subtract" src="./images/w2subtract.gif" /></p>
 <hr />
 <p>And that is the end of the first&nbsp;chapter! </p>
-<p>You will see more examples and fun applications in the assignment. The addition and subtraction rules looks easy but it has a huge impact to more important concepts like linear combination, span, and&nbsp;basis. </p>
-<p>Now it is the time to reveal the answer of the question I gave from the previous chapter: What is a vector in&nbsp;mathematics? </p>
-<p>Well, mathematics people tend to have a more abstract definition. In short, vector is the object that follows the rules of vector addition and the scalar multiplication. Or you can say that vector is an element of vector space. What is a vector space? Well, we will go back to this topic. For now, you can think of vector space as a realm that has those rules we mentioned&nbsp;above.</p>
+<p>You will see more examples and fun applications in the assignment. The addition and subtraction rules look easy but it has a huge impact on more important concepts like linear combination, span, and&nbsp;basis. </p>
+<p>Now is the time to reveal the answer to the question I gave from the previous chapter: What is a vector in&nbsp;mathematics? </p>
+<p>Well, mathematics people tend to have a more abstract definition. In short, a vector is the object that follows the rules of vector addition and scalar multiplication. Or you can say that vector is an element of vector space. What is a vector space? Well, we will go back to this topic. For now, you can think of vector space as a realm that has those rules we mentioned&nbsp;above.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
