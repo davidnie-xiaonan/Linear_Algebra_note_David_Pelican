@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look at …
+        <meta name="description" content="Last time, we focused on the matrix in linear systems. By treating the linear equations as a transformation of vectors, we can easily predict the number of solutions. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="5-4 The cheat: inverse matrix "/>
 <meta property="og:url" content="./5-4-the-cheat-inverse-matrix" />
-<meta property="og:description" content="Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look at …" />
+<meta property="og:description" content="Last time, we focused on the matrix in linear systems. By treating the linear equations as a transformation of vectors, we can easily predict the number of solutions. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-4 The cheat: inverse matrix ">
-<meta name="twitter:description" content="Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look at …">
+<meta name="twitter:description" content="Last time, we focused on the matrix in linear systems. By treating the linear equations as a transformation of vectors, we can easily predict the number of solutions. But when we tried to solve the system, we still have to do elimination. So, can we do better? Let’s look …">
 
         <title>5-4 The cheat: inverse matrix  · Linear Algebra Note
 </title>
@@ -92,15 +92,15 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&nbsp;better?</p>
+            <p>Last time, we focused on the matrix in linear systems. By treating the linear equations as  a transformation of vectors, we can easily predict the number of solutions. But when we tried to solve the system, we still have to do elimination. So, can we do&nbsp;better?</p>
 <p>Let&#8217;s look at our equation in matrix&nbsp;form:</p>
 <div class="math">$$A\pmb{\color{red}x} = \pmb{b}$$</div>
 <p>The thing we are trying to solve is <span class="math">\(\pmb{\color{red}x}\)</span>, and we know the transformation <span class="math">\(A\)</span> and the target vector <span class="math">\(b\)</span>. Assume you solved the equation and you have exactly one solution, you know that the null space of this transformation is zero. In another word, the system will always give you a unique <span class="math">\( \pmb{\color{red}x}\)</span> for any vector <span class="math">\(\pmb{b}\)</span>. But the problem is, when we change the vector <span class="math">\(\pmb{b}\)</span>, we have to solve the system again, and that is not good for&nbsp;us.</p>
 <p>So, is there a better way to solve&nbsp;this? </p>
 <p>Let&#8217;s look at the simplest equation that we all learned in elementary&nbsp;school:</p>
 <div class="math">$$a\color{red}x = b$$</div>
-<p>Notice that <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are just number. To solve x, we just divide the <span class="math">\(a\)</span> both side. Good thing about this is that no matter how b change, we <strong>always</strong> divide the number <span class="math">\(a\)</span> to get our solution for <span class="math">\(\color{red}x\)</span>.</p>
-<p>But wait a second, we don&#8217;t have division in matrix! Obviously you can&#8217;t divide matrices, it doesn&#8217;t make any sense! Or is&nbsp;it?</p>
+<p>Notice that <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are just numbers. To solve x, we just divide the <span class="math">\(a\)</span> on both side. The good thing about this is that no matter how b change, we <strong>always</strong> divide the number <span class="math">\(a\)</span> to get our solution for <span class="math">\(\color{red}x\)</span>.</p>
+<p>But wait for a second, we don&#8217;t have the division in matrix! Obviously, you can&#8217;t divide matrices, it doesn&#8217;t make any sense! Or is&nbsp;it?</p>
 <p>The matrix act as a transformation &#8220;function&#8221;, like <span class="math">\( y = sin(x)\)</span>, you can&#8217;t just divide functions. But, we can change our &#8220;division&#8221; into the multiplication of the reciprocal! What is the &#8220;reciprocal&#8221; of a function? Well, it is called the inverse of&nbsp;function:</p>
 <div class="math">$$f^{-1}(f(x)) = x$$</div>
 <p>So how do we solve the equation? Let&#8217;s first see how we did it in&nbsp;function:</p>
@@ -114,11 +114,11 @@
 <p>So what has to be true for this &#8220;inverse&#8221; in order to make the above idea&nbsp;practical?</p>
 <p>It is not hard to see that the second line has to be the definition for inverse&nbsp;matrix:</p>
 <div class="math">$$A^{-1}(A\pmb{\color{red}x}) = \color{red}x $$</div>
-<p>If you treat the two matrix <span class="math">\(A^{-1}A\)</span> as one matrix, Let&#8217;s call it <span class="math">\(I\)</span> ,what is <span class="math">\(I\)</span> transformation looks&nbsp;like?</p>
+<p>If you treat the two matrices <span class="math">\(A^{-1}A\)</span> as one matrix, Let&#8217;s call it <span class="math">\(I\)</span>, what is <span class="math">\(I\)</span> transformation looks&nbsp;like?</p>
 <div class="math">$$A^{-1}A = I$$</div>
 <div class="math">$$(A^{-1}A)\pmb{\color{red}x} = \color{red}x $$</div>
 <div class="math">$$I\pmb{\color{red}x} = \pmb{\color{red}x}$$</div>
-<p>Well, this matrix has to transform vector <span class="math">\({\color{red}x}\)</span> into itself. Such transformation is called <strong>identity matrix</strong>. Let&#8217;s construct the identity matrix&nbsp;together.</p>
+<p>Well, this matrix has to transform vector <span class="math">\({\color{red}x}\)</span> into itself. Such transformation is called the <strong>identity matrix</strong>. Let&#8217;s construct the identity matrix&nbsp;together.</p>
 <p>First, what is the dimension of this matrix? If the vector has to transform to itself, then the matrix must have size of n by n, where n is the dimension of that vector. How about the entries? The basis of this transformation should remain the&nbsp;same:</p>
 <div class="math">$$\left( \begin{bmatrix}
 1\\
@@ -144,14 +144,14 @@
 \end{bmatrix}$$</div>
 <p>Now we know what matrix are we looking for, it is time to see how to compute the inverse&nbsp;matrix.</p>
 <p>Our goal is to find a matrix <span class="math">\(A^{-1}\)</span>such that <span class="math">\(A^{-1}A = I\)</span>, Here we will introduce one of the methods to compute the inverse. For now, let&#8217;s accept the fact that this method works. Later on, we will find out why this method&nbsp;works.</p>
-<p>The method we will use is  Gauss–Jordan elimination, a variation of the classic Gaussian elimination. Let&#8217;s say we want to find the inverse matrix of following matrix&nbsp;A:</p>
+<p>The method we will use is called Gauss–Jordan elimination, a variation of the classic Gaussian elimination. Let&#8217;s say we want to find the inverse matrix of the following matrix&nbsp;A:</p>
 <div class="math">$$A = \begin{bmatrix}
 1 &amp; 2\\
 3 &amp; 4
 \end{bmatrix}$$</div>
-<p>First, we have to take a look at the matrix, because not all matrices have inverse. There are two things we need to check: First is the size of this matrix, it has to be a <strong>square matrix</strong> (2 by 2, 3 by 3 etc.). Second, it has to have linear independent rows. Or use the concepts we learned earlier, for a n by n matrix, the dimension of column space has to be&nbsp;n.</p>
-<p>For this easy example, we can see that both conditions are satisfied. So we know that this matrix has inverse, and now we can compute&nbsp;it.</p>
-<p>First step is to write a augmented matrix by combining the matrix A and the identity matrix with the same&nbsp;size:</p>
+<p>First, we have to take a look at the matrix, because not all matrices have an inverse. There are two things we need to check: First is the size of this matrix, it has to be a <strong>square matrix</strong> (2 by 2, 3 by 3, etc.). Second, it has to have linear independent rows. Or use the concepts we learned earlier, for a <span class="math">\(n \times n\)</span> matrix, the dimension of column space has to be&nbsp;n.</p>
+<p>For this easy example, we can see that both conditions are satisfied. So we know that this matrix has an inverse, and now we can compute&nbsp;it.</p>
+<p>The first step is to write an augmented matrix by combining the matrix A and the identity matrix with the same&nbsp;size:</p>
 <div class="math">$$
 [A|I] = \left[
   \begin{matrix}
@@ -167,7 +167,7 @@
   \right.
 \right]
 $$</div>
-<p>Then we do Gaussian elimination. The goal is to make the left part of the augmented matrix to be identity matrix so the right part, which is the identity matrix at the beginning, will became the inverse&nbsp;matrix.</p>
+<p>Then we do Gaussian elimination. The goal is to make the left part of the augmented matrix be identity matrix so the right part, which is the identity matrix at the beginning, will become the inverse&nbsp;matrix.</p>
 <p>Let&#8217;s get&nbsp;started:</p>
 <div class="math">$$r_2 \rightarrow r_2-3r_1$$</div>
 <div class="math">$$\left[
@@ -267,12 +267,12 @@ $$</div>
 1 &amp; 0\\
 0 &amp; 1
 \end{bmatrix}$$</div>
-<p>For 3 by 3 or higher dimension matrix, finding inverse can be really tedious. There are other ways to compute the inverse of a matrix, but if you do it by hand, Gaussian elimination is the most efficient&nbsp;one.</p>
+<p>For <span class="math">\(3 \times 3\)</span> or higher dimension matrix, finding inverse can be really tedious. There are other ways to compute the inverse of a matrix, but if you do it by hand, Gaussian elimination is the most efficient&nbsp;one.</p>
 <p>Now we successfully find the inverse of our matrix, we can finally find the nontrivial solution for our equation <span class="math">\(A\pmb{\color{red}x} = \pmb{b}\)</span> for any <span class="math">\(\pmb{b}\)</span> we&nbsp;want.</p>
-<p>But you might want to ask this question: There are cases that we don&#8217;t get any solution or get infinite many solution, so if our solution is given by a simple&nbsp;multiplication:</p>
+<p>But you might want to ask this question: There are cases that we don&#8217;t get any solution or get infinite many solutions, so if our solution is given by a simple&nbsp;multiplication:</p>
 <div class="math">$$\color{red}x = A^{-1} \pmb{b}$$</div>
-<p>Then how can there be infinite many solution or no solution? An easy answer to this question is: For those cases, we couldn&#8217;t find any&nbsp;inverse. </p>
-<p>To see that, we have to treat the inverse matrix as a linear transformation. Not all matrices have inverse, for example, any matrix has different numbers of rows and columns cannot have&nbsp;inverse.</p>
+<p>Then how can there be infinite many solutions or no solutions? An easy answer to this question is: For those cases, we couldn&#8217;t find any&nbsp;inverse. </p>
+<p>To see that, we have to treat the inverse matrix as a linear transformation. Not all matrices have an inverse, for example, any matrix has different numbers of rows and columns cannot have an&nbsp;inverse.</p>
 <p>Let&#8217;s look at a specific&nbsp;example:</p>
 <div class="math">$$AB = \begin{bmatrix}
 1 &amp; 2 &amp; 1\\
@@ -285,7 +285,7 @@ $$</div>
 1 &amp; 0\\
 0 &amp; 1
 \end{bmatrix} $$</div>
-<p>Apparently, the matrix <span class="math">\(A\)</span> multiply by matrix <span class="math">\(B\)</span> give you identity matrix, but can you say that the inverse of <span class="math">\(B\)</span> is <span class="math">\(A\)</span>? Sort of, but not quite. We can call them <strong>left inverse</strong> or <strong>right inverse</strong>. To be a inverse matrix, multiply from left to right or right to left has to returns the same identity&nbsp;matrix.</p>
+<p>Apparently, the matrix <span class="math">\(A\)</span> multiply by the matrix <span class="math">\(B\)</span> gives you an identity matrix, but can you say that the inverse of <span class="math">\(B\)</span> is <span class="math">\(A\)</span>? Sort of, but not quite. We can call them <strong>left inverse</strong> or <strong>right inverse</strong>. To be an inverse matrix, multiplying from left to right or right to left has to return the same identity&nbsp;matrix.</p>
 <p>For the above example, we can easily see&nbsp;that:</p>
 <div class="math">$$BA =\begin{bmatrix}
       1 &amp; 0 \\
@@ -298,16 +298,16 @@ $$</div>
 1 &amp; 0\\
 0 &amp; 1
 \end{bmatrix} $$</div>
-<p>How about the matrix that transform 2d space to 1d&nbsp;line? </p>
+<p>How about the matrix that transforms 2d space to 1d&nbsp;line? </p>
 <div class="math">$$ A = \begin{bmatrix}
 2 &amp; -1\\
 2 &amp; -1
 \end{bmatrix}$$</div>
 <p><img alt="w5line_int" src="./images/w5linear_trans.gif" /></p>
-<p>Do they have inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vector on the&nbsp;plane.</p>
+<p>Do they have an inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vectors on the&nbsp;plane.</p>
 <p><img alt="w5line_int" src="./images/w5inverse.gif" /></p>
 <p>That is not a linear transformation can do. It&#8217;s like functions, for one x value, you can only get one y value. So for one vector input, you can only get one vector&nbsp;output.</p>
-<p>In practice, we will see that finding the inverse in order to solve linear system is actually not very convenient. Nowadays, computer use other methods like <strong><span class="caps">LU</span> decomposition</strong>, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having inverse matrix is a&nbsp;must.</p>
+<p>In practice, we will see that finding the inverse in order to solve the linear system is actually not very convenient. Nowadays, computers use other methods like <strong><span class="caps">LU</span> decomposition</strong>, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having an inverse matrix is a&nbsp;must.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

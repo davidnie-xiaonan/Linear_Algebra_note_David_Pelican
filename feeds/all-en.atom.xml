@@ -1291,9 +1291,9 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-2 Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination</id><summary type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
-&lt;p&gt;So what is Gaussian elimination? In short, it is a algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&amp;nbsp;matrix.&lt;/p&gt;
-&lt;p&gt;So what is Gaussian elimination? In short, it is a algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the procedure, no matter how hard the linear systems are, you can solve it&amp;nbsp;guaranteed.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-2 Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination</id><summary type="html">&lt;p&gt;In this section, we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduce special forms of&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;So what is Gaussian elimination? In short, it is an algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the procedure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this section, we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduce special forms of&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;So what is Gaussian elimination? In short, it is an algorithm that will &lt;strong&gt;Always&lt;/strong&gt; solve a linear system. If you follow the procedure, no matter how hard the linear systems are, you can solve it&amp;nbsp;guaranteed.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s go through a simple&amp;nbsp;example:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$  
@@ -1316,7 +1316,7 @@ y
 \end{bmatrix}
 $$&lt;/div&gt;
 &lt;p&gt;To solve this as a high school student, you can try substitution or&amp;nbsp;elimination. &lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s use elimination! You will first make a choice of eliminating x or y. It is much easier to eliminate y, all you need is to add first row to the second row and cancel out all the&amp;nbsp;y:&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s use elimination! You will first make a choice of eliminating x or y. It is much easier to eliminate y, all you need is to add the first row to the second row and cancel out all the&amp;nbsp;y:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(1)}+ \color{red}{(2)} \rightarrow 3x = 3 $$&lt;/div&gt;
 &lt;div class="math"&gt;$$ x = 1 $$&lt;/div&gt;
 &lt;p&gt;then we substitute the result back to &lt;span class="math"&gt;\((2)\)&lt;/span&gt;:&lt;/p&gt;
@@ -1354,7 +1354,7 @@ $$&lt;/div&gt;
 \right]
 $$&lt;/div&gt;
 &lt;p&gt;How do you &amp;#8220;read&amp;#8221; this notation? Well, think about the first column is the coefficients for x and the second column is the coefficients for y and the sum is given by the number after the&amp;nbsp;bar. &lt;/p&gt;
-&lt;p&gt;We will see why this notation suit our purpose in a sec, now if we want to do the same thing as above, then how should we write&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;We will see why this notation suits our purpose in a sec, now if we want to do the same thing as above, then how should we write&amp;nbsp;it?&lt;/p&gt;
 &lt;p&gt;To write &lt;span class="math"&gt;\( \color{red}{(1)}+ \color{red}{(2)}\)&lt;/span&gt;, we can &lt;strong&gt;change&lt;/strong&gt; the row &lt;span class="math"&gt;\( \color{red}{(2)}\)&lt;/span&gt; to our new row &lt;span class="math"&gt;\( \color{red}{(1)}+ \color{red}{(2)}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow \color{red}{(1)}+ \color{red}{(2)}$$&lt;/div&gt;
 &lt;div class="math"&gt;$$
@@ -1384,7 +1384,7 @@ $$&lt;/div&gt;
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;this change is so called the &lt;strong&gt;row operation&lt;/strong&gt;, or &lt;strong&gt;elementary row operation&lt;/strong&gt;, There are in total three types of row operations. The first one is &lt;strong&gt;row addition&lt;/strong&gt;, which is exactly what we did above, replacing one row to this row adding another&amp;nbsp;row.&lt;/p&gt;
+&lt;p&gt;this change is so-called the &lt;strong&gt;row operation&lt;/strong&gt;, or &lt;strong&gt;elementary row operation&lt;/strong&gt;, There are in total three types of row operations. The first one is &lt;strong&gt;row addition&lt;/strong&gt;, which is exactly what we did above, replacing one row to this row adding another&amp;nbsp;row.&lt;/p&gt;
 &lt;p&gt;then what we did is to divide the new row by 3, in order to get $ x = 1 $. we will perform the same operation&amp;nbsp;here:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow \frac{1}{3} \times \color{red}{(2)}$$&lt;/div&gt;
 &lt;div class="math"&gt;$$\left[
@@ -1414,7 +1414,7 @@ $$&lt;/div&gt;
 \right]
 $$&lt;/div&gt;
 &lt;p&gt;And this is our next type of row operation, called &lt;strong&gt;row multiplication&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;Now comes to the hard part, which is our &amp;#8220;substitution&amp;#8221;. In grade 9, these two method: substitution and elimination were taught as different method. But in here, we can see that both method can be break down into numbers of basic row&amp;nbsp;operations.&lt;/p&gt;
+&lt;p&gt;Now comes to the hard part, which is our &amp;#8220;substitution&amp;#8221;. In grade 9, these two methods: substitution and elimination were taught as different methods. But in here, we can see that both methods can be broken down into numbers of basic row&amp;nbsp;operations.&lt;/p&gt;
 &lt;p&gt;What we did after we figured out the x is we plugged into the original equation &lt;span class="math"&gt;\(\color{red}{(2)}\)&lt;/span&gt;. But as you see, we don&amp;#8217;t have the original equations anymore,, so we have to plug into the first one. How to do that? we can first remove all the x from the first equation by&amp;nbsp;doing:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(1)}\rightarrow \color{red}{(1)} - 2 \times \color{red}{(2)}$$&lt;/div&gt;
 &lt;div class="math"&gt;$$\left[
@@ -1500,8 +1500,8 @@ $$&lt;/div&gt;
 \right]
 $$&lt;/div&gt;
 &lt;p&gt;Then, we can easily read the result just by looking at the&amp;nbsp;rows.&lt;/p&gt;
-&lt;p&gt;Alright! We have learned the notation and row operation, now it is the time to find out how to perform the Gaussian elimination. This method is not always the optimum one when you solve linear system, but it is surely the one you can rely on when you have no clue how to&amp;nbsp;start.&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s have a fairly simple example to show how this&amp;nbsp;work.&lt;/p&gt;
+&lt;p&gt;Alright! We have learned the notation and row operation, now it is time to find out how to perform the Gaussian elimination. This method is not always the optimum one when you solve linear systems, but it is surely the one you can rely on when you have no clue how to&amp;nbsp;start.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s have a fairly simple example to show how this&amp;nbsp;works.&lt;/p&gt;
 &lt;div class="math"&gt;$$\left[
   \begin{matrix}
     1&amp;amp; -1 &amp;amp; 1  \\
@@ -1519,8 +1519,8 @@ $$&lt;/div&gt;
 \right]
 $$&lt;/div&gt;
 &lt;p&gt;As you can see, we have a system of equations with three unknowns. We started from the first row and we only care about the first number in the row. If this number is not &lt;span class="math"&gt;\(1\)&lt;/span&gt;, we will divide whatever this number is to make our first number to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;In this case, we have that number already be &lt;span class="math"&gt;\(1\)&lt;/span&gt; so we moved on to next&amp;nbsp;step.&lt;/p&gt;
-&lt;p&gt;The next step is to make the first number on the second row to be &lt;span class="math"&gt;\(0\)&lt;/span&gt;. To do that, you will do a row addition(subtraction). The only row we will use is the first row since the first row already has the coefficient of x to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;, we just need to subtract as many row 1 as we want to get the first number on the second row to be &lt;span class="math"&gt;\(0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In this case, we have that number already be &lt;span class="math"&gt;\(1\)&lt;/span&gt; so we moved on to the next&amp;nbsp;step.&lt;/p&gt;
+&lt;p&gt;The next step is to make the first number on the second row be &lt;span class="math"&gt;\(0\)&lt;/span&gt;. To do that, you will do a row addition(subtraction). The only row we will use is the first row since the first row already has the coefficient of x to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;, we just need to subtract as many row 1 as we want to get the first number on the second row to be &lt;span class="math"&gt;\(0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;In this case, the first number on the second row is 1, so we need to subtract exactly one row 1 to row&amp;nbsp;2:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow  \color{red}{(2)}- \color{red}{(1)} $$&lt;/div&gt;
 &lt;div class="math"&gt;$$\left[
@@ -1553,8 +1553,8 @@ $$&lt;/div&gt;
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;Now we do the similar thing as above, we check if the coefficient of the second number is &lt;span class="math"&gt;\(1\)&lt;/span&gt; or not, if not, we will do a division to make this number to be &lt;span class="math"&gt;\(1\)&lt;/span&gt;. Luckily, this time we get a &lt;span class="math"&gt;\(1\)&lt;/span&gt; again! So we don&amp;#8217;t have to do&amp;nbsp;anything.&lt;/p&gt;
-&lt;p&gt;You might already see the pattern here. The next step is to make sure that on the third row, we have &lt;span class="math"&gt;\(0\)&lt;/span&gt; for both the first coefficient and the second one. To do that, we subtract different amount of row 1 and row&amp;nbsp;2.&lt;/p&gt;
+&lt;p&gt;Now we do the similar thing as above, we check if the coefficient of the second number is &lt;span class="math"&gt;\(1\)&lt;/span&gt; or not, if not, we will do a division to make this number be &lt;span class="math"&gt;\(1\)&lt;/span&gt;. Luckily, this time we get &lt;span class="math"&gt;\(1\)&lt;/span&gt; again! So we don&amp;#8217;t have to do&amp;nbsp;anything.&lt;/p&gt;
+&lt;p&gt;You might already see the pattern here. The next step is to make sure that on the third row, we have &lt;span class="math"&gt;\(0\)&lt;/span&gt; for both the first coefficient and the second one. To do that, we subtract different amounts of row 1 and row&amp;nbsp;2.&lt;/p&gt;
 &lt;p&gt;In our case, The first number for the third row is 1, which means that we need to subtract off one row&amp;nbsp;1:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(3)}\rightarrow  \color{red}{(3)}- \color{red}{(1)} $$&lt;/div&gt;
 &lt;div class="math"&gt;$$\left[
@@ -1652,8 +1652,8 @@ $$&lt;/div&gt;
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;Lovely, we are half way there! As you can see, our matrix on the left now became a special shape with all diagonal term to be &lt;span class="math"&gt;\(1\)&lt;/span&gt; and the bottom left to be all zero. This type of matrix is what we called &lt;strong&gt;lower triangular matrix&lt;/strong&gt;, but that is not our topic today so we won&amp;#8217;t dig on too&amp;nbsp;much. &lt;/p&gt;
-&lt;p&gt;The rest of the job is much easier than the first half, you will do the similar thing but work your way up this time. The goal is to have all diagonal terms to be &lt;span class="math"&gt;\(1\)&lt;/span&gt; and rest to be zero. To do that , we first subtract one row 3 to row 2 to get rid of that annoying &lt;span class="math"&gt;\(1\)&lt;/span&gt; at the end of row&amp;nbsp;2:&lt;/p&gt;
+&lt;p&gt;Lovely, we are half-way there! As you can see, our matrix on the left now became a special shape with all diagonal terms to be &lt;span class="math"&gt;\(1\)&lt;/span&gt; and the bottom left to be all zero. This type of matrix is what we called &lt;strong&gt;lower triangular matrix&lt;/strong&gt;, but that is not our topic today so we won&amp;#8217;t dig on too&amp;nbsp;much. &lt;/p&gt;
+&lt;p&gt;The rest of the job is much easier than the first half, you will do the similar thing but work your way up this time. The goal is to have all diagonal terms to be &lt;span class="math"&gt;\(1\)&lt;/span&gt; and the rest to be zero. To do that, we first subtract one row 3 to row 2 to get rid of that annoying &lt;span class="math"&gt;\(1\)&lt;/span&gt; at the end of row&amp;nbsp;2:&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(2)}\rightarrow  \color{red}{(2)}- \color{red}{(3)}$$&lt;/div&gt;
 &lt;div class="math"&gt;$$\left[
   \begin{matrix}
@@ -1753,7 +1753,7 @@ $$&lt;/div&gt;
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;Don&amp;#8217;t worry! You will see these cases in the practice. We are not going to discuss these case in&amp;nbsp;detail. &lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t worry! You will see these cases in practice. We are not going to discuss these cases in&amp;nbsp;detail. &lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -1815,17 +1815,17 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-3 Column space and null space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space</id><summary type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions are there before we solve the&amp;nbsp;equations.&lt;/p&gt;
-&lt;p&gt;This sounds great, but how should we do this? Let&amp;#8217;s start from 2d and then move on to higher&amp;nbsp;dimension.&lt;/p&gt;
-&lt;p&gt;Our linear equations on plane looks like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&amp;nbsp;lines.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-3 Column space and null space</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space</id><summary type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are there before we solve the&amp;nbsp;equations.&lt;/p&gt;
+&lt;p&gt;This sounds great, but how should we do this? Let&amp;#8217;s start from 2d and then move on to higher&amp;nbsp;dimensions.&lt;/p&gt;
+&lt;p&gt;Our linear equations on the plane look like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&amp;nbsp;lines.&lt;/p&gt;
 &lt;p&gt;So what are the&amp;nbsp;cases?&lt;/p&gt;
 &lt;p&gt;The first case is obvious, two lines intersect at one point. In this case, we have exactly &lt;strong&gt;one&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_int.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The second case is two parallel lines. In this case, we have &lt;strong&gt;zero&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_para.png" /&gt;&lt;/p&gt;
-&lt;p&gt;The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are &lt;strong&gt;infinite&lt;/strong&gt;&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are &lt;strong&gt;infinite&lt;/strong&gt;&amp;nbsp;solutions.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5same_line.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;I personally don&amp;#8217;t like to say there are infinite many solution. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinite many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &amp;#8220;there are infinite many solutions&amp;#8221; won&amp;#8217;t give you enough&amp;nbsp;information. &lt;/p&gt;
+&lt;p&gt;I personally don&amp;#8217;t like to say there are infinite many solutions. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinitely many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &amp;#8220;there are infinitely many solutions&amp;#8221; won&amp;#8217;t give you enough&amp;nbsp;information. &lt;/p&gt;
 &lt;p&gt;If we write these three different cases in augment matrix, you will see that the second one and the third one are very&amp;nbsp;special:&lt;/p&gt;
 &lt;div class="math"&gt;$$\left[
   \begin{matrix}
@@ -1870,7 +1870,7 @@ $$&lt;/div&gt;
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;This one is saying that &lt;span class="math"&gt;\(2x-y = 2\)&lt;/span&gt; and also &lt;span class="math"&gt;\(2x-y = -1\)&lt;/span&gt;. Obviously this will end up with no solution since you can combine them and give you &lt;span class="math"&gt;\(2 = -1\)&lt;/span&gt;. For this type of linear system, we say they are &lt;strong&gt;inconsistent&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;This one is saying that &lt;span class="math"&gt;\(2x-y = 2\)&lt;/span&gt; and also &lt;span class="math"&gt;\(2x-y = -1\)&lt;/span&gt;. Obviously, this will end up with no solution since you can combine them and give you &lt;span class="math"&gt;\(2 = -1\)&lt;/span&gt;. For this type of linear system, we say they are &lt;strong&gt;inconsistent&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;Then let&amp;#8217;s look at the next&amp;nbsp;one:&lt;/p&gt;
 &lt;div class="math"&gt;$$\left[
   \begin{matrix}
@@ -1886,25 +1886,25 @@ $$&lt;/div&gt;
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;This one is ridiculous. The two equations are literally the same thing! So it didn&amp;#8217;t tell us enough information about the system! Of course you are getting infinite many solution because you have two variable with only one&amp;nbsp;equation.&lt;/p&gt;
-&lt;p&gt;So Let&amp;#8217;s sum up here. If the matrix has linear dependent rows, then it means that at least one of the row is &amp;#8220;useless&amp;#8221;. So if you have a n by n matrix and one of the row is telling the same thing as other rows, then you will not have sufficient condition to solve this system. Then you will end up with many&amp;nbsp;solutions. &lt;/p&gt;
-&lt;p&gt;If your matrix has linear dependent rows and the vector don&amp;#8217;t match, then it means you have parallel lines&amp;amp;planes. Then you end up with no&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;This one is ridiculous. The two equations are literally the same thing! So it didn&amp;#8217;t tell us enough information about the system! Of course you are getting infinite many solutions because you have two variables with only one&amp;nbsp;equation.&lt;/p&gt;
+&lt;p&gt;So Let&amp;#8217;s sum up here. If the matrix has linear dependent rows, then it means that at least one of the rows is &amp;#8220;useless&amp;#8221;. So if you have a &lt;span class="math"&gt;\(n\times n\)&lt;/span&gt; matrix and one of the rows is telling the same thing as other rows, then you will not have sufficient conditions to solve this system. Then you will end up with many&amp;nbsp;solutions. &lt;/p&gt;
+&lt;p&gt;If your matrix has linear dependent rows and the vector doesn&amp;#8217;t match, then it means you have parallel lines&amp;amp;planes. Then you end up with no&amp;nbsp;solution.&lt;/p&gt;
 &lt;p&gt;Then finally, if all your rows are linear independent, congratulation! You can have a non-trivial&amp;nbsp;solution.&lt;/p&gt;
-&lt;p&gt;But why linear independent rows can give you non-trivial solution? Let&amp;#8217;s see if we can understand it using the knowledge of linear&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;But why linear independent rows can give you non-trivial solutions? Let&amp;#8217;s see if we can understand it using the knowledge of linear&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;The equation we are going to solve is&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
 &lt;p&gt;Solving this equation means to find the vector &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; such that after the transformation it became &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;By look at the transformation, we can predict what will happen if we put a vector in there. Let&amp;#8217;s start with a linear dependent&amp;nbsp;matrix:&lt;/p&gt;
+&lt;p&gt;By looking at the transformation, we can predict what will happen if we put a vector in there. Let&amp;#8217;s start with a linear dependent&amp;nbsp;matrix:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 2 &amp;amp;-1\\
 2 &amp;amp;-1
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;So what is the transformation looks&amp;nbsp;like?&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5linear_trans.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;As you can see, all the vectors are transformed onto a line &lt;span class="math"&gt;\(y = x\)&lt;/span&gt;. This makes sense since the transformation returns exactly same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; that gives you &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;. Then there are two possible results: One is that your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; actually landed on this line so you get some solution. The other case is your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is unfortunately not on this line so the system is inconsistent, no such &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; can give you that &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; vector after the&amp;nbsp;transformation.&lt;/p&gt;
-&lt;p&gt;Now why do you have multiple solutions for one &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;? Well, If we just look at the transformation itself, I looks like all the vectors in 2d space are &lt;strong&gt;projected&lt;/strong&gt; on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects returns exactly same&amp;nbsp;shadow.&lt;/p&gt;
-&lt;p&gt;But this is only 2 dimension. What if we have more than 2? what if we have dimension of 10? how do we understand the transformation that happens in 100 dimension? Obviously we need more tools to do that. So, let&amp;#8217;s use the knowledge of span and basis&amp;nbsp;vector!&lt;/p&gt;
-&lt;p&gt;We know that we can think of any matrices as linear transformation, and each column in a transformation matrix tells us how basis vector transform. So why don&amp;#8217;t we find the span of those basis vectors after the transformation? That will definitely give us some information about this&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;As you can see, all the vectors are transformed onto a line &lt;span class="math"&gt;\(y = x\)&lt;/span&gt;. This makes sense since the transformation returns exactly the same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; that gives you &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;. Then there are two possible results: One is that your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; actually landed on this line so you get some solution. The other case is your &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; is unfortunately not on this line so the system is inconsistent, no such &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt; can give you that &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; vector after the&amp;nbsp;transformation.&lt;/p&gt;
+&lt;p&gt;Now, why do you have multiple solutions for one &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;? Well, If we just look at the transformation itself, it looks like all the vectors in 2d space are &lt;strong&gt;projected&lt;/strong&gt; on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects return exactly the same&amp;nbsp;shadow.&lt;/p&gt;
+&lt;p&gt;But this is only 2 dimension. What if we have more than 2? what if we have the dimension of 10? how do we understand the transformation that happens in 100 dimensions? Obviously, we need more tools to do that. So, let&amp;#8217;s use the knowledge of span and basis&amp;nbsp;vector!&lt;/p&gt;
+&lt;p&gt;We know that we can think of any matrices as linear transformations, and each column in a transformation matrix tells us how basis vector transform. So why don&amp;#8217;t we find the span of those basis vectors after the transformation? That will definitely give us some information about this&amp;nbsp;transformation.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s take the above matrix as a&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 2 &amp;amp;-1\\
@@ -1918,7 +1918,7 @@ $$&lt;/div&gt;
 -1\\
 -1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;So the span of those vectors give us the &lt;span class="math"&gt;\(y = x\)&lt;/span&gt; line on 2d&amp;nbsp;plane. &lt;/p&gt;
+&lt;p&gt;So the span of those vectors gives us the &lt;span class="math"&gt;\(y = x\)&lt;/span&gt; line on a 2d&amp;nbsp;plane. &lt;/p&gt;
 &lt;p&gt;What do we know from this? We know that any vectors after this transformation will end up sitting on the line &lt;span class="math"&gt;\(y = x\)&lt;/span&gt;. Why? Well any vector on the plane can be rewrite into a linear combination of the basis&amp;nbsp;vector:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 a\\
@@ -1948,20 +1948,20 @@ b
 0\\
 1
 \end{bmatrix}&lt;/div&gt;\)&lt;/span&gt;. Therefore, the vector after the transformation will for sure sit on the span of column vectors, because the span is the collection of all possible linear&amp;nbsp;combinations.&lt;/p&gt;
-&lt;p&gt;Do that span of column vectors has a name? Yes, it is called &lt;strong&gt;Column space&lt;/strong&gt;. By looking at the column space, we will know where our vectors live after the transformation. It is just like the idea of range in&amp;nbsp;function.&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s look at the dimension of column space. For a n by n matrix, which means you have n variable and n equations(or you can think of a dimension n vector transform to a same dimension vector). We can say the dimension of matrix is n. if its column space also have dimension of n, what does this tell us? Well, it means your vector after the transformation lives in the same dimension n space. In the other word, the columns are linearly independent. Later on we will know that this also means the rows are linearly independent&amp;nbsp;too. &lt;/p&gt;
-&lt;p&gt;Here is the tricky part. What if the dimension is less than n? You might say: Sure! Then it means the linear system has no solution or many solution. But I want to know more about&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;An interesting question to ask is: We start with dimension of n, we ended up with dimension of something less than n, so where does this &amp;#8220;missing&amp;#8221; dimension go? Let&amp;#8217;s look at the equation&amp;nbsp;again:&lt;/p&gt;
+&lt;p&gt;Do that span of column vectors has a name? Yes, it is called &lt;strong&gt;Column space&lt;/strong&gt;. By looking at the column space, we will know where our vectors live after the transformation. It is just like the idea of the range in&amp;nbsp;function.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at the dimension of column space. For a &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; matrix, which means you have n variable and n equations(or you can think of a dimension n vector transform to a same dimension vector). We can say the dimension of the matrix is n. if its column space also has the dimension of n, what does this tell us? Well, it means your vector after the transformation lives in the same dimension n space. In other word, the columns are linearly independent. Later on, we will know that this also means the rows are linearly independent&amp;nbsp;too. &lt;/p&gt;
+&lt;p&gt;Here is the tricky part. What if the dimension is less than n? You might say: Sure! Then it means the linear system has no solution or many solutions. But I want to know more about&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;An interesting question to ask is: We start with the dimension of n, we ended up with the dimension of something less than n, so where does this &amp;#8220;missing&amp;#8221; dimension go? Let&amp;#8217;s look at the equation&amp;nbsp;again:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
-&lt;p&gt;Assume we have linear independent columns (or you can say we have only one solution). Let&amp;#8217;s call the solution &lt;span class="math"&gt;\(\pmb{x}_1\)&lt;/span&gt;,&amp;nbsp;so:&lt;/p&gt;
+&lt;p&gt;Assume we have linearly independent columns (or you can say we have only one solution). Let&amp;#8217;s call the solution &lt;span class="math"&gt;\(\pmb{x}_1\)&lt;/span&gt;,&amp;nbsp;so:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x}_1 = \pmb{b}$$&lt;/div&gt;
 &lt;p&gt;Now let&amp;#8217;s consider the similar&amp;nbsp;equation:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x} = \pmb{0}$$&lt;/div&gt;
-&lt;p&gt;if there is some non-zero &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; satisfy this equation, we are in a big trouble.&amp;nbsp;Why?&lt;/p&gt;
+&lt;p&gt;if there is some non-zero &lt;span class="math"&gt;\(\pmb{x}\)&lt;/span&gt; satisfy this equation, we are in big trouble.&amp;nbsp;Why?&lt;/p&gt;
 &lt;p&gt;Assume that &lt;span class="math"&gt;\(A\pmb{x}_2 = \pmb{0}\)&lt;/span&gt; for some non-zero &lt;span class="math"&gt;\(\pmb{x}_2\)&lt;/span&gt;, the I can say there exist a brand new solution for &lt;span class="math"&gt;\(A\pmb{x} = \pmb{b}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x}_1 + A\pmb{x}_2 = \pmb{b} + \pmb{0} $$&lt;/div&gt;
 &lt;div class="math"&gt;$$A(\pmb{x}_1 + \pmb{x}_2) = \pmb{b} $$&lt;/div&gt;
-&lt;p&gt;The new solution is &lt;span class="math"&gt;\(\pmb{x}_1 + \pmb{x}_2\)&lt;/span&gt;. For linear independent matrix, this $\pmb{x}_2 $ has to be zero, other wise you won&amp;#8217;t get only one&amp;nbsp;solution. &lt;/p&gt;
+&lt;p&gt;The new solution is &lt;span class="math"&gt;\(\pmb{x}_1 + \pmb{x}_2\)&lt;/span&gt;. For linear independent matrix, this $\pmb{x}_2 $ has to be zero, otherwise you won&amp;#8217;t get only one&amp;nbsp;solution. &lt;/p&gt;
 &lt;p&gt;What if the rows are linear dependent? Then the equation &lt;span class="math"&gt;\(A\pmb{x} = \pmb{0}\)&lt;/span&gt; will have non-zero&amp;nbsp;solution! &lt;/p&gt;
 &lt;p&gt;Take the same matrix as example, if we solve &lt;span class="math"&gt;\(A\pmb{x} = \pmb{0}\)&lt;/span&gt; for this matrix we will&amp;nbsp;have:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
@@ -1981,11 +1981,11 @@ y
 1\\
 2
 \end{bmatrix} \right) $$&lt;/div&gt;
-&lt;p&gt;We actually have name for this space, we call it &lt;strong&gt;null space&lt;/strong&gt; or &lt;strong&gt;Kernel&lt;/strong&gt;. &amp;#8220;Null&amp;#8221; means &amp;#8220;nothing&amp;#8221;, Of course this does not means there is nothing in the space. It means the collection of all vectors that are transformed to &amp;#8220;nothing&amp;#8221;, the zero&amp;nbsp;vector.&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&amp;nbsp;dimensional.&lt;/p&gt;
+&lt;p&gt;We actually have a name for this space, we call it &lt;strong&gt;null space&lt;/strong&gt; or &lt;strong&gt;Kernel&lt;/strong&gt;. &amp;#8220;Null&amp;#8221; means &amp;#8220;nothing&amp;#8221;, Of course, this does not mean there is nothing in the space. It means the collection of all vectors that are transformed to &amp;#8220;nothing&amp;#8221;, the zero&amp;nbsp;vector.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of the null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&amp;nbsp;dimensional.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5nullspace.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solution from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&amp;nbsp;one.&lt;/p&gt;
-&lt;p&gt;By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solution or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describes one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&amp;nbsp;algebra.&lt;/p&gt;
+&lt;p&gt;As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solutions from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solutions or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describe one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&amp;nbsp;algebra.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -2047,16 +2047,16 @@ y
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-4 The cheat: inverse matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix</id><summary type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s look at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we focused on the matrix in linear system. By treating the linear equations as transformation of vectors, we can easily predict the numbers of solution. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 5 Solving Linear system using matrix"></category></entry><entry><title>5-4 The cheat: inverse matrix</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix</id><summary type="html">&lt;p&gt;Last time, we focused on the matrix in linear systems. By treating the linear equations as  a transformation of vectors, we can easily predict the number of solutions. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we focused on the matrix in linear systems. By treating the linear equations as  a transformation of vectors, we can easily predict the number of solutions. But when we tried to solve the system, we still have to do elimination. So, can we do&amp;nbsp;better?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at our equation in matrix&amp;nbsp;form:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{\color{red}x} = \pmb{b}$$&lt;/div&gt;
 &lt;p&gt;The thing we are trying to solve is &lt;span class="math"&gt;\(\pmb{\color{red}x}\)&lt;/span&gt;, and we know the transformation &lt;span class="math"&gt;\(A\)&lt;/span&gt; and the target vector &lt;span class="math"&gt;\(b\)&lt;/span&gt;. Assume you solved the equation and you have exactly one solution, you know that the null space of this transformation is zero. In another word, the system will always give you a unique &lt;span class="math"&gt;\( \pmb{\color{red}x}\)&lt;/span&gt; for any vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;. But the problem is, when we change the vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;, we have to solve the system again, and that is not good for&amp;nbsp;us.&lt;/p&gt;
 &lt;p&gt;So, is there a better way to solve&amp;nbsp;this? &lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at the simplest equation that we all learned in elementary&amp;nbsp;school:&lt;/p&gt;
 &lt;div class="math"&gt;$$a\color{red}x = b$$&lt;/div&gt;
-&lt;p&gt;Notice that &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; are just number. To solve x, we just divide the &lt;span class="math"&gt;\(a\)&lt;/span&gt; both side. Good thing about this is that no matter how b change, we &lt;strong&gt;always&lt;/strong&gt; divide the number &lt;span class="math"&gt;\(a\)&lt;/span&gt; to get our solution for &lt;span class="math"&gt;\(\color{red}x\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;But wait a second, we don&amp;#8217;t have division in matrix! Obviously you can&amp;#8217;t divide matrices, it doesn&amp;#8217;t make any sense! Or is&amp;nbsp;it?&lt;/p&gt;
+&lt;p&gt;Notice that &lt;span class="math"&gt;\(a\)&lt;/span&gt; and &lt;span class="math"&gt;\(b\)&lt;/span&gt; are just numbers. To solve x, we just divide the &lt;span class="math"&gt;\(a\)&lt;/span&gt; on both side. The good thing about this is that no matter how b change, we &lt;strong&gt;always&lt;/strong&gt; divide the number &lt;span class="math"&gt;\(a\)&lt;/span&gt; to get our solution for &lt;span class="math"&gt;\(\color{red}x\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;But wait for a second, we don&amp;#8217;t have the division in matrix! Obviously, you can&amp;#8217;t divide matrices, it doesn&amp;#8217;t make any sense! Or is&amp;nbsp;it?&lt;/p&gt;
 &lt;p&gt;The matrix act as a transformation &amp;#8220;function&amp;#8221;, like &lt;span class="math"&gt;\( y = sin(x)\)&lt;/span&gt;, you can&amp;#8217;t just divide functions. But, we can change our &amp;#8220;division&amp;#8221; into the multiplication of the reciprocal! What is the &amp;#8220;reciprocal&amp;#8221; of a function? Well, it is called the inverse of&amp;nbsp;function:&lt;/p&gt;
 &lt;div class="math"&gt;$$f^{-1}(f(x)) = x$$&lt;/div&gt;
 &lt;p&gt;So how do we solve the equation? Let&amp;#8217;s first see how we did it in&amp;nbsp;function:&lt;/p&gt;
@@ -2070,11 +2070,11 @@ y
 &lt;p&gt;So what has to be true for this &amp;#8220;inverse&amp;#8221; in order to make the above idea&amp;nbsp;practical?&lt;/p&gt;
 &lt;p&gt;It is not hard to see that the second line has to be the definition for inverse&amp;nbsp;matrix:&lt;/p&gt;
 &lt;div class="math"&gt;$$A^{-1}(A\pmb{\color{red}x}) = \color{red}x $$&lt;/div&gt;
-&lt;p&gt;If you treat the two matrix &lt;span class="math"&gt;\(A^{-1}A\)&lt;/span&gt; as one matrix, Let&amp;#8217;s call it &lt;span class="math"&gt;\(I\)&lt;/span&gt; ,what is &lt;span class="math"&gt;\(I\)&lt;/span&gt; transformation looks&amp;nbsp;like?&lt;/p&gt;
+&lt;p&gt;If you treat the two matrices &lt;span class="math"&gt;\(A^{-1}A\)&lt;/span&gt; as one matrix, Let&amp;#8217;s call it &lt;span class="math"&gt;\(I\)&lt;/span&gt;, what is &lt;span class="math"&gt;\(I\)&lt;/span&gt; transformation looks&amp;nbsp;like?&lt;/p&gt;
 &lt;div class="math"&gt;$$A^{-1}A = I$$&lt;/div&gt;
 &lt;div class="math"&gt;$$(A^{-1}A)\pmb{\color{red}x} = \color{red}x $$&lt;/div&gt;
 &lt;div class="math"&gt;$$I\pmb{\color{red}x} = \pmb{\color{red}x}$$&lt;/div&gt;
-&lt;p&gt;Well, this matrix has to transform vector &lt;span class="math"&gt;\({\color{red}x}\)&lt;/span&gt; into itself. Such transformation is called &lt;strong&gt;identity matrix&lt;/strong&gt;. Let&amp;#8217;s construct the identity matrix&amp;nbsp;together.&lt;/p&gt;
+&lt;p&gt;Well, this matrix has to transform vector &lt;span class="math"&gt;\({\color{red}x}\)&lt;/span&gt; into itself. Such transformation is called the &lt;strong&gt;identity matrix&lt;/strong&gt;. Let&amp;#8217;s construct the identity matrix&amp;nbsp;together.&lt;/p&gt;
 &lt;p&gt;First, what is the dimension of this matrix? If the vector has to transform to itself, then the matrix must have size of n by n, where n is the dimension of that vector. How about the entries? The basis of this transformation should remain the&amp;nbsp;same:&lt;/p&gt;
 &lt;div class="math"&gt;$$\left( \begin{bmatrix}
 1\\
@@ -2100,14 +2100,14 @@ y
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;Now we know what matrix are we looking for, it is time to see how to compute the inverse&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Our goal is to find a matrix &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt;such that &lt;span class="math"&gt;\(A^{-1}A = I\)&lt;/span&gt;, Here we will introduce one of the methods to compute the inverse. For now, let&amp;#8217;s accept the fact that this method works. Later on, we will find out why this method&amp;nbsp;works.&lt;/p&gt;
-&lt;p&gt;The method we will use is  Gauss–Jordan elimination, a variation of the classic Gaussian elimination. Let&amp;#8217;s say we want to find the inverse matrix of following matrix&amp;nbsp;A:&lt;/p&gt;
+&lt;p&gt;The method we will use is called Gauss–Jordan elimination, a variation of the classic Gaussian elimination. Let&amp;#8217;s say we want to find the inverse matrix of the following matrix&amp;nbsp;A:&lt;/p&gt;
 &lt;div class="math"&gt;$$A = \begin{bmatrix}
 1 &amp;amp; 2\\
 3 &amp;amp; 4
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;First, we have to take a look at the matrix, because not all matrices have inverse. There are two things we need to check: First is the size of this matrix, it has to be a &lt;strong&gt;square matrix&lt;/strong&gt; (2 by 2, 3 by 3 etc.). Second, it has to have linear independent rows. Or use the concepts we learned earlier, for a n by n matrix, the dimension of column space has to be&amp;nbsp;n.&lt;/p&gt;
-&lt;p&gt;For this easy example, we can see that both conditions are satisfied. So we know that this matrix has inverse, and now we can compute&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;First step is to write a augmented matrix by combining the matrix A and the identity matrix with the same&amp;nbsp;size:&lt;/p&gt;
+&lt;p&gt;First, we have to take a look at the matrix, because not all matrices have an inverse. There are two things we need to check: First is the size of this matrix, it has to be a &lt;strong&gt;square matrix&lt;/strong&gt; (2 by 2, 3 by 3, etc.). Second, it has to have linear independent rows. Or use the concepts we learned earlier, for a &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; matrix, the dimension of column space has to be&amp;nbsp;n.&lt;/p&gt;
+&lt;p&gt;For this easy example, we can see that both conditions are satisfied. So we know that this matrix has an inverse, and now we can compute&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;The first step is to write an augmented matrix by combining the matrix A and the identity matrix with the same&amp;nbsp;size:&lt;/p&gt;
 &lt;div class="math"&gt;$$
 [A|I] = \left[
   \begin{matrix}
@@ -2123,7 +2123,7 @@ y
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;Then we do Gaussian elimination. The goal is to make the left part of the augmented matrix to be identity matrix so the right part, which is the identity matrix at the beginning, will became the inverse&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Then we do Gaussian elimination. The goal is to make the left part of the augmented matrix be identity matrix so the right part, which is the identity matrix at the beginning, will become the inverse&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s get&amp;nbsp;started:&lt;/p&gt;
 &lt;div class="math"&gt;$$r_2 \rightarrow r_2-3r_1$$&lt;/div&gt;
 &lt;div class="math"&gt;$$\left[
@@ -2223,12 +2223,12 @@ $$&lt;/div&gt;
 1 &amp;amp; 0\\
 0 &amp;amp; 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;For 3 by 3 or higher dimension matrix, finding inverse can be really tedious. There are other ways to compute the inverse of a matrix, but if you do it by hand, Gaussian elimination is the most efficient&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;For &lt;span class="math"&gt;\(3 \times 3\)&lt;/span&gt; or higher dimension matrix, finding inverse can be really tedious. There are other ways to compute the inverse of a matrix, but if you do it by hand, Gaussian elimination is the most efficient&amp;nbsp;one.&lt;/p&gt;
 &lt;p&gt;Now we successfully find the inverse of our matrix, we can finally find the nontrivial solution for our equation &lt;span class="math"&gt;\(A\pmb{\color{red}x} = \pmb{b}\)&lt;/span&gt; for any &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; we&amp;nbsp;want.&lt;/p&gt;
-&lt;p&gt;But you might want to ask this question: There are cases that we don&amp;#8217;t get any solution or get infinite many solution, so if our solution is given by a simple&amp;nbsp;multiplication:&lt;/p&gt;
+&lt;p&gt;But you might want to ask this question: There are cases that we don&amp;#8217;t get any solution or get infinite many solutions, so if our solution is given by a simple&amp;nbsp;multiplication:&lt;/p&gt;
 &lt;div class="math"&gt;$$\color{red}x = A^{-1} \pmb{b}$$&lt;/div&gt;
-&lt;p&gt;Then how can there be infinite many solution or no solution? An easy answer to this question is: For those cases, we couldn&amp;#8217;t find any&amp;nbsp;inverse. &lt;/p&gt;
-&lt;p&gt;To see that, we have to treat the inverse matrix as a linear transformation. Not all matrices have inverse, for example, any matrix has different numbers of rows and columns cannot have&amp;nbsp;inverse.&lt;/p&gt;
+&lt;p&gt;Then how can there be infinite many solutions or no solutions? An easy answer to this question is: For those cases, we couldn&amp;#8217;t find any&amp;nbsp;inverse. &lt;/p&gt;
+&lt;p&gt;To see that, we have to treat the inverse matrix as a linear transformation. Not all matrices have an inverse, for example, any matrix has different numbers of rows and columns cannot have an&amp;nbsp;inverse.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at a specific&amp;nbsp;example:&lt;/p&gt;
 &lt;div class="math"&gt;$$AB = \begin{bmatrix}
 1 &amp;amp; 2 &amp;amp; 1\\
@@ -2241,7 +2241,7 @@ $$&lt;/div&gt;
 1 &amp;amp; 0\\
 0 &amp;amp; 1
 \end{bmatrix} $$&lt;/div&gt;
-&lt;p&gt;Apparently, the matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt; multiply by matrix &lt;span class="math"&gt;\(B\)&lt;/span&gt; give you identity matrix, but can you say that the inverse of &lt;span class="math"&gt;\(B\)&lt;/span&gt; is &lt;span class="math"&gt;\(A\)&lt;/span&gt;? Sort of, but not quite. We can call them &lt;strong&gt;left inverse&lt;/strong&gt; or &lt;strong&gt;right inverse&lt;/strong&gt;. To be a inverse matrix, multiply from left to right or right to left has to returns the same identity&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Apparently, the matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt; multiply by the matrix &lt;span class="math"&gt;\(B\)&lt;/span&gt; gives you an identity matrix, but can you say that the inverse of &lt;span class="math"&gt;\(B\)&lt;/span&gt; is &lt;span class="math"&gt;\(A\)&lt;/span&gt;? Sort of, but not quite. We can call them &lt;strong&gt;left inverse&lt;/strong&gt; or &lt;strong&gt;right inverse&lt;/strong&gt;. To be an inverse matrix, multiplying from left to right or right to left has to return the same identity&amp;nbsp;matrix.&lt;/p&gt;
 &lt;p&gt;For the above example, we can easily see&amp;nbsp;that:&lt;/p&gt;
 &lt;div class="math"&gt;$$BA =\begin{bmatrix}
       1 &amp;amp; 0 \\
@@ -2254,16 +2254,16 @@ $$&lt;/div&gt;
 1 &amp;amp; 0\\
 0 &amp;amp; 1
 \end{bmatrix} $$&lt;/div&gt;
-&lt;p&gt;How about the matrix that transform 2d space to 1d&amp;nbsp;line? &lt;/p&gt;
+&lt;p&gt;How about the matrix that transforms 2d space to 1d&amp;nbsp;line? &lt;/p&gt;
 &lt;div class="math"&gt;$$ A = \begin{bmatrix}
 2 &amp;amp; -1\\
 2 &amp;amp; -1
 \end{bmatrix}$$&lt;/div&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5linear_trans.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;Do they have inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vector on the&amp;nbsp;plane.&lt;/p&gt;
+&lt;p&gt;Do they have an inverse? Again, no. The inverse matrix is like the reverse operation of the previous transformation. If the transformation maps the plane to line, the reverse operation must transform a line to a plane. Which means that for a single vector on the line, it has to transform to many different vectors on the&amp;nbsp;plane.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5inverse.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;That is not a linear transformation can do. It&amp;#8217;s like functions, for one x value, you can only get one y value. So for one vector input, you can only get one vector&amp;nbsp;output.&lt;/p&gt;
-&lt;p&gt;In practice, we will see that finding the inverse in order to solve linear system is actually not very convenient. Nowadays, computer use other methods like &lt;strong&gt;&lt;span class="caps"&gt;LU&lt;/span&gt; decomposition&lt;/strong&gt;, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having inverse matrix is a&amp;nbsp;must.&lt;/p&gt;
+&lt;p&gt;In practice, we will see that finding the inverse in order to solve the linear system is actually not very convenient. Nowadays, computers use other methods like &lt;strong&gt;&lt;span class="caps"&gt;LU&lt;/span&gt; decomposition&lt;/strong&gt;, which is so much faster than finding the inverse. Nevertheless, to have a unique solution, having an inverse matrix is a&amp;nbsp;must.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of matrix. So what is Gaussian elimination? In short, it is a algorithm that will Always solve a linear system. If you follow the …
+        <meta name="description" content="In this section, we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduce special forms of matrix. So what is Gaussian elimination? In short, it is an algorithm that will Always solve a linear system. If you follow the procedure …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="5-2 Gaussian elimination "/>
 <meta property="og:url" content="./5-2-gaussian-elimination" />
-<meta property="og:description" content="In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of matrix. So what is Gaussian elimination? In short, it is a algorithm that will Always solve a linear system. If you follow the …" />
+<meta property="og:description" content="In this section, we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduce special forms of matrix. So what is Gaussian elimination? In short, it is an algorithm that will Always solve a linear system. If you follow the procedure …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-2 Gaussian elimination ">
-<meta name="twitter:description" content="In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of matrix. So what is Gaussian elimination? In short, it is a algorithm that will Always solve a linear system. If you follow the …">
+<meta name="twitter:description" content="In this section, we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduce special forms of matrix. So what is Gaussian elimination? In short, it is an algorithm that will Always solve a linear system. If you follow the procedure …">
 
         <title>5-2 Gaussian elimination  · Linear Algebra Note
 </title>
@@ -92,8 +92,8 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>In this section we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduced some special form of&nbsp;matrix.</p>
-<p>So what is Gaussian elimination? In short, it is a algorithm that will <strong>Always</strong> solve a linear system. If you follow the procedure, no matter how hard the linear systems are, you can solve it&nbsp;guaranteed.</p>
+            <p>In this section, we are going to learn the way to solve linear equations using Gaussian elimination. We are also going to introduce special forms of&nbsp;matrix.</p>
+<p>So what is Gaussian elimination? In short, it is an algorithm that will <strong>Always</strong> solve a linear system. If you follow the procedure, no matter how hard the linear systems are, you can solve it&nbsp;guaranteed.</p>
 <p>Let&#8217;s go through a simple&nbsp;example:
 </p>
 <div class="math">$$  
@@ -116,7 +116,7 @@ y
 \end{bmatrix}
 $$</div>
 <p>To solve this as a high school student, you can try substitution or&nbsp;elimination. </p>
-<p>Let&#8217;s use elimination! You will first make a choice of eliminating x or y. It is much easier to eliminate y, all you need is to add first row to the second row and cancel out all the&nbsp;y:</p>
+<p>Let&#8217;s use elimination! You will first make a choice of eliminating x or y. It is much easier to eliminate y, all you need is to add the first row to the second row and cancel out all the&nbsp;y:</p>
 <div class="math">$$ \color{red}{(1)}+ \color{red}{(2)} \rightarrow 3x = 3 $$</div>
 <div class="math">$$ x = 1 $$</div>
 <p>then we substitute the result back to <span class="math">\((2)\)</span>:</p>
@@ -154,7 +154,7 @@ $$</div>
 \right]
 $$</div>
 <p>How do you &#8220;read&#8221; this notation? Well, think about the first column is the coefficients for x and the second column is the coefficients for y and the sum is given by the number after the&nbsp;bar. </p>
-<p>We will see why this notation suit our purpose in a sec, now if we want to do the same thing as above, then how should we write&nbsp;it?</p>
+<p>We will see why this notation suits our purpose in a sec, now if we want to do the same thing as above, then how should we write&nbsp;it?</p>
 <p>To write <span class="math">\( \color{red}{(1)}+ \color{red}{(2)}\)</span>, we can <strong>change</strong> the row <span class="math">\( \color{red}{(2)}\)</span> to our new row <span class="math">\( \color{red}{(1)}+ \color{red}{(2)}\)</span>:</p>
 <div class="math">$$ \color{red}{(2)}\rightarrow \color{red}{(1)}+ \color{red}{(2)}$$</div>
 <div class="math">$$
@@ -184,7 +184,7 @@ $$</div>
   \right.
 \right]
 $$</div>
-<p>this change is so called the <strong>row operation</strong>, or <strong>elementary row operation</strong>, There are in total three types of row operations. The first one is <strong>row addition</strong>, which is exactly what we did above, replacing one row to this row adding another&nbsp;row.</p>
+<p>this change is so-called the <strong>row operation</strong>, or <strong>elementary row operation</strong>, There are in total three types of row operations. The first one is <strong>row addition</strong>, which is exactly what we did above, replacing one row to this row adding another&nbsp;row.</p>
 <p>then what we did is to divide the new row by 3, in order to get $ x = 1 $. we will perform the same operation&nbsp;here:</p>
 <div class="math">$$ \color{red}{(2)}\rightarrow \frac{1}{3} \times \color{red}{(2)}$$</div>
 <div class="math">$$\left[
@@ -214,7 +214,7 @@ $$</div>
 \right]
 $$</div>
 <p>And this is our next type of row operation, called <strong>row multiplication</strong>. </p>
-<p>Now comes to the hard part, which is our &#8220;substitution&#8221;. In grade 9, these two method: substitution and elimination were taught as different method. But in here, we can see that both method can be break down into numbers of basic row&nbsp;operations.</p>
+<p>Now comes to the hard part, which is our &#8220;substitution&#8221;. In grade 9, these two methods: substitution and elimination were taught as different methods. But in here, we can see that both methods can be broken down into numbers of basic row&nbsp;operations.</p>
 <p>What we did after we figured out the x is we plugged into the original equation <span class="math">\(\color{red}{(2)}\)</span>. But as you see, we don&#8217;t have the original equations anymore,, so we have to plug into the first one. How to do that? we can first remove all the x from the first equation by&nbsp;doing:</p>
 <div class="math">$$ \color{red}{(1)}\rightarrow \color{red}{(1)} - 2 \times \color{red}{(2)}$$</div>
 <div class="math">$$\left[
@@ -300,8 +300,8 @@ $$</div>
 \right]
 $$</div>
 <p>Then, we can easily read the result just by looking at the&nbsp;rows.</p>
-<p>Alright! We have learned the notation and row operation, now it is the time to find out how to perform the Gaussian elimination. This method is not always the optimum one when you solve linear system, but it is surely the one you can rely on when you have no clue how to&nbsp;start.</p>
-<p>Let&#8217;s have a fairly simple example to show how this&nbsp;work.</p>
+<p>Alright! We have learned the notation and row operation, now it is time to find out how to perform the Gaussian elimination. This method is not always the optimum one when you solve linear systems, but it is surely the one you can rely on when you have no clue how to&nbsp;start.</p>
+<p>Let&#8217;s have a fairly simple example to show how this&nbsp;works.</p>
 <div class="math">$$\left[
   \begin{matrix}
     1&amp; -1 &amp; 1  \\
@@ -319,8 +319,8 @@ $$</div>
 \right]
 $$</div>
 <p>As you can see, we have a system of equations with three unknowns. We started from the first row and we only care about the first number in the row. If this number is not <span class="math">\(1\)</span>, we will divide whatever this number is to make our first number to be <span class="math">\(1\)</span>.</p>
-<p>In this case, we have that number already be <span class="math">\(1\)</span> so we moved on to next&nbsp;step.</p>
-<p>The next step is to make the first number on the second row to be <span class="math">\(0\)</span>. To do that, you will do a row addition(subtraction). The only row we will use is the first row since the first row already has the coefficient of x to be <span class="math">\(1\)</span>, we just need to subtract as many row 1 as we want to get the first number on the second row to be <span class="math">\(0\)</span>.</p>
+<p>In this case, we have that number already be <span class="math">\(1\)</span> so we moved on to the next&nbsp;step.</p>
+<p>The next step is to make the first number on the second row be <span class="math">\(0\)</span>. To do that, you will do a row addition(subtraction). The only row we will use is the first row since the first row already has the coefficient of x to be <span class="math">\(1\)</span>, we just need to subtract as many row 1 as we want to get the first number on the second row to be <span class="math">\(0\)</span>.</p>
 <p>In this case, the first number on the second row is 1, so we need to subtract exactly one row 1 to row&nbsp;2:</p>
 <div class="math">$$ \color{red}{(2)}\rightarrow  \color{red}{(2)}- \color{red}{(1)} $$</div>
 <div class="math">$$\left[
@@ -353,8 +353,8 @@ $$</div>
   \right.
 \right]
 $$</div>
-<p>Now we do the similar thing as above, we check if the coefficient of the second number is <span class="math">\(1\)</span> or not, if not, we will do a division to make this number to be <span class="math">\(1\)</span>. Luckily, this time we get a <span class="math">\(1\)</span> again! So we don&#8217;t have to do&nbsp;anything.</p>
-<p>You might already see the pattern here. The next step is to make sure that on the third row, we have <span class="math">\(0\)</span> for both the first coefficient and the second one. To do that, we subtract different amount of row 1 and row&nbsp;2.</p>
+<p>Now we do the similar thing as above, we check if the coefficient of the second number is <span class="math">\(1\)</span> or not, if not, we will do a division to make this number be <span class="math">\(1\)</span>. Luckily, this time we get <span class="math">\(1\)</span> again! So we don&#8217;t have to do&nbsp;anything.</p>
+<p>You might already see the pattern here. The next step is to make sure that on the third row, we have <span class="math">\(0\)</span> for both the first coefficient and the second one. To do that, we subtract different amounts of row 1 and row&nbsp;2.</p>
 <p>In our case, The first number for the third row is 1, which means that we need to subtract off one row&nbsp;1:</p>
 <div class="math">$$ \color{red}{(3)}\rightarrow  \color{red}{(3)}- \color{red}{(1)} $$</div>
 <div class="math">$$\left[
@@ -452,8 +452,8 @@ $$</div>
   \right.
 \right]
 $$</div>
-<p>Lovely, we are half way there! As you can see, our matrix on the left now became a special shape with all diagonal term to be <span class="math">\(1\)</span> and the bottom left to be all zero. This type of matrix is what we called <strong>lower triangular matrix</strong>, but that is not our topic today so we won&#8217;t dig on too&nbsp;much. </p>
-<p>The rest of the job is much easier than the first half, you will do the similar thing but work your way up this time. The goal is to have all diagonal terms to be <span class="math">\(1\)</span> and rest to be zero. To do that , we first subtract one row 3 to row 2 to get rid of that annoying <span class="math">\(1\)</span> at the end of row&nbsp;2:</p>
+<p>Lovely, we are half-way there! As you can see, our matrix on the left now became a special shape with all diagonal terms to be <span class="math">\(1\)</span> and the bottom left to be all zero. This type of matrix is what we called <strong>lower triangular matrix</strong>, but that is not our topic today so we won&#8217;t dig on too&nbsp;much. </p>
+<p>The rest of the job is much easier than the first half, you will do the similar thing but work your way up this time. The goal is to have all diagonal terms to be <span class="math">\(1\)</span> and the rest to be zero. To do that, we first subtract one row 3 to row 2 to get rid of that annoying <span class="math">\(1\)</span> at the end of row&nbsp;2:</p>
 <div class="math">$$ \color{red}{(2)}\rightarrow  \color{red}{(2)}- \color{red}{(3)}$$</div>
 <div class="math">$$\left[
   \begin{matrix}
@@ -553,7 +553,7 @@ $$</div>
   \right.
 \right]
 $$</div>
-<p>Don&#8217;t worry! You will see these cases in the practice. We are not going to discuss these case in&nbsp;detail. </p>
+<p>Don&#8217;t worry! You will see these cases in practice. We are not going to discuss these cases in&nbsp;detail. </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

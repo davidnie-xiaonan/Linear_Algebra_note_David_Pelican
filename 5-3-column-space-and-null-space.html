@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …
+        <meta name="description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="5-3 Column space and null space "/>
 <meta property="og:url" content="./5-3-column-space-and-null-space" />
-<meta property="og:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …" />
+<meta property="og:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-3 Column space and null space ">
-<meta name="twitter:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions …">
+<meta name="twitter:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are …">
 
         <title>5-3 Column space and null space  · Linear Algebra Note
 </title>
@@ -92,17 +92,17 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrix. Now comes to the second one, which is to know how many solutions are there before we solve the&nbsp;equations.</p>
-<p>This sounds great, but how should we do this? Let&#8217;s start from 2d and then move on to higher&nbsp;dimension.</p>
-<p>Our linear equations on plane looks like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&nbsp;lines.</p>
+            <p>As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are there before we solve the&nbsp;equations.</p>
+<p>This sounds great, but how should we do this? Let&#8217;s start from 2d and then move on to higher&nbsp;dimensions.</p>
+<p>Our linear equations on the plane look like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&nbsp;lines.</p>
 <p>So what are the&nbsp;cases?</p>
 <p>The first case is obvious, two lines intersect at one point. In this case, we have exactly <strong>one</strong>&nbsp;solution.</p>
 <p><img alt="w5line_int" src="./images/w5line_int.png" /></p>
 <p>The second case is two parallel lines. In this case, we have <strong>zero</strong>&nbsp;solution.</p>
 <p><img alt="w5line_int" src="./images/w5line_para.png" /></p>
-<p>The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are <strong>infinite</strong>&nbsp;solution.</p>
+<p>The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are <strong>infinite</strong>&nbsp;solutions.</p>
 <p><img alt="w5line_int" src="./images/w5same_line.gif" /></p>
-<p>I personally don&#8217;t like to say there are infinite many solution. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinite many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &#8220;there are infinite many solutions&#8221; won&#8217;t give you enough&nbsp;information. </p>
+<p>I personally don&#8217;t like to say there are infinite many solutions. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinitely many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &#8220;there are infinitely many solutions&#8221; won&#8217;t give you enough&nbsp;information. </p>
 <p>If we write these three different cases in augment matrix, you will see that the second one and the third one are very&nbsp;special:</p>
 <div class="math">$$\left[
   \begin{matrix}
@@ -147,7 +147,7 @@ $$</div>
   \right.
 \right]
 $$</div>
-<p>This one is saying that <span class="math">\(2x-y = 2\)</span> and also <span class="math">\(2x-y = -1\)</span>. Obviously this will end up with no solution since you can combine them and give you <span class="math">\(2 = -1\)</span>. For this type of linear system, we say they are <strong>inconsistent</strong>. </p>
+<p>This one is saying that <span class="math">\(2x-y = 2\)</span> and also <span class="math">\(2x-y = -1\)</span>. Obviously, this will end up with no solution since you can combine them and give you <span class="math">\(2 = -1\)</span>. For this type of linear system, we say they are <strong>inconsistent</strong>. </p>
 <p>Then let&#8217;s look at the next&nbsp;one:</p>
 <div class="math">$$\left[
   \begin{matrix}
@@ -163,25 +163,25 @@ $$</div>
   \right.
 \right]
 $$</div>
-<p>This one is ridiculous. The two equations are literally the same thing! So it didn&#8217;t tell us enough information about the system! Of course you are getting infinite many solution because you have two variable with only one&nbsp;equation.</p>
-<p>So Let&#8217;s sum up here. If the matrix has linear dependent rows, then it means that at least one of the row is &#8220;useless&#8221;. So if you have a n by n matrix and one of the row is telling the same thing as other rows, then you will not have sufficient condition to solve this system. Then you will end up with many&nbsp;solutions. </p>
-<p>If your matrix has linear dependent rows and the vector don&#8217;t match, then it means you have parallel lines&amp;planes. Then you end up with no&nbsp;solution.</p>
+<p>This one is ridiculous. The two equations are literally the same thing! So it didn&#8217;t tell us enough information about the system! Of course you are getting infinite many solutions because you have two variables with only one&nbsp;equation.</p>
+<p>So Let&#8217;s sum up here. If the matrix has linear dependent rows, then it means that at least one of the rows is &#8220;useless&#8221;. So if you have a <span class="math">\(n\times n\)</span> matrix and one of the rows is telling the same thing as other rows, then you will not have sufficient conditions to solve this system. Then you will end up with many&nbsp;solutions. </p>
+<p>If your matrix has linear dependent rows and the vector doesn&#8217;t match, then it means you have parallel lines&amp;planes. Then you end up with no&nbsp;solution.</p>
 <p>Then finally, if all your rows are linear independent, congratulation! You can have a non-trivial&nbsp;solution.</p>
-<p>But why linear independent rows can give you non-trivial solution? Let&#8217;s see if we can understand it using the knowledge of linear&nbsp;transformation.</p>
+<p>But why linear independent rows can give you non-trivial solutions? Let&#8217;s see if we can understand it using the knowledge of linear&nbsp;transformation.</p>
 <p>The equation we are going to solve is&nbsp;this:</p>
 <div class="math">$$A\pmb{\color{red}x} = \pmb{b}$$</div>
 <p>Solving this equation means to find the vector <span class="math">\(\pmb{\color{red}x}\)</span> such that after the transformation it became <span class="math">\(\pmb{b}\)</span>.</p>
-<p>By look at the transformation, we can predict what will happen if we put a vector in there. Let&#8217;s start with a linear dependent&nbsp;matrix:</p>
+<p>By looking at the transformation, we can predict what will happen if we put a vector in there. Let&#8217;s start with a linear dependent&nbsp;matrix:</p>
 <div class="math">$$\begin{bmatrix}
 2 &amp;-1\\
 2 &amp;-1
 \end{bmatrix}$$</div>
 <p>So what is the transformation looks&nbsp;like?</p>
 <p><img alt="w5line_int" src="./images/w5linear_trans.gif" /></p>
-<p>As you can see, all the vectors are transformed onto a line <span class="math">\(y = x\)</span>. This makes sense since the transformation returns exactly same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific <span class="math">\(\pmb{\color{red}x}\)</span> that gives you <span class="math">\(\pmb{b}\)</span>. Then there are two possible results: One is that your <span class="math">\(\pmb{b}\)</span> actually landed on this line so you get some solution. The other case is your <span class="math">\(\pmb{b}\)</span> is unfortunately not on this line so the system is inconsistent, no such <span class="math">\(\pmb{\color{red}x}\)</span> can give you that <span class="math">\(\pmb{b}\)</span> vector after the&nbsp;transformation.</p>
-<p>Now why do you have multiple solutions for one <span class="math">\(\pmb{b}\)</span>? Well, If we just look at the transformation itself, I looks like all the vectors in 2d space are <strong>projected</strong> on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects returns exactly same&nbsp;shadow.</p>
-<p>But this is only 2 dimension. What if we have more than 2? what if we have dimension of 10? how do we understand the transformation that happens in 100 dimension? Obviously we need more tools to do that. So, let&#8217;s use the knowledge of span and basis&nbsp;vector!</p>
-<p>We know that we can think of any matrices as linear transformation, and each column in a transformation matrix tells us how basis vector transform. So why don&#8217;t we find the span of those basis vectors after the transformation? That will definitely give us some information about this&nbsp;transformation.</p>
+<p>As you can see, all the vectors are transformed onto a line <span class="math">\(y = x\)</span>. This makes sense since the transformation returns exactly the same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific <span class="math">\(\pmb{\color{red}x}\)</span> that gives you <span class="math">\(\pmb{b}\)</span>. Then there are two possible results: One is that your <span class="math">\(\pmb{b}\)</span> actually landed on this line so you get some solution. The other case is your <span class="math">\(\pmb{b}\)</span> is unfortunately not on this line so the system is inconsistent, no such <span class="math">\(\pmb{\color{red}x}\)</span> can give you that <span class="math">\(\pmb{b}\)</span> vector after the&nbsp;transformation.</p>
+<p>Now, why do you have multiple solutions for one <span class="math">\(\pmb{b}\)</span>? Well, If we just look at the transformation itself, it looks like all the vectors in 2d space are <strong>projected</strong> on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects return exactly the same&nbsp;shadow.</p>
+<p>But this is only 2 dimension. What if we have more than 2? what if we have the dimension of 10? how do we understand the transformation that happens in 100 dimensions? Obviously, we need more tools to do that. So, let&#8217;s use the knowledge of span and basis&nbsp;vector!</p>
+<p>We know that we can think of any matrices as linear transformations, and each column in a transformation matrix tells us how basis vector transform. So why don&#8217;t we find the span of those basis vectors after the transformation? That will definitely give us some information about this&nbsp;transformation.</p>
 <p>Let&#8217;s take the above matrix as a&nbsp;example:</p>
 <div class="math">$$\begin{bmatrix}
 2 &amp;-1\\
@@ -195,7 +195,7 @@ $$</div>
 -1\\
 -1
 \end{bmatrix}$$</div>
-<p>So the span of those vectors give us the <span class="math">\(y = x\)</span> line on 2d&nbsp;plane. </p>
+<p>So the span of those vectors gives us the <span class="math">\(y = x\)</span> line on a 2d&nbsp;plane. </p>
 <p>What do we know from this? We know that any vectors after this transformation will end up sitting on the line <span class="math">\(y = x\)</span>. Why? Well any vector on the plane can be rewrite into a linear combination of the basis&nbsp;vector:</p>
 <div class="math">$$\begin{bmatrix}
 a\\
@@ -225,20 +225,20 @@ b
 0\\
 1
 \end{bmatrix}</div>\)</span>. Therefore, the vector after the transformation will for sure sit on the span of column vectors, because the span is the collection of all possible linear&nbsp;combinations.</p>
-<p>Do that span of column vectors has a name? Yes, it is called <strong>Column space</strong>. By looking at the column space, we will know where our vectors live after the transformation. It is just like the idea of range in&nbsp;function.</p>
-<p>Let&#8217;s look at the dimension of column space. For a n by n matrix, which means you have n variable and n equations(or you can think of a dimension n vector transform to a same dimension vector). We can say the dimension of matrix is n. if its column space also have dimension of n, what does this tell us? Well, it means your vector after the transformation lives in the same dimension n space. In the other word, the columns are linearly independent. Later on we will know that this also means the rows are linearly independent&nbsp;too. </p>
-<p>Here is the tricky part. What if the dimension is less than n? You might say: Sure! Then it means the linear system has no solution or many solution. But I want to know more about&nbsp;it.</p>
-<p>An interesting question to ask is: We start with dimension of n, we ended up with dimension of something less than n, so where does this &#8220;missing&#8221; dimension go? Let&#8217;s look at the equation&nbsp;again:</p>
+<p>Do that span of column vectors has a name? Yes, it is called <strong>Column space</strong>. By looking at the column space, we will know where our vectors live after the transformation. It is just like the idea of the range in&nbsp;function.</p>
+<p>Let&#8217;s look at the dimension of column space. For a <span class="math">\(n \times n\)</span> matrix, which means you have n variable and n equations(or you can think of a dimension n vector transform to a same dimension vector). We can say the dimension of the matrix is n. if its column space also has the dimension of n, what does this tell us? Well, it means your vector after the transformation lives in the same dimension n space. In other word, the columns are linearly independent. Later on, we will know that this also means the rows are linearly independent&nbsp;too. </p>
+<p>Here is the tricky part. What if the dimension is less than n? You might say: Sure! Then it means the linear system has no solution or many solutions. But I want to know more about&nbsp;it.</p>
+<p>An interesting question to ask is: We start with the dimension of n, we ended up with the dimension of something less than n, so where does this &#8220;missing&#8221; dimension go? Let&#8217;s look at the equation&nbsp;again:</p>
 <div class="math">$$A\pmb{\color{red}x} = \pmb{b}$$</div>
-<p>Assume we have linear independent columns (or you can say we have only one solution). Let&#8217;s call the solution <span class="math">\(\pmb{x}_1\)</span>,&nbsp;so:</p>
+<p>Assume we have linearly independent columns (or you can say we have only one solution). Let&#8217;s call the solution <span class="math">\(\pmb{x}_1\)</span>,&nbsp;so:</p>
 <div class="math">$$A\pmb{x}_1 = \pmb{b}$$</div>
 <p>Now let&#8217;s consider the similar&nbsp;equation:</p>
 <div class="math">$$A\pmb{x} = \pmb{0}$$</div>
-<p>if there is some non-zero <span class="math">\(\pmb{x}\)</span> satisfy this equation, we are in a big trouble.&nbsp;Why?</p>
+<p>if there is some non-zero <span class="math">\(\pmb{x}\)</span> satisfy this equation, we are in big trouble.&nbsp;Why?</p>
 <p>Assume that <span class="math">\(A\pmb{x}_2 = \pmb{0}\)</span> for some non-zero <span class="math">\(\pmb{x}_2\)</span>, the I can say there exist a brand new solution for <span class="math">\(A\pmb{x} = \pmb{b}\)</span>:</p>
 <div class="math">$$A\pmb{x}_1 + A\pmb{x}_2 = \pmb{b} + \pmb{0} $$</div>
 <div class="math">$$A(\pmb{x}_1 + \pmb{x}_2) = \pmb{b} $$</div>
-<p>The new solution is <span class="math">\(\pmb{x}_1 + \pmb{x}_2\)</span>. For linear independent matrix, this $\pmb{x}_2 $ has to be zero, other wise you won&#8217;t get only one&nbsp;solution. </p>
+<p>The new solution is <span class="math">\(\pmb{x}_1 + \pmb{x}_2\)</span>. For linear independent matrix, this $\pmb{x}_2 $ has to be zero, otherwise you won&#8217;t get only one&nbsp;solution. </p>
 <p>What if the rows are linear dependent? Then the equation <span class="math">\(A\pmb{x} = \pmb{0}\)</span> will have non-zero&nbsp;solution! </p>
 <p>Take the same matrix as example, if we solve <span class="math">\(A\pmb{x} = \pmb{0}\)</span> for this matrix we will&nbsp;have:</p>
 <div class="math">$$\begin{bmatrix}
@@ -258,11 +258,11 @@ y
 1\\
 2
 \end{bmatrix} \right) $$</div>
-<p>We actually have name for this space, we call it <strong>null space</strong> or <strong>Kernel</strong>. &#8220;Null&#8221; means &#8220;nothing&#8221;, Of course this does not means there is nothing in the space. It means the collection of all vectors that are transformed to &#8220;nothing&#8221;, the zero&nbsp;vector.</p>
-<p>Let&#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&nbsp;dimensional.</p>
+<p>We actually have a name for this space, we call it <strong>null space</strong> or <strong>Kernel</strong>. &#8220;Null&#8221; means &#8220;nothing&#8221;, Of course, this does not mean there is nothing in the space. It means the collection of all vectors that are transformed to &#8220;nothing&#8221;, the zero&nbsp;vector.</p>
+<p>Let&#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of the null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&nbsp;dimensional.</p>
 <p><img alt="w5line_int" src="./images/w5nullspace.gif" /></p>
-<p>As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solution from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&nbsp;one.</p>
-<p>By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solution or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describes one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&nbsp;algebra.</p>
+<p>As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solutions from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&nbsp;one.</p>
+<p>By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solutions or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describe one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&nbsp;algebra.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
