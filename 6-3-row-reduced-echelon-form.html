@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special approach. Assume we have …
+        <meta name="description" content="We already saw several interesting things we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced in the first class of linear algebra, but here we are going to try a very special approach. Assume we have …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="6-3 Row Reduced Echelon Form "/>
 <meta property="og:url" content="./6-3-row-reduced-echelon-form" />
-<meta property="og:description" content="We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special approach. Assume we have …" />
+<meta property="og:description" content="We already saw several interesting things we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced in the first class of linear algebra, but here we are going to try a very special approach. Assume we have …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="6-3 Row Reduced Echelon Form ">
-<meta name="twitter:description" content="We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special approach. Assume we have …">
+<meta name="twitter:description" content="We already saw several interesting things we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced in the first class of linear algebra, but here we are going to try a very special approach. Assume we have …">
 
         <title>6-3 Row Reduced Echelon Form  · Linear Algebra Note
 </title>
@@ -92,7 +92,7 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special&nbsp;approach.</p>
+            <p>We already saw several interesting things we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced in the first class of linear algebra, but here we are going to try a very special&nbsp;approach.</p>
 <p>Assume we have a lovely matrix <span class="math">\(A\)</span>, where <span class="math">\(A\)</span> has some interesting&nbsp;columns:</p>
 <div class="math">$$A = \begin{bmatrix}
 2 &amp; -1 &amp; 1\\
@@ -113,8 +113,8 @@
 2\\
 3 
 \end{bmatrix}$$</div>
-<p>What do we know about the columns of this matrix? We know that the real &#8220;meat&#8221; of the matrix is the first two columns, since the last column is the linear combination of the first&nbsp;two. </p>
-<p>So, how about we deconstruct this matrix into two? where the first matrix contain all the &#8220;meat&#8221; of the matrix (here the &#8220;meat&#8221; just means the basis of column space), and the second matrix tells us all the other information, like the last column is the first column plus the second&nbsp;column?</p>
+<p>What do we know about the columns of this matrix? We know that the real &#8220;meat&#8221; of the matrix is the first two columns since the last column is the linear combination of the first&nbsp;two. </p>
+<p>So, how about we deconstruct this matrix into two? where the first matrix contains all the &#8220;meat&#8221; of the matrix (here the &#8220;meat&#8221; just means the basis of column space), and the second matrix tells us all the other information, like the last column is the first column plus the second&nbsp;column?</p>
 <p>Let&#8217;s do&nbsp;this!</p>
 <p>first matrix is easy! We just get rid of the last column and call it <span class="math">\(C\)</span>:</p>
 <div class="math">$$C = \begin{bmatrix}
@@ -198,9 +198,9 @@
 1 &amp; 0 &amp; 1\\
 0 &amp; 1 &amp; 1
 \end{bmatrix} = CR$$</div>
-<p>Here comes the cool part. Do you know why we name the &#8220;bone&#8221; matrix <span class="math">\(R\)</span>? The <span class="math">\(R\)</span> stand for row, if you learned the Gaussian elimination before, you will notice that this matrix looks like the result of the Gaussian elimination, the <strong>Row Echelon Form</strong>! Specifically, in this case, we get the <strong>Reduced Row Echelon Form</strong> of matrix <span class="math">\(A\)</span>. </p>
+<p>Here comes the cool part. Do you know why we name the &#8220;bone&#8221; matrix <span class="math">\(R\)</span>? The <span class="math">\(R\)</span> stands for the row, if you learned the Gaussian elimination before, you will notice that this matrix looks like the result of the Gaussian elimination, the <strong>Row Echelon Form</strong>! Specifically, in this case, we get the <strong>Reduced Row Echelon Form</strong> of matrix <span class="math">\(A\)</span>. </p>
 <p>We can do this for any matrix. When you do it on the square matrix with all independent columns(rows), the Reduced Row Echelon Form(<span class="caps">RREF</span>) is just the identity&nbsp;matrix. </p>
-<p>So, not only we can combine two matrix into one, we can also decompose a matrix into many. This specific example is called <span class="caps">CR</span> factorization, there are more of them in the future, like <span class="caps">LU</span> decomposition or diagonalization. Each of them plays an important role in linear&nbsp;algebra.</p>
+<p>So, not only we can combine two matrices into one, we can also decompose a matrix into many. This specific example is called <span class="caps">CR</span> factorization, there are more of them in the future, like <span class="caps">LU</span> decomposition or diagonalization. Each of them plays an important role in linear&nbsp;algebra.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

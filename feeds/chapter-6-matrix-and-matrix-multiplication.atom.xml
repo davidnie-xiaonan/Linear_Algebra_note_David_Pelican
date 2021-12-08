@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 6 Matrix and Matrix multiplication</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-6-matrix-and-matrix-multiplication.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>6-1 Matrix and matrix multiplication</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication</id><summary type="html">&lt;p&gt;In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from&amp;nbsp;basics.&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s look at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this Chapter we will work with matrix and matrix multiplication. Of course, just learn how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from&amp;nbsp;basics.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linear Algebra Note - Chapter 6 Matrix and Matrix multiplication</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/" rel="alternate"></link><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/chapter-6-matrix-and-matrix-multiplication.atom.xml" rel="self"></link><id>https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/</id><updated>2021-12-05T19:30:00-05:00</updated><subtitle>By David Nie</subtitle><entry><title>6-1 Matrix and matrix multiplication</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-1-matrix-and-matrix-multiplication</id><summary type="html">&lt;p&gt;In this chapter we will work with matrix and matrix multiplication. Of course, just learning how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from the&amp;nbsp;basics.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this chapter we will work with matrix and matrix multiplication. Of course, just learning how to multiply the matrices together is not going to be the goal of this chapter. But to learn more powerful tools in linear algebra, we need to start from the&amp;nbsp;basics.&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s look at two matrix multiplication with vectors &lt;span class="math"&gt;\(A\pmb{x} = \pmb{b}\)&lt;/span&gt;&amp;nbsp;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 2\\
@@ -33,11 +33,11 @@
 1 &amp;amp; \color{red}{2} \\
 3 &amp;amp; \color{red}{4}
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;So here you are! This is the way of multiplying matrices! Although we don&amp;#8217;t know what it is mean or what is it for yet, we can still see something out of&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;First you can see that the &amp;#8220;shape&amp;#8221; of matrix is quite important here. Just like when we do transformation, we cannot make a 3 by 3 transformation matrix to transform a 1d vector. To multiply two matrices, the matrices must have certain&amp;nbsp;&amp;#8220;shape&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;If we think about matrix &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; matrix multiplication as the combination of many column vector transformation, then like transformation, the size of input column vector must agree with the size of transformation matrix, to be specific, the column number of the first matrix must be the same as the size of input column vector. Which happens to be the row number of the second&amp;nbsp;matrix. &lt;/p&gt;
-&lt;p&gt;But how about the row number of the first matrix and the column number of the second matrix? Are they useful? Well yes!, they are just happens to be the dimension of the result matrix! The row number of the first matrix became the dimension of output vector and the column number of the second matrix tells you how many of them are combining together to form the final&amp;nbsp;matrix.&lt;/p&gt;
-&lt;p&gt;All of the details above seems complicate and hard to memorize, but here is one good thing about math, you don&amp;#8217;t have to memorize them at all! Just write down any matrix and start multiplying them and combining the vectors. You will figure out all the details by yourself! Also Luckily, we hardly work with non-square matrices, and for square matrices, rules are pretty simple: &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; matrix can only multiply the square matrix with the same size (&lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;) and the result will be another &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;So here you are! This is the way of multiplying matrices! Although we don&amp;#8217;t know what it is means or what is it for yet, we can still see something out of&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;First, you can see that the &amp;#8220;shape&amp;#8221; of the matrix is quite important here. Just like when we do transformation, we cannot make a 3 by 3 transformation matrix to transform a 1d vector. To multiply two matrices, the matrices must have the certain&amp;nbsp;&amp;#8220;shape&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;If we think about matrix &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; matrix multiplication as the combination of many column vector transformations, then like transformation, the size of the input column vector must agree with the size of the transformation matrix, to be specific, the column number of the first matrix must be the same as the size of the input column vector. Which happens to be the row number of the second&amp;nbsp;matrix. &lt;/p&gt;
+&lt;p&gt;But how about the row number of the first matrix and the column number of the second matrix? Are they useful? Well yes!, they are just happen to be the dimension of the result matrix! The row number of the first matrix became the dimension of the output vector and the column number of the second matrix tells you how many of them are combining together to form the final&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;All of the details above seem complicated and hard to memorize, but here is one good thing about math, you don&amp;#8217;t have to memorize them at all! Just write down any matrix and start multiplying them and combining the vectors. You will figure out all the details by yourself! Also luckily, we hardly work with non-square matrices, and for square matrices, rules are pretty simple: &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; matrix can only multiply the square matrix with the same size (&lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;) and the result will be another &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;&amp;nbsp;matrix.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -99,9 +99,9 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-2 The “Steps” in Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination</id><summary type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into application. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
-&lt;p&gt;Remember the way we solve the linear system? We use Gaussian elimination. Let&amp;#8217;s look at a example and see if …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into application. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
-&lt;p&gt;Remember the way we solve the linear system? We use Gaussian elimination. Let&amp;#8217;s look at a example and see if we can understand the process in a new point of&amp;nbsp;view.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-2 The “Steps” in Gaussian elimination</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-2-the-steps-in-gaussian-elimination</id><summary type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into applications. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
+&lt;p&gt;Remember the way we solve the linear system? We use Gaussian elimination. Let&amp;#8217;s look at an example and see if …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we learned how to multiply two matrices. In this section, we can finally put this into applications. The first application we will do is the elementary&amp;nbsp;matrices.&lt;/p&gt;
+&lt;p&gt;Remember the way we solve the linear system? We use Gaussian elimination. Let&amp;#8217;s look at an example and see if we can understand the process from a new point of&amp;nbsp;view.&lt;/p&gt;
 &lt;p&gt;Assume we are going to solve the below&amp;nbsp;system:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
@@ -119,7 +119,7 @@
   \right.
 \right]
 $$&lt;/div&gt;
-&lt;p&gt;The way we solve it is to do some row operation, namely you take one row in the matrix and replace it with a modified version of it or you swap two rows. There are two ways to modify the rows, which is adding and multiplying. Let&amp;#8217;s take a look at one row&amp;nbsp;operation.&lt;/p&gt;
+&lt;p&gt;The way we solve it is to do some row operation, namely, you take one row in the matrix and replace it with a modified version of it or you swap two rows. There are two ways to modify the rows, which is adding and multiplying. Let&amp;#8217;s take a look at one row&amp;nbsp;operation.&lt;/p&gt;
 &lt;div class="math"&gt;$$ \color{red}{(1)}\rightarrow \frac{1}{2} \times\color{red}{(1)} $$&lt;/div&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 2 &amp;amp; 4\\
@@ -163,7 +163,7 @@ $$&lt;/div&gt;
 1 &amp;amp; 2\\
 1 &amp;amp; 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;Great, now we know that we can describe the row operation as a specific matrix multiply on it. Actually, their is a name for that type of matrix, it is called &lt;strong&gt;elementary matrix&lt;/strong&gt;. We can try to write down more elementary matrix in 2d and see what they looks&amp;nbsp;like.&lt;/p&gt;
+&lt;p&gt;Great, now we know that we can describe the row operation as a specific matrix multiplied on it. Actually, there is a name for that type of matrix, it is called &lt;strong&gt;elementary matrix&lt;/strong&gt;. We can try to write down more elementary matrix in 2d and see what they look&amp;nbsp;like.&lt;/p&gt;
 &lt;p&gt;Say we want to add the second row to the first row and replace the first one, what should we&amp;nbsp;do?&lt;/p&gt;
 &lt;p&gt;We first start with an identity matrix. For 2d, the matrix will be a &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt;&amp;nbsp;matrix.&lt;/p&gt;
 &lt;div class="math"&gt;$$I_{2\times2}= \begin{bmatrix}
@@ -184,7 +184,7 @@ $$&lt;/div&gt;
 1 &amp;amp; 0
 \end{bmatrix}
 $$&lt;/div&gt;
-&lt;p&gt;For now, elementary matrix is just a fancy way to write down the row operation of matrices. But why do we need such way to describe row operation? Let&amp;#8217;s look at one of the application of row operation, the Gaussian&amp;nbsp;elimination.&lt;/p&gt;
+&lt;p&gt;For now, the elementary matrix is just a fancy way to write down the row operation of matrices. But why do we need such way to describe row operation? Let&amp;#8217;s look at one of the applications of row operation, the Gaussian&amp;nbsp;elimination.&lt;/p&gt;
 &lt;p&gt;Remember we solve linear system &lt;span class="math"&gt;\(A\pmb{x}=\pmb{b}\)&lt;/span&gt; using the Gaussian elimination? What if we rewrite all the row operation to elementary matrices? We start with writing the augmented&amp;nbsp;matrix:&lt;/p&gt;
 &lt;div class="math"&gt;$$A|\pmb{b}=  
 \left[
@@ -228,7 +228,7 @@ $$&lt;/div&gt;
     \end{matrix}
   \right.
 \right] $$&lt;/div&gt;
-&lt;p&gt;Then we do Gaussian elimination for both side. The goal is to make the left side of augmented matrix to be identity&amp;nbsp;matrix.&lt;/p&gt;
+&lt;p&gt;Then we do Gaussian elimination for both sides. The goal is to make the left side of the augmented matrix be an identity&amp;nbsp;matrix.&lt;/p&gt;
 &lt;div class="math"&gt;$$A \rightarrow I $$&lt;/div&gt;
 &lt;p&gt;We can write the row operation as multiple elementary&amp;nbsp;matrices:
 &lt;/p&gt;
@@ -297,8 +297,8 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-3 Row Reduced Echelon Form</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form</id><summary type="html">&lt;p&gt;We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
-&lt;p&gt;Assume we have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We already saw several interesting thing we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced at the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-3 Row Reduced Echelon Form</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-3-row-reduced-echelon-form</id><summary type="html">&lt;p&gt;We already saw several interesting things we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced in the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
+&lt;p&gt;Assume we have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We already saw several interesting things we can do with Matrix and Matrix multiplication, in this section, we will learn a very famous matrix. This matrix is always introduced in the first class of linear algebra, but here we are going to try a very special&amp;nbsp;approach.&lt;/p&gt;
 &lt;p&gt;Assume we have a lovely matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, where &lt;span class="math"&gt;\(A\)&lt;/span&gt; has some interesting&amp;nbsp;columns:&lt;/p&gt;
 &lt;div class="math"&gt;$$A = \begin{bmatrix}
 2 &amp;amp; -1 &amp;amp; 1\\
@@ -319,8 +319,8 @@ $$&lt;/div&gt;
 2\\
 3 
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;What do we know about the columns of this matrix? We know that the real &amp;#8220;meat&amp;#8221; of the matrix is the first two columns, since the last column is the linear combination of the first&amp;nbsp;two. &lt;/p&gt;
-&lt;p&gt;So, how about we deconstruct this matrix into two? where the first matrix contain all the &amp;#8220;meat&amp;#8221; of the matrix (here the &amp;#8220;meat&amp;#8221; just means the basis of column space), and the second matrix tells us all the other information, like the last column is the first column plus the second&amp;nbsp;column?&lt;/p&gt;
+&lt;p&gt;What do we know about the columns of this matrix? We know that the real &amp;#8220;meat&amp;#8221; of the matrix is the first two columns since the last column is the linear combination of the first&amp;nbsp;two. &lt;/p&gt;
+&lt;p&gt;So, how about we deconstruct this matrix into two? where the first matrix contains all the &amp;#8220;meat&amp;#8221; of the matrix (here the &amp;#8220;meat&amp;#8221; just means the basis of column space), and the second matrix tells us all the other information, like the last column is the first column plus the second&amp;nbsp;column?&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s do&amp;nbsp;this!&lt;/p&gt;
 &lt;p&gt;first matrix is easy! We just get rid of the last column and call it &lt;span class="math"&gt;\(C\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$C = \begin{bmatrix}
@@ -404,9 +404,9 @@ $$&lt;/div&gt;
 1 &amp;amp; 0 &amp;amp; 1\\
 0 &amp;amp; 1 &amp;amp; 1
 \end{bmatrix} = CR$$&lt;/div&gt;
-&lt;p&gt;Here comes the cool part. Do you know why we name the &amp;#8220;bone&amp;#8221; matrix &lt;span class="math"&gt;\(R\)&lt;/span&gt;? The &lt;span class="math"&gt;\(R\)&lt;/span&gt; stand for row, if you learned the Gaussian elimination before, you will notice that this matrix looks like the result of the Gaussian elimination, the &lt;strong&gt;Row Echelon Form&lt;/strong&gt;! Specifically, in this case, we get the &lt;strong&gt;Reduced Row Echelon Form&lt;/strong&gt; of matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;Here comes the cool part. Do you know why we name the &amp;#8220;bone&amp;#8221; matrix &lt;span class="math"&gt;\(R\)&lt;/span&gt;? The &lt;span class="math"&gt;\(R\)&lt;/span&gt; stands for the row, if you learned the Gaussian elimination before, you will notice that this matrix looks like the result of the Gaussian elimination, the &lt;strong&gt;Row Echelon Form&lt;/strong&gt;! Specifically, in this case, we get the &lt;strong&gt;Reduced Row Echelon Form&lt;/strong&gt; of matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;We can do this for any matrix. When you do it on the square matrix with all independent columns(rows), the Reduced Row Echelon Form(&lt;span class="caps"&gt;RREF&lt;/span&gt;) is just the identity&amp;nbsp;matrix. &lt;/p&gt;
-&lt;p&gt;So, not only we can combine two matrix into one, we can also decompose a matrix into many. This specific example is called &lt;span class="caps"&gt;CR&lt;/span&gt; factorization, there are more of them in the future, like &lt;span class="caps"&gt;LU&lt;/span&gt; decomposition or diagonalization. Each of them plays an important role in linear&amp;nbsp;algebra.&lt;/p&gt;
+&lt;p&gt;So, not only we can combine two matrices into one, we can also decompose a matrix into many. This specific example is called &lt;span class="caps"&gt;CR&lt;/span&gt; factorization, there are more of them in the future, like &lt;span class="caps"&gt;LU&lt;/span&gt; decomposition or diagonalization. Each of them plays an important role in linear&amp;nbsp;algebra.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -468,12 +468,14 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-4 Change the basis</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-4-change-the-basis" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-4-change-the-basis</id><summary type="html">&lt;p&gt;Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&amp;nbsp;segment …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&amp;nbsp;segment:&lt;/p&gt;
+&lt;/script&gt;</content><category term="Chapter 6 Matrix and Matrix multiplication"></category></entry><entry><title>6-4 Change the basis</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/6-4-change-the-basis" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/6-4-change-the-basis</id><summary type="html">&lt;p&gt;Now comes one of the biggest applications of Matrix multiplication. Sometimes when we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random points on the Cartesian coordinate and form a line&amp;nbsp;segment:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6example.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Say we want to find the tip of the bar after a rotation of 15 degree, to do this normally takes quite a lot of work. But, if we convert the point &lt;span class="math"&gt;\((3,1)\)&lt;/span&gt; to the polar coordinate, and then we do the rotation. After that, we can covert the transformed polar coordinate into Cartesian&amp;nbsp;coordinate.&lt;/p&gt;
+&lt;p&gt;Say …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Now comes one of the biggest applications of Matrix multiplication. Sometimes when we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random points on the Cartesian coordinate and form a line&amp;nbsp;segment:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6example.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Say we want to find the tip of the bar after a rotation of 15 degrees, to do this normally takes quite a lot of work. But, if we convert the point &lt;span class="math"&gt;\((3,1)\)&lt;/span&gt; to the polar coordinate, and then we do the rotation. After that, we can covert the transformed polar coordinate into Cartesian&amp;nbsp;coordinate.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6example" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6rotation.gif" /&gt;&lt;/p&gt;
 &lt;p&gt;So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&amp;nbsp;one? &lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&amp;#8217;s say &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s start with a vector in the classic Cartesian coordinate, pick any two numbers, let&amp;#8217;s say &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The basis of Cartesian coordinate is vector &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt;, so the meaning of vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; is just two pieces of &lt;span class="math"&gt;\((1,0)\)&lt;/span&gt; and one piece of &lt;span class="math"&gt;\((0,1)\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 2\\
@@ -499,7 +501,7 @@ $$&lt;/div&gt;
 3\\
 1
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;To not make you confuse, I will label all the vectors lie in Cartesian coordinate black, and the vector lie in new coordinate&amp;nbsp;red.&lt;/p&gt;
+&lt;p&gt;To not make you confused, I will label all the vectors lie in Cartesian coordinate black, and the vector lies in new coordinate&amp;nbsp;red.&lt;/p&gt;
 &lt;p&gt;So the question is, what should be the vector &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt; in our new basis? In another word, how many &lt;span class="math"&gt;\((1,1)\)&lt;/span&gt; and &lt;span class="math"&gt;\((-1,2)\)&lt;/span&gt; combined together will give you &lt;span class="math"&gt;\((2,1)\)&lt;/span&gt;? &lt;/p&gt;
 &lt;p&gt;You might find the statements here are kind of confusing, so I will help you out by showing you the solution&amp;nbsp;first:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6changebasis" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6changebasis.png" /&gt;&lt;/p&gt;
@@ -549,7 +551,7 @@ $$&lt;/div&gt;
 \color{red}{\frac{5}{3}}\\
 \color{red}{\frac{1}{3}}
 \end{bmatrix} $$&lt;/div&gt;
-&lt;p&gt;Strange, right? To know the presentation in one specific basis, you have to apply the inverse transformation. but this is what it&amp;nbsp;is.&lt;/p&gt;
+&lt;p&gt;Strange, right? To know the presentation on one specific basis, you have to apply the inverse transformation. but this is what it&amp;nbsp;is.&lt;/p&gt;
 &lt;p&gt;For the previous example, the way we get &lt;span class="math"&gt;\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)&lt;/span&gt; is by first put our basis vector together and form the&amp;nbsp;matrix &lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{bmatrix}
 1 &amp;amp; 1\\
@@ -563,14 +565,14 @@ $$&lt;/div&gt;
 \frac{2}{3} &amp;amp; \frac{1}{3}\\
 \frac{1}{3} &amp;amp; -\frac{1}{3}
 \end{bmatrix}$$&lt;/div&gt;
-&lt;p&gt;And the last step is to put any vector we want to transform in it and do a&amp;nbsp;multiplication.&lt;/p&gt;
+&lt;p&gt;And the last step is to put any vector we want to transform in it and do&amp;nbsp;multiplication.&lt;/p&gt;
 &lt;p&gt;Can we do it for any basis? Here is the animation I made that shows the vector &lt;span class="math"&gt;\(&lt;div class="math"&gt;\begin{bmatrix}
 2\\
 1
 \end{bmatrix}&lt;/div&gt;\)&lt;/span&gt; in different&amp;nbsp;basis:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="w6any" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w6any.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;Now we know how to convert a vector in another basis, let&amp;#8217;s do something fun&amp;nbsp;here.&lt;/p&gt;
-&lt;p&gt;Assume you have some transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt; in some basis. For example, the Cartesian coordinate. The transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt; has a dimension of &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;. Let&amp;#8217;s say we have a vector lies in the Cartesian coordinate called &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt; and if you transform that vector, you will get vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;Now we know how to convert a vector on another basis, let&amp;#8217;s do something fun&amp;nbsp;here.&lt;/p&gt;
+&lt;p&gt;Assume you have some transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt; on some basis. For example, the Cartesian coordinate. The transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt; has a dimension of &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt;. Let&amp;#8217;s say we have a vector that lies in the Cartesian coordinate called &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt; and if you transform that vector, you will get vector &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$T\pmb{a} = \pmb{b}$$&lt;/div&gt;
 &lt;p&gt;Here comes the cool part. Instead of doing this transform in the old, boring Cartesian coordinate, why not do it in a new fancy basis? The basis vectors of this new basis form a matrix &lt;span class="math"&gt;\(P\)&lt;/span&gt;. We can rewrite the vector &lt;span class="math"&gt;\(\pmb{a}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\pmb{b}\)&lt;/span&gt; in our new&amp;nbsp;basis:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{a}' = P^{-1}\pmb{a}$$&lt;/div&gt;
@@ -586,14 +588,14 @@ $$&lt;/div&gt;
 &lt;div class="math"&gt;$$T'\pmb{a}' = P^{-1}T\pmb{a}$$&lt;/div&gt;
 &lt;div class="math"&gt;$$T'\pmb{a}' = P^{-1}TP\pmb{a}'$$&lt;/div&gt;
 &lt;div class="math"&gt;$$T' = P^{-1}TP$$&lt;/div&gt;
-&lt;p&gt;We can see that the way we rewrite a transformation for new basis is kind of different than vector. To understand the expression of &lt;span class="math"&gt;\(T' = P^{-1}TP\)&lt;/span&gt; is not hard. Imagine you are doing business in the other country. The transformation is the business process(Take some money and return some money). &lt;span class="math"&gt;\(T'\)&lt;/span&gt; and &lt;span class="math"&gt;\(T\)&lt;/span&gt; is just the same business process but in different country. say one in &lt;span class="caps"&gt;US&lt;/span&gt; one in &lt;span class="caps"&gt;UK&lt;/span&gt;. The matrix &lt;span class="math"&gt;\(P\)&lt;/span&gt; convert one currency to another, in our case dollar to pound. So if you are American and want to do the business in &lt;span class="caps"&gt;US&lt;/span&gt;, all you need is the transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt;. But if you are a gentleman from &lt;span class="caps"&gt;UK&lt;/span&gt;, The same business process became&amp;nbsp;to:&lt;/p&gt;
-&lt;p&gt;1) Convert the money to dollar (&lt;span class="math"&gt;\(P\)&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;2) Do the business in &lt;span class="caps"&gt;US&lt;/span&gt; (&lt;span class="math"&gt;\(T\)&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;3) Convert the dollar you earned in &lt;span class="caps"&gt;US&lt;/span&gt; back to pound and enjoy your life (&lt;span class="math"&gt;\(P^{-1}\)&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;We can see that the way we rewrite a transformation for the new basis is kind of different than for vectors. Memorizing the expression of &lt;span class="math"&gt;\(T' = P^{-1}TP\)&lt;/span&gt; is not hard. Imagine you are doing business in another country. The transformation is the business process(Take some money and return some money). &lt;span class="math"&gt;\(T'\)&lt;/span&gt; and &lt;span class="math"&gt;\(T\)&lt;/span&gt; is just the same business process but in the different country. say one in &lt;span class="caps"&gt;US&lt;/span&gt; one in the &lt;span class="caps"&gt;UK&lt;/span&gt;. The matrix &lt;span class="math"&gt;\(P\)&lt;/span&gt; converts one currency to another, in our case dollar to pound. So if you are American and want to do the business in the &lt;span class="caps"&gt;US&lt;/span&gt;, all you need is the transformation &lt;span class="math"&gt;\(T\)&lt;/span&gt;. But if you are a gentleman from &lt;span class="caps"&gt;UK&lt;/span&gt;, The same business process became&amp;nbsp;to:&lt;/p&gt;
+&lt;p&gt;1) Convert the money to dollars (&lt;span class="math"&gt;\(P\)&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;2) Do the business in the &lt;span class="caps"&gt;US&lt;/span&gt; (&lt;span class="math"&gt;\(T\)&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;3) Convert the dollar you earned in the &lt;span class="caps"&gt;US&lt;/span&gt; back to pounds and enjoy your life (&lt;span class="math"&gt;\(P^{-1}\)&lt;/span&gt;)&lt;/p&gt;
 &lt;p&gt;So overall, what you did&amp;nbsp;is:&lt;/p&gt;
 &lt;div class="math"&gt;$$\pmb{a} \rightarrow P\pmb{a} \rightarrow TP\pmb{a} \rightarrow P^{-1}TP\pmb{a}$$&lt;/div&gt;
 &lt;p&gt;and that is the process &lt;span class="math"&gt;\(T'\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Notice that what we are dealing with is the &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; case. We can generalized this idea to any dimensions, but that is not what we focus here. Most of the time, we will be working on &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; case, especially &lt;span class="math"&gt;\(3 \times 3\)&lt;/span&gt; or &lt;span class="math"&gt;\(4 \times 4\)&lt;/span&gt; for&amp;nbsp;physics. &lt;/p&gt;
+&lt;p&gt;Notice that what we are dealing with is the &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; case. We can generalize this idea to any dimension, but that is not what we focus on here. Most of the time, we will be working on &lt;span class="math"&gt;\(n \times n\)&lt;/span&gt; case, especially &lt;span class="math"&gt;\(3 \times 3\)&lt;/span&gt; or &lt;span class="math"&gt;\(4 \times 4\)&lt;/span&gt; for&amp;nbsp;physics. &lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

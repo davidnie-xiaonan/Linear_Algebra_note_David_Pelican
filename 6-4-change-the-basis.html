@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line segment …
+        <meta name="description" content="Now comes one of the biggest applications of Matrix multiplication. Sometimes when we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random points on the Cartesian coordinate and form a line segment: Say …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="6-4 Change the basis "/>
 <meta property="og:url" content="./6-4-change-the-basis" />
-<meta property="og:description" content="Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line segment …" />
+<meta property="og:description" content="Now comes one of the biggest applications of Matrix multiplication. Sometimes when we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random points on the Cartesian coordinate and form a line segment: Say …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="6-4 Change the basis ">
-<meta name="twitter:description" content="Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line segment …">
+<meta name="twitter:description" content="Now comes one of the biggest applications of Matrix multiplication. Sometimes when we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random points on the Cartesian coordinate and form a line segment: Say …">
 
         <title>6-4 Change the basis  · Linear Algebra Note
 </title>
@@ -92,12 +92,12 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Now comes to one of the biggest applications of Matrix multiplication. Sometimes we we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random point on the Cartesian coordinate and form a line&nbsp;segment:</p>
+            <p>Now comes one of the biggest applications of Matrix multiplication. Sometimes when we solve a problem, we might find that the classic Cartesian coordinate is not the best coordinate to work with. For example, let start with some random points on the Cartesian coordinate and form a line&nbsp;segment:</p>
 <p><img alt="w6example" src="./images/w6example.png" /></p>
-<p>Say we want to find the tip of the bar after a rotation of 15 degree, to do this normally takes quite a lot of work. But, if we convert the point <span class="math">\((3,1)\)</span> to the polar coordinate, and then we do the rotation. After that, we can covert the transformed polar coordinate into Cartesian&nbsp;coordinate.</p>
+<p>Say we want to find the tip of the bar after a rotation of 15 degrees, to do this normally takes quite a lot of work. But, if we convert the point <span class="math">\((3,1)\)</span> to the polar coordinate, and then we do the rotation. After that, we can covert the transformed polar coordinate into Cartesian&nbsp;coordinate.</p>
 <p><img alt="w6example" src="./images/w6rotation.gif" /></p>
 <p>So, can we do the same in linear algebra? Can we change one vector in one coordinate(basis) to another&nbsp;one? </p>
-<p>Let&#8217;s start with a vector in the classic Cartesian coordinate, pick any two number, let&#8217;s say <span class="math">\((2,1)\)</span>.</p>
+<p>Let&#8217;s start with a vector in the classic Cartesian coordinate, pick any two numbers, let&#8217;s say <span class="math">\((2,1)\)</span>.</p>
 <p>The basis of Cartesian coordinate is vector <span class="math">\((1,0)\)</span> and <span class="math">\((0,1)\)</span>, so the meaning of vector <span class="math">\((2,1)\)</span> is just two pieces of <span class="math">\((1,0)\)</span> and one piece of <span class="math">\((0,1)\)</span>:</p>
 <div class="math">$$\begin{bmatrix}
 2\\
@@ -123,7 +123,7 @@
 3\\
 1
 \end{bmatrix}$$</div>
-<p>To not make you confuse, I will label all the vectors lie in Cartesian coordinate black, and the vector lie in new coordinate&nbsp;red.</p>
+<p>To not make you confused, I will label all the vectors lie in Cartesian coordinate black, and the vector lies in new coordinate&nbsp;red.</p>
 <p>So the question is, what should be the vector <span class="math">\((2,1)\)</span> in our new basis? In another word, how many <span class="math">\((1,1)\)</span> and <span class="math">\((-1,2)\)</span> combined together will give you <span class="math">\((2,1)\)</span>? </p>
 <p>You might find the statements here are kind of confusing, so I will help you out by showing you the solution&nbsp;first:</p>
 <p><img alt="w6changebasis" src="./images/w6changebasis.png" /></p>
@@ -173,7 +173,7 @@
 \color{red}{\frac{5}{3}}\\
 \color{red}{\frac{1}{3}}
 \end{bmatrix} $$</div>
-<p>Strange, right? To know the presentation in one specific basis, you have to apply the inverse transformation. but this is what it&nbsp;is.</p>
+<p>Strange, right? To know the presentation on one specific basis, you have to apply the inverse transformation. but this is what it&nbsp;is.</p>
 <p>For the previous example, the way we get <span class="math">\((\color{red}{\frac{5}{3}},\color{red}{\frac{1}{3}})\)</span> is by first put our basis vector together and form the&nbsp;matrix </p>
 <div class="math">$$\begin{bmatrix}
 1 &amp; 1\\
@@ -187,14 +187,14 @@
 \frac{2}{3} &amp; \frac{1}{3}\\
 \frac{1}{3} &amp; -\frac{1}{3}
 \end{bmatrix}$$</div>
-<p>And the last step is to put any vector we want to transform in it and do a&nbsp;multiplication.</p>
+<p>And the last step is to put any vector we want to transform in it and do&nbsp;multiplication.</p>
 <p>Can we do it for any basis? Here is the animation I made that shows the vector <span class="math">\(<div class="math">\begin{bmatrix}
 2\\
 1
 \end{bmatrix}</div>\)</span> in different&nbsp;basis:</p>
 <p><img alt="w6any" src="./images/w6any.gif" /></p>
-<p>Now we know how to convert a vector in another basis, let&#8217;s do something fun&nbsp;here.</p>
-<p>Assume you have some transformation <span class="math">\(T\)</span> in some basis. For example, the Cartesian coordinate. The transformation <span class="math">\(T\)</span> has a dimension of <span class="math">\(n \times n\)</span>. Let&#8217;s say we have a vector lies in the Cartesian coordinate called <span class="math">\(\pmb{a}\)</span> and if you transform that vector, you will get vector <span class="math">\(\pmb{b}\)</span>:</p>
+<p>Now we know how to convert a vector on another basis, let&#8217;s do something fun&nbsp;here.</p>
+<p>Assume you have some transformation <span class="math">\(T\)</span> on some basis. For example, the Cartesian coordinate. The transformation <span class="math">\(T\)</span> has a dimension of <span class="math">\(n \times n\)</span>. Let&#8217;s say we have a vector that lies in the Cartesian coordinate called <span class="math">\(\pmb{a}\)</span> and if you transform that vector, you will get vector <span class="math">\(\pmb{b}\)</span>:</p>
 <div class="math">$$T\pmb{a} = \pmb{b}$$</div>
 <p>Here comes the cool part. Instead of doing this transform in the old, boring Cartesian coordinate, why not do it in a new fancy basis? The basis vectors of this new basis form a matrix <span class="math">\(P\)</span>. We can rewrite the vector <span class="math">\(\pmb{a}\)</span> and <span class="math">\(\pmb{b}\)</span> in our new&nbsp;basis:</p>
 <div class="math">$$\pmb{a}' = P^{-1}\pmb{a}$$</div>
@@ -210,14 +210,14 @@
 <div class="math">$$T'\pmb{a}' = P^{-1}T\pmb{a}$$</div>
 <div class="math">$$T'\pmb{a}' = P^{-1}TP\pmb{a}'$$</div>
 <div class="math">$$T' = P^{-1}TP$$</div>
-<p>We can see that the way we rewrite a transformation for new basis is kind of different than vector. To understand the expression of <span class="math">\(T' = P^{-1}TP\)</span> is not hard. Imagine you are doing business in the other country. The transformation is the business process(Take some money and return some money). <span class="math">\(T'\)</span> and <span class="math">\(T\)</span> is just the same business process but in different country. say one in <span class="caps">US</span> one in <span class="caps">UK</span>. The matrix <span class="math">\(P\)</span> convert one currency to another, in our case dollar to pound. So if you are American and want to do the business in <span class="caps">US</span>, all you need is the transformation <span class="math">\(T\)</span>. But if you are a gentleman from <span class="caps">UK</span>, The same business process became&nbsp;to:</p>
-<p>1) Convert the money to dollar (<span class="math">\(P\)</span>)</p>
-<p>2) Do the business in <span class="caps">US</span> (<span class="math">\(T\)</span>)</p>
-<p>3) Convert the dollar you earned in <span class="caps">US</span> back to pound and enjoy your life (<span class="math">\(P^{-1}\)</span>)</p>
+<p>We can see that the way we rewrite a transformation for the new basis is kind of different than for vectors. Memorizing the expression of <span class="math">\(T' = P^{-1}TP\)</span> is not hard. Imagine you are doing business in another country. The transformation is the business process(Take some money and return some money). <span class="math">\(T'\)</span> and <span class="math">\(T\)</span> is just the same business process but in the different country. say one in <span class="caps">US</span> one in the <span class="caps">UK</span>. The matrix <span class="math">\(P\)</span> converts one currency to another, in our case dollar to pound. So if you are American and want to do the business in the <span class="caps">US</span>, all you need is the transformation <span class="math">\(T\)</span>. But if you are a gentleman from <span class="caps">UK</span>, The same business process became&nbsp;to:</p>
+<p>1) Convert the money to dollars (<span class="math">\(P\)</span>)</p>
+<p>2) Do the business in the <span class="caps">US</span> (<span class="math">\(T\)</span>)</p>
+<p>3) Convert the dollar you earned in the <span class="caps">US</span> back to pounds and enjoy your life (<span class="math">\(P^{-1}\)</span>)</p>
 <p>So overall, what you did&nbsp;is:</p>
 <div class="math">$$\pmb{a} \rightarrow P\pmb{a} \rightarrow TP\pmb{a} \rightarrow P^{-1}TP\pmb{a}$$</div>
 <p>and that is the process <span class="math">\(T'\)</span>.</p>
-<p>Notice that what we are dealing with is the <span class="math">\(n \times n\)</span> case. We can generalized this idea to any dimensions, but that is not what we focus here. Most of the time, we will be working on <span class="math">\(n \times n\)</span> case, especially <span class="math">\(3 \times 3\)</span> or <span class="math">\(4 \times 4\)</span> for&nbsp;physics. </p>
+<p>Notice that what we are dealing with is the <span class="math">\(n \times n\)</span> case. We can generalize this idea to any dimension, but that is not what we focus on here. Most of the time, we will be working on <span class="math">\(n \times n\)</span> case, especially <span class="math">\(3 \times 3\)</span> or <span class="math">\(4 \times 4\)</span> for&nbsp;physics. </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part …
+        <meta name="description" content="In this chapter, we learned quite a lot of practical concepts like solving linear systems or inverse matrices. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. Here, we are just going to learn the first part of …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="5-5 The fundamental theorem of Linear Algebra "/>
 <meta property="og:url" content="./5-5-the-fundamental-theorem-of-linear-algebra" />
-<meta property="og:description" content="In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part …" />
+<meta property="og:description" content="In this chapter, we learned quite a lot of practical concepts like solving linear systems or inverse matrices. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. Here, we are just going to learn the first part of …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="5-5 The fundamental theorem of Linear Algebra ">
-<meta name="twitter:description" content="In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part …">
+<meta name="twitter:description" content="In this chapter, we learned quite a lot of practical concepts like solving linear systems or inverse matrices. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. Here, we are just going to learn the first part of …">
 
         <title>5-5 The fundamental theorem of Linear Algebra  · Linear Algebra Note
 </title>
@@ -92,8 +92,8 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>In this chapter, we learned quite a lot of practical concepts like solving linear system or inverse matrix. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. In here, we are just going to learn the first part of it which also called Rank–Nullity&nbsp;theorem.</p>
-<p>The name of this theorem is actually not universal. It is popularized by one of my favorite professors: <a href="http://www-math.mit.edu/~gs/">Gilbert Strang</a>. This name is related to the famous theorem in calculus, the fundamental theorem of Calculus. The theorem itself is not hard to prove, so if you are interested, you can try to do it. But before we dig in to the theorem, we will quickly introduce two more&nbsp;concepts.</p>
+            <p>In this chapter, we learned quite a lot of practical concepts like solving linear systems or inverse matrices. Now we can finally learn something more abstract and beautiful(in my opinion), which is the fundamental theorem of linear algebra. Here, we are just going to learn the first part of it which is also called Rank–Nullity&nbsp;theorem.</p>
+<p>The name of this theorem is actually not universal. It is popularized by one of my favorite professors: <a href="http://www-math.mit.edu/~gs/">Gilbert Strang</a>. This name is related to the famous theorem in calculus, the fundamental theorem of Calculus. The theorem itself is not hard to prove, so if you are interested, you can try to do it. But before we dig into the theorem, we will quickly introduce two more&nbsp;concepts.</p>
 <p>The first one is the <strong>Rank</strong> of a matrix <span class="amp">&amp;</span> transformation. The Rank of a matrix is defined as the dimension of its column space. For&nbsp;example:</p>
 <div class="math">$$A = \begin{bmatrix}
 1 &amp; 2\\
@@ -112,7 +112,7 @@
 2 &amp; 1\\
 2 &amp; 1
 \end{bmatrix}$$</div>
-<p>The null space of this transformation can be found by calculate the following&nbsp;equation:</p>
+<p>The null space of this transformation can be found by calculating the following&nbsp;equation:</p>
 <div class="math">$$A\pmb{x} = \pmb{0}$$</div>
 <p>if you solve this equation, you will find that the solution for <span class="math">\(\pmb{x}\)</span> is <span class="math">\(span \left( <div class="math">\begin{bmatrix}
 1\\
@@ -122,7 +122,7 @@
 <p>Now we finished our appetizer, let&#8217;s check our main course. And of course, To understand the theorem better, we have to put this in the frame of linear&nbsp;transformation.</p>
 <p>Let&#8217;s say we have a transformation matrix <span class="math">\(T\)</span>. This matrix transform all vectors in vector space <span class="math">\(V\)</span> to another vector space <span class="math">\(W\)</span>. So if you pick any vector in <span class="math">\(W\)</span>, say <span class="math">\(\pmb{w} \in W\)</span>. Then their must be at least one vector <span class="math">\(\pmb{v}\)</span> in vector space <span class="math">\(V\)</span>, such&nbsp;that: </p>
 <div class="math">$$\pmb{w} = T(\pmb{v})$$</div>
-<p>What we are interested is the dimension. So what is the dimension of <span class="math">\(V\)</span>? This is easy. If your matrix <span class="math">\(T\)</span> is a <span class="math">\(m \times n\)</span> matrix, it means you take the vector with dimension <span class="math">\(n\)</span> and you output a vector with dimension <span class="math">\(m\)</span>. So, the input vector space must have dimension of <span class="math">\(n\)</span>.</p>
+<p>What we are interested is the dimension. So what is the dimension of <span class="math">\(V\)</span>? This is easy. If your matrix <span class="math">\(T\)</span> is a <span class="math">\(m \times n\)</span> matrix, it means you take the vector with dimension <span class="math">\(n\)</span> and you output a vector with dimension <span class="math">\(m\)</span>. So, the input vector space must have the  dimension of <span class="math">\(n\)</span>.</p>
 <p>How about the dimension of <span class="math">\(W\)</span>? The vector space <span class="math">\(W\)</span> has a more complicated situation. You might think, like how we get the dimension of <span class="math">\(V\)</span>, the dimension of <span class="math">\(W\)</span> is simply <span class="math">\(m\)</span>. That is not true. For&nbsp;example:</p>
 <div class="math">$$A = \begin{bmatrix}
 0 &amp; 0\\
@@ -132,8 +132,8 @@
 <p>So what is it? Well, I think I just spoil the answer at the beginning. Yes! You guessed it! It is the Rank of this transformation. Why? Remember how the transformation matrix is defined? The column of the transformation matrix is the basis vectors after transformation. So the span of the &#8220;transformed&#8221; basis has to be the vector space <span class="math">\(W\)</span>.</p>
 <p>There is another name for <span class="math">\(W\)</span>. For a linear transformation. Vector space <span class="math">\(W\)</span> is called the <strong>image</strong> of transformation. It is the &#8220;output&#8221; of that&nbsp;transformation.</p>
 <p>Alright! We now know the dimension of vector space before and after the transformation, there is only one part of the theorem&nbsp;remains.</p>
-<p>When we looked at the dimension of <span class="math">\(V\)</span> and <span class="math">\(W\)</span>, you will notice that the dimension of <span class="math">\(V\)</span> is <strong>always</strong> bigger or equal to the dimension of <span class="math">\(W\)</span>. This comes from the fact that linear transformation cannot map one vector to two different ones, just like in function, one <span class="math">\(x\)</span> value will always give you one <span class="math">\(y\)</span> value, so the domain will always bigger than the&nbsp;range. </p>
-<p>This is not particularly interested, but one might ask another question: where did the &#8220;missing&#8221; dimension go? If your transformation transform a 3d space to a 1d space, the rest 2 dimension actually go to the <strong>Null space</strong> of that transformation! This is the last piece of our Rank-Nullity&nbsp;theorem:</p>
+<p>When we looked at the dimension of <span class="math">\(V\)</span> and <span class="math">\(W\)</span>, you will notice that the dimension of <span class="math">\(V\)</span> is <strong>always</strong> bigger or equal to the dimension of <span class="math">\(W\)</span>. This comes from the fact that linear transformation cannot map one vector to two different ones, just like in function, one <span class="math">\(x\)</span> value will always give you one <span class="math">\(y\)</span> value, so the domain will always be bigger than the&nbsp;range. </p>
+<p>This is not particularly interesting, but one might ask another question: where did the &#8220;missing&#8221; dimension go? If your transformation transforms a 3d space into a 1d space, the rest 2 dimension actually go to the <strong>Null space</strong> of that transformation! This is the last piece of our Rank-Nullity&nbsp;theorem:</p>
 <div class="math">$$Rank(T) + Nullity(T) = dim(V) = n$$</div>
 <p>How is this useful in practice? Well, once we know the rank of a transformation, we can quickly tell the dimension of its null space, and this works for unknown matrix too. Even if we don&#8217;t know the exact transformation in the future, by applying the Rank-Nullity Theorem, we can know the dimension of image space or null&nbsp;space. </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {

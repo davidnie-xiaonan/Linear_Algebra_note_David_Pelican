@@ -17,7 +17,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content=", Chapter 7 Eigenvector, eigenvalue and Diagonalization, " />
+<meta name="keywords" content=", Chapter 7 Eigenvector, eigenvalue, and Diagonalization, " />
 
 <meta property="og:title" content="7-2 Characteristic polynomials "/>
 <meta property="og:url" content="./7-2-characteristic-polynomials" />
@@ -103,22 +103,22 @@
 <p>Notice that we only know the matrix <span class="math">\(A\)</span>, so we need some way to combine these two terms. Factoring out vector <span class="math">\(\pmb{x}\)</span> seems to be a good idea, but is there any way to factor out the vector <span class="math">\(\pmb{x}\)</span>?</p>
 <p>Yes! We know the fact that for the square matrix with the same&nbsp;size:</p>
 <div class="math">$$(A+B)\pmb{x} = A\pmb{x}+B\pmb{x}$$</div>
-<p>So if we can rewrite number <span class="math">\(\lambda\)</span> into a matrix with the same size as <span class="math">\(A\)</span>, then we can combine the matrices and factor out <span class="math">\(\pmb{x}\)</span>. But how do we  rewrite number to a matrix? That is not hard since this number is multiplying on a vector, We can add a linear transformation that does nothing in front of vector <span class="math">\(\pmb{x}\)</span>:</p>
+<p>So if we can rewrite number <span class="math">\(\lambda\)</span> into a matrix with the same size as <span class="math">\(A\)</span>, then we can combine the matrices and factor out <span class="math">\(\pmb{x}\)</span>. But how do we rewrite numbers to a matrix? That is not hard since this number is multiplying on a vector, We can add a linear transformation that does nothing in front of vector <span class="math">\(\pmb{x}\)</span>:</p>
 <div class="math">$$\lambda\pmb{x} = \lambda I\pmb{x} = (\lambda I)\pmb{x} $$</div>
 <p>Now, the scalar <span class="math">\(\lambda\)</span> is a linear transformation <span class="math">\(\lambda I\)</span>, therefore, we can add the matrix <span class="math">\(A\)</span> and the new matrix <span class="math">\(\lambda I\)</span>:</p>
 <div class="math">$$A\pmb{x} - \lambda I\pmb{x} = 0$$</div>
 <div class="math">$$(A- \lambda I)\pmb{x} = 0$$</div>
-<p>The new matrix <span class="math">\((A- \lambda I)\)</span> multiply some vector <span class="math">\(\pmb{x}\)</span> gives you zero vector. How do we find the vector <span class="math">\(\pmb{x}\)</span>? Easy! This is just ask you to find the null space of matrix <span class="math">\((A- \lambda I)\)</span>! </p>
-<p>Before, to find null space, we need to solve the linear system <span class="math">\(A\pmb{x} = 0\)</span>. But in our case, the matrix itself has some unknown variable in it, which is the number <span class="math">\(\lambda\)</span>. So how could we find the null space of a unknown&nbsp;matrix?</p>
-<p>Here we will introduce a technique that we didn&#8217;t mention before, call <strong>determinant</strong>. In short, the determinant calculate the ratio between the size of space before and after the linear transformation. In 2d, it is simply the ratio between the area before and after the linear transformation. To calculate determinant for any <span class="math">\(2\times2\)</span> matrix, we just need to&nbsp;do:</p>
+<p>The new matrix <span class="math">\((A- \lambda I)\)</span> multiply some vector <span class="math">\(\pmb{x}\)</span> gives you zero vector. How do we find the vector <span class="math">\(\pmb{x}\)</span>? Easy! This is just asking you to find the null space of matrix <span class="math">\((A- \lambda I)\)</span>! </p>
+<p>Before, to find null space, we need to solve the linear system <span class="math">\(A\pmb{x} = 0\)</span>. But in our case, the matrix itself has some unknown variable in it, which is the number <span class="math">\(\lambda\)</span>. So how could we find the null space of an unknown&nbsp;matrix?</p>
+<p>Here we will introduce a technique that we didn&#8217;t mention before, call <strong>determinant</strong>. In short, the determinant calculates the ratio between the size of space before and after the linear transformation. In 2d, it is simply the ratio between the area before and after the linear transformation. To calculate determinant for any <span class="math">\(2\times2\)</span> matrix, we just need to&nbsp;do:</p>
 <div class="math">$$det(A) = \begin{vmatrix}
 a &amp; b\\
 c &amp; d \\
 \end{vmatrix} = ad - bc$$</div>
 <p>We are not going to cover the method of finding <span class="math">\(3\times3\)</span> or higher dimension matrix&#8217;s determinant in this chapter. Feel free to search them up and think about&nbsp;why. </p>
-<p>Why is find the ratio of area useful in our case? Because if a non-zero null space exist for a matrix, the the determinant of this matrix must be&nbsp;zero. </p>
-<p>Why? By the rank-nullity theorem, if null space has dimension greater than zero, it means our rank is less than the dimension of matrix. So the linear transformation will transform the space to a space with lower&nbsp;dimension. </p>
-<p>If the matrix is <span class="math">\(2\times2\)</span> but the rank is lower than 2, for example, is 1. It just means the matrix will transform any 2d vector to a 2d vector on a line (1d). So what will be the ratio of area before and after the transformation? Obviously is zero(The whole 2d plane was &#8220;smash&#8221; into a&nbsp;line).</p>
+<p>Why is finding the ratio of areas useful in our case? Because if a non-zero null space exists for a matrix, the determinant of this matrix must be&nbsp;zero. </p>
+<p>Why? By the rank-nullity theorem, if null space has the dimension greater than zero, it means our rank is less than the dimension of matrix. So the linear transformation will transform the space to a space with lower&nbsp;dimension. </p>
+<p>If the matrix is <span class="math">\(2\times2\)</span> but the rank is lower than 2, for example, is 1. It just means the matrix will transform any 2d vector to a 2d vector on a line (1d). So what will be the ratio of areas before and after the transformation? Obviously is zero(The whole 2d plane was &#8220;smashed&#8221; into a&nbsp;line).</p>
 <p>Great! Now is time to put everything together and calculate some eigenvalue <span class="amp">&amp;</span> eigenvector! Let&#8217;s find the eigenvalue <span class="amp">&amp;</span> eigenvector for the matrix we discussed last&nbsp;time:</p>
 <div class="math">$$A = \begin{bmatrix}
 1 &amp; 0\\
@@ -172,7 +172,7 @@ y
 1
 \end{bmatrix}}
 $$</div>
-<p>Therefore, the eigenvector correspond to eigenvalue <span class="math">\(1\)</span> is&nbsp;vector </p>
+<p>Therefore, the eigenvector corresponding to eigenvalue <span class="math">\(1\)</span> is the&nbsp;vector </p>
 <div class="math">$$\begin{bmatrix}
 -1\\
 1
@@ -182,16 +182,16 @@ $$</div>
 0\\
 1
 \end{bmatrix}$$</div>
-<p>Awesome! We solved all the eigenvalue and their eigenvector. Does that means we solved everything? Of course not. Remember, we got lucky when solving the polynomial. Let&#8217;s go back to the characteristic polynomial and see what are we&nbsp;missing.</p>
+<p>Awesome! We solved all the eigenvalue and their eigenvector. Does that mean we solved everything? Of course not. Remember, we got lucky when solving the polynomial. Let&#8217;s go back to the characteristic polynomial and see what are we&nbsp;missing.</p>
 <p>The characteristic polynomial we had is <span class="math">\((1-\lambda )(2-\lambda)\)</span>, but in principle, we could have any polynomials. Take <span class="math">\(2\times2\)</span> matrix as example, our characteristic polynomial will be a&nbsp;quadratic:</p>
 <div class="math">$$a\lambda^2 + b\lambda + c= 0$$</div>
 <p>For our case, we ended up with two distinct <span class="math">\(\lambda\)</span> values. But we could also have two same <span class="math">\(\lambda\)</span> values or no real <span class="math">\(\lambda\)</span>. </p>
-<p>The two same <span class="math">\(\lambda\)</span> values case is not that interesting. In 2d, the transformation that has only one eigenvalue will looks like a shear transformation. The interesting case is when we have no real <span class="math">\(\lambda\)</span>&nbsp;values. </p>
-<p>Let&#8217;s imaging: What kind of transformation in 2d that has no eigenvector? Having eigenvectors means there are some directions where all the vector alone that direction do not change its direction after the transformation. So, having no eigenvector means all the vector in 2d change its direction after the transformation. Did we see any of the transformation that can do&nbsp;this?</p>
-<p>Of course! Any transformation that rotate the&nbsp;plane!</p>
+<p>The two same <span class="math">\(\lambda\)</span> values case is not that interesting. In 2d, the transformation that has only one eigenvalue will look like a shear transformation. The interesting case is when we have no real <span class="math">\(\lambda\)</span>&nbsp;values. </p>
+<p>Let&#8217;s imaging: What kind of transformation in 2d that has no eigenvector? Having eigenvectors means there are some directions where all the vectors alone that direction do not change their direction after the transformation. So, having no eigenvector means all the vectors in 2d change their direction after the transformation. Did we see any of the transformations that can do&nbsp;this?</p>
+<p>Of course! Any transformation that rotates the&nbsp;plane!</p>
 <p><img alt="w4rotation" src="./images/w4rotation.gif" /></p>
-<p>Let&#8217;s take the very first linear transformation we saw. As you can see, all the vector do not end up with the same direction after the&nbsp;transformation.</p>
-<p>If you learned the imaginary number before(don&#8217;t worry if you never learn it, but I highly recommend you check it out online if you never), you will know that the quadratic that has no real solution will have imaginary solution. So our eigenvalue will be imaginary. In fact, imaginary eigenvalue will always has something to do with the rotation. However, Imaginary eigenvalue is beyond the scope of our&nbsp;note.</p>
+<p>Let&#8217;s take the very first linear transformation we saw. As you can see, all the vectors do not end up in the same direction after the&nbsp;transformation.</p>
+<p>If you learned the imaginary number before(don&#8217;t worry if you never learn it, but I highly recommend you check it out online if you never), you will know that the quadratic that have no real solution will have the imaginary solution. So our eigenvalue will be imaginary. In fact, imaginary eigenvalue will always has something to do with rotation. However, the imaginary eigenvalue is beyond the scope of our&nbsp;note.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -290,7 +290,7 @@ $$</div>
 <time datetime="2021-12-05T19:30:00-05:00">12月 05, 2021</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="./categories#chapter-7-eigenvector-eigenvalue-and-diagonalization-ref">Chapter 7 Eigenvector, eigenvalue and Diagonalization</a>
+            <a class="category-link" href="./categories#chapter-7-eigenvector-eigenvalue-and-diagonalization-ref">Chapter 7 Eigenvector, eigenvalue, and Diagonalization</a>
 <h4>Stay in Touch</h4>
 <div id="sidebar-social-link">
     <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
