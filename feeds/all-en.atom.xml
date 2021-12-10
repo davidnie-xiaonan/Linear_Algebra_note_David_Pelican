@@ -3653,7 +3653,7 @@ x\\
 0 &amp;amp; \lambda_2
 \end{bmatrix} $$&lt;/div&gt;
 &lt;p&gt;If you look carefully, you will see that the transformation is nothing but stretch or compressed along the direction of basis (in this case, x or y direction). But hold on, haven&amp;#8217;t we  learned something that is similar? The eigenvalue and&amp;nbsp;eigenvector!&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s do a quick review on &lt;a href="7-1-Eigenvalue"&gt;section 7-1&lt;/a&gt;. For some matrices, you can find that alone certain direction, the transformation does not change the direction of the input&amp;nbsp;vector:&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s do a quick review on &lt;a href="7-1-eigenvalue-and-eigenvector"&gt;section 7-1&lt;/a&gt;. For some matrices, you can find that alone certain direction, the transformation does not change the direction of the input&amp;nbsp;vector:&lt;/p&gt;
 &lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb{x}$$&lt;/div&gt;
 &lt;p&gt;The vectors lie in those special directions are called the eigenvector of the matrix and the coefficients that tell you how the vectors are being stretched or compressed are called the&amp;nbsp;eigenvalue.&lt;/p&gt;
 &lt;p&gt;You can sense that the pieces are coming together. Let use a &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt; matrix as an&amp;nbsp;example:&lt;/p&gt;
