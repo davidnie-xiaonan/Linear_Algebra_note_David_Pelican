@@ -3628,4 +3628,151 @@ $$&lt;/div&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue, and Diagonalization"></category></entry><entry><title>7-4 Diagonalization</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-4-diagonalization" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/7-4-diagonalization</id><content type="html">&lt;p&gt;Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to&amp;nbsp;solve.&lt;/p&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue, and Diagonalization"></category></entry></feed>
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue, and Diagonalization"></category></entry><entry><title>7-4 Diagonalization</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/7-4-diagonalization" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/7-4-diagonalization</id><summary type="html">&lt;p&gt;Last time, we learned a special matrix called the diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve. So, is it possible to make all the matrix into diagonal ones? If not, is there any lucky matrix that we can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last time, we learned a special matrix called the diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve. So, is it possible to make all the matrix into diagonal ones? If not, is there any lucky matrix that we can&amp;nbsp;convert?&lt;/p&gt;
+&lt;p&gt;Now you might get confused by what I said. What do you mean by converting a matrix? Well, in &lt;a href="6-4-change-the-basis"&gt;section 6-4&lt;/a&gt;, we learned that the same transformation can have different matrix representations on different bases. Maybe we can use this fact as our advantage to see what we can&amp;nbsp;do.&lt;/p&gt;
+&lt;p&gt;Our goal is to see if we can find a specific basis such that the transformation(matrix) in this basis became a diagonal matrix. Obviously, this is not easy. I mean, how would we even start? Well, we can start from the diagonal matrix since that seems&amp;nbsp;easy.&lt;/p&gt;
+&lt;p&gt;If you have a diagonal matrix, what is the transformation that corresponding to a diagonal matrix? Let&amp;#8217;s look at an&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$ D = \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 2
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;if you take this matrix and transform a vector &lt;span class="math"&gt;\((x,y)\)&lt;/span&gt;, you will&amp;nbsp;get:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \pmb{x}' = D\pmb{x} = \begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; 2
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix} = \begin{bmatrix}
+x\\
+2y
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;If you look at the vector, this is just the orginal vector but the y-component doubled. In general, if you have a diagonal&amp;nbsp;matrix:&lt;/p&gt;
+&lt;div class="math"&gt;$$ D = \begin{bmatrix}
+\lambda_1 &amp;amp; 0\\
+0 &amp;amp; \lambda_2
+\end{bmatrix} $$&lt;/div&gt;
+&lt;p&gt;If you look carefully, you will see that the transformation is nothing but stretch or compressed along the direction of basis (in this case, x or y direction). But hold on, haven&amp;#8217;t we  learned something that is similar? The eigenvalue and&amp;nbsp;eigenvector!&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s do a quick review on &lt;a href="7-1-Eigenvalue"&gt;section 7-1&lt;/a&gt;. For some matrices, you can find that alone certain direction, the transformation does not change the direction of the input&amp;nbsp;vector:&lt;/p&gt;
+&lt;div class="math"&gt;$$A\pmb{x} = \lambda\pmb{x}$$&lt;/div&gt;
+&lt;p&gt;The vectors lie in those special directions are called the eigenvector of the matrix and the coefficients that tell you how the vectors are being stretched or compressed are called the&amp;nbsp;eigenvalue.&lt;/p&gt;
+&lt;p&gt;You can sense that the pieces are coming together. Let use a &lt;span class="math"&gt;\(2\times2\)&lt;/span&gt; matrix as an&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = \begin{bmatrix}
+1 &amp;amp; 0\\
+1 &amp;amp; 2 \\
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;Previously, we find that the eigenvectors&amp;nbsp;are:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+-1\\
+1
+\end{bmatrix},\begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;and the corresponding eigenvectors are &lt;span class="math"&gt;\(1\)&lt;/span&gt; and &lt;span class="math"&gt;\(2\)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;Here comes the brilliant idea: the eigenvectors are linearly independent so these two vectors are enough to span the entire space. If we change the basis from the original Cartesian basis to the basis that formed by eigenvectors, what would&amp;nbsp;happen?&lt;/p&gt;
+&lt;p&gt;Now the transformation has to be described by our new basis. Since this is nothing but another linear transformation, and we know that the columns for the linear transformation matrix are nothing but the basis vectors after the&amp;nbsp;transformation:&lt;/p&gt;
+&lt;div class="math"&gt;$$T = \begin{bmatrix}
+T(\pmb{x}_1) &amp;amp; T(\pmb{x}_2) &amp;amp; ...\\
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;So what would be the basis vectors after the transformation? Well, we know that our new basis vectors are all eigenvectors. So, the transformation will be nothing but multiply the corresponding&amp;nbsp;eigenvalues:&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\pmb{x}_i)  = \lambda \pmb{x}_i$$&lt;/div&gt;
+&lt;p&gt;Then what will be our transformation matrix on the new&amp;nbsp;basis?&lt;/p&gt;
+&lt;div class="math"&gt;$$T = \begin{bmatrix}
+T(\pmb{x}_1) &amp;amp; T(\pmb{x}_2) &amp;amp; ...\\
+\end{bmatrix} = \begin{bmatrix}
+    \lambda_1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \dots  &amp;amp; 0 \\
+    0 &amp;amp; \lambda_2 &amp;amp; 0 &amp;amp; \dots  &amp;amp; 0 \\
+    0 &amp;amp; 0 &amp;amp; \lambda_3 &amp;amp; \dots  &amp;amp; 0 \\
+    \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+    0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \dots  &amp;amp; \lambda_n
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;And that my friend, is a diagonal&amp;nbsp;matrix!&lt;/p&gt;
+&lt;p&gt;So what does it mean? It means that if we can transform our matrix to the new &amp;#8220;eigenbasis&amp;#8221;, then the transformation has to be a diagonal&amp;nbsp;matrix!&lt;/p&gt;
+&lt;p&gt;Now how do we change the matrix to a new basis? We&amp;nbsp;do:&lt;/p&gt;
+&lt;div class="math"&gt;$$T' = P^{-1}TP$$&lt;/div&gt;
+&lt;p&gt;For our case, we will start which matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;, end up with matrix &lt;span class="math"&gt;\(D\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$D = P^{-1}AP$$&lt;/div&gt;
+&lt;p&gt;What will be our matrix &lt;span class="math"&gt;\(P\)&lt;/span&gt;? Well, matrix &lt;span class="math"&gt;\(P\)&lt;/span&gt; is the matrix formed by new basis&amp;nbsp;vectors:&lt;/p&gt;
+&lt;div class="math"&gt;$$P = \begin{bmatrix}
+    \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots  &amp;amp; \vdots \\
+    \pmb{x}_1 &amp;amp; \pmb{x}_2 &amp;amp; \pmb{x}_3 &amp;amp; \dots  &amp;amp; \pmb{x}_n \\
+    \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \vdots \\
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;In this case, the basis vectors have to be the eigenvectors of matrix &lt;span class="math"&gt;\(A\)&lt;/span&gt;. The matrix &lt;span class="math"&gt;\(D\)&lt;/span&gt; has to be the diagonal matrix where all the diagonal terms has to be the corresponding&amp;nbsp;eigenvalues:&lt;/p&gt;
+&lt;div class="math"&gt;$$ D = \begin{bmatrix}
+    \lambda_1 &amp;amp; 0 &amp;amp; 0 &amp;amp; \dots  &amp;amp; 0 \\
+    0 &amp;amp; \lambda_2 &amp;amp; 0 &amp;amp; \dots  &amp;amp; 0 \\
+    0 &amp;amp; 0 &amp;amp; \lambda_3 &amp;amp; \dots  &amp;amp; 0 \\
+    \vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+    0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \dots  &amp;amp; \lambda_n
+\end{bmatrix}
+$$&lt;/div&gt;
+&lt;p&gt;The process &lt;span class="math"&gt;\(D = P^{-1}AP\)&lt;/span&gt; or we can write it as &lt;span class="math"&gt;\(A = PDP^{-1}\)&lt;/span&gt; is called &lt;strong&gt;Diagonalization&lt;/strong&gt;. Obviously, not all the matrix is diagonalizable. To be able to diagonalize, the matrix has to have enough eigenvectors to form a basis. In our example, we can see that we have two eigenvectors that perfectly span the space. You can also realize that by looking at the&amp;nbsp;expression:&lt;/p&gt;
+&lt;div class="math"&gt;$$A = PDP^{-1}$$&lt;/div&gt;
+&lt;p&gt;If the matrix &lt;span class="math"&gt;\(P\)&lt;/span&gt; is not invertible, then we are not able to write down &lt;span class="math"&gt;\(P^{-1}\)&lt;/span&gt;. And being able to have a rank equal to the dimension of the matrix is essential for finding an&amp;nbsp;inverse.&lt;/p&gt;
+&lt;p&gt;Now, we can see that why the eigenvectors are so useful. They are the basis that we are looking for to convert the matrices into a diagonal one. And the eigenvalues are the components of our diagonal&amp;nbsp;matrix.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Chapter 7 Eigenvector, eigenvalue, and Diagonalization"></category></entry></feed>

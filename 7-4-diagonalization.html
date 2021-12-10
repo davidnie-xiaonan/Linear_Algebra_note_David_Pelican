@@ -12,7 +12,7 @@
 
         <meta name="author" content="David Nie" />
 
-        <meta name="description" content="Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve.
+        <meta name="description" content="Last time, we learned a special matrix called the diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve. So, is it possible to make all the matrix into diagonal ones? If not, is there any lucky matrix that we can …
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
@@ -21,13 +21,13 @@
 
 <meta property="og:title" content="7-4 Diagonalization "/>
 <meta property="og:url" content="./7-4-diagonalization" />
-<meta property="og:description" content="Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve." />
+<meta property="og:description" content="Last time, we learned a special matrix called the diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve. So, is it possible to make all the matrix into diagonal ones? If not, is there any lucky matrix that we can …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
 <meta property="og:article:published_time" content="2021-09-11T10:20:00-04:00" />
 <meta property="og:article:modified_time" content="2021-12-05T19:30:00-05:00" />
 <meta name="twitter:title" content="7-4 Diagonalization ">
-<meta name="twitter:description" content="Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve.">
+<meta name="twitter:description" content="Last time, we learned a special matrix called the diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve. So, is it possible to make all the matrix into diagonal ones? If not, is there any lucky matrix that we can …">
 
         <title>7-4 Diagonalization  · Linear Algebra Note
 </title>
@@ -92,7 +92,154 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Last time, we learned a special matrix called diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to&nbsp;solve.</p>
+            <p>Last time, we learned a special matrix called the diagonal matrix. We knew that if a matrix is a diagonal matrix, everything will be extremely easy to solve. So, is it possible to make all the matrix into diagonal ones? If not, is there any lucky matrix that we can&nbsp;convert?</p>
+<p>Now you might get confused by what I said. What do you mean by converting a matrix? Well, in <a href="6-4-change-the-basis">section 6-4</a>, we learned that the same transformation can have different matrix representations on different bases. Maybe we can use this fact as our advantage to see what we can&nbsp;do.</p>
+<p>Our goal is to see if we can find a specific basis such that the transformation(matrix) in this basis became a diagonal matrix. Obviously, this is not easy. I mean, how would we even start? Well, we can start from the diagonal matrix since that seems&nbsp;easy.</p>
+<p>If you have a diagonal matrix, what is the transformation that corresponding to a diagonal matrix? Let&#8217;s look at an&nbsp;example:</p>
+<div class="math">$$ D = \begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 2
+\end{bmatrix} $$</div>
+<p>if you take this matrix and transform a vector <span class="math">\((x,y)\)</span>, you will&nbsp;get:</p>
+<div class="math">$$ \pmb{x}' = D\pmb{x} = \begin{bmatrix}
+1 &amp; 0\\
+0 &amp; 2
+\end{bmatrix}\begin{bmatrix}
+x\\
+y
+\end{bmatrix} = \begin{bmatrix}
+x\\
+2y
+\end{bmatrix}$$</div>
+<p>If you look at the vector, this is just the orginal vector but the y-component doubled. In general, if you have a diagonal&nbsp;matrix:</p>
+<div class="math">$$ D = \begin{bmatrix}
+\lambda_1 &amp; 0\\
+0 &amp; \lambda_2
+\end{bmatrix} $$</div>
+<p>If you look carefully, you will see that the transformation is nothing but stretch or compressed along the direction of basis (in this case, x or y direction). But hold on, haven&#8217;t we  learned something that is similar? The eigenvalue and&nbsp;eigenvector!</p>
+<p>Let&#8217;s do a quick review on <a href="7-1-Eigenvalue">section 7-1</a>. For some matrices, you can find that alone certain direction, the transformation does not change the direction of the input&nbsp;vector:</p>
+<div class="math">$$A\pmb{x} = \lambda\pmb{x}$$</div>
+<p>The vectors lie in those special directions are called the eigenvector of the matrix and the coefficients that tell you how the vectors are being stretched or compressed are called the&nbsp;eigenvalue.</p>
+<p>You can sense that the pieces are coming together. Let use a <span class="math">\(2\times2\)</span> matrix as an&nbsp;example:</p>
+<div class="math">$$A = \begin{bmatrix}
+1 &amp; 0\\
+1 &amp; 2 \\
+\end{bmatrix}$$</div>
+<p>Previously, we find that the eigenvectors&nbsp;are:</p>
+<div class="math">$$\begin{bmatrix}
+-1\\
+1
+\end{bmatrix},\begin{bmatrix}
+0\\
+1
+\end{bmatrix}$$</div>
+<p>and the corresponding eigenvectors are <span class="math">\(1\)</span> and <span class="math">\(2\)</span>. </p>
+<p>Here comes the brilliant idea: the eigenvectors are linearly independent so these two vectors are enough to span the entire space. If we change the basis from the original Cartesian basis to the basis that formed by eigenvectors, what would&nbsp;happen?</p>
+<p>Now the transformation has to be described by our new basis. Since this is nothing but another linear transformation, and we know that the columns for the linear transformation matrix are nothing but the basis vectors after the&nbsp;transformation:</p>
+<div class="math">$$T = \begin{bmatrix}
+T(\pmb{x}_1) &amp; T(\pmb{x}_2) &amp; ...\\
+\end{bmatrix}$$</div>
+<p>So what would be the basis vectors after the transformation? Well, we know that our new basis vectors are all eigenvectors. So, the transformation will be nothing but multiply the corresponding&nbsp;eigenvalues:</p>
+<div class="math">$$T(\pmb{x}_i)  = \lambda \pmb{x}_i$$</div>
+<p>Then what will be our transformation matrix on the new&nbsp;basis?</p>
+<div class="math">$$T = \begin{bmatrix}
+T(\pmb{x}_1) &amp; T(\pmb{x}_2) &amp; ...\\
+\end{bmatrix} = \begin{bmatrix}
+    \lambda_1 &amp; 0 &amp; 0 &amp; \dots  &amp; 0 \\
+    0 &amp; \lambda_2 &amp; 0 &amp; \dots  &amp; 0 \\
+    0 &amp; 0 &amp; \lambda_3 &amp; \dots  &amp; 0 \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; 0 &amp; \dots  &amp; \lambda_n
+\end{bmatrix}
+$$</div>
+<p>And that my friend, is a diagonal&nbsp;matrix!</p>
+<p>So what does it mean? It means that if we can transform our matrix to the new &#8220;eigenbasis&#8221;, then the transformation has to be a diagonal&nbsp;matrix!</p>
+<p>Now how do we change the matrix to a new basis? We&nbsp;do:</p>
+<div class="math">$$T' = P^{-1}TP$$</div>
+<p>For our case, we will start which matrix <span class="math">\(A\)</span>, end up with matrix <span class="math">\(D\)</span>:</p>
+<div class="math">$$D = P^{-1}AP$$</div>
+<p>What will be our matrix <span class="math">\(P\)</span>? Well, matrix <span class="math">\(P\)</span> is the matrix formed by new basis&nbsp;vectors:</p>
+<div class="math">$$P = \begin{bmatrix}
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots  &amp; \vdots \\
+    \pmb{x}_1 &amp; \pmb{x}_2 &amp; \pmb{x}_3 &amp; \dots  &amp; \pmb{x}_n \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+\end{bmatrix}
+$$</div>
+<p>In this case, the basis vectors have to be the eigenvectors of matrix <span class="math">\(A\)</span>. The matrix <span class="math">\(D\)</span> has to be the diagonal matrix where all the diagonal terms has to be the corresponding&nbsp;eigenvalues:</p>
+<div class="math">$$ D = \begin{bmatrix}
+    \lambda_1 &amp; 0 &amp; 0 &amp; \dots  &amp; 0 \\
+    0 &amp; \lambda_2 &amp; 0 &amp; \dots  &amp; 0 \\
+    0 &amp; 0 &amp; \lambda_3 &amp; \dots  &amp; 0 \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; 0 &amp; \dots  &amp; \lambda_n
+\end{bmatrix}
+$$</div>
+<p>The process <span class="math">\(D = P^{-1}AP\)</span> or we can write it as <span class="math">\(A = PDP^{-1}\)</span> is called <strong>Diagonalization</strong>. Obviously, not all the matrix is diagonalizable. To be able to diagonalize, the matrix has to have enough eigenvectors to form a basis. In our example, we can see that we have two eigenvectors that perfectly span the space. You can also realize that by looking at the&nbsp;expression:</p>
+<div class="math">$$A = PDP^{-1}$$</div>
+<p>If the matrix <span class="math">\(P\)</span> is not invertible, then we are not able to write down <span class="math">\(P^{-1}\)</span>. And being able to have a rank equal to the dimension of the matrix is essential for finding an&nbsp;inverse.</p>
+<p>Now, we can see that why the eigenvectors are so useful. They are the basis that we are looking for to convert the matrices into a diagonal one. And the eigenvalues are the components of our diagonal&nbsp;matrix.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
              
