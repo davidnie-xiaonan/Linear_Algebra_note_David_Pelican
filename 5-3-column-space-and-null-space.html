@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/css/custom.css" media="screen">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -20,7 +20,7 @@
 <meta name="keywords" content=", Chapter 5 Solving Linear system using matrix, " />
 
 <meta property="og:title" content="5-3 Column space and null space "/>
-<meta property="og:url" content="./5-3-column-space-and-null-space" />
+<meta property="og:url" content="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space" />
 <meta property="og:description" content="As we discussed at the beginning of this chapter, We want our new notation to be much better than the old one in two aspects. The first one: Simplicity, is done by writing the equations into matrices. Now comes the second one, which is to know how many solutions are …" />
 <meta property="og:site_name" content="Linear Algebra Note" />
 <meta property="og:article:author" content="David Nie" />
@@ -31,17 +31,17 @@
 
         <title>5-3 Column space and null space  · Linear Algebra Note
 </title>
-        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="./theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="./theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="./theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="./theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="./theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link rel="shortcut icon" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linear Algebra Note - Full Atom Feed" />
 
 
@@ -57,18 +57,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="./"><span class=site-name>Linear Algebra Note</span></a>
+                        <a class="brand" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/"><span class=site-name>Linear Algebra Note</span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li >
                                     <a href=
-                                       .
+                                       https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican
                                     >Home</a>
                                 </li>
-                                <li ><a href="./categories">Categories</a></li>
-                                <li ><a href="./tags">Tags</a></li>
-                                <li ><a href="./archives">Archives</a></li>
-                                <li><form class="navbar-search" action="./search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/categories">Categories</a></li>
+                                <li ><a href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/tags">Tags</a></li>
+                                <li ><a href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./5-3-column-space-and-null-space">
+            <a href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-3-column-space-and-null-space">
                 5-3  Column space and null&nbsp;space
             </a>
         </h1>
@@ -97,11 +97,11 @@
 <p>Our linear equations on the plane look like just lines. So solving linear equations means you want to find the certain spot where two of your equations are satisfied simultaneously. In another word, the point (solution) has to be on both&nbsp;lines.</p>
 <p>So what are the&nbsp;cases?</p>
 <p>The first case is obvious, two lines intersect at one point. In this case, we have exactly <strong>one</strong>&nbsp;solution.</p>
-<p><img alt="w5line_int" src="./images/w5line_int.png" /></p>
+<p><img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_int.png" /></p>
 <p>The second case is two parallel lines. In this case, we have <strong>zero</strong>&nbsp;solution.</p>
-<p><img alt="w5line_int" src="./images/w5line_para.png" /></p>
+<p><img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5line_para.png" /></p>
 <p>The third case is less obvious, you can place your two lines at the same place. In this case, all the points on these lines are the solution. We can say there are <strong>infinite</strong>&nbsp;solutions.</p>
-<p><img alt="w5line_int" src="./images/w5same_line.gif" /></p>
+<p><img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5same_line.gif" /></p>
 <p>I personally don&#8217;t like to say there are infinite many solutions. Here is the reason: Saying infinite solutions is not useful, at least in some cases. For example, there are infinitely many points on one line, but there are also infinite many points on two lines, a plane, a little triangle, or a cube. So only saying &#8220;there are infinitely many solutions&#8221; won&#8217;t give you enough&nbsp;information. </p>
 <p>If we write these three different cases in augment matrix, you will see that the second one and the third one are very&nbsp;special:</p>
 <div class="math">$$\left[
@@ -177,7 +177,7 @@ $$</div>
 2 &amp;-1
 \end{bmatrix}$$</div>
 <p>So what is the transformation looks&nbsp;like?</p>
-<p><img alt="w5line_int" src="./images/w5linear_trans.gif" /></p>
+<p><img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5linear_trans.gif" /></p>
 <p>As you can see, all the vectors are transformed onto a line <span class="math">\(y = x\)</span>. This makes sense since the transformation returns exactly the same number for x and y. In fact, any linear dependent 2 by 2 matrix will squish the 2d plane to a line(or a point if everything is zero). So, if we are looking for a specific <span class="math">\(\pmb{\color{red}x}\)</span> that gives you <span class="math">\(\pmb{b}\)</span>. Then there are two possible results: One is that your <span class="math">\(\pmb{b}\)</span> actually landed on this line so you get some solution. The other case is your <span class="math">\(\pmb{b}\)</span> is unfortunately not on this line so the system is inconsistent, no such <span class="math">\(\pmb{\color{red}x}\)</span> can give you that <span class="math">\(\pmb{b}\)</span> vector after the&nbsp;transformation.</p>
 <p>Now, why do you have multiple solutions for one <span class="math">\(\pmb{b}\)</span>? Well, If we just look at the transformation itself, it looks like all the vectors in 2d space are <strong>projected</strong> on the 1d line. Like the shadow under sun. So it kind of makes sense if different objects return exactly the same&nbsp;shadow.</p>
 <p>But this is only 2 dimension. What if we have more than 2? what if we have the dimension of 10? how do we understand the transformation that happens in 100 dimensions? Obviously, we need more tools to do that. So, let&#8217;s use the knowledge of span and basis&nbsp;vector!</p>
@@ -260,7 +260,7 @@ y
 \end{bmatrix} \right) $$</div>
 <p>We actually have a name for this space, we call it <strong>null space</strong> or <strong>Kernel</strong>. &#8220;Null&#8221; means &#8220;nothing&#8221;, Of course, this does not mean there is nothing in the space. It means the collection of all vectors that are transformed to &#8220;nothing&#8221;, the zero&nbsp;vector.</p>
 <p>Let&#8217;s take a look at what null space is. Here I graphed a vector in 2d and drew some other vectors that are the linear combination of the null space vector and the original vector. Notice in our case, all such vector sits on a line since our null space is one&nbsp;dimensional.</p>
-<p><img alt="w5line_int" src="./images/w5nullspace.gif" /></p>
+<p><img alt="w5line_int" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/w5nullspace.gif" /></p>
 <p>As you can see, all the vectors were transformed into one same vector as we expected. if we know one solution of the linear system, adding any null space vector to that solution will give you a new solution. So if the null space of your matrix is not zero, then once you have a solution(if the system is consistent), you can get infinite many solutions from adding the null space vectors. But if the null space of your matrix is zero, you will just get a unique&nbsp;one.</p>
 <p>By checking the column space and the null space of a linear system, it is fairly easy to tell if the system has solutions or not. Notice that we are no longer focusing on a single linear system. We are now treating the matrix as a linear transformation and focusing on how the whole space change. The linear equations only describe one result of this linear transformation. Once you understand this, it is much easier for you to understand why people are interested in linear&nbsp;algebra.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -348,8 +348,8 @@ y
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="./5-4-the-cheat-inverse-matrix" title="Previous: 5-4 The cheat: inverse matrix">5-4 The cheat: inverse matrix</a></li>
-                <li class="next-article"><a href="./5-2-gaussian-elimination" title="Next: 5-2 Gaussian elimination">5-2 Gaussian elimination</a> »</li>
+                <li class="previous-article">« <a href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-4-the-cheat-inverse-matrix" title="Previous: 5-4 The cheat: inverse matrix">5-4 The cheat: inverse matrix</a></li>
+                <li class="next-article"><a href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/5-2-gaussian-elimination" title="Next: 5-2 Gaussian elimination">5-2 Gaussian elimination</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -361,7 +361,7 @@ y
 <time datetime="2021-12-05T19:30:00-05:00">12月 05, 2021</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="./categories#chapter-5-solving-linear-system-using-matrix-ref">Chapter 5 Solving Linear system using matrix</a>
+            <a class="category-link" href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/categories#chapter-5-solving-linear-system-using-matrix-ref">Chapter 5 Solving Linear system using matrix</a>
 <h4>Stay in Touch</h4>
 <div id="sidebar-social-link">
     <a href="https://www.linkedin.com/in/%E9%9C%84%E6%A5%A0-%E8%81%82-877a01176/" title="" target="_blank" rel="nofollow noopener noreferrer">
@@ -465,7 +465,7 @@ y
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
