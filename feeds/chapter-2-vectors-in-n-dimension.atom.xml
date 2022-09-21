@@ -12,7 +12,7 @@
 &lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2,4,6,8,10,12,14]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;But you might want to ask: What is the definition of a vector in mathematics? Take some guesses, We will reveal the answer at the end of this&amp;nbsp;chapter.&lt;/p&gt;
 &lt;p&gt;In physics, a vector is usually placed in a coordinate system. For example, we can say a 2d vector called x in the Cartesian plane to be (1,1), which means that the vector is starting from the origin and pointing toward&amp;nbsp;Northeast. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="vector1" src="../images/vector1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="vector1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/vector.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Notice that the starting point of a vector is not important, we can freely move the vector without changing it as long as it maintains the shape. The Reason is simple, changing starting point doesn&amp;#8217;t change its direction or&amp;nbsp;magnitude.&lt;/p&gt;
 &lt;p&gt;Because of that, we usually place it right on the origin and use the tip coordinate to describe the&amp;nbsp;vector.&lt;/p&gt;
 &lt;p&gt;You can compute the length of this vector using Pythagorean theorem. In our case, the result&amp;nbsp;is:&lt;/p&gt;

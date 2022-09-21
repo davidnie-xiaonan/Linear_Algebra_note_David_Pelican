@@ -16,7 +16,7 @@
 &lt;p&gt;Hopefully, everyone can get a much better understanding after reading the note and be able to perform some useful calculations. In the end, I would like to quote what Dieudonné said in his &amp;#8220;Foundations of Modern Analysis, Vol.&amp;nbsp;1&amp;#8221;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is hardly any theory which is more elementary (than linear algebra), in spite of the fact that generations of professors and textbook writers have obscured its simplicity by preposterous calculations with&amp;nbsp;matrices.&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Chapter 1"></category></entry><entry><title>1-2 prereq</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/1-2-prereq" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/1-2-prereq</id><summary type="html">&lt;p&gt;One of the fascinating thing about Linear Algebra is that the prerequisites of this course are nearly nothing. When I first learn linear algebra, I was amazed by the fact that you can do so many things with just some simple integer number operation. But to catch the essence of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the fascinating thing about Linear Algebra is that the prerequisites of this course are nearly nothing. When I first learn linear algebra, I was amazed by the fact that you can do so many things with just some simple integer number operation. But to catch the essence of linear algebra, we need to review some basic algebra that everybody does in grade 8: The linear&amp;nbsp;equation.&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="Chapter 1"></category></entry><entry><title>1-2 prereq</title><link href="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/1-2-prereq" rel="alternate"></link><published>2021-09-11T10:20:00-04:00</published><updated>2021-12-05T19:30:00-05:00</updated><author><name>David Nie</name></author><id>tag:davidnie-xiaonan.github.io,2021-09-11:/Linear_Algebra_note_David_Pelican/1-2-prereq</id><summary type="html">&lt;p&gt;One of the fascinating things about Linear Algebra is that the prerequisites of this course are nearly nothing. When I first learn linear algebra, I was amazed by the fact that you can do so many things with just some simple integer number operation. But to catch the essence of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the fascinating things about Linear Algebra is that the prerequisites of this course are nearly nothing. When I first learn linear algebra, I was amazed by the fact that you can do so many things with just some simple integer number operation. But to catch the essence of linear algebra, we need to review some basic algebra that everybody does in grade 8: The linear&amp;nbsp;equation.&lt;/p&gt;
 &lt;p&gt;We all learned the linear equations, the simple algebraic expression that somehow describes the shape of a line in the Cartesian plane. The algebra&amp;nbsp;expression:&lt;/p&gt;
 &lt;div class="math"&gt;$$y=mx+b$$&lt;/div&gt;
 &lt;p&gt;We call this slope-intercept form. We can also rearrange the equation and write down the same thing with an expression that looks&amp;nbsp;like:&lt;/p&gt;
@@ -125,7 +125,7 @@
 &lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2,4,6,8,10,12,14]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;But you might want to ask: What is the definition of a vector in mathematics? Take some guesses, We will reveal the answer at the end of this&amp;nbsp;chapter.&lt;/p&gt;
 &lt;p&gt;In physics, a vector is usually placed in a coordinate system. For example, we can say a 2d vector called x in the Cartesian plane to be (1,1), which means that the vector is starting from the origin and pointing toward&amp;nbsp;Northeast. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="vector1" src="../images/vector1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="vector1" src="https://davidnie-xiaonan.github.io/Linear_Algebra_note_David_Pelican/images/vector.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Notice that the starting point of a vector is not important, we can freely move the vector without changing it as long as it maintains the shape. The Reason is simple, changing starting point doesn&amp;#8217;t change its direction or&amp;nbsp;magnitude.&lt;/p&gt;
 &lt;p&gt;Because of that, we usually place it right on the origin and use the tip coordinate to describe the&amp;nbsp;vector.&lt;/p&gt;
 &lt;p&gt;You can compute the length of this vector using Pythagorean theorem. In our case, the result&amp;nbsp;is:&lt;/p&gt;
@@ -1119,14 +1119,14 @@ f
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}) R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
+&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}), R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="math"&gt;$$T(\pmb{x …&lt;/div&gt;</summary><content type="html">&lt;ol&gt;
 &lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}) R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
+&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}), R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="math"&gt;$$T(\pmb{x}) = \begin{bmatrix}
 1 &amp;amp; 0\\
@@ -1161,6 +1161,31 @@ f
 &lt;p&gt;Can you write &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt; down as a matrix? if so, what is the dimension of this matrix &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt;? (hint: Try to think matrix as columns of&amp;nbsp;vector)&lt;/p&gt;
 &lt;p&gt;(4)What if you reverse the order of transformation? Say &lt;span class="math"&gt;\(T_4(\pmb{x}) = T_1(T_2(\pmb{x}))\)&lt;/span&gt;? Does that gives you the same transformation? What is the result tells&amp;nbsp;you?&lt;/p&gt;
 &lt;h1 id="answer-sheet"&gt;Answer sheet&lt;a class="headerlink" href="#answer-sheet" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you want to write down the transformation matrix, you need to find the basis vector of the space and see how they transform. In our case, the basis will be &lt;span class="math"&gt;\([1,0]\)&lt;/span&gt; and &lt;span class="math"&gt;\([0,1]\)&lt;/span&gt;, if you rotate them counterclockwise by an arbitrary angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;, you will&amp;nbsp;have:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+1 \\
+0 
+\end{bmatrix} \rightarrow \begin{bmatrix}
+\cos\theta\\
+\sin\theta
+\end{bmatrix}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+0 \\
+1 
+\end{bmatrix} \rightarrow \begin{bmatrix}
+-\sin\theta\\
+\cos\theta
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;you can check this by graphing the arms in the unit circle and see the coordinate after the rotation of angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So, our transformation matrix should&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\pmb{x}) = \begin{bmatrix}
+\cos\theta &amp;amp; -\sin\theta\\
+\sin\theta &amp;amp; \cos\theta
+\end{bmatrix}$$&lt;/div&gt;
+&lt;hr /&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

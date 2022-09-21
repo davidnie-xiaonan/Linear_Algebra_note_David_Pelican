@@ -285,14 +285,14 @@ f
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}) R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
+&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}), R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="math"&gt;$$T(\pmb{x …&lt;/div&gt;</summary><content type="html">&lt;ol&gt;
 &lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}) R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
+&lt;li&gt;Consider a transformation matrix &lt;span class="math"&gt;\(T(\pmb{x}), R^2\rightarrow R^2\)&lt;/span&gt;:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="math"&gt;$$T(\pmb{x}) = \begin{bmatrix}
 1 &amp;amp; 0\\
@@ -327,6 +327,31 @@ f
 &lt;p&gt;Can you write &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt; down as a matrix? if so, what is the dimension of this matrix &lt;span class="math"&gt;\(T_3(\pmb{x})\)&lt;/span&gt;? (hint: Try to think matrix as columns of&amp;nbsp;vector)&lt;/p&gt;
 &lt;p&gt;(4)What if you reverse the order of transformation? Say &lt;span class="math"&gt;\(T_4(\pmb{x}) = T_1(T_2(\pmb{x}))\)&lt;/span&gt;? Does that gives you the same transformation? What is the result tells&amp;nbsp;you?&lt;/p&gt;
 &lt;h1 id="answer-sheet"&gt;Answer sheet&lt;a class="headerlink" href="#answer-sheet" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;In 4-1, we worked on the transformation that rotation 90 degree counterclockwise. In this practice, you will write down the transformation matrix for any rotation in 2d and prove that it is a linear&amp;nbsp;transformation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you want to write down the transformation matrix, you need to find the basis vector of the space and see how they transform. In our case, the basis will be &lt;span class="math"&gt;\([1,0]\)&lt;/span&gt; and &lt;span class="math"&gt;\([0,1]\)&lt;/span&gt;, if you rotate them counterclockwise by an arbitrary angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;, you will&amp;nbsp;have:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+1 \\
+0 
+\end{bmatrix} \rightarrow \begin{bmatrix}
+\cos\theta\\
+\sin\theta
+\end{bmatrix}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\begin{bmatrix}
+0 \\
+1 
+\end{bmatrix} \rightarrow \begin{bmatrix}
+-\sin\theta\\
+\cos\theta
+\end{bmatrix}$$&lt;/div&gt;
+&lt;p&gt;you can check this by graphing the arms in the unit circle and see the coordinate after the rotation of angle &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So, our transformation matrix should&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="math"&gt;$$T(\pmb{x}) = \begin{bmatrix}
+\cos\theta &amp;amp; -\sin\theta\\
+\sin\theta &amp;amp; \cos\theta
+\end{bmatrix}$$&lt;/div&gt;
+&lt;hr /&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
